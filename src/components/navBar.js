@@ -1,16 +1,12 @@
 import React from "react";
+// import { NavLink } from "react-router-dom";
 
-import { Nav, NavLink, Bars, NavMenu } from "./navbarElements";
-
-import logo from "../assets/images/logo.svg";
+// import { Nav, NavLink, Bars, NavMenu } from "./navbarElements";
+import { Nav, NavLink, Bars, NavMenu } from "./navElements";
 
 const Navbar = () => {
     return (
         <div className="nav-con">
-            <a href="/" target="_blank" rel="noopener noreferrer">
-                <img src={logo} className="App-logo" alt="logo" />
-            </a>
-
             <Nav className="nav">
                 {/* <Bars onClick={console.log("burger clicked")} /> */}
 

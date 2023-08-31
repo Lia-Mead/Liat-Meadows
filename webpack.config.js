@@ -1,14 +1,3 @@
-// module: {
-//   rules: [
-//     {
-//       test: /\.js$/,
-//       enforce: 'pre',
-//       use: ['source-map-loader'],
-//     },
-//     // Other rules...
-//   ],
-// }
-
 const webpack = require("webpack");
 
 module.exports = {
@@ -19,3 +8,33 @@ module.exports = {
         }),
     ],
 };
+
+// const path = require("path");
+
+// module.exports = {
+//     entry: "./src/index.js", // Your main entry file
+//     output: {
+//         filename: "bundle.js",
+//         path: path.resolve(__dirname, "dist"), // Output directory
+//     },
+//     plugins: [
+//         new webpack.DefinePlugin({
+//             "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
+//         }),
+//     ],
+//     module: {
+//         rules: [
+//             {
+//                 test: /\.js$/,
+//                 exclude: /node_modules/,
+//                 use: {
+//                     loader: "babel-loader",
+//                 },
+//             },
+//         ],
+//     },
+//     scripts: {
+//         start: "webpack --mode development",
+//         // ... other scripts ...
+//     },
+// };

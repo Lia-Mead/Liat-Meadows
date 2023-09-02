@@ -1,8 +1,7 @@
-import React from "react";
 // import { NavLink } from "react-router-dom";
 
 // import { Nav, NavLink, Bars, NavMenu } from "./navbarElements";
-import { Nav, NavLink, Bars, NavMenu } from "./navElements";
+import { Nav, NavLink, Bars, NavMenu } from "../components/navElements";
 
 const Navbar = () => {
     return (

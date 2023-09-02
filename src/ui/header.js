@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import NavBar from "../components/navBar";
+import { useState, useEffect } from "react";
+import NavBar from "./navBar";
 import BurgerMenu from "../components/burgerMenu";
 
 import close from "../assets/images/close.svg";
@@ -23,7 +23,7 @@ export default function Header() {
         // componentDidMount - registers eventlistener, event fired by the browser
         window.addEventListener("resize", updateSize);
         setScreenSize(window.innerWidth);
-    });
+    }, []);
 
     const [burgerOpen, setBurgerOpen] = useState(false);
 

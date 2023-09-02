@@ -1,26 +1,4 @@
-// module.exports = {
-//     env: {
-//         browser: true,
-//         es2021: true,
-//     },
-//     extends: ["eslint:recommended", "plugin:react/recommended"],
-//     parserOptions: {
-//         ecmaFeatures: {
-//             jsx: true,
-//         },
-//         ecmaVersion: 14,
-//         sourceType: "module",
-//         parser: "@babel/eslint-parser",
-//     },
-//     plugins: ["react", "react-hooks"],
-//     rules: {
-//         "no-unused-vars":
-//             process.env.NODE_ENV === "production" ? "error" : "off",
-//         "react/react-in-jsx-scope": "off",
-//         // Add your custom rules here
-//     },
-// };
-
+// eslint-disable-next-line no-undef
 module.exports = {
     env: {
         browser: true,
@@ -43,7 +21,9 @@ module.exports = {
     plugins: ["react", "react-hooks"],
     rules: {
         "no-unused-vars":
+            // eslint-disable-next-line no-undef
             process.env.NODE_ENV === "production" ? "error" : "off",
+        "react/react-in-jsx-scope": "off",
         //add customize rules here as per your project's needs
     },
 };

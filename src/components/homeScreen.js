@@ -1,10 +1,9 @@
-import React from "react";
-import { Card } from "../components/card";
+import { Card } from "../ui/card";
 // import "./styles/homeScreen.css";
 
 const HomeScreen = () => {
     return (
-        <div className="con">
+        <div className="con home">
             <div className="stage">
                 <h1>Liat Meadows</h1>
                 <h2>Web Developement & Design</h2>
@@ -17,9 +16,7 @@ const HomeScreen = () => {
                     specialist.
                 </h3>
             </div>
-            <div className="box">
-                <Card />
-            </div>
+            <div className="box"></div>
         </div>
     );
 };

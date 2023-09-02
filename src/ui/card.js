@@ -1,7 +1,5 @@
-import React from "react";
-import { ProductCard } from "react-ui-cards";
-
-import "../styles/card.css";
+import ProductCard from "../components/ProductCard/productCard";
+// import { ProductCard } from "react-ui-cards";
 
 import epicTimeImage from "../assets/images/epic-time.jpg";
 import epicTimeGif from "../assets/images/epic-time.gif";
@@ -38,16 +36,6 @@ const projects = [
         stack: "React, Node.js, PostgreSQL, Socket.IO, AWS",
     },
     {
-        key: 2,
-        title: "Stop the Stomp",
-        description:
-            "Petition project for collecting e-signatures against stomping neighbors",
-        image: stopImage,
-        gif: stopGif,
-        url: "https://petition-for-dummies.herokuapp.com/",
-        stack: "Handlebars, Node.js, PostgreSQL",
-    },
-    {
         key: 3,
         title: "Mureal",
         description:
@@ -63,7 +51,18 @@ const projects = [
         description: "Search your artists and albums with the spotify API",
         image: searchifyImage,
         gif: searchifyGif,
+        url: "https://searchify-alpha.vercel.app",
         stack: "Node.js, Spotify API",
+    },
+    {
+        key: 2,
+        title: "Stop the Stomp",
+        description:
+            "Petition project for collecting e-signatures against stomping neighbors",
+        image: stopImage,
+        gif: stopGif,
+        url: "https://stop-the-stomp.vercel.app/",
+        stack: "Handlebars, Node.js, PostgreSQL",
     },
     {
         key: 5,
@@ -72,6 +71,7 @@ const projects = [
             "Connect Four game retro style. Match four diagonal avatars and win the round",
         image: connectImage,
         gif: connectGif,
+        url: "https://connect-four-retro.vercel.app",
         stack: "Node.js, JavaScript",
     },
 ];
@@ -85,6 +85,5 @@ export const Card = () =>
             description={proj.description}
             buttonText="Go"
             url={proj.url}
-            target="_blank"
         />
     ));

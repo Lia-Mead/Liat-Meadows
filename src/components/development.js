@@ -1,11 +1,10 @@
-import React from "react";
-import { Card } from "../components/card";
+import { Card } from "../ui/card";
 
 const Developement = () => {
     return (
         <div className="con dev">
             <div className="box">
-                <h3>Check out some of my projects</h3>
+                <h3>My full stack projects</h3>
                 <Card />
             </div>
         </div>

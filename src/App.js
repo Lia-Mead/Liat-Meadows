@@ -1,13 +1,12 @@
-import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import HomeScreen from "./components/homeScreen";
-import Header from "./components/header";
+import Header from "./ui/header";
 import About from "./components/about";
-import Footer from "./components/footer";
+import Footer from "./ui/footer";
 import Design from "./components/design";
 import Development from "./components/development";
-import "./styles/App.css";
+import "./styles/App.scss";
 
 function App() {
     return (

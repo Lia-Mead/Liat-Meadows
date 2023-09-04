@@ -29,18 +29,8 @@ const ProjectDetails = ({
                     </h2>
 
                     <div className="stage">
-                        <div className="gallery-con">
+                        <div className="text">
                             <p>{description}</p>
-                            <img
-                                className="image"
-                                src={photos[0]}
-                                alt="Project Image 1"
-                            />
-                            {/* <img
-                                className="image"
-                                src={photos[1]}
-                                alt="Project Image 2"
-                            /> */}
                             <p>
                                 <span className="highlight">Stack: </span>
                                 {stack}
@@ -56,6 +46,19 @@ const ProjectDetails = ({
                             >
                                 {prod ? "view project" : "to git hub"}
                             </button>
+                        </div>
+                        <div className="gallery-con">
+                            {/* <ProductCardGallery photos={photos} /> */}
+                            <img
+                                className="image"
+                                src={photos[0]}
+                                alt="Project Image 1"
+                            />
+                            {/* <img
+                                className="image"
+                                src={photos[1]}
+                                alt="Project Image 2"
+                            /> */}
                         </div>
                     </div>
                 </div>

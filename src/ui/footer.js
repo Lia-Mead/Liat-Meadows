@@ -14,7 +14,7 @@ const Footer = () => {
                 gitHub
             </a>
             <p>
-                <a href="mailto:meadowsliat@gmail.com">liatmeadows@gmail.com</a>
+                <a href="mailto:meadowsliat@gmail.com">meadowsliat@gmail.com</a>
             </p>
         </div>
     );

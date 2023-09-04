@@ -11,19 +11,28 @@ import styles from "./styles.module.scss";
 const ProductCard = ({
     className,
     photos,
-    productName,
+    title,
+    slug,
     description,
+    stack,
     buttonText,
     url,
+    prod,
+    // onClick,
     ...rest
 }) => (
     <Card className={cx(styles["product-card"], className)} {...rest}>
         <ProductCardGallery photos={photos} />
         <ProductCardDescription
-            productName={productName}
+            title={title}
+            slug={slug}
             description={description}
+            stack={stack}
             buttonText={buttonText}
             url={url}
+            // onClick={onClick}
+            photos={photos}
+            prod={prod}
         />
     </Card>
 );
@@ -31,10 +40,14 @@ const ProductCard = ({
 ProductCard.propTypes = {
     className: PropTypes.string,
     photos: PropTypes.array.isRequired,
-    productName: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    slug: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    stack: PropTypes.string.isRequired,
     buttonText: PropTypes.string,
     url: PropTypes.string.isRequired,
+    prod: PropTypes.bool.isRequired,
+    // onClick: PropTypes.func.isRequired,
 };
 
 export default ProductCard;

@@ -13,15 +13,9 @@ const Navbar = () => {
                     {/* <NavLink to="/" activeStyle>
                         home
                     </NavLink> */}
-                    <NavLink to="/development" activeStyle>
-                        development
-                    </NavLink>
-                    <NavLink to="/design" activeStyle>
-                        design
-                    </NavLink>
-                    <NavLink to="/about" activeStyle>
-                        about
-                    </NavLink>
+                    <NavLink to="/development">development</NavLink>
+                    <NavLink to="/design">design</NavLink>
+                    <NavLink to="/about">about</NavLink>
                 </NavMenu>
             </Nav>
         </div>

@@ -1,7 +1,9 @@
 const Design = () => {
     return (
-        <div>
-            <p>Design</p>
+        <div className="con">
+            <div className="box">
+                <p>Design</p>
+            </div>
         </div>
     );
 };

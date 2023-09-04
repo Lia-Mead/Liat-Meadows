@@ -4,7 +4,7 @@ const Developement = () => {
     return (
         <div className="con dev">
             <div className="box">
-                <h3>My full stack projects</h3>
+                <h2>My full stack projects</h2>
                 <Card />
             </div>
         </div>

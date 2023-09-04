@@ -6,6 +6,7 @@ import About from "./components/about";
 import Footer from "./ui/footer";
 import Design from "./components/design";
 import Development from "./components/development";
+import ProjectDetails from "./components/projectDetails";
 import "./styles/App.scss";
 
 function App() {
@@ -18,6 +19,11 @@ function App() {
                     <Route path="/development" component={Development} />
                     <Route path="/design" component={Design} />
                     <Route path="/about" component={About} />
+                    {/* <Route path="/projectDetails" component={ProjectDetails} /> */}
+                    <Route
+                        path="/projectDetails/:slug"
+                        component={ProjectDetails}
+                    />
                 </Switch>
             </Router>
 

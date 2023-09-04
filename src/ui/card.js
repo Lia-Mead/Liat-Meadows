@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ProductCard from "../components/ProductCard/productCard";
 // import { ProductCard } from "react-ui-cards";
 
@@ -13,6 +14,7 @@ import searchifyImage from "../assets/images/searchify.jpg";
 import searchifyGif from "../assets/images/searchify.gif";
 import connectImage from "../assets/images/connect-four.jpg";
 import connectGif from "../assets/images/connect-four.gif";
+import ProjectDetails from "../components/projectDetails";
 
 const projects = [
     {
@@ -22,8 +24,10 @@ const projects = [
             "My one-week final project from the course at Spiced Academy",
         image: allThatJazzImage,
         gif: allThatJazzGif,
-        url: "https://allthatjazz.vercel.app/",
+        url: "https://github.com/Lia-Mead/allthatjazz",
         stack: "React, Node.js, PostgreSQL, Socket.IO, AWS",
+        slug: "allthatjazz",
+        prod: false,
     },
     {
         key: 1,
@@ -32,8 +36,10 @@ const projects = [
             "A Social network for 90s lovers for contacts and some nostalgia chats",
         image: epicTimeImage,
         gif: epicTimeGif,
-        url: "https://epic-time.herokuapp.com/",
+        url: "https://github.com/Lia-Mead/epic-time",
         stack: "React, Node.js, PostgreSQL, Socket.IO, AWS",
+        slug: "epic-time",
+        prod: false,
     },
     {
         key: 3,
@@ -42,8 +48,10 @@ const projects = [
             "An image oriented platform dedicated to street art and murals",
         image: murealImage,
         gif: murealGif,
-        url: "https://mureal.herokuapp.com/",
+        url: "https://github.com/Lia-Mead/mureal",
         stack: "Vue.js, Node.js, PostgreSQL, AWS",
+        slug: "mureal",
+        prod: false,
     },
     {
         key: 4,
@@ -53,6 +61,8 @@ const projects = [
         gif: searchifyGif,
         url: "https://searchify-alpha.vercel.app",
         stack: "Node.js, Spotify API",
+        slug: "searchify",
+        prod: true,
     },
     {
         key: 2,
@@ -63,6 +73,8 @@ const projects = [
         gif: stopGif,
         url: "https://stop-the-stomp.vercel.app/",
         stack: "Handlebars, Node.js, PostgreSQL",
+        slug: "stop-the-stomp",
+        prod: false,
     },
     {
         key: 5,
@@ -73,17 +85,35 @@ const projects = [
         gif: connectGif,
         url: "https://connect-four-retro.vercel.app",
         stack: "Node.js, JavaScript",
+        slug: "connect-four",
+        prod: true,
     },
 ];
 
-export const Card = () =>
-    projects.map((proj) => (
-        <ProductCard
-            key={proj.key}
-            photos={[proj.image, proj.gif]}
-            productName={proj.title}
-            description={proj.description}
-            buttonText="Go"
-            url={proj.url}
-        />
-    ));
+export const Card = () => {
+    const [selectedProject, setSelectedProject] = useState(null);
+
+    const handleClick = (project) => {
+        setSelectedProject(project);
+    };
+
+    return (
+        <>
+            {projects.map((project) => (
+                <ProductCard
+                    key={project.key}
+                    photos={[project.image, project.gif]}
+                    title={project.title}
+                    slug={project.slug}
+                    description={project.description}
+                    stack={project.stack}
+                    buttonText="More"
+                    url={project.url}
+                    prod={project.prod}
+                    // onClick={() => handleClick(project)}
+                />
+            ))}
+            {selectedProject && <ProjectDetails project={selectedProject} />}
+        </>
+    );
+};

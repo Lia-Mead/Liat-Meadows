@@ -48,12 +48,15 @@ const ProjectDetails = ({
                             </button>
                         </div>
                         <div className="gallery-con">
-                            {/* <ProductCardGallery photos={photos} /> */}
-                            <img
+                            <ProductCardGallery
+                                className="gallery"
+                                photos={photos}
+                            />
+                            {/* <img
                                 className="image"
                                 src={photos[0]}
                                 alt="Project Image 1"
-                            />
+                            /> */}
                             {/* <img
                                 className="image"
                                 src={photos[1]}

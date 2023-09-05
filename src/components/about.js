@@ -2,11 +2,16 @@ import avatar from "../assets/images/liat.jpg";
 
 const About = () => {
     return (
-        <div className="con about">
+        <div className="about-container">
             <div className="box">
                 <div className="text-box">
                     <h1>Liat Meadows</h1>
-                    <h2 className="highlight">Web Developement & Design</h2>
+                    <h2>
+                        <a className="highlight" href="#about">
+                            About
+                        </a>
+                    </h2>
+
                     <p>
                         I am an experienced web and mobile app developer with a
                         strong focus on{" "}

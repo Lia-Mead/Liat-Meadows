@@ -14,20 +14,21 @@ function App() {
         <>
             <Router>
                 <Header />
-                <Switch>
-                    <Route path="/" exact component={HomeScreen} />
-                    <Route path="/development" component={Development} />
-                    <Route path="/design" component={Design} />
-                    <Route path="/about" component={About} />
-                    {/* <Route path="/projectDetails" component={ProjectDetails} /> */}
-                    <Route
-                        path="/projectDetails/:slug"
-                        component={ProjectDetails}
-                    />
-                </Switch>
+                <div className="main">
+                    <Switch>
+                        <Route path="/" exact component={HomeScreen} />
+                        <Route path="/development" component={Development} />
+                        <Route path="/design" component={Design} />
+                        <Route path="/about" component={About} />
+                        {/* <Route path="/projectDetails" component={ProjectDetails} /> */}
+                        <Route
+                            path="/projectDetails/:slug"
+                            component={ProjectDetails}
+                        />
+                    </Switch>
+                </div>
+                <Footer />
             </Router>
-
-            <Footer />
         </>
     );
 }

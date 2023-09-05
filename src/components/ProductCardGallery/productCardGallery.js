@@ -5,7 +5,7 @@ import cx from "classnames";
 import GalleryToggle from "./GalleryToggle/galleryToggle";
 import styles from "./styles.module.scss";
 
-const ProductCardGallery = ({ photos }) => {
+const ProductCardGallery = ({ photos, className }) => {
     const [activeItem, setActiveItem] = useState(0);
 
     const rotateRight = () => {
@@ -19,7 +19,7 @@ const ProductCardGallery = ({ photos }) => {
     };
 
     return (
-        <div className={styles["product-card-gallery"]}>
+        <div className={cx(className, styles["product-card-gallery"])}>
             {photos.map((photo, i) => (
                 <div
                     key={photo}
@@ -39,6 +39,7 @@ const ProductCardGallery = ({ photos }) => {
 
 ProductCardGallery.propTypes = {
     photos: PropTypes.array.isRequired,
+    className: PropTypes.string,
 };
 
 export default ProductCardGallery;

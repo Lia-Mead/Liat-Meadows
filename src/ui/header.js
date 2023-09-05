@@ -4,7 +4,6 @@ import BurgerMenu from "../components/burgerMenu";
 
 import close from "../assets/images/close.svg";
 import burger from "../assets/images/burger.svg";
-// import logo from "../assets/images/logo.svg";
 import Logo from "../components/logo";
 
 import { Link } from "react-router-dom";
@@ -38,12 +37,10 @@ export default function Header() {
     return (
         <>
             <header className="nav-con">
-                <Link className="logo-link" to="/">
-                    <Logo onClick={toggleBurgerMenu} className="App-logo" />
+                <Link to="/">
+                    <Logo onClick={toggleBurgerMenu} />
                 </Link>
-                {/* <a href="/" target="_blank" rel="noopener noreferrer">
-                <img src={logo} className="App-logo" alt="logo" />
-            </a> */}
+
                 <div className="menu-right">
                     {screenSize < 900 || mQuery ? (
                         <img

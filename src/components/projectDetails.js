@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-import Card from "./ProductCard/Card/card";
-import ProductCardDescription from "./ProductCardDescription/productCardDescription";
+// import Card from "./ProductCard/Card/card";
+// import ProductCardDescription from "./ProductCardDescription/productCardDescription";
+// import cx from "classnames";
 import ProductCardGallery from "./ProductCardGallery/productCardGallery";
-import cx from "classnames";
 
 import styles from "./ProductCardGallery/styles.module.scss";
 
@@ -19,7 +19,7 @@ const ProjectDetails = ({
 
     return (
         <>
-            <div className="con detail">
+            <div className="detail-con">
                 <div className="box">
                     <h2>
                         <Link to="/development" className="link">
@@ -92,11 +92,6 @@ const ProjectDetails = ({
 ProjectDetails.propTypes = {
     buttonText: PropTypes.string,
     className: PropTypes.string,
-    // photos: PropTypes.array.isRequired,
-    // title: PropTypes.string.isRequired,
-    // description: PropTypes.string.isRequired,
-    // stack: PropTypes.string.isRequired,
-    // url: PropTypes.string,
     isButtonActive: PropTypes.bool,
     project: PropTypes.object,
     location: PropTypes.shape({

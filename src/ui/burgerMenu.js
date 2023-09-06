@@ -1,10 +1,9 @@
-// import React from "react";
 import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 
 export default function BurgerMenu({ toggleBurgerMenu }) {
     return (
-        <nav className="burger">
+        <nav className="open-nav">
             <NavLink
                 className="nav-icon"
                 activeClassName="active-b"
@@ -19,7 +18,7 @@ export default function BurgerMenu({ toggleBurgerMenu }) {
                 className="nav-icon"
                 activeClassName="active-b"
                 onClick={toggleBurgerMenu}
-                to="/desin"
+                to="/design"
             >
                 design
             </NavLink>

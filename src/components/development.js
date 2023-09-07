@@ -1,16 +1,27 @@
-import { Card } from "../ui/card";
+import PropTypes from 'prop-types';
 
-const Developement = () => {
-    return (
-        <div id="development" className="development-con">
-            <div className="box">
-                <h2>
-                    <a href="#my-dev-projects">My full stack projects</a>
-                </h2>
-                <Card />
-            </div>
+import Card from '../ui/card';
+
+import { devProjects } from '../data/dev-projects';
+
+const Development = () => {
+  return (
+    <div id="my-dev-projects" className="development-con">
+      <div className="box">
+        <h2>
+          <a href="#my-dev-projects">My development projects</a>
+        </h2>
+        <div className={'cards-box'}>
+          <Card projectArray={devProjects} isWideCard={false} />
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
-export default Developement;
+Card.propTypes = {
+  projectArray: PropTypes.array.isRequired,
+  isWideCard: PropTypes.bool,
+};
+
+export default Development;

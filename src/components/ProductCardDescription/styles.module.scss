@@ -27,14 +27,11 @@
     color: #2c3e50;
     font-size: 0.75rem;
     letter-spacing: 2px;
-    min-height: 42px;
+    min-height: 65px;
 }
 
-.product-card-stack {
-    color: #101011;
-    font-size: 0.75rem;
-    letter-spacing: 2px;
-    min-height: 42px;
+.product-card-description-wide {
+    min-height: 72px;
 }
 
 .go-button {
@@ -54,6 +51,10 @@
     &:active {
         background-color: #16a085;
     }
+}
+
+.go-button-wide {
+    margin-top: 20px;
 }
 
 .go-button-disabled {

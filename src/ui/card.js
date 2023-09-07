@@ -34,7 +34,6 @@ const Card = ({ projectArray }) => {
           url: project.url,
           published: project.published,
           isWideCard: project.isWideCard,
-          // detailButton: project.detailButton,
           gif,
         };
 

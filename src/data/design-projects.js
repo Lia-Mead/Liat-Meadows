@@ -33,8 +33,6 @@ export const designProjects = [
     stack: 'Sketch, Photoshop, React, HTML, CSS',
     slug: 'ziegert-real-estate',
     isWideCard: true,
-    // detailButton: false,
-    // published: true,
   },
   {
     title: 'Flamingo Generation',

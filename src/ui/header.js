@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+
 import NavBar from './navBar';
 import BurgerMenu from '../ui/burgerMenu';
 
@@ -27,33 +29,31 @@ export default function Header() {
   useEffect(() => {
     window.addEventListener('resize', handleResize);
 
-    // Cleanup the event listener when the component unmounts
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
 
   useEffect(() => {
-    // Close the burger menu when screenSize is less than 900
     if (screenSize < 900) {
       setBurgerOpen(false);
     }
   }, [screenSize]);
 
   const updateSize = () => {
-    // console.log("size updated");
     let mql = window.matchMedia('(max-width: 1074px)');
     setMQuery(mql.matches);
-    // console.log(mql.matches); // true or false
   };
 
-  const toggleBurgerMenu = () => {
+  const toggleBurgerMenu = ({ changeLanguage }) => {
     // console.log("toggle open");
     setBurgerOpen(!burgerOpen);
   };
 
   let src;
   burgerOpen ? (src = close) : (src = burger);
+
+  // console.log('setIsHebrew in Header:', setIsHebrew);
 
   return (
     <>
@@ -75,3 +75,8 @@ export default function Header() {
     </>
   );
 }
+
+// Header.propTypes = {
+//   // changeLanguage: PropTypes.func,
+//   setIsHebrew: PropTypes.func.isRequired,
+// };

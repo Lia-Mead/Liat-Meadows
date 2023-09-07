@@ -1,14 +1,17 @@
 /* eslint-disable no-undef */
+import PropTypes from 'prop-types';
+import { withTranslation } from 'react-i18next';
+
 import Avatar from '../assets/images/liat.jpg';
 import StackIcon from '../assets/icons/stack.svg';
 
-const About = () => {
+const About = ({ t, isHebrew }) => {
   return (
     <div id="about" className="about-container">
       <div className="box">
         <h2>
           <a href="#about" className="highlight">
-            About
+            {t('about')}
           </a>
         </h2>
         <div className="text-box">
@@ -16,10 +19,10 @@ const About = () => {
             <p>
               Hi, nice to meet you. My name is Liat. I am an experienced web and
               mobile app developer with a strong focus on{' '}
-              <strong className="highlight">React Native.</strong> I bring with
-              me perennial design work experience as a UI/UX specialist. That
-              been said, it is clear why I love CSS and enjoy putting much love
-              and care in the details.
+              <strong className="highlight">React Native</strong> and React. I
+              bring with me perennial design work experience as a UI/UX
+              specialist. That been said, it is clear why I love CSS and enjoy
+              putting much love and care in the details.
             </p>
             <p>
               My journey across tech teams made me keen about giving my design a
@@ -38,7 +41,6 @@ const About = () => {
             <p>I am looking forward to our collaboration.</p>
             <br />
             <br />
-            {/* <strong className="highlight">Stack</strong> */}
             <img className="icon" src={StackIcon} alt="liat-meadows-photo" />
             <p>
               JavaScript &#8226; HTML5 &#8226; CSS &#8226; SASS &#8226; Node.js
@@ -56,4 +58,9 @@ const About = () => {
   );
 };
 
-export default About;
+About.propTypes = {
+  t: PropTypes.func.isRequired,
+  isHebrew: PropTypes.bool.isRequired,
+};
+
+export default withTranslation()(About);

@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import OpenGallery from './openGallery';
 
 const ProjectDetails = ({ location, isButtonActive = true }) => {
-  const { title, description, stack, url, photos, published } = location.state;
+  const { title, description, stack, url, photos, published, detailButton } =
+    location.state;
 
   return (
     <>
@@ -28,16 +29,32 @@ const ProjectDetails = ({ location, isButtonActive = true }) => {
 
             <div className="gallery-con">
               <OpenGallery className="gallery" photos={photos} />
-              <button
-                className={'button'}
-                onClick={() => {
-                  if (isButtonActive) {
-                    window.open(url, '_blank');
-                  }
-                }}
-              >
-                {published ? 'even more' : 'to git hub'}
-              </button>
+
+              {published && (
+                <button
+                  className={'button'}
+                  onClick={() => {
+                    if (isButtonActive) {
+                      window.open(url, '_blank');
+                    }
+                  }}
+                >
+                  {published ? 'even more' : 'to git hub'}
+                </button>
+              )}
+
+              {/* {detailButton && (
+                <button
+                  className={'button'}
+                  onClick={() => {
+                    if (isButtonActive) {
+                      window.open(url, '_blank');
+                    }
+                  }}
+                >
+                  {published ? 'even more' : 'to git hub'}
+                </button>
+              )} */}
             </div>
           </div>
         </div>
@@ -50,6 +67,7 @@ ProjectDetails.propTypes = {
   buttonText: PropTypes.string,
   className: PropTypes.string,
   isButtonActive: PropTypes.bool,
+  detailButton: PropTypes.bool,
   project: PropTypes.object,
   location: PropTypes.shape({
     state: PropTypes.object,

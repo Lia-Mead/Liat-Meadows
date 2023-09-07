@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
-import avatar from '../assets/images/liat.jpg';
+import Avatar from '../assets/images/liat.jpg';
+import StackIcon from '../assets/icons/stack.svg';
 
 const About = () => {
   return (
@@ -20,7 +21,6 @@ const About = () => {
               been said, it is clear why I love CSS and enjoy putting much love
               and care in the details.
             </p>
-
             <p>
               My journey across tech teams made me keen about giving my design a
               technical perspective. Over the last years I worked for VMZ Berlin
@@ -38,7 +38,8 @@ const About = () => {
             <p>I am looking forward to our collaboration.</p>
             <br />
             <br />
-            <strong className="highlight">Stack</strong>
+            {/* <strong className="highlight">Stack</strong> */}
+            <img className="icon" src={StackIcon} alt="liat-meadows-photo" />
             <p>
               JavaScript &#8226; HTML5 &#8226; CSS &#8226; SASS &#8226; Node.js
               &#8226; Express &#8226; React-Native &#8226; React.js &#8226;
@@ -49,7 +50,7 @@ const About = () => {
           </div>
         </div>
 
-        <img className="avatar" src={avatar} alt="liat-meadows-photo" />
+        <img className="avatar" src={Avatar} alt="liat-meadows-photo" />
       </div>
     </div>
   );

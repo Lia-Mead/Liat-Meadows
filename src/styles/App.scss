@@ -84,13 +84,6 @@ p {
   padding-right: 3%;
 }
 
-// .anchor {
-//     float: left;
-//     padding-right: 4px;
-//     margin-left: -20px;
-//     line-height: 1;
-// }
-
 /* grid layout */
 /* .cards {
     display: grid;
@@ -382,6 +375,7 @@ p {
     flex-wrap: wrap;
     margin-top: 40px;
     justify-content: center;
+    height: 100%;
     .text {
       max-width: 80%;
     }
@@ -421,6 +415,9 @@ p {
 
   a {
     margin: 0;
+  }
+  .icon {
+    padding: 0;
   }
 }
 

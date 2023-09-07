@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import ProductCard from '../components/ProductCard/productCard';
+import ProjectCard from '../components/ProjectCard/projectCard';
 import ProjectDetails from '../components/projectDetails';
 
 const Card = ({ projectArray }) => {
@@ -34,10 +34,11 @@ const Card = ({ projectArray }) => {
           url: project.url,
           published: project.published,
           isWideCard: project.isWideCard,
+          // detailButton: project.detailButton,
           gif,
         };
 
-        return <ProductCard key={uuidv4()} {...projectData} />;
+        return <ProjectCard key={uuidv4()} {...projectData} />;
       })}
 
       {selectedProject && <ProjectDetails project={selectedProject} />}

@@ -2,9 +2,8 @@ import flamingoBook from '../assets/images/flamingo-bookcover.jpg';
 import flamingoWeb from '../assets/images/flamingo-web.jpg';
 import flamingoPhone from '../assets/images/flamingo-phone.jpg';
 import flamingoStickers from '../assets/images/flamingo-stickers.jpg';
-import lvCards from '../assets/images/lv-cards.jpg';
 import lvComp from '../assets/images/lv-comp.jpg';
-import lvIllu from '../assets/images/lv-illu.png';
+import lvIllu from '../assets/images/lv-illu.jpg';
 import lvPin from '../assets/images/lv-pin.jpg';
 import fcWindow from '../assets/images/fc-window.jpg';
 import fcTitle from '../assets/images/fc-title.jpg';
@@ -34,7 +33,8 @@ export const designProjects = [
     stack: 'Sketch, Photoshop, React, HTML, CSS',
     slug: 'ziegert-real-estate',
     isWideCard: true,
-    published: true,
+    // detailButton: false,
+    // published: true,
   },
   {
     title: 'Flamingo Generation',
@@ -55,9 +55,7 @@ export const designProjects = [
     description:
       'Corporate design for a Munich, Germany based passionate tour guide. The goal was to develop a Brand Identity which reflects the spirit of the services he offers: authentic and adventurous traveling and exploring.',
     image1: lvComp,
-    image2: lvCards,
-    image3: lvIllu,
-    image4: lvPin,
+    image2: lvIllu,
     url: 'https://www.behance.net/gallery/24510341/Les-Voyageurs',
     stack: 'Photoshop, Illustrator',
     slug: 'les-voyageurs',

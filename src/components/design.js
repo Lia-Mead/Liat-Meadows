@@ -1,30 +1,42 @@
 import PropTypes from 'prop-types';
+import { withTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
+
+import { useLanguage } from '../components/LanguageContext';
 
 import Card from '../ui/card';
 
 import { designProjects } from '../data/design-projects';
 
 const Design = () => {
+  // const { isHebrew } = useLanguage();
+  const { t, i18n } = useTranslation();
+  const isHebrew = i18n.language === 'he';
+
   return (
-    <div id="my-design-projects" className="design-con">
+    <div
+      id="my-design-projects"
+      className={`design-con ${isHebrew ? 'rtl-text' : 'ltr-text'}`}
+    >
       <div className="column">
         <div className="brush">
           <h2 className="brush-text">
-            <a href="#my-design-projects">My design projects</a>
+            <a href="#my-design-projects">{t('design_my_design_projects')}</a>
           </h2>
         </div>
 
         <div className="cards-box">
-          <Card projectArray={designProjects} isWideCard={true} />
+          <Card t={t} projectArray={designProjects} isWideCard={true} />
         </div>
       </div>
     </div>
   );
 };
 
-Card.propTypes = {
-  projectArray: PropTypes.array.isRequired,
+Design.propTypes = {
+  projectArray: PropTypes.array,
   isWideCard: PropTypes.bool,
+  t: PropTypes.func.isRequired,
 };
 
-export default Design;
+export default withTranslation()(Design);

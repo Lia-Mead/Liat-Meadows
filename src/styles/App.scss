@@ -162,13 +162,19 @@ p {
   .brush-text {
     margin: 10px 0px 10px 20px;
   }
+
   h3 {
     font-weight: 300;
     font-size: 5rem;
   }
 
-  .about-container .avatar {
-    margin-top: -150px;
+  .about-container {
+    .box {
+      padding-bottom: 80px;
+    }
+    .avatar {
+      margin-top: -150px;
+    }
   }
 }
 
@@ -176,6 +182,13 @@ p {
   background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=1abc9c);
   padding: 1px;
   width: 46%;
+}
+
+.brush-he {
+  width: 29%;
+}
+.brush-de {
+  width: 47%;
 }
 
 .highlight {
@@ -188,6 +201,7 @@ p {
   max-width: 80%;
   flex-wrap: wrap;
   margin: 0 auto;
+  padding-bottom: 80px;
 }
 
 .gallery-con {
@@ -290,6 +304,15 @@ p {
   justify-content: flex-end;
 }
 
+.nav-menu {
+  display: flex;
+  align-items: center;
+  margin-right: -24px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
 .lang-btn {
   border-radius: 4px;
   /* background: #808080; */
@@ -300,7 +323,8 @@ p {
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   /* Second Nav */
-  margin-left: 24px;
+  margin-left: 12px;
+  margin-right: 12px;
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
@@ -367,6 +391,7 @@ p {
   right: 0;
   top: 79px;
   z-index: 300;
+  padding-bottom: 20px;
   nav {
     display: flex;
     z-index: 300;
@@ -377,8 +402,9 @@ p {
     align-items: flex-start;
   }
   a {
-    color: black;
+    color: #2c3e50;
     margin: 40px 40px;
+    text-decoration: underline;
   }
 }
 
@@ -453,6 +479,7 @@ p {
 
   .box {
     background-color: #261e1e;
+    padding-bottom: 20px;
   }
 
   .text-con {
@@ -464,6 +491,7 @@ p {
   }
   .icon {
     padding: 0;
+    width: 80px;
   }
 }
 
@@ -476,6 +504,9 @@ p {
   .stage {
     width: 70%;
   }
+  .brush-he {
+    width: 34%;
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -487,15 +518,12 @@ p {
     padding-bottom: 120px;
   }
 
-  // .app-logo {
-  //   height: 11vmin;
-  //   margin-left: 10px;
-  //   padding-left: 0;
-  // }
-
   .footer {
     flex-direction: column;
     height: 6rem;
+    .link-con {
+      margin-top: 10px;
+    }
   }
 
   .brush {
@@ -511,5 +539,15 @@ p {
         margin: 0;
       }
     }
+  }
+
+  .about-container {
+    .box {
+      padding-bottom: 80px;
+    }
+  }
+
+  .text-box {
+    width: 100%;
   }
 }

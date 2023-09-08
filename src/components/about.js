@@ -1,13 +1,23 @@
 /* eslint-disable no-undef */
 import PropTypes from 'prop-types';
 import { withTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
+// import { useLanguage } from '../components/LanguageContext';
 
 import Avatar from '../assets/images/liat.jpg';
 import StackIcon from '../assets/icons/stack.svg';
 
-const About = ({ t, isHebrew }) => {
+// const About = ({ t }) => {
+const About = () => {
+  const { t, i18n } = useTranslation();
+  const isHebrew = i18n.language === 'he';
+
+  console.log('isHebrew About', isHebrew);
   return (
-    <div id="about" className="about-container">
+    <div
+      id="about"
+      className={`about-container ${isHebrew ? 'rtl-text' : 'ltr-text'}`}
+    >
       <div className="box">
         <h2>
           <a href="#about" className="highlight">
@@ -16,29 +26,20 @@ const About = ({ t, isHebrew }) => {
         </h2>
         <div className="text-box">
           <div className="text-con">
+            <p>{t('about_para_1_1')}</p>
             <p>
-              Hi, nice to meet you. My name is Liat. I am an experienced web and
-              mobile app developer with a strong focus on{' '}
-              <strong className="highlight">React Native</strong> and React. I
-              bring with me perennial design work experience as a UI/UX
-              specialist. That been said, it is clear why I love CSS and enjoy
-              putting much love and care in the details.
+              {' '}
+              {t('about_para_1_1_1')}
+              <strong className="highlight">{t('about_para_1_2')}</strong>
+              {t('about_para_1_3')}
             </p>
+            <p>{t('about_para_2_1')}</p>
             <p>
-              My journey across tech teams made me keen about giving my design a
-              technical perspective. Over the last years I worked for VMZ Berlin
-              mbH Operators as a frontend mobile developer where I implemeted
-              innovative transportation applications in React Native and became
-              very fond of this cross platform framework.
-            </p>
-            <p>
-              I build websites from prototype to production. Creating sketches
-              and developing interactive, innovative solutions with a strong
-              emphasis on <strong className="highlight">User Experience</strong>
-              .
+              {t('about_para_3_1')}
+              <strong className="highlight">{t('about_para_3_2')}</strong>
             </p>
             <br />
-            <p>I am looking forward to our collaboration.</p>
+            <p>{t('about_para_4_1')}</p>
             <br />
             <br />
             <img className="icon" src={StackIcon} alt="liat-meadows-photo" />
@@ -60,7 +61,7 @@ const About = ({ t, isHebrew }) => {
 
 About.propTypes = {
   t: PropTypes.func.isRequired,
-  isHebrew: PropTypes.bool.isRequired,
+  // isHebrew: PropTypes.bool.isRequired,
 };
 
 export default withTranslation()(About);

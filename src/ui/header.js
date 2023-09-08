@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import NavBar from './navBar';
 import BurgerMenu from '../ui/burgerMenu';
+import LanguageSwitch from '../components/LanguageSwitch';
 
 import close from '../assets/icons/close.svg';
 import burger from '../assets/icons/burger.svg';
@@ -10,10 +11,12 @@ import Logo from '../components/logo';
 
 import { Link } from 'react-router-dom';
 
-export default function Header() {
+export default function Header({ t }) {
   const [burgerOpen, setBurgerOpen] = useState(false);
   const [mQuery, setMQuery] = useState();
   const [screenSize, setScreenSize] = useState(window.innerWidth);
+
+  const [isHebrew, setIsHebrew] = useState(false);
 
   const handleResize = () => {
     setScreenSize(window.innerWidth);
@@ -66,17 +69,21 @@ export default function Header() {
           {screenSize < 900 || mQuery ? (
             <img onClick={toggleBurgerMenu} className="navbar-icon" src={src} />
           ) : (
-            <NavBar />
+            <NavBar t={t} />
           )}
         </div>
+
+        {/* <LanguageSwitch setIsHebrew={setIsHebrew} /> */}
       </header>
 
-      {burgerOpen ? <BurgerMenu toggleBurgerMenu={toggleBurgerMenu} /> : null}
+      {burgerOpen ? (
+        <BurgerMenu t={t} toggleBurgerMenu={toggleBurgerMenu} />
+      ) : null}
     </>
   );
 }
 
-// Header.propTypes = {
-//   // changeLanguage: PropTypes.func,
-//   setIsHebrew: PropTypes.func.isRequired,
-// };
+Header.propTypes = {
+  t: PropTypes.func.isRequired,
+  setIsHebrew: PropTypes.func.isRequired,
+};

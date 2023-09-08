@@ -3,29 +3,37 @@ import { useTranslation } from 'react-i18next';
 import Development from './development';
 import Design from './design';
 import About from './about';
-// import { useLanguage } from '../components/LanguageContext';
-// import { LanguageProvider } from './components/LanguageContext';
-// import { useScrollToLocation } from "./srollToLocation";
+import { devProjects } from '../data/dev-projects';
+import { designProjects } from '../data/design-projects';
 
 const HomeScreen = () => {
   const { t, i18n } = useTranslation();
   const isHebrew = i18n.language === 'he';
-  // const { isHebrew } = useLanguage();
+  const isGerman = i18n.language === 'de';
+
+  const brushStyle = () => {
+    if (isHebrew) {
+      return 'brush brush-he';
+    } else if (isGerman) {
+      return 'brush brush-de';
+    }
+    return 'brush';
+  };
 
   return (
-    <div className="con home">
+    <div className={`con home ${isHebrew ? 'rtl-text' : 'ltr-text'}`}>
       <div className="stage">
-        <h1>Liat Meadows</h1>
-        <div className="brush">
-          <h2 className="brush-text">{t('Web Development & Design')}</h2>
+        <h1>{t('liat_meadows')}</h1>
+        <div className={brushStyle()}>
+          <h2 className="brush-text">{t('development_and_design')}</h2>
         </div>
-        <h3 className={isHebrew ? 'rtl-text' : 'ltr-text'}>
-          {t('home-slogan')} <br />
-          {t('home-slogan2')}
+        <h3>
+          {t('home_slogan')} <br />
+          {t('home_slogan2')}
         </h3>
       </div>
-      <Development t={t} isHebrew={isHebrew} />
-      <Design t={t} isHebrew={isHebrew} />
+      <Development t={t} isHebrew={isHebrew} projectArray={devProjects} />
+      <Design t={t} isHebrew={isHebrew} projectArray={designProjects} />
       <About t={t} isHebrew={isHebrew} />
     </div>
   );

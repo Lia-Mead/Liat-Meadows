@@ -1,17 +1,21 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import { withTranslation } from 'react-i18next';
+
 import LanguageSwitch from '../components/LanguageSwitch';
 
 import {
   Nav,
   NavLink,
-  NavMenu,
-  NavBtn,
-  NavBtnLink,
+  // NavMenu,
+  // NavBtn,
+  // NavBtnLink,
 } from '../components/navElements';
 
-const Navbar = () => {
+const Navbar = ({ t }) => {
   const [isHebrew, setIsHebrew] = useState(false);
+  // const { t, i18n } = useTranslation();
+  // const isHebrew = i18n.language === 'he';
   //   const scrollToTop = () => {
   //     window.scrollTo({
   //       top: 0,
@@ -20,21 +24,23 @@ const Navbar = () => {
   //   };
 
   return (
+    // <div className={`nav-con ${isHebrew ? 'rtl-text' : 'ltr-text'}`}>
     <div className="nav-con">
       <Nav className="nav">
-        <NavMenu>
-          <NavLink to="/development">development</NavLink>
-          <NavLink to="/design">design</NavLink>
-          <NavLink to="/about">about</NavLink>
-        </NavMenu>
+        <div className="nav-menu">
+          <NavLink to="/development">{t('about_development')}</NavLink>
+          <NavLink to="/design">{t('about_design')}</NavLink>
+          <NavLink to="/about">{t('about_about')}</NavLink>
+        </div>
         <LanguageSwitch setIsHebrew={setIsHebrew} />
       </Nav>
     </div>
   );
 };
 
-// Navbar.propTypes = {
-//   setIsHebrew: PropTypes.func.isRequired,
-// };
+Navbar.propTypes = {
+  t: PropTypes.func.isRequired,
+  // setIsHebrew: PropTypes.func.isRequired,
+};
 
-export default Navbar;
+export default withTranslation()(Navbar);

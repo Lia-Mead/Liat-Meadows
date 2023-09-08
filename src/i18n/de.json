@@ -1,5 +1,20 @@
 {
   "about": "Über mich",
-  "home-slogan": "Ich mache Webseiten. Verdammt hübsche Websiten.",
-  "home-slogan2": "Das ist, was ich tue."
+  "home_slogan": "Ich mache Webseiten. Verdammt hübsche Websiten.",
+  "home_slogan2": "Das ist, was ich tue.",
+  "development_and_design": "Web-Entwicklung & Design.",
+  "liat_meadows": "Liat Meadows",
+  "about_development": "Entwicklung",
+  "about_design": "Design",
+  "about_about": "Über mich",
+  "about_para_1_1": "Hallo, schön Sie kennenzulernen. Mein Name ist Liat.\n",
+  "about_para_1_1_1": "Ich bin eine erfahrene Web- und Mobile-App-Entwickler mit einem starken Fokus auf ",
+  "about_para_1_2": "React Native",
+  "about_para_1_3": " uns React. Als UI/UX-Spezialistin bringe ich mehrjährige Berufserfahrung im Design mit. In Anbetracht meines Hintergrunds, ist es klar weshalb ich CSS liebe und es mir genieße, viel Liebe und Sorgfalt in die Details zu stecken.",
+  "about_para_2_1": "Meine Reise durch Technologieteams hat in mir den Wunsch geweckt, meinem Design eine technische Perspektive zu geben. In den letzten Jahren arbeitete ich für VMZ Berlin mbH Operators als Frontend-Mobile-Entwickler, wo ich innovative Transportanwendungen in React Native implementierte und dieses plattformübergreifende Framework sehr schätzte.",
+  "about_para_3_1": "Ich erstelle Websites vom Prototyp bis zur Produktion. Erstellen von Skizzen und Entwickeln interaktiver, innovativer Lösungen mit einem starken Schwerpunkt auf ",
+  "about_para_3_2": "Benutzererfahrung.",
+  "about_para_4_1": "Ich freue mich auf unsere Zusammenarbeit.",
+  "development_my_development_projects": "Meine Entwicklungs-Projekte",
+  "design_my_design_projects": "Meine Design-Projekte"
 }

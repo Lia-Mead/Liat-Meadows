@@ -1,5 +1,38 @@
-/* .con {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-} */
+.home {
+  .stage {
+    padding: 3% 5%;
+    width: 100vw;
+    background-color: #e2e2e2;
+  }
+
+  .brush-text {
+    margin: 10px 0px 10px 20px;
+  }
+
+  h3 {
+    font-weight: 300;
+    font-size: 5rem;
+  }
+
+  .about-container {
+    .box {
+      padding-bottom: 80px;
+    }
+    // .avatar {
+    //   margin-top: -150px;
+    // }
+  }
+
+  @media screen and (max-width: 850px) {
+    .home {
+      h3 {
+        font-size: 3rem;
+      }
+      .about-container {
+        .avatar {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

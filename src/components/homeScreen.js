@@ -5,6 +5,7 @@ import Design from './design';
 import About from './about';
 import { devProjects } from '../data/dev-projects';
 import { designProjects } from '../data/design-projects';
+import '../styles/homeScreen.scss';
 
 const HomeScreen = () => {
   const { t, i18n } = useTranslation();

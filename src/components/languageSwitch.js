@@ -10,7 +10,7 @@ const LanguageSwitch = ({ setIsHebrew }) => {
   };
 
   return (
-    <div>
+    <div className="lang-box">
       <button
         className="lang-btn"
         onClick={() => {

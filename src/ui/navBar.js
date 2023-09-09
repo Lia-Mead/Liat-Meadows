@@ -12,8 +12,8 @@ import {
   // NavBtnLink,
 } from '../components/navElements';
 
-const Navbar = ({ t }) => {
-  const [isHebrew, setIsHebrew] = useState(false);
+const Navbar = ({ t, setIsHebrew, isHebrew }) => {
+  // const [isHebrew, setIsHebrew] = useState(false);
   // const { t, i18n } = useTranslation();
   // const isHebrew = i18n.language === 'he';
   //   const scrollToTop = () => {
@@ -27,7 +27,7 @@ const Navbar = ({ t }) => {
     // <div className={`nav-con ${isHebrew ? 'rtl-text' : 'ltr-text'}`}>
     <div className="nav-con">
       <Nav className="nav">
-        <div className="nav-menu">
+        <div className={`nav-menu ${isHebrew ? 'rtl-text' : 'ltr-text'}`}>
           <NavLink to="/development">{t('about_development')}</NavLink>
           <NavLink to="/design">{t('about_design')}</NavLink>
           <NavLink to="/about">{t('about_about')}</NavLink>
@@ -40,7 +40,8 @@ const Navbar = ({ t }) => {
 
 Navbar.propTypes = {
   t: PropTypes.func.isRequired,
-  // setIsHebrew: PropTypes.func.isRequired,
+  setIsHebrew: PropTypes.func.isRequired,
+  isHebrew: PropTypes.bool.isRequired,
 };
 
 export default withTranslation()(Navbar);

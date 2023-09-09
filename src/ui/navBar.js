@@ -30,7 +30,10 @@ const Navbar = ({ t, setIsHebrew, isHebrew }) => {
           <NavLink to="/design">{t('about_design')}</NavLink>
           <NavLink to="/about">{t('about_about')}</NavLink>
         </div>
-        <LanguageSwitch setIsHebrew={setIsHebrew} />
+        <LanguageSwitch
+          setIsHebrew={setIsHebrew}
+          // handleLanguageChange={handleLanguageChange}
+        />
       </Nav>
     </div>
   );
@@ -38,6 +41,7 @@ const Navbar = ({ t, setIsHebrew, isHebrew }) => {
 
 Navbar.propTypes = {
   t: PropTypes.func.isRequired,
+  // handleLanguageChange: PropTypes.func,
   setIsHebrew: PropTypes.func.isRequired,
   isHebrew: PropTypes.bool.isRequired,
 };

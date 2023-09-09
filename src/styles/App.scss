@@ -61,7 +61,7 @@ p {
 }
 
 .link {
-  text-decoration: none;
+  // text-decoration: none;
   color: #2c3e50;
 }
 
@@ -166,7 +166,8 @@ p {
 }
 
 .highlight {
-  color: #1abc9c;
+  // color: #61dafb;
+  color: #007bff;
 }
 
 .cards-box {
@@ -181,7 +182,6 @@ p {
 .gallery-con {
   display: flex;
   width: 700px;
-  width: 100%;
   height: 450px;
   border-radius: 0.25rem;
   flex-direction: column;
@@ -233,6 +233,21 @@ p {
   &:active {
     background-color: #16a085;
   }
+}
+
+.top {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #e2e2e2;
+  background-color: #16a085;
+  position: absolute;
+  right: 20px;
+  bottom: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
 }
 
 .text-box {
@@ -404,6 +419,10 @@ p {
 
 .design-con {
   height: 100%;
+
+  h2 {
+    margin: 10px 40px 20px 0px;
+  }
   .column {
     background-color: #d7d7d7;
     flex-direction: column;
@@ -432,6 +451,10 @@ p {
     .text {
       max-width: 80%;
     }
+  }
+
+  h2 > a {
+    text-decoration: underline;
   }
 
   p {
@@ -473,6 +496,10 @@ p {
   .icon {
     padding: 0;
     width: 80px;
+  }
+
+  .highlight {
+    color: #61dafb;
   }
 }
 

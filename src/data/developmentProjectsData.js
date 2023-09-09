@@ -19,9 +19,8 @@ import userchi2 from '../assets/images/userchi2.jpg';
 export const getDevelopmentProjects = (t) => {
   return [
     {
-      title: 'USER-CHI',
-      description:
-        'Frontend for a react native app for charging electric vehicles, as a part of my work at VMZ Berlin',
+      title: t('card_project_name_userchi'),
+      description: t('card_description_userchi'),
       image1: userchi1,
       image2: userchi2,
       gif: '',
@@ -31,9 +30,8 @@ export const getDevelopmentProjects = (t) => {
       published: true,
     },
     {
-      title: 'All that Jazz',
-      description:
-        'My one-week final project from the course at Spiced Academy',
+      title: t('card_project_name_jazz'),
+      description: t('card_description_jazz'),
       image1: allThatJazzImage2,
       image2: allThatJazzImage1,
       gif: allThatJazzGif,
@@ -43,9 +41,8 @@ export const getDevelopmentProjects = (t) => {
       published: false,
     },
     {
-      title: 'Epic Time',
-      description:
-        'A Social network for 90s lovers for contacts and some nostalgia chats',
+      title: t('card_project_name_epic'),
+      description: t('card_description_epic'),
       image1: epicTimeImage1,
       image2: epicTimeImage2,
       image3: epicTimeImage3,
@@ -56,9 +53,8 @@ export const getDevelopmentProjects = (t) => {
       published: false,
     },
     {
-      title: 'Mureal',
-      description:
-        'An image oriented platform dedicated to street art and murals',
+      title: t('card_project_name_mureal'),
+      description: t('card_description_mureal'),
       image1: murealImage,
       gif: murealGif,
       url: 'https://github.com/Lia-Mead/mureal',
@@ -67,8 +63,8 @@ export const getDevelopmentProjects = (t) => {
       published: false,
     },
     {
-      title: 'Searchify',
-      description: 'Search your artists and albums with the spotify API',
+      title: t('card_project_name_searchify'),
+      description: t('card_description_searchify'),
       image1: searchifyImage,
       gif: searchifyGif,
       url: 'https://searchify-alpha.vercel.app',
@@ -77,9 +73,8 @@ export const getDevelopmentProjects = (t) => {
       published: true,
     },
     {
-      title: 'Stop the Stomp',
-      description:
-        'Petition project for collecting e-signatures against stomping neighbors',
+      title: t('card_project_name_petition'),
+      description: t('card_description_petition'),
       image1: stopImage,
       gif: stopGif,
       url: 'https://stop-the-stomp.vercel.app/',
@@ -88,9 +83,8 @@ export const getDevelopmentProjects = (t) => {
       published: false,
     },
     {
-      title: 'Connect Four',
-      description:
-        'Connect Four game retro style. Match four diagonal avatars and win the round',
+      title: t('card_project_connect'),
+      description: t('card_description_connect'),
       image1: connectImage,
       gif: connectGif,
       url: 'https://connect-four-retro.vercel.app',

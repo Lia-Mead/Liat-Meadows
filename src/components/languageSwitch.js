@@ -16,6 +16,7 @@ const LanguageSwitch = ({ setIsHebrew }) => {
         onClick={() => {
           changeLanguage('en');
           setIsHebrew(false);
+          // handleLanguageChange('en');
         }}
       >
         English
@@ -25,6 +26,7 @@ const LanguageSwitch = ({ setIsHebrew }) => {
         onClick={() => {
           changeLanguage('de');
           setIsHebrew(false);
+          // handleLanguageChange('de');
         }}
       >
         Deutsch
@@ -34,6 +36,7 @@ const LanguageSwitch = ({ setIsHebrew }) => {
         onClick={() => {
           changeLanguage('he');
           setIsHebrew(true);
+          // handleLanguageChange('he');
         }}
       >
         עברית
@@ -44,6 +47,7 @@ const LanguageSwitch = ({ setIsHebrew }) => {
 
 LanguageSwitch.propTypes = {
   setIsHebrew: PropTypes.func.isRequired,
+  // handleLanguageChange: PropTypes.func,
 };
 
 export default LanguageSwitch;

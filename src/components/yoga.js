@@ -5,11 +5,7 @@ const Yoga = () => {
     <div className="about-container">
       <div className="box">
         <div className="text-box">
-          <h2>
-            <a className="highlight" href="#about">
-              Yoga
-            </a>
-          </h2>
+          <h2>Yoga</h2>
 
           <p>
             <strong className="highlight">yoga</strong>.

@@ -12,7 +12,12 @@ import Logo from '../components/logo';
 
 import { Link } from 'react-router-dom';
 
-export default function Header({ t, setIsHebrew, isHebrew }) {
+export default function Header({
+  t,
+  setIsHebrew,
+  isHebrew,
+  // handleLanguageChange,
+}) {
   const [burgerOpen, setBurgerOpen] = useState(false);
   const [mQuery, setMQuery] = useState();
   const [screenSize, setScreenSize] = useState(window.innerWidth);
@@ -71,7 +76,12 @@ export default function Header({ t, setIsHebrew, isHebrew }) {
           {screenSize < 900 || mQuery ? (
             <img onClick={toggleBurgerMenu} className="navbar-icon" src={src} />
           ) : (
-            <NavBar t={t} setIsHebrew={setIsHebrew} isHebrew={isHebrew} />
+            <NavBar
+              t={t}
+              setIsHebrew={setIsHebrew}
+              isHebrew={isHebrew}
+              // handleLanguageChange={handleLanguageChange}
+            />
           )}
         </div>
 
@@ -96,4 +106,5 @@ Header.propTypes = {
   t: PropTypes.func.isRequired,
   setIsHebrew: PropTypes.func.isRequired,
   isHebrew: PropTypes.bool.isRequired,
+  // handleLanguageChange: PropTypes.func,
 };

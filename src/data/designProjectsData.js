@@ -22,9 +22,8 @@ import Ziegert4 from '../assets/images/ziegert4.jpg';
 export const getDesignProjects = (t) => {
   return [
     {
-      title: t('project_name_ziegert'),
-      description:
-        'Web design for Ziegert Real Estate Agency and Financial Consulting Services in Berlin. I designed a fully responsive website to allow finding the right property with ease and preciseness. designed in 2020',
+      title: t('card_project_name_ziegert'),
+      description: t('card_description_ziegert'),
       image1: Ziegert1,
       image2: Ziegert2,
       image3: Ziegert3,
@@ -35,9 +34,8 @@ export const getDesignProjects = (t) => {
       isWideCard: true,
     },
     {
-      title: 'Flamingo Generation',
-      description:
-        "My Bachelor's thesis at ifog Akademie. The Flamingo Generation is the youth of today, walking around with heads bent over smartphones. This is a project about growing up in the digital era and its influences on juveniles and our society in general.",
+      title: t('card_project_name_flamingo'),
+      description: t('card_description_flamingo'),
       image1: flamingoBook,
       image2: flamingoWeb,
       image3: flamingoPhone,
@@ -49,9 +47,8 @@ export const getDesignProjects = (t) => {
       published: true,
     },
     {
-      title: 'Les Voyageurs',
-      description:
-        'Corporate design for a Munich, Germany based passionate tour guide. The goal was to develop a Brand Identity which reflects the spirit of the services he offers: authentic and adventurous traveling and exploring.',
+      title: t('card_project_name_les_voyageurs'),
+      description: t('card_description_les'),
       image1: lvComp,
       image2: lvIllu,
       url: 'https://www.behance.net/gallery/24510341/Les-Voyageurs',
@@ -61,9 +58,8 @@ export const getDesignProjects = (t) => {
       published: true,
     },
     {
-      title: 'A Fine Corner',
-      description:
-        'Show Giesing (a neighbourhood in Munich) in a new light. I chose to concentrate literally on corners and that is what came up.',
+      title: t('card_project_name_fine_corner'),
+      description: t('card_description_fine'),
       image1: fcWindow,
       image2: fcTitle,
       image3: fcPages,
@@ -76,9 +72,8 @@ export const getDesignProjects = (t) => {
       published: true,
     },
     {
-      title: 'Simply Legendary',
-      description:
-        'World famous little red riding hood is turning into little red riding helmet. I was participating in a creative competition for Segway and won an award for this work (one from six best works).',
+      title: t('card_project_name_simply'),
+      description: t('card_description_simply'),
       image1: legendaryPoster,
       image2: legendaryWoods,
       image3: legendaryPWolf,

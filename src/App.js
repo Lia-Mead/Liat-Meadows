@@ -14,11 +14,19 @@ import Footer from './ui/footer';
 import Design from './components/design';
 import Development from './components/development';
 import ProjectDetails from './components/projectDetails';
+import ScrollToTopOnPageChange from './components/scrollToTopOnPageChange';
+import useLanguage from './components/LanguageContext';
 import './styles/App.scss';
 
 function App() {
   const { t } = useTranslation();
   const [isHebrew, setIsHebrew] = useState(false);
+
+  // const { language, setLanguage } = useLanguage();
+
+  // const handleLanguageChange = (newLanguage) => {
+  //   setLanguage(newLanguage);
+  // };
 
   useEffect(() => {
     if (i18n.language === 'he') {
@@ -40,14 +48,20 @@ function App() {
 
     changeLanguage(userLanguage);
 
-    // TODO save in cookie
+    // TODO save in cookie local storage
   }, []);
 
   return (
     <I18nextProvider i18n={i18n}>
       <LanguageProvider>
         <Router>
-          <Header t={t} isHebrew={isHebrew} setIsHebrew={setIsHebrew} />
+          <ScrollToTopOnPageChange history={history} />
+          <Header
+            t={t}
+            isHebrew={isHebrew}
+            setIsHebrew={setIsHebrew}
+            // handleLanguageChange={handleLanguageChange}
+          />
           <div className="main">
             <Switch>
               <Route path="/" exact component={HomeScreen} />

@@ -20,9 +20,7 @@ const About = () => {
     >
       <div className="box">
         <h2>
-          <a href="#about" className="highlight">
-            {t('about')}
-          </a>
+          <a href="#about">{t('about')}</a>
         </h2>
         <div className="text-box">
           <div className="text-con">

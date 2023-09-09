@@ -3,22 +3,20 @@ import { Link } from 'react-router-dom';
 import { withTranslation } from 'react-i18next';
 import { useTranslation } from 'react-i18next';
 
-// import { getDesignProjects } from '../data/design-projects'; // Adjust the import path
-
 import OpenGallery from './openGallery';
 
 const ProjectDetails = ({ location, isButtonActive = true }) => {
   const { title, description, stack, url, photos, published } = location.state;
-  const { t } = useTranslation();
-  // const designProjects = getDesignProjects(t);
+  const { t, i18n } = useTranslation();
+  const isHebrew = i18n.language === 'he';
 
   return (
     <>
-      <div className="detail-con">
+      <div className={`detail-con ${isHebrew ? 'rtl-text' : 'ltr-text'}`}>
         <div className="box">
           <h2>
             <Link to="/development" className="link">
-              Projects
+              {t('detail_project_title_link')}
             </Link>
             <span className="highlight"> / {title}</span>
           </h2>
@@ -44,7 +42,9 @@ const ProjectDetails = ({ location, isButtonActive = true }) => {
                     }
                   }}
                 >
-                  {published ? 'even more' : 'to git hub'}
+                  {published
+                    ? t('project_button_even_more')
+                    : t('project_button_git')}
                 </button>
               )}
             </div>

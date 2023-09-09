@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 
 import { v4 as uuidv4 } from 'uuid';
 
 import ProjectCard from '../components/ProjectCard/projectCard';
 import ProjectDetails from '../components/projectDetails';
+import { getDesignProjects } from '../data/design-projects';
 
 const Card = ({ projectArray }) => {
+  const { t, i18n } = useTranslation();
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
@@ -30,7 +33,7 @@ const Card = ({ projectArray }) => {
           slug: project.slug,
           description: project.description,
           stack: project.stack,
-          buttonText: 'More',
+          buttonText: t('card_button'),
           url: project.url,
           published: project.published,
           isWideCard: project.isWideCard,

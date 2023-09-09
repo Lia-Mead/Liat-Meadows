@@ -8,7 +8,7 @@
   "about_design": "Design",
   "about_about": "Über mich",
   "about_para_1_1": "Hallo, schön Sie kennenzulernen. Mein Name ist Liat.\n",
-  "about_para_1_1_1": "Ich bin eine erfahrene Web- und Mobile-App-Entwickler mit einem starken Fokus auf ",
+  "about_para_1_1_1": "Ich bin eine erfahrene Web- und Mobile-App-Entwickler, spezialisiert im Bereich Frontend mit einem starken Fokus auf ",
   "about_para_1_2": "React Native",
   "about_para_1_3": " uns React. Als UI/UX-Spezialistin bringe ich mehrjährige Berufserfahrung im Design mit. In Anbetracht meines Hintergrunds, ist es klar weshalb ich CSS liebe und es mir genieße, viel Liebe und Sorgfalt in die Details zu stecken.",
   "about_para_2_1": "Meine Reise durch Technologieteams hat in mir den Wunsch geweckt, meinem Design eine technische Perspektive zu geben. In den letzten Jahren arbeitete ich für VMZ Berlin mbH Operators als Frontend-Mobile-Entwickler, wo ich innovative Transportanwendungen in React Native implementierte und dieses plattformübergreifende Framework sehr schätzte.",
@@ -16,5 +16,8 @@
   "about_para_3_2": "Benutzererfahrung.",
   "about_para_4_1": "Ich freue mich auf unsere Zusammenarbeit.",
   "development_my_development_projects": "Meine Entwicklungs-Projekte",
-  "design_my_design_projects": "Meine Design-Projekte"
+  "design_my_design_projects": "Meine Design-Projekte",
+  "project_stack": "Stack",
+  "project_name_ziegert": "ZIEGERT Immobilien",
+  "card_button": "Mehr"
 }

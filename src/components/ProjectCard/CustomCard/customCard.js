@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import styles from './styles.module.scss';
 
-const Card = ({ className, float, children, ...rest }) => {
+const CustomCard = ({ className, float, children, ...rest }) => {
   return (
     <div
       className={classnames(
@@ -20,10 +20,10 @@ const Card = ({ className, float, children, ...rest }) => {
   );
 };
 
-Card.propTypes = {
+CustomCard.propTypes = {
   className: PropTypes.string,
   float: PropTypes.bool,
   children: PropTypes.node,
 };
 
-export default Card;
+export default CustomCard;

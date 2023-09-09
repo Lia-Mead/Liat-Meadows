@@ -3,14 +3,20 @@ import { useTranslation } from 'react-i18next';
 import Development from './development';
 import Design from './design';
 import About from './about';
-import { devProjects } from '../data/dev-projects';
-import { designProjects } from '../data/design-projects';
+// import { devProjects } from '../data/dev-projects';
+// import { designProjects } from '../data/design-projects';
+import { getDesignProjects } from '../data/designProjectsData';
+import { getDevelopmentProjects } from '../data/developmentProjectsData';
+
 import '../styles/homeScreen.scss';
 
 const HomeScreen = () => {
   const { t, i18n } = useTranslation();
   const isHebrew = i18n.language === 'he';
   const isGerman = i18n.language === 'de';
+
+  const designProjects = getDesignProjects(t);
+  const devProjects = getDevelopmentProjects(t);
 
   const brushStyle = () => {
     if (isHebrew) {

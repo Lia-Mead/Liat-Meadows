@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { withTranslation } from 'react-i18next';
 
@@ -13,7 +12,6 @@ import {
 } from '../components/navElements';
 
 const Navbar = ({ t, setIsHebrew, isHebrew }) => {
-  // const [isHebrew, setIsHebrew] = useState(false);
   // const { t, i18n } = useTranslation();
   // const isHebrew = i18n.language === 'he';
   //   const scrollToTop = () => {

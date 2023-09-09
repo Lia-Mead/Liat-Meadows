@@ -6,12 +6,16 @@ import { useLanguage } from '../components/LanguageContext';
 
 import Card from '../ui/card';
 
-import { designProjects } from '../data/design-projects';
+import { getDesignProjects } from '../data/designProjectsData';
+// import { getDesignProjects } from '../data/design-projects'; // Adjust the import path
+// import { designProjects } from '../data/design-projects';
 
 const Design = () => {
   // const { isHebrew } = useLanguage();
   const { t, i18n } = useTranslation();
   const isHebrew = i18n.language === 'he';
+
+  const designProjects = getDesignProjects(t);
 
   return (
     <div

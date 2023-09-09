@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
 
-import Card from './Card/card';
+import CustomCard from './CustomCard/customCard';
 import ProjectCardDescription from '../ProjectCardDescription/projectCardDescription';
 import ProjectCardGallery from '../ProjectCardGallery/projectCardGallery';
 
@@ -21,7 +21,7 @@ const ProjectCard = ({
   isWideCard,
   ...rest
 }) => (
-  <Card
+  <CustomCard
     className={cx(
       styles[isWideCard ? 'product-card-wide' : 'product-card'],
       className
@@ -40,7 +40,7 @@ const ProjectCard = ({
       published={published}
       isWideCard={isWideCard}
     />
-  </Card>
+  </CustomCard>
 );
 
 ProjectCard.propTypes = {

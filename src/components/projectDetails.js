@@ -1,10 +1,16 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { withTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
+
+// import { getDesignProjects } from '../data/design-projects'; // Adjust the import path
 
 import OpenGallery from './openGallery';
 
 const ProjectDetails = ({ location, isButtonActive = true }) => {
   const { title, description, stack, url, photos, published } = location.state;
+  const { t } = useTranslation();
+  // const designProjects = getDesignProjects(t);
 
   return (
     <>
@@ -21,7 +27,7 @@ const ProjectDetails = ({ location, isButtonActive = true }) => {
             <div className="text">
               <p>{description}</p>
               <p>
-                <span className="highlight">Stack: </span>
+                <span className="highlight">{t('project_stack')}: </span>
                 {stack}
               </p>
             </div>
@@ -50,6 +56,7 @@ const ProjectDetails = ({ location, isButtonActive = true }) => {
 };
 
 ProjectDetails.propTypes = {
+  t: PropTypes.func.isRequired,
   buttonText: PropTypes.string,
   className: PropTypes.string,
   isButtonActive: PropTypes.bool,
@@ -59,4 +66,4 @@ ProjectDetails.propTypes = {
   }),
 };
 
-export default ProjectDetails;
+export default withTranslation()(ProjectDetails);

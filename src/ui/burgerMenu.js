@@ -40,7 +40,7 @@ export default function BurgerMenu({
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, []);
+  }, [setBurgerOpen]);
 
   return (
     <nav

@@ -30,11 +30,17 @@ function App() {
 
   // const isHebrew = i18n.language === 'he';
 
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
   useEffect(() => {
     const userLanguage = window.navigator.language;
     console.log("User's browser language:", userLanguage);
 
-    // You can use the userLanguage value to set your application's language or perform other actions based on it.
+    changeLanguage(userLanguage);
+
+    // TODO save in cookie
   }, []);
 
   return (

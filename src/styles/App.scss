@@ -8,10 +8,6 @@ body {
   color: #2c3e50;
 }
 
-// html {
-//   scroll-behavior: smooth;
-// }
-
 #root {
   display: flex;
   flex-direction: column;
@@ -48,7 +44,6 @@ h2 > a {
   font-weight: 300;
   margin: 40px 0px 20px 0px;
   width: 80%;
-  // color: #fff;
   text-decoration: none;
 }
 
@@ -112,7 +107,7 @@ p {
 .app-logo {
   width: 60px;
   padding: 7px;
-  margin-left: 5px;
+  margin-left: 15px;
   cursor: pointer;
   z-index: 300;
 }
@@ -245,6 +240,7 @@ p {
   text-transform: uppercase;
   letter-spacing: 3px;
   color: #000000;
+  background-color: #ffffff;
   border: 2px solid black;
   border-radius: 0.25rem;
   transition: 0.25s;
@@ -531,6 +527,12 @@ p {
 }
 
 @media screen and (max-width: 850px) {
+  .home {
+    .animate-character {
+      font-size: 40px;
+      line-height: 1.5;
+    }
+  }
   .con {
     flex-direction: row;
   }
@@ -546,18 +548,6 @@ p {
       margin-top: 10px;
     }
   }
-
-  // .home {
-
-  //   h3 {
-  //     font-size: 3rem;
-  //   }
-  //   .about-container {
-  //     .avatar {
-  //       margin: 0;
-  //     }
-  //   }
-  // }
 
   .about-container {
     .box {

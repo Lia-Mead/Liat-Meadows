@@ -7,7 +7,7 @@ import About from './about';
 import { getDesignProjects } from '../data/designProjectsData';
 import { getDevelopmentProjects } from '../data/developmentProjectsData';
 import '../styles/homeScreen.scss';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 const HomeScreen = ({ toTop }) => {
   const { t, i18n } = useTranslation();

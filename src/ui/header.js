@@ -16,7 +16,6 @@ export default function Header({
   t,
   setIsHebrew,
   isHebrew,
-  scrollToTop,
   toTop,
   // handleLanguageChange,
 }) {
@@ -69,7 +68,7 @@ export default function Header({
   return (
     <>
       <header className="header">
-        <Link to="/" onClick={scrollToTop}>
+        <Link to="/" onClick={toTop}>
           <Logo />
           {/* <Logo onClick={toggleBurgerMenu} /> */}
         </Link>
@@ -83,7 +82,6 @@ export default function Header({
               t={t}
               setIsHebrew={setIsHebrew}
               isHebrew={isHebrew}
-              scrollToTop={scrollToTop}
               toTop={toTop}
               // handleLanguageChange={handleLanguageChange}
             />
@@ -110,7 +108,6 @@ export default function Header({
 Header.propTypes = {
   t: PropTypes.func.isRequired,
   setIsHebrew: PropTypes.func.isRequired,
-  scrollToTop: PropTypes.func,
   toTop: PropTypes.func,
   isHebrew: PropTypes.bool.isRequired,
   // handleLanguageChange: PropTypes.func,

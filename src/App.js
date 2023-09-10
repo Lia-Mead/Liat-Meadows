@@ -23,7 +23,7 @@ import Footer from './ui/footer';
 import Design from './components/design';
 import Development from './components/development';
 import ProjectDetails from './components/projectDetails';
-import ScrollToTopOnPageChange from './components/scrollToTopOnPageChange';
+// import ScrollToTopOnPageChange from './components/scrollToTopOnPageChange';
 import useLanguage from './components/LanguageContext';
 // import ScrollToTop from './components/scrollToTop';
 import './styles/App.scss';
@@ -40,13 +40,13 @@ function App() {
   //   setScrollTop(event.currentTarget.scrollTop);
   // };
 
-  if (process.env.NODE_ENV === 'production') {
-    // Code to run in production environment
-    console.log('prod');
-  } else {
-    // Code to run in development environment
-    console.log('dev');
-  }
+  // if (process.env.NODE_ENV === 'production') {
+  //   // Code to run in production environment
+  //   console.log('prod');
+  // } else {
+  //   // Code to run in development environment
+  //   console.log('dev');
+  // }
 
   // accessibility axe
   // if (process.env.NODE_ENV === 'development') {
@@ -91,13 +91,6 @@ function App() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  const toTop = () => {
-    const container = document.getElementById('container');
-    if (container) {
-      container.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  };
 
   // useEffect(() => {
   //   console.log('new');
@@ -153,22 +146,30 @@ function App() {
 
   const history = useHistory();
 
-  // Scroll to the top whenever a link is clicked
-  const scrollToTop = () => {
-    window.scrollTo(0, 0);
+  const toTop = () => {
+    console.log('toTop');
+    const container = document.getElementById('container');
+    if (container) {
+      container.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
+
+  // Scroll to the top whenever a link is clicked
+  // const scrollToTop = () => {
+  //   console.log('scrollToTop');
+  //   window.scrollTo(0, 0);
+  // };
 
   return (
     <I18nextProvider i18n={i18n}>
       <LanguageProvider>
         <Router>
-          <ScrollToTopOnPageChange history={history} />
-          {/* <ScrollToTopOnPageChange /> */}
+          {/* <ScrollToTopOnPageChange history={history} /> */}
           <Header
             t={t}
             isHebrew={isHebrew}
             setIsHebrew={setIsHebrew}
-            scrollToTop={scrollToTop}
+            // scrollToTop={scrollToTop}
             toTop={toTop}
             // handleLanguageChange={handleLanguageChange}
           />

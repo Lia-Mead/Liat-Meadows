@@ -14,12 +14,6 @@ import {
 const Navbar = ({ t, setIsHebrew, isHebrew, scrollToTop, toTop }) => {
   // const { t, i18n } = useTranslation();
   // const isHebrew = i18n.language === 'he';
-  //   const scrollToTop = () => {
-  //     window.scrollTo({
-  //       top: 0,
-  //       behavior: 'smooth',
-  //     });
-  //   };
 
   return (
     // <div className={`nav-con ${isHebrew ? 'rtl-text' : 'ltr-text'}`}>

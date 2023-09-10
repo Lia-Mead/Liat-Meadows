@@ -12,7 +12,7 @@ import PropTypes from 'prop-types';
 import i18n from './i18n/i18n';
 import { LanguageProvider } from './components/LanguageContext';
 import { useTranslation } from 'react-i18next';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 
 import axe from 'react-axe';
 
@@ -24,7 +24,7 @@ import Design from './components/design';
 import Development from './components/development';
 import ProjectDetails from './components/projectDetails';
 // import ScrollToTopOnPageChange from './components/scrollToTopOnPageChange';
-import useLanguage from './components/LanguageContext';
+// import useLanguage from './components/LanguageContext';
 // import ScrollToTop from './components/scrollToTop';
 import './styles/App.scss';
 
@@ -53,10 +53,10 @@ function App() {
   //   axe(React, ReactDOM, 1000); // Configure and initialize the package
   // }
 
-  // const { language, setLanguage } = useLanguage();
+  // const { userLanguage, setUserLanguage } = useLanguage();
 
   // const handleLanguageChange = (newLanguage) => {
-  //   setLanguage(newLanguage);
+  //   setUserLanguage(newLanguage);
   // };
 
   useEffect(() => {
@@ -65,22 +65,41 @@ function App() {
     } else {
       setIsHebrew(false);
     }
-  }, [setIsHebrew]);
+  }, []);
+  // }, [setIsHebrew]);
+
+  // useEffect(() => {
+  //   const savedLanguage = localStorage.getItem('selectedLanguage');
+
+  //   if (savedLanguage) {
+  //     i18n.changeLanguage(savedLanguage);
+  //   }
+  // }, []);
 
   // const isHebrew = i18n.language === 'he';
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
+  // const changeLanguage = (lng) => {
+  //   i18n.changeLanguage(lng);
+  // };
 
-  useEffect(() => {
-    const userLanguage = window.navigator.language;
-    console.log("User's browser language:", userLanguage);
+  // const handleLanguageChange = (newLanguage) => {
+  //   i18n.changeLanguage(newLanguage);
 
-    changeLanguage(userLanguage);
+  //   saveLanguageToLocalStorage(newLanguage);
+  // };
 
-    // TODO save in cookie local storage
-  }, []);
+  // const saveLanguageToLocalStorage = (language) => {
+  //   localStorage.setItem('selectedLanguage', language);
+  // };
+
+  // useEffect(() => {
+  //   const userLanguage = window.navigator.language;
+  //   console.log("User's browser language:", userLanguage);
+
+  //   handleLanguageChange(userLanguage);
+
+  //   // TODO save in cookie local storage
+  // }, []);
 
   useEffect(() => {
     console.log('useEffect window', window);
@@ -120,20 +139,6 @@ function App() {
     });
   };
 
-  // const [scrollPosition, setSrollPosition] = useState(0);
-  // const handleScroll3 = () => {
-  //   const position = window.scrollY;
-  //   setSrollPosition(position);
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll3, { passive: true });
-
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll3);
-  //   };
-  // }, []);
-
   // useEffect(() => {
   //   window.addEventListener('scroll', () => {
   //     if (window.scrollY > 400) {
@@ -144,14 +149,12 @@ function App() {
   //   });
   // }, []);
 
-  const history = useHistory();
+  // const history = useHistory();
 
   const toTop = () => {
-    // console.log('toTop');
     const container = document.getElementById('container');
     if (container) {
       container.scrollTo({ top: 0, behavior: 'smooth', overflowx: 'auto' });
-      // container.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 

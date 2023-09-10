@@ -12,28 +12,17 @@ import { useEffect } from 'react';
 const HomeScreen = ({ toTop }) => {
   const { t, i18n } = useTranslation();
   const isHebrew = i18n.language === 'he';
-  const isGerman = i18n.language === 'de';
 
   const designProjects = getDesignProjects(t);
   const devProjects = getDevelopmentProjects(t);
-
-  const brushStyle = () => {
-    if (isHebrew) {
-      return 'brush brush-he';
-    } else if (isGerman) {
-      return 'brush brush-de';
-    }
-    return 'brush';
-  };
 
   return (
     <div id="home" className={`con home ${isHebrew ? 'rtl-text' : 'ltr-text'}`}>
       <div className="stage">
         <h1>{t('liat_meadows')}</h1>
-        <div className={brushStyle()}>
-          <h2 className="brush-text">{t('development_and_design')}</h2>
-        </div>
-        <h3>
+
+        <h2>{t('development_and_design')}</h2>
+        <h3 className="animate-character">
           {t('home_slogan')} <br />
           {t('home_slogan2')}
         </h3>

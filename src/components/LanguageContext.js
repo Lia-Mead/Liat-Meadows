@@ -34,9 +34,9 @@ import PropTypes from 'prop-types';
 const LanguageContext = createContext();
 
 // Create a custom hook to access the language context
-export const useLanguage = () => {
-  return useContext(LanguageContext);
-};
+// export const useLanguage = () => {
+//   return useContext(LanguageContext);
+// };
 
 // Create the LanguageProvider component
 export const LanguageProvider = ({ children }) => {

@@ -40,9 +40,6 @@
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 3px;
-  // color: #ecf0f1;
-  // background-color: #007bff;
-  // border: 1px transparent;
 
   border-radius: 0.25rem;
   transition: 0.25s;
@@ -54,9 +51,9 @@
   &:hover,
   &:focus,
   &:active {
-    // background-color: #07192d;
-    background-color: #007bff80;
-    // background-color: #007bff90;
+    // background-color: #007bff80;
+    background: linear-gradient(287deg, #3cb371, #0fa7ee);
+    border-color: transparent;
   }
 }
 

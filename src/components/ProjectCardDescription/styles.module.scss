@@ -40,18 +40,23 @@
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #ecf0f1;
-  background-color: #0fa7ee;
-  // background-color: #1abc9c;
+  // color: #ecf0f1;
+  // background-color: #007bff;
+  // border: 1px transparent;
+
   border-radius: 0.25rem;
-  border: 1px transparent;
   transition: 0.25s;
+  font-weight: 600;
+
+  color: #000000;
+  border: 2px solid black;
 
   &:hover,
   &:focus,
   &:active {
-    background-color: #007bff90;
-    // background-color: #16a085;
+    // background-color: #07192d;
+    background-color: #007bff80;
+    // background-color: #007bff90;
   }
 }
 

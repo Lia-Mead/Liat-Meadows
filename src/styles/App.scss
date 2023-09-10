@@ -219,10 +219,12 @@ p {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #ecf0f1;
-  background-color: #1abc9c;
+  color: #000000;
+  border: 2px solid black;
+  // color: #ecf0f1;
+  // border: 1px transparent;
+  // background-color: #1abc9c;
   border-radius: 0.25rem;
-  border: 1px transparent;
   transition: 0.25s;
   width: 210px;
   align-self: center;
@@ -231,7 +233,7 @@ p {
   &:hover,
   &:focus,
   &:active {
-    background-color: #16a085;
+    background-color: #007bff80;
   }
 }
 
@@ -239,15 +241,17 @@ p {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  color: #e2e2e2;
-  background-color: #16a085;
+  // color: #e2e2e2;
+  color: #000000;
+  background-color: #ffffff;
+  // background-color: #16a085;
   position: absolute;
   right: 20px;
   bottom: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid;
+  border: 1px solid #261e1e;
 }
 
 .text-box {

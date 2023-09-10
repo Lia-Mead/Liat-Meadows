@@ -6,6 +6,9 @@ import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n/i18n';
 import { LanguageProvider } from './components/LanguageContext';
 import { useTranslation } from 'react-i18next';
+import ReactDOM from 'react-dom';
+
+import axe from 'react-axe';
 
 import HomeScreen from './components/homeScreen';
 import Header from './ui/header';
@@ -21,6 +24,18 @@ import './styles/App.scss';
 function App() {
   const { t } = useTranslation();
   const [isHebrew, setIsHebrew] = useState(false);
+
+  if (process.env.NODE_ENV === 'production') {
+    // Code to run in production environment
+    console.log('prod');
+  } else {
+    // Code to run in development environment
+    console.log('dev');
+  }
+
+  if (process.env.NODE_ENV === 'development') {
+    axe(React, ReactDOM, 1000); // Configure and initialize the package
+  }
 
   // const { language, setLanguage } = useLanguage();
 
@@ -62,7 +77,7 @@ function App() {
             setIsHebrew={setIsHebrew}
             // handleLanguageChange={handleLanguageChange}
           />
-          <div className="main">
+          <main className="main">
             <Switch>
               <Route path="/" exact component={HomeScreen} />
               <Route path="/development" component={Development} />
@@ -70,7 +85,7 @@ function App() {
               <Route path="/about" component={About} />
               <Route path="/projectDetails/:slug" component={ProjectDetails} />
             </Switch>
-          </div>
+          </main>
           <Footer />
         </Router>
       </LanguageProvider>

@@ -18,7 +18,7 @@ const Development = () => {
 
   return (
     <div
-      id="my-dev-projects"
+      // id="my-dev-projects"
       className={`development-con ${isHebrew ? 'rtl-text' : 'ltr-text'}`}
     >
       <div className="box">

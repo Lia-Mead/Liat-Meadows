@@ -3,14 +3,14 @@ body {
   margin: 0;
   height: 100vh;
   min-height: 100%;
-  overflow: hidden;
+  // overflow: hidden;
   overflow-x: hidden;
   color: #2c3e50;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+// html {
+//   scroll-behavior: smooth;
+// }
 
 #root {
   display: flex;
@@ -21,7 +21,6 @@ html {
   .main {
     height: 100%;
     overflow: scroll;
-    // padding-bottom: 80px;
     background-color: #d7d7d7;
   }
   //   .main::-webkit-scrollbar {

@@ -19,7 +19,7 @@ const Design = () => {
 
   return (
     <div
-      id="my-design-projects"
+      // id="my-design-projects"
       className={`design-con ${isHebrew ? 'rtl-text' : 'ltr-text'}`}
     >
       <div className="column">

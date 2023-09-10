@@ -8,7 +8,7 @@ import ProjectCard from '../components/ProjectCard/projectCard';
 import ProjectDetails from '../components/projectDetails';
 import { getDesignProjects } from '../data/design-projects';
 
-const Card = ({ projectArray }) => {
+const Card = ({ projectArray, toTop }) => {
   const { t, i18n } = useTranslation();
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -43,13 +43,16 @@ const Card = ({ projectArray }) => {
         return <ProjectCard key={uuidv4()} {...projectData} />;
       })}
 
-      {selectedProject && <ProjectDetails project={selectedProject} />}
+      {selectedProject && (
+        <ProjectDetails project={selectedProject} onClick={toTop} />
+      )}
     </>
   );
 };
 
 Card.propTypes = {
   projectArray: PropTypes.array.isRequired,
+  toTop: PropTypes.func,
 };
 
 export default Card;

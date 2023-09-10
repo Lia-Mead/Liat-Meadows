@@ -105,7 +105,7 @@ function App() {
   // }, []);
 
   const handleScroll = () => {
-    console.log('Scroll event detected');
+    // console.log('Scroll event detected', window.scrollY);
 
     requestAnimationFrame(() => {
       const position = window.scrollY;
@@ -147,7 +147,7 @@ function App() {
   const history = useHistory();
 
   const toTop = () => {
-    console.log('toTop');
+    // console.log('toTop');
     const container = document.getElementById('container');
     if (container) {
       container.scrollTo({ top: 0, behavior: 'smooth' });
@@ -169,11 +169,10 @@ function App() {
             t={t}
             isHebrew={isHebrew}
             setIsHebrew={setIsHebrew}
-            // scrollToTop={scrollToTop}
             toTop={toTop}
             // handleLanguageChange={handleLanguageChange}
           />
-          <main id="container" className="main" onScroll={handleScroll}>
+          <main id="container" className="main" onClick={toTop}>
             <Switch>
               <Route path="/" exact component={HomeScreen} />
               <Route path="/development" component={Development} />
@@ -181,10 +180,8 @@ function App() {
               <Route path="/about" component={About} />
               <Route path="/projectDetails/:slug" component={ProjectDetails} />
             </Switch>
-            {!isScrolled && (
+            {isScrolled && (
               <button
-                // href="#"
-                // id="back-to-top"
                 className="top"
                 onClick={() => {
                   toTop();

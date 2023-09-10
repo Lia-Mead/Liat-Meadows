@@ -9,7 +9,7 @@ import Card from '../ui/card';
 // import { devProjects } from '../data/dev-projects';
 import { getDevelopmentProjects } from '../data/developmentProjectsData';
 
-const Development = () => {
+const Development = ({ toTop }) => {
   // const { isHebrew } = useLanguage();
   const { t, i18n } = useTranslation();
   const isHebrew = i18n.language === 'he';
@@ -18,7 +18,7 @@ const Development = () => {
 
   return (
     <div
-      // id="my-dev-projects"
+      id="my-dev-projects"
       className={`development-con ${isHebrew ? 'rtl-text' : 'ltr-text'}`}
     >
       <div className="box">
@@ -28,7 +28,12 @@ const Development = () => {
           </a>
         </h2>
         <div className={'cards-box'}>
-          <Card t={t} projectArray={devProjects} isWideCard={false} />
+          <Card
+            t={t}
+            projectArray={devProjects}
+            isWideCard={false}
+            onClick={toTop}
+          />
         </div>
       </div>
     </div>
@@ -38,6 +43,7 @@ const Development = () => {
 Development.propTypes = {
   projectArray: PropTypes.array,
   isWideCard: PropTypes.bool,
+  toTop: PropTypes.func,
   t: PropTypes.func.isRequired,
 };
 

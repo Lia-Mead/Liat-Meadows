@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import PropTypes from 'prop-types';
 
 import Development from './development';
 import Design from './design';
@@ -8,7 +9,7 @@ import { getDevelopmentProjects } from '../data/developmentProjectsData';
 import '../styles/homeScreen.scss';
 import { useEffect } from 'react';
 
-const HomeScreen = () => {
+const HomeScreen = ({ toTop }) => {
   const { t, i18n } = useTranslation();
   const isHebrew = i18n.language === 'he';
   const isGerman = i18n.language === 'de';
@@ -37,11 +38,25 @@ const HomeScreen = () => {
           {t('home_slogan2')}
         </h3>
       </div>
-      <Development t={t} isHebrew={isHebrew} projectArray={devProjects} />
-      <Design t={t} isHebrew={isHebrew} projectArray={designProjects} />
-      <About t={t} isHebrew={isHebrew} />
+      <Development
+        t={t}
+        isHebrew={isHebrew}
+        projectArray={devProjects}
+        onClick={toTop}
+      />
+      <Design
+        t={t}
+        isHebrew={isHebrew}
+        projectArray={designProjects}
+        onClick={toTop}
+      />
+      <About t={t} isHebrew={isHebrew} onClick={toTop} />
     </div>
   );
+};
+
+HomeScreen.propTypes = {
+  toTop: PropTypes.func,
 };
 
 export default HomeScreen;

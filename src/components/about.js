@@ -15,7 +15,7 @@ const About = () => {
   console.log('isHebrew About', isHebrew);
   return (
     <div
-      // id="about"
+      id="about"
       className={`about-container ${isHebrew ? 'rtl-text' : 'ltr-text'}`}
     >
       <div className="box">

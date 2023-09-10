@@ -10,7 +10,7 @@ import { getDesignProjects } from '../data/designProjectsData';
 // import { getDesignProjects } from '../data/design-projects'; // Adjust the import path
 // import { designProjects } from '../data/design-projects';
 
-const Design = () => {
+const Design = ({ toTop }) => {
   // const { isHebrew } = useLanguage();
   const { t, i18n } = useTranslation();
   const isHebrew = i18n.language === 'he';
@@ -19,7 +19,7 @@ const Design = () => {
 
   return (
     <div
-      // id="my-design-projects"
+      id="my-design-projects"
       className={`design-con ${isHebrew ? 'rtl-text' : 'ltr-text'}`}
     >
       <div className="column">
@@ -30,7 +30,12 @@ const Design = () => {
         </div>
 
         <div className="cards-box">
-          <Card t={t} projectArray={designProjects} isWideCard={true} />
+          <Card
+            t={t}
+            projectArray={designProjects}
+            isWideCard={true}
+            onClick={toTop}
+          />
         </div>
       </div>
     </div>
@@ -40,6 +45,7 @@ const Design = () => {
 Design.propTypes = {
   projectArray: PropTypes.array,
   isWideCard: PropTypes.bool,
+  toTop: PropTypes.func,
   t: PropTypes.func.isRequired,
 };
 

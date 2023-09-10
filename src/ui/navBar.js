@@ -3,20 +3,13 @@ import { withTranslation } from 'react-i18next';
 
 import LanguageSwitch from '../components/LanguageSwitch';
 
-import {
-  Nav,
-  NavLink,
-  // NavMenu,
-  // NavBtn,
-  // NavBtnLink,
-} from '../components/navElements';
+import { Nav, NavLink } from '../components/navElements';
 
-const Navbar = ({ t, setIsHebrew, isHebrew, scrollToTop, toTop }) => {
+const Navbar = ({ t, setIsHebrew, isHebrew, toTop }) => {
   // const { t, i18n } = useTranslation();
   // const isHebrew = i18n.language === 'he';
 
   return (
-    // <div className={`nav-con ${isHebrew ? 'rtl-text' : 'ltr-text'}`}>
     <div className="nav-con">
       <Nav className="nav">
         <div className={`nav-menu ${isHebrew ? 'rtl-text' : 'ltr-text'}`}>
@@ -43,7 +36,6 @@ Navbar.propTypes = {
   t: PropTypes.func.isRequired,
   // handleLanguageChange: PropTypes.func,
   setIsHebrew: PropTypes.func.isRequired,
-  scrollToTop: PropTypes.func,
   toTop: PropTypes.func,
   isHebrew: PropTypes.bool.isRequired,
 };

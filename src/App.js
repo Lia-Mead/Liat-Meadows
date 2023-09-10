@@ -150,7 +150,8 @@ function App() {
     // console.log('toTop');
     const container = document.getElementById('container');
     if (container) {
-      container.scrollTo({ top: 0, behavior: 'smooth' });
+      container.scrollTo({ top: 0, behavior: 'smooth', overflowx: 'auto' });
+      // container.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
@@ -172,7 +173,12 @@ function App() {
             toTop={toTop}
             // handleLanguageChange={handleLanguageChange}
           />
-          <main id="container" className="main" onClick={toTop}>
+          <main
+            id="container"
+            className="main"
+            onClick={toTop}
+            onScroll={handleScroll}
+          >
             <Switch>
               <Route path="/" exact component={HomeScreen} />
               <Route path="/development" component={Development} />

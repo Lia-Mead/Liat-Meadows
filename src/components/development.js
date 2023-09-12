@@ -2,15 +2,10 @@ import PropTypes from 'prop-types';
 import { withTranslation } from 'react-i18next';
 import { useTranslation } from 'react-i18next';
 
-// import { useLanguage } from '../components/LanguageContext';
-
 import Card from '../ui/card';
-
-// import { devProjects } from '../data/dev-projects';
 import { getDevelopmentProjects } from '../data/developmentProjectsData';
 
 const Development = ({ toTop }) => {
-  // const { isHebrew } = useLanguage();
   const { t, i18n } = useTranslation();
   const isHebrew = i18n.language === 'he';
 
@@ -32,7 +27,7 @@ const Development = ({ toTop }) => {
             t={t}
             projectArray={devProjects}
             isWideCard={false}
-            onClick={toTop}
+            toTop={toTop}
           />
         </div>
       </div>

@@ -15,6 +15,7 @@ const ProjectCardDescription = ({
   photos,
   published,
   isWideCard,
+  // toTop,
   isButtonActive = true,
 }) => {
   const buttonStyle = () => {
@@ -55,8 +56,15 @@ const ProjectCardDescription = ({
             published,
           },
         }}
+        onClick={() => {
+          window.scrollTo(0, 0); // Scroll to the top of the page
+        }}
       >
-        <button className={buttonStyle()} disabled={!isButtonActive}>
+        <button
+          className={buttonStyle()}
+          disabled={!isButtonActive}
+          // onClick={toTop}
+        >
           {buttonText}
         </button>
       </Link>
@@ -75,6 +83,7 @@ ProjectCardDescription.propTypes = {
   photos: PropTypes.array.isRequired,
   published: PropTypes.bool,
   isWideCard: PropTypes.bool,
+  // toTop: PropTypes.func,
 };
 
 export default ProjectCardDescription;

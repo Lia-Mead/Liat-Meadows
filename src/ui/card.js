@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import ProjectCard from '../components/ProjectCard/projectCard';
 import ProjectDetails from '../components/projectDetails';
-import { getDesignProjects } from '../data/design-projects';
+// import { getDesignProjects } from '../data/design-projects';
 
 const Card = ({ projectArray, toTop }) => {
   const { t, i18n } = useTranslation();
@@ -40,11 +40,12 @@ const Card = ({ projectArray, toTop }) => {
           gif,
         };
 
-        return <ProjectCard key={uuidv4()} {...projectData} />;
+        return <ProjectCard key={uuidv4()} {...projectData} toTop={toTop} />;
       })}
 
       {selectedProject && (
-        <ProjectDetails project={selectedProject} onClick={toTop} />
+        // <ProjectDetails project={selectedProject} />
+        <ProjectDetails project={selectedProject} />
       )}
     </>
   );

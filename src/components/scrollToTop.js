@@ -1,31 +1,23 @@
-// import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
-// const ScrollToTop = () => {
-//   const [showTopBtn, setShowTopBtn] = useState(false);
-//   useEffect(() => {
-//     window.addEventListener('scroll', () => {
-//       if (window.scrollY > 60) {
-//         setShowTopBtn(true);
-//       } else {
-//         setShowTopBtn(false);
-//       }
-//     });
-//   }, []);
-//   const goToTop = () => {
-//     window.scrollTo({
-//       top: 0,
-//       behavior: 'smooth',
-//     });
-//   };
-//   return (
-//     <div className="top-to-btm">
-//       {' '}
-//       {showTopBtn && (
-//         <button href="#" id="back-to-top" className="top" onClick={goToTop}>
-//           top
-//         </button>
-//       )}{' '}
-//     </div>
-//   );
-// };
-// export default ScrollToTop;
+import { useEffect } from 'react';
+import { withRouter } from 'react-router-dom';
+
+function ScrollToTop({ history }) {
+  useEffect(() => {
+    const unlisten = history.listen(() => {
+      window.scrollTo(0, 0);
+    });
+    return () => {
+      unlisten();
+    };
+  }, [history]);
+
+  return null;
+}
+
+ScrollToTop.propTypes = {
+  history: PropTypes.func.isRequired,
+};
+
+export default withRouter(ScrollToTop);

@@ -1,30 +1,16 @@
-html,
 body {
   margin: 0;
-  height: 100vh;
-  min-height: 100%;
-  // overflow: hidden;
-  overflow-x: hidden;
+  padding: 0;
+  min-height: 100vh;
   color: #2c3e50;
 }
-
-#root {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.main-content {
+  flex-grow: 1;
+  background-color: #d7d7d7;
+  width: 100%;
   height: 100%;
   max-width: 1920px;
-  .main {
-    height: 100%;
-    overflow: scroll;
-    background-color: #d7d7d7;
-  }
-  //   .main::-webkit-scrollbar {
-  //     width: 12px;
-  //   }
-  .main::-webkit-scrollbar-thumb {
-    background-color: #888888;
-  }
+  margin-top: 80px;
 }
 
 .App {
@@ -86,8 +72,6 @@ p {
     display: inline-block;
     font-size: 90px;
     &:hover {
-      // opacity: 1;
-      // animation: textclip 5s linear;
       animation: textclip 5s linear infinite;
     }
   }
@@ -181,8 +165,6 @@ p {
 .box {
   background-color: #d7d7d7;
   justify-content: center;
-  width: 100vw;
-  min-height: 100%;
   padding-bottom: 80px;
 }
 
@@ -261,11 +243,9 @@ p {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  // color: #e2e2e2;
   color: #000000;
   background-color: #ffffff;
-  // background-color: #16a085;
-  position: absolute;
+  position: fixed;
   right: 20px;
   bottom: 90px;
   display: flex;
@@ -276,7 +256,7 @@ p {
 
 .text-box {
   width: 63%;
-  color: #e2e2e2;
+  color: #ffffff;
 }
 
 .header {
@@ -288,6 +268,11 @@ p {
   flex: 1 0 auto;
   flex-flow: wrap;
   height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3000;
+  box-shadow: 6px 0px 6px 0px rgb(61 53 53 / 24%);
 }
 
 .nav {
@@ -297,33 +282,20 @@ p {
 .nav-menu {
   display: flex;
   align-items: center;
-  // margin-right: -24px;
   @media screen and (max-width: 768px) {
     display: none;
   }
 }
 
-// .lang-box {
-//   display: flex;
-//   justify-content: center;
-//   margin: 10px auto;
-//   padding-bottom: 10px;
-//   box-shadow: 0 10px 10px -10px rgba(#7f8c8d, 1);
-//   -webkit-box-shadow: 0 10px 10px -10px rgba(#7f8c8d, 1);
-// }
-
 .lang-btn {
   border-radius: 4px;
-  /* background: #808080; */
   padding: 10px;
   color: #000000;
   outline: none;
   border: 1px black;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  /* Second Nav */
-  // margin-left: 12px;
-  // margin-right: 12px;
+
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
@@ -353,9 +325,12 @@ p {
   color: #fff;
   font-size: 0.8em;
   height: 3.5rem;
-  bottom: 0;
   width: 100vw;
-  position: absolute;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
   box-shadow: 6px -6px 6px 0px rgb(32 31 31 / 24%);
   -webkit-box-shadow: -4px -6px 6px 0px rgb(32 31 31 / 24%);
   flex: none;
@@ -433,7 +408,8 @@ p {
 .development-con {
   height: 100%;
   .box {
-    background-color: #261e1e;
+    // background-color: #261e1e;
+    background-color: #6d6969;
   }
   h2 > a {
     color: #ffffff;
@@ -449,7 +425,7 @@ p {
 }
 
 .detail-con {
-  min-height: 100%;
+  height: 100%;
   .stage {
     display: flex;
     flex-wrap: wrap;
@@ -490,8 +466,9 @@ p {
   }
 
   .box {
-    background-color: #261e1e;
-    padding-bottom: 20px;
+    // background-color: #261e1e;
+    background-color: #6d6969;
+    padding-bottom: 100px;
   }
 
   .text-con {

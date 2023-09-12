@@ -19,6 +19,7 @@ const ProjectCard = ({
   url,
   published,
   isWideCard,
+  toTop,
   ...rest
 }) => (
   <CustomCard
@@ -39,6 +40,7 @@ const ProjectCard = ({
       photos={photos}
       published={published}
       isWideCard={isWideCard}
+      toTop={toTop}
     />
   </CustomCard>
 );
@@ -54,6 +56,7 @@ ProjectCard.propTypes = {
   url: PropTypes.string,
   published: PropTypes.bool,
   isWideCard: PropTypes.bool,
+  toTop: PropTypes.func,
 };
 
 export default ProjectCard;

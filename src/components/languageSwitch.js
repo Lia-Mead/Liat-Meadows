@@ -1,24 +1,30 @@
-import { useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const LanguageSwitch = ({ setIsHebrew }) => {
   const { i18n } = useTranslation();
 
-  // const changeLanguage = (lng) => {
-  //   i18n.changeLanguage(lng);
-  // };
+  const setIsHebrewCallback = useCallback(
+    (value) => {
+      setIsHebrew(value);
+    },
+    [setIsHebrew]
+  );
 
-  const handleLanguageChange = (newLanguage) => {
-    i18n.changeLanguage(newLanguage);
+  const handleLanguageChange = useCallback(
+    (newLanguage) => {
+      i18n.changeLanguage(newLanguage);
 
-    saveLanguageToLocalStorage(newLanguage);
-  };
+      const saveLanguageToLocalStorage = (language) => {
+        localStorage.setItem('selectedLanguage', language);
+        console.log('newlang in local storage', language);
+      };
 
-  const saveLanguageToLocalStorage = (language) => {
-    localStorage.setItem('selectedLanguage', language);
-    console.log('newlang in local storage', language);
-  };
+      saveLanguageToLocalStorage(newLanguage);
+    },
+    [i18n]
+  );
 
   useEffect(() => {
     const browserLanguage = window.navigator.language;
@@ -34,9 +40,10 @@ const LanguageSwitch = ({ setIsHebrew }) => {
     }
 
     if (savedLanguage == 'he') {
-      setIsHebrew(true);
+      // setIsHebrew(true);
+      setIsHebrewCallback(true);
     }
-  }, []);
+  }, [handleLanguageChange, i18n, setIsHebrewCallback]);
 
   return (
     <div className="lang-box">
@@ -44,7 +51,7 @@ const LanguageSwitch = ({ setIsHebrew }) => {
         className="lang-btn"
         onClick={() => {
           handleLanguageChange('en');
-          setIsHebrew(false);
+          setIsHebrewCallback(false);
         }}
       >
         English
@@ -53,7 +60,7 @@ const LanguageSwitch = ({ setIsHebrew }) => {
         className="lang-btn"
         onClick={() => {
           handleLanguageChange('de');
-          setIsHebrew(false);
+          setIsHebrewCallback(false);
         }}
       >
         Deutsch

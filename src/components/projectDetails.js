@@ -10,6 +10,8 @@ const ProjectDetails = ({ location, isButtonActive = true }) => {
   const { t, i18n } = useTranslation();
   const isHebrew = i18n.language === 'he';
 
+  console.log('published', published);
+
   return (
     <>
       <div className={`detail-con ${isHebrew ? 'rtl-text' : 'ltr-text'}`}>
@@ -33,7 +35,7 @@ const ProjectDetails = ({ location, isButtonActive = true }) => {
             <div className="gallery-con">
               <OpenGallery className="gallery" photos={photos} />
 
-              {published && (
+              {url != '' && (
                 <button
                   className={'button'}
                   onClick={() => {
@@ -44,7 +46,7 @@ const ProjectDetails = ({ location, isButtonActive = true }) => {
                 >
                   {published
                     ? t('project_button_even_more')
-                    : t('project_button_git')}
+                    : t('project_button_git_hub')}
                 </button>
               )}
             </div>

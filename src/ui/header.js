@@ -67,7 +67,8 @@ export default function Header({
 
   return (
     <>
-      <header className="header">
+      <header className={`header ${isHebrew ? 'rtl-text' : 'ltr-text'}`}>
+        {/* <header className="header"> */}
         <Link to="/" onClick={toTop}>
           <Logo />
           {/* <Logo onClick={toggleBurgerMenu} /> */}

@@ -13,7 +13,7 @@ const Yoga = () => {
           <br />
         </div>
 
-        <img className="avatar" src={avatar} alt="liat-meadows-photo" />
+        <img className="avatar" src={avatar} alt="liat-meadows" />
       </div>
     </div>
   );

@@ -6,12 +6,9 @@ import LanguageSwitch from '../components/LanguageSwitch';
 import { Nav, NavLink } from '../components/navElements';
 
 const Navbar = ({ t, setIsHebrew, isHebrew, toTop }) => {
-  // const { t, i18n } = useTranslation();
-  // const isHebrew = i18n.language === 'he';
-
   return (
     <div className="nav-con">
-      <Nav className="nav">
+      <Nav className="nav" role="menu">
         <div className={`nav-menu ${isHebrew ? 'rtl-text' : 'ltr-text'}`}>
           <NavLink to="/development" onClick={toTop}>
             {t('about_development')}
@@ -23,10 +20,7 @@ const Navbar = ({ t, setIsHebrew, isHebrew, toTop }) => {
             {t('about_about')}
           </NavLink>
         </div>
-        <LanguageSwitch
-          setIsHebrew={setIsHebrew}
-          // handleLanguageChange={handleLanguageChange}
-        />
+        <LanguageSwitch setIsHebrew={setIsHebrew} />
       </Nav>
     </div>
   );
@@ -34,7 +28,6 @@ const Navbar = ({ t, setIsHebrew, isHebrew, toTop }) => {
 
 Navbar.propTypes = {
   t: PropTypes.func.isRequired,
-  // handleLanguageChange: PropTypes.func,
   setIsHebrew: PropTypes.func.isRequired,
   toTop: PropTypes.func,
   isHebrew: PropTypes.bool.isRequired,

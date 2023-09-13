@@ -41,7 +41,6 @@ p {
 }
 
 .link {
-  // text-decoration: none;
   color: #2c3e50;
 }
 
@@ -359,8 +358,8 @@ p {
 }
 
 .open-nav {
-  position: absolute;
-  width: 40%;
+  position: fixed;
+  width: 60%;
   background-color: #ffffff;
   right: 0;
   top: 79px;
@@ -390,6 +389,7 @@ p {
     display: flex;
     justify-content: center;
     padding-bottom: 20px;
+    padding-top: 20px;
     box-shadow: 0 10px 10px -10px rgba(#7f8c8d, 1);
     -webkit-box-shadow: 0 10px 10px -10px rgba(#7f8c8d, 1);
     .lang-btn {
@@ -432,9 +432,9 @@ p {
     margin-top: 40px;
     justify-content: center;
     height: 100%;
-    .text {
-      max-width: 80%;
-    }
+    // .text {
+    //   max-width: 80%;
+    // }
   }
 
   h2 > a {
@@ -534,5 +534,8 @@ p {
 
   .text-box {
     width: 100%;
+  }
+  .top {
+    bottom: 120px;
   }
 }

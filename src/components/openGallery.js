@@ -20,7 +20,7 @@ const OpenGallery = ({ photos, className }) => {
           key={`project-image-${index + 1}`}
           className="image"
           src={photo}
-          alt={`Project Image ${index + 1}`}
+          alt={`Project ${index + 1}`}
         />
       ))}
     </>

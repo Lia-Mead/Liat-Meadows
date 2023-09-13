@@ -10,11 +10,11 @@ export default function BurgerMenu({
   setBurgerOpen,
   setIsHebrew,
   isHebrew,
+  toTop,
 }) {
   const menuRef = useRef(null);
 
-  //   const [isHebrew, setIsHebrew] = useState(false);
-  console.log('ishebrew burgermenu', isHebrew);
+  // console.log('ishebrew burgermenu', isHebrew);
 
   const handleMenuClick = (event) => {
     // Stop propagation to prevent closing when clicking inside the menu.
@@ -23,20 +23,17 @@ export default function BurgerMenu({
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        // Click occurred outside of the menu.
-        setBurgerOpen(false);
-        if (!menuRef.current.contains(event.target.closest('.nav-icon'))) {
-          // Click occurred outside of the menu and its child elements (nav-icons).
+      const clickedElement = event.target;
+
+      if (menuRef.current && !menuRef.current.contains(clickedElement)) {
+        if (!clickedElement.classList.contains('navbar-icon')) {
           setBurgerOpen(false);
         }
       }
     };
 
-    // Attach the event listener when the component mounts.
     document.addEventListener('mousedown', handleClickOutside);
 
-    // Remove the event listener when the component unmounts.
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
@@ -47,11 +44,22 @@ export default function BurgerMenu({
       ref={menuRef}
       className={`open-nav ${isHebrew ? 'rtl-text' : 'ltr-text'}`}
       onClick={handleMenuClick}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          handleMenuClick();
+        }
+      }}
+      // role="menu"
+      // aria-labelledby="menubutton"
+      // tabIndex="0"
     >
       <NavLink
         className="nav-icon"
         activeClassName="active-b"
-        onClick={toggleBurgerMenu}
+        onClick={() => {
+          toggleBurgerMenu();
+          toTop();
+        }}
         exact
         to="/development"
       >
@@ -61,7 +69,10 @@ export default function BurgerMenu({
       <NavLink
         className="nav-icon"
         activeClassName="active-b"
-        onClick={toggleBurgerMenu}
+        onClick={() => {
+          toggleBurgerMenu();
+          toTop();
+        }}
         to="/design"
       >
         {t('about_design')}
@@ -70,7 +81,10 @@ export default function BurgerMenu({
       <NavLink
         className="nav-icon"
         activeClassName="active-b"
-        onClick={toggleBurgerMenu}
+        onClick={() => {
+          toggleBurgerMenu();
+          toTop();
+        }}
         to="/about"
       >
         {t('about_about')}
@@ -87,4 +101,5 @@ BurgerMenu.propTypes = {
   setBurgerOpen: PropTypes.func.isRequired,
   setIsHebrew: PropTypes.func.isRequired,
   isHebrew: PropTypes.bool.isRequired,
+  toTop: PropTypes.func,
 };

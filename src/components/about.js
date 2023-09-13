@@ -2,17 +2,14 @@
 import PropTypes from 'prop-types';
 import { withTranslation } from 'react-i18next';
 import { useTranslation } from 'react-i18next';
-// import { useLanguage } from '../components/LanguageContext';
 
 import Avatar from '../assets/images/liat.jpg';
 import StackIcon from '../assets/icons/stack.svg';
 
-// const About = ({ t }) => {
 const About = () => {
   const { t, i18n } = useTranslation();
   const isHebrew = i18n.language === 'he';
 
-  console.log('isHebrew About', isHebrew);
   return (
     <div
       id="about"
@@ -40,7 +37,7 @@ const About = () => {
             <p>{t('about_para_4_1')}</p>
             <br />
             <br />
-            <img className="icon" src={StackIcon} alt="liat-meadows-photo" />
+            <img className="icon" src={StackIcon} alt="liat-meadows" />
             <p>
               JavaScript &#8226; HTML5 &#8226; CSS &#8226; SASS &#8226; Node.js
               &#8226; Express &#8226; React-Native &#8226; React.js &#8226;
@@ -51,7 +48,7 @@ const About = () => {
           </div>
         </div>
 
-        <img className="avatar" src={Avatar} alt="liat-meadows-photo" />
+        <img className="avatar" src={Avatar} alt="liat-meadows" />
       </div>
     </div>
   );

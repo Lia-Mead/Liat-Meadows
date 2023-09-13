@@ -18,7 +18,7 @@ const LanguageSwitch = ({ setIsHebrew }) => {
 
       const saveLanguageToLocalStorage = (language) => {
         localStorage.setItem('selectedLanguage', language);
-        console.log('newlang in local storage', language);
+        // console.log('newlang in local storage', language);
       };
 
       saveLanguageToLocalStorage(newLanguage);
@@ -28,10 +28,10 @@ const LanguageSwitch = ({ setIsHebrew }) => {
 
   useEffect(() => {
     const browserLanguage = window.navigator.language;
-    console.log("User's browser language:", browserLanguage);
+    // console.log("User's browser language:", browserLanguage);
 
     const savedLanguage = localStorage.getItem('selectedLanguage');
-    console.log('savedLanguage', savedLanguage);
+    // console.log('savedLanguage', savedLanguage);
 
     if (savedLanguage) {
       i18n.changeLanguage(savedLanguage);

@@ -63,11 +63,11 @@ function App() {
   }, []);
 
   useEffect(() => {
-    console.log('useEffect window', window);
+    // console.log('useEffect window', window);
     window.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => {
-      console.log('cleanup');
+      // console.log('cleanup');
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
@@ -95,22 +95,22 @@ function App() {
       document.body.scrollTop ||
       0;
 
-    if (position > 60) {
+    if (position > 100) {
       setIsScrolled(true);
     } else {
       setIsScrolled(false);
     }
   };
 
-  useEffect(() => {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 400) {
-        console.log('true');
-      } else {
-        console.log('false');
-      }
-    });
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener('scroll', () => {
+  //     if (window.scrollY > 400) {
+  //       console.log('true');
+  //     } else {
+  //       console.log('false');
+  //     }
+  //   });
+  // }, []);
 
   // const history = useHistory();
 

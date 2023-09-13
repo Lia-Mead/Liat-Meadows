@@ -10,8 +10,6 @@ const ProjectDetails = ({ location, isButtonActive = true }) => {
   const { t, i18n } = useTranslation();
   const isHebrew = i18n.language === 'he';
 
-  console.log('published', published);
-
   return (
     <>
       <div className={`detail-con ${isHebrew ? 'rtl-text' : 'ltr-text'}`}>

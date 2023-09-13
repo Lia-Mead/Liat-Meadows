@@ -12,13 +12,7 @@ import Logo from '../components/logo';
 
 import { Link } from 'react-router-dom';
 
-export default function Header({
-  t,
-  setIsHebrew,
-  isHebrew,
-  toTop,
-  // handleLanguageChange,
-}) {
+export default function Header({ t, setIsHebrew, isHebrew, toTop }) {
   const [burgerOpen, setBurgerOpen] = useState(false);
   const [mQuery, setMQuery] = useState();
   const [screenSize, setScreenSize] = useState(window.innerWidth);
@@ -46,24 +40,27 @@ export default function Header({
 
   useEffect(() => {
     if (screenSize < 900) {
+      console.log('screenSize', screenSize);
       setBurgerOpen(false);
     }
   }, [screenSize]);
 
-  // const updateSize = () => {
-  //   let mql = window.matchMedia('(max-width: 1074px)');
-  //   setMQuery(mql.matches);
-  // };
+  useEffect(() => {
+    window.addEventListener('resize', updateSize);
+    setScreenSize(window.innerWidth);
+  }, []);
 
-  const toggleBurgerMenu = ({ changeLanguage }) => {
-    // console.log("toggle open");
+  const updateSize = () => {
+    let mql = window.matchMedia('(max-width: 1074px)');
+    setMQuery(mql.matches);
+  };
+
+  const toggleBurgerMenu = () => {
     setBurgerOpen(!burgerOpen);
   };
 
   let src;
   burgerOpen ? (src = close) : (src = burger);
-
-  console.log('isHebrew in Header:', isHebrew);
 
   return (
     <>
@@ -71,25 +68,35 @@ export default function Header({
         {/* <header className="header"> */}
         <Link to="/" onClick={toTop}>
           <Logo />
-          {/* <Logo onClick={toggleBurgerMenu} /> */}
         </Link>
 
-        <div className="menu-right">
+        <div className="menu-right" role="menu">
           {/* <div ref={menuRef} className="menu-right" onClick={handleMenuClick}> */}
           {screenSize < 900 || mQuery ? (
-            <img onClick={toggleBurgerMenu} className="navbar-icon" src={src} />
+            <img
+              onClick={toggleBurgerMenu}
+              className="navbar-icon"
+              src={src}
+              alt="menu-burger"
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  toggleBurgerMenu();
+                }
+              }}
+              // eslint-disable-next-line jsx-a11y/no-noninteractive-element-to-interactive-role
+              role="menu"
+              aria-labelledby="menubutton"
+              tabIndex="0"
+            />
           ) : (
             <NavBar
               t={t}
               setIsHebrew={setIsHebrew}
               isHebrew={isHebrew}
               toTop={toTop}
-              // handleLanguageChange={handleLanguageChange}
             />
           )}
         </div>
-
-        {/* <LanguageSwitch setIsHebrew={setIsHebrew} /> */}
       </header>
 
       {burgerOpen ? (
@@ -100,6 +107,7 @@ export default function Header({
           setBurgerOpen={setBurgerOpen}
           setIsHebrew={setIsHebrew}
           isHebrew={isHebrew}
+          toTop={toTop}
         />
       ) : null}
     </>
@@ -111,5 +119,4 @@ Header.propTypes = {
   setIsHebrew: PropTypes.func.isRequired,
   toTop: PropTypes.func,
   isHebrew: PropTypes.bool.isRequired,
-  // handleLanguageChange: PropTypes.func,
 };

@@ -17,11 +17,9 @@ export default function Header({ t, setIsHebrew, isHebrew, toTop }) {
   const [mQuery, setMQuery] = useState();
   const [screenSize, setScreenSize] = useState(window.innerWidth);
 
-  // const { isHebrew } = useLanguage(); // Access the isHebrew state from the context
-
-  const handleResize = () => {
-    setScreenSize(window.innerWidth);
-  };
+  // const handleResize = () => {
+  //   setScreenSize(window.innerWidth);
+  // };
 
   // const scrollToTop = () => {
   //     window.scrollTo({
@@ -30,25 +28,13 @@ export default function Header({ t, setIsHebrew, isHebrew, toTop }) {
   //     });
   // };
 
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
+  // useEffect(() => {
+  //   window.addEventListener('resize', handleResize);
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (screenSize < 900) {
-      console.log('screenSize', screenSize);
-      setBurgerOpen(false);
-    }
-  }, [screenSize]);
-
-  useEffect(() => {
-    window.addEventListener('resize', updateSize);
-    setScreenSize(window.innerWidth);
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize);
+  //   };
+  // }, []);
 
   const updateSize = () => {
     let mql = window.matchMedia('(max-width: 1074px)');
@@ -61,6 +47,18 @@ export default function Header({ t, setIsHebrew, isHebrew, toTop }) {
 
   let src;
   burgerOpen ? (src = close) : (src = burger);
+
+  useEffect(() => {
+    if (screenSize < 900) {
+      console.log('screenSize', screenSize);
+      setBurgerOpen(false);
+    }
+  }, [screenSize]);
+
+  useEffect(() => {
+    window.addEventListener('resize', updateSize);
+    setScreenSize(window.innerWidth);
+  }, []);
 
   return (
     <>

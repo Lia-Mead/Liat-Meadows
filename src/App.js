@@ -34,26 +34,6 @@ function App() {
   const [isHebrew, setIsHebrew] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // const [scrollTop, setScrollTop] = useState(0);
-
-  // const handleScrollNew = (event) => {
-  //   console.log('new scroll');
-  //   setScrollTop(event.currentTarget.scrollTop);
-  // };
-
-  // if (process.env.NODE_ENV === 'production') {
-  //   // Code to run in production environment
-  //   console.log('prod');
-  // } else {
-  //   // Code to run in development environment
-  //   console.log('dev');
-  // }
-
-  // accessibility axe
-  // if (process.env.NODE_ENV === 'development') {
-  //   axe(React, ReactDOM, 1000); // Configure and initialize the package
-  // }
-
   useEffect(() => {
     if (i18n.language === 'he') {
       setIsHebrew(true);
@@ -72,22 +52,6 @@ function App() {
     };
   }, []);
 
-  // const handleScroll = () => {
-  //   // console.log('Scroll event detected', window.scrollY);
-
-  //   requestAnimationFrame(() => {
-  //     const position = window.scrollY;
-  //     // const position = window.scrollY;
-  //     console.log('position', position);
-
-  //     if (position > 100) {
-  //       setIsScrolled(true);
-  //     } else {
-  //       setIsScrolled(false);
-  //     }
-  //   });
-  // };
-
   const handleScroll = () => {
     const position =
       window.scrollY ||
@@ -97,30 +61,14 @@ function App() {
 
     if (position > 100) {
       setIsScrolled(true);
+      // document.getElementsByClassName('.footer').style.display = 'block';
+      // document.querySelector('.footer').style.display = 'block';
     } else {
       setIsScrolled(false);
+      // document.getElementsByClassName('.footer').style.display = 'none';
+      // document.querySelector('.footer').style.display = 'none';
     }
   };
-
-  // useEffect(() => {
-  //   window.addEventListener('scroll', () => {
-  //     if (window.scrollY > 400) {
-  //       console.log('true');
-  //     } else {
-  //       console.log('false');
-  //     }
-  //   });
-  // }, []);
-
-  // const history = useHistory();
-
-  // const toTop = () => {
-  //   const container = document.getElementById('container');
-  //   if (container) {
-  //     container.scrollTo({ top: 0, behavior: 'smooth' });
-  //     // container.scrollTo({ top: 0, behavior: 'smooth', overflowx: 'auto' }); safari
-  //   }
-  // };
 
   const toTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -132,34 +80,43 @@ function App() {
         <Router>
           {/* <ScrollToTopOnPageChange history={history} /> */}
           {/* <ScrollToTop /> */}
-          <Header
-            t={t}
-            isHebrew={isHebrew}
-            setIsHebrew={setIsHebrew}
-            toTop={toTop}
-            // handleLanguageChange={handleLanguageChange}
-          />
-          <main id="container" className="main-content" onScroll={handleScroll}>
-            <Switch>
-              <Route path="/" exact component={HomeScreen} />
-              <Route path="/development" component={Development} />
-              <Route path="/design" component={Design} />
-              <Route path="/about" component={About} />
-              <Route path="/projectDetails/:slug" component={ProjectDetails} />
-            </Switch>
-            {isScrolled && (
-              <button
-                className="top"
-                onClick={() => {
-                  // console.log('to top');
-                  toTop();
-                }}
-              >
-                top
-              </button>
-            )}
-          </main>
-          <Footer />
+          <div className="wrapper">
+            <Header
+              t={t}
+              isHebrew={isHebrew}
+              setIsHebrew={setIsHebrew}
+              toTop={toTop}
+            />
+            <main
+              id="container"
+              className="main-content"
+              // className={`main-content ${isScrolled ? 'is-scrolled' : ''}`}
+              onScroll={handleScroll}
+            >
+              <Switch>
+                <Route path="/" exact component={HomeScreen} />
+                <Route path="/development" component={Development} />
+                <Route path="/design" component={Design} />
+                <Route path="/about" component={About} />
+                <Route
+                  path="/projectDetails/:slug"
+                  component={ProjectDetails}
+                />
+              </Switch>
+              {isScrolled && (
+                <button
+                  className="top"
+                  onClick={() => {
+                    toTop();
+                  }}
+                >
+                  top
+                </button>
+              )}
+            </main>
+            {!isScrolled ? <Footer /> : null}
+            {/* <Footer /> */}
+          </div>
         </Router>
       </LanguageProvider>
     </I18nextProvider>

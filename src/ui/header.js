@@ -17,25 +17,6 @@ export default function Header({ t, setIsHebrew, isHebrew, toTop }) {
   const [mQuery, setMQuery] = useState();
   const [screenSize, setScreenSize] = useState(window.innerWidth);
 
-  // const handleResize = () => {
-  //   setScreenSize(window.innerWidth);
-  // };
-
-  // const scrollToTop = () => {
-  //     window.scrollTo({
-  //         top: 0,
-  //         behavior: "smooth",
-  //     });
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener('resize', handleResize);
-
-  //   return () => {
-  //     window.removeEventListener('resize', handleResize);
-  //   };
-  // }, []);
-
   const updateSize = () => {
     let mql = window.matchMedia('(max-width: 1074px)');
     setMQuery(mql.matches);
@@ -60,15 +41,18 @@ export default function Header({ t, setIsHebrew, isHebrew, toTop }) {
     setScreenSize(window.innerWidth);
   }, []);
 
+  useEffect(() => {
+    console.log('isHebrew', isHebrew);
+  }, [isHebrew]);
+
   return (
     <>
       <header className={`header ${isHebrew ? 'rtl-text' : 'ltr-text'}`}>
-        {/* <header className="header"> */}
         <Link to="/" onClick={toTop}>
           <Logo />
         </Link>
 
-        <div className="menu-right" role="menu">
+        <div className={isHebrew ? 'menu-right' : 'menu-left'} role="menu">
           {/* <div ref={menuRef} className="menu-right" onClick={handleMenuClick}> */}
           {screenSize < 900 || mQuery ? (
             <img

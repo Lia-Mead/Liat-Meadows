@@ -48,5 +48,20 @@
   "card_description_mureal": "An image-oriented platform dedicated to street art and murals",
   "card_description_searchify": "Search your artists and albums with the Spotify API",
   "card_description_petition": "Petition project for collecting e-signatures against stomping neighbours",
-  "card_description_connect": "Connect Four game retro style. Match four diagonal avatars and win the round"
+  "card_description_connect": "Connect Four game retro style. Match four diagonal avatars and win the round",
+
+  "footer_imprint": "Imprint",
+  "footer_accessibility": "Accessibility",
+  "footer_open_source": "Open Source",
+  "accessibility_statement_title": "Accessibility Statement",
+  "accessibility_statement_text_1": "We advocate website accessibility for the convenience of all surfers.",
+  "accessibility_statement_text_2": "I would be happy to receive comments and requests regarding email accessibility.",
+  "accessibility_statement_text_3": "You can contact me by e-mail.",
+  "imprint_title": "Imprint",
+  "imprint_text_1": "The responsible person for this website and all of its content is Liat Meadows.",
+  "imprint_text_2": "For every inquiry you may reach me through my e-mail.",
+  "imprint_text_3": "Liat Meadows",
+  "imprint_text_4": "meadowsliat@gmail.com",
+  "oss_title": "Open Source Libraries",
+  "oss_text_1": "This website is using the following open source libraries:"
 }

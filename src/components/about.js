@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withTranslation } from 'react-i18next';
 import { useTranslation } from 'react-i18next';
 
-import Avatar from '../assets/images/liat.jpg';
+import Avatar from '../assets/images/liatm.jpg';
 import StackIcon from '../assets/icons/stack.svg';
 
 const About = () => {

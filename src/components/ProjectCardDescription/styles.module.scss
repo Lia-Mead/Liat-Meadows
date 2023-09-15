@@ -59,8 +59,12 @@
   &:focus,
   &:active {
     // background-color: #007bff80;
-    background: linear-gradient(287deg, #3cb371, #0fa7ee);
+    // background: linear-gradient(287deg, #3cb371, #0fa7ee);
+    // border-color: transparent;
+
+    background: linear-gradient(287deg, #231557, #0fa7ee);
     border-color: transparent;
+    color: #ffffff;
   }
 }
 

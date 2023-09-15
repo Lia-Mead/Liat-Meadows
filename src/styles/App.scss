@@ -69,61 +69,14 @@ p {
   color: #2c3e50;
 }
 
-.con.home {
-  background-color: #e2e2e2;
-  .stage {
-    padding: 3% 5%;
-    margin: 0 auto;
-
-    h1 {
-      text-transform: uppercase;
-      color: #007bff;
-    }
-    h2 {
-      font-weight: 500;
-      color: #012171;
-    }
-  }
-  .animate-character {
-    text-transform: uppercase;
-    background-image: linear-gradient(
-      -225deg,
-      #231557 0%,
-      #44107a 29%,
-      #ff1361 67%,
-      #fff800 100%
-    );
-    background-size: auto auto;
-    background-clip: border-box;
-    background-size: 200% auto;
-    color: #fff;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textclip 5s linear;
-    display: inline-block;
-    font-size: 90px;
-    &:hover {
-      animation: textclip 5s linear infinite;
-    }
-  }
-
-  .accessibility-question {
-    width: 300px;
-    height: 20px;
-    background-color: #94127a;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9000;
-  }
-
-  @keyframes textclip {
-    to {
-      background-position: 200% center;
-    }
-  }
+.accessibility-question {
+  width: 300px;
+  height: 20px;
+  background-color: #94127a;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9000;
 }
 
 .menu-left {
@@ -602,13 +555,13 @@ p {
 }
 
 @media screen and (max-width: 850px) {
-  .home {
-    .animate-character {
-      font-size: 30px !important;
-      line-height: 1.5;
-      margin-top: 20px;
-    }
-  }
+  // .home {
+  //   .animate-character {
+  //     font-size: 30px !important;
+  //     line-height: 1.5;
+  //     margin-top: 20px;
+  //   }
+  // }
   .con {
     flex-direction: row;
   }

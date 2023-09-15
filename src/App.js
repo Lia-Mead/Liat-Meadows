@@ -9,6 +9,7 @@ import i18n from './i18n/i18n';
 import { LanguageProvider } from './components/LanguageContext';
 
 import { useTranslation } from 'react-i18next';
+
 // import { Accessibility } from 'accessibility';
 
 // import ReactDOM from 'react-dom';
@@ -248,8 +249,9 @@ function App() {
 
   // useEffect(() => {
   //   const accessibilityButton = document.querySelector(
-  //     // '._access-icon.material-icons'
-  //     '._access-icon.material-icons._access'
+  //     '._access-icon.material-icons',
+  //     '._access-icon.material-icons._access',
+  //     ''
   //   );
 
   //   if (isAccessibility) {

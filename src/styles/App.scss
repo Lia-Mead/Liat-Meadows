@@ -55,6 +55,7 @@ h1 > a {
   margin: 40px 0px 20px 0px;
   width: 80%;
   text-decoration: none;
+  line-height: 1.9;
 }
 
 h2,
@@ -316,12 +317,10 @@ p {
 .footer {
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   align-items: center;
   background: #201f1f;
   color: #fff;
   font-size: 0.8em;
-  // height: 8rem;
   height: 130px;
   width: 100vw;
   position: fixed;
@@ -359,9 +358,6 @@ p {
 
   .footer-link {
     margin: 0 5%;
-  }
-  .hidden-footer {
-    display: none;
   }
 }
 
@@ -563,13 +559,6 @@ p {
 }
 
 @media screen and (max-width: 850px) {
-  // .home {
-  //   .animate-character {
-  //     font-size: 30px !important;
-  //     line-height: 1.5;
-  //     margin-top: 20px;
-  //   }
-  // }
   .con {
     flex-direction: row;
   }
@@ -579,8 +568,6 @@ p {
   }
 
   .footer {
-    flex-direction: column;
-    height: 6rem;
     .link-con {
       margin-top: 10px;
       margin-left: 30px;
@@ -613,6 +600,12 @@ p {
   .main-content {
     width: 100%;
     max-width: none;
+  }
+
+  .detail-con {
+    .box {
+      padding-bottom: 130px;
+    }
   }
 
   .gallery-con {

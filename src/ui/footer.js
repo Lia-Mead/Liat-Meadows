@@ -23,7 +23,6 @@ const Footer = ({ t, isHebrew }) => {
         </p>
       </div>
 
-      {/* <div className="footer-box second"> */}
       <div className={`footer-box ${isHebrew ? 'rtl-text' : 'ltr-text'}`}>
         <Link className="footer-link" to="/imprint">
           {t('footer_imprint')}

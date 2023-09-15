@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 
-const AccessibilityStatement = ({ isHebrew }) => {
+const AccessibilityStatement = () => {
   const { t } = useTranslation();
   return (
     <div
       id="accessibility"
-      className={`accessibility-con ${isHebrew ? 'rtl-text' : 'ltr-text'}`}
+      className={`accessibility-con'}`}
+      // className={`accessibility-con ${isHebrew ? 'rtl-text' : 'ltr-text'}`}
     >
       <div className="box">
         <div className="text-content">
@@ -21,8 +22,8 @@ const AccessibilityStatement = ({ isHebrew }) => {
   );
 };
 
-AccessibilityStatement.propTypes = {
-  isHebrew: PropTypes.bool,
-};
+// AccessibilityStatement.propTypes = {
+//   isHebrew: PropTypes.bool,
+// };
 
 export default AccessibilityStatement;

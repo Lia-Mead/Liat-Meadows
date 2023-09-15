@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 const OpenSource = () => {
   // const OpenSource = ({ isHebrew }) => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   // console.log('isHebrew', isHebrew);
   return (
     <div
@@ -41,8 +41,8 @@ const OpenSource = () => {
   );
 };
 
-OpenSource.propTypes = {
-  // isHebrew: PropTypes.bool.isRequired,
-};
+// OpenSource.propTypes = {
+//   // isHebrew: PropTypes.bool.isRequired,
+// };
 
 export default OpenSource;

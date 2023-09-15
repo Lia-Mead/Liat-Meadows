@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 
 const Imprint = () => {
@@ -23,8 +23,8 @@ const Imprint = () => {
   );
 };
 
-Imprint.propTypes = {
-  isHebrew: PropTypes.bool,
-};
+// Imprint.propTypes = {
+//   isHebrew: PropTypes.bool,
+// };
 
 export default Imprint;

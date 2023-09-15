@@ -316,12 +316,13 @@ p {
 .footer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   background: #201f1f;
   color: #fff;
   font-size: 0.8em;
-  height: 5rem;
+  // height: 8rem;
+  height: 130px;
   width: 100vw;
   position: fixed;
   bottom: 0;
@@ -337,6 +338,8 @@ p {
   .footer-box {
     display: flex;
     width: 80%;
+    padding: 1% 0;
+    min-height: 30px;
   }
   .footer-box.first {
     justify-content: center;
@@ -346,6 +349,7 @@ p {
     width: 100%;
     padding: 1% 0;
     flex-wrap: wrap;
+    min-height: 50px;
   }
   .footer-box.second {
     width: 70%;
@@ -354,7 +358,7 @@ p {
   }
 
   .footer-link {
-    margin: 1% 5%;
+    margin: 0 5%;
   }
   .hidden-footer {
     display: none;
@@ -456,9 +460,13 @@ p {
   }
   .box {
     background-color: #d7d7d7;
-    padding-bottom: 80px;
+    padding-bottom: 110px;
     margin: 0 auto;
     width: 90%;
+    justify-content: center;
+  }
+  .title-box {
+    padding: 5% 5% 0 5%;
   }
 
   h1 > a {

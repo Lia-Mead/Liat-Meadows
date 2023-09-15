@@ -13,14 +13,15 @@ const ProjectDetails = ({ location, isButtonActive = true }) => {
   return (
     <>
       <div className={`detail-con ${isHebrew ? 'rtl-text' : 'ltr-text'}`}>
-        <div className="box">
-          <h2>
+        <div className="title-box">
+          <h1>
             <Link to="/development" className="link">
               {t('detail_project_title_link')}
             </Link>
             <span className="highlight"> / {title}</span>
-          </h2>
-
+          </h1>
+        </div>
+        <div className="box">
           <div className="stage">
             <div className="text">
               <p>{description}</p>

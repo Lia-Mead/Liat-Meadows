@@ -2,12 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 
-const OpenSource = ({ isHebrew }) => {
+const OpenSource = () => {
+  // const OpenSource = ({ isHebrew }) => {
   const { t, i18n } = useTranslation();
+  // console.log('isHebrew', isHebrew);
   return (
     <div
       id="open-source"
-      className={`terms-con ${isHebrew ? 'rtl-text' : 'ltr-text'}`}
+      className={`terms-con'}`}
+      // className={`terms-con ${isHebrew ? 'rtl-text' : 'ltr-text'}`}
     >
       <div className="box">
         <div className="text-content">
@@ -39,7 +42,7 @@ const OpenSource = ({ isHebrew }) => {
 };
 
 OpenSource.propTypes = {
-  isHebrew: PropTypes.func.isRequired,
+  // isHebrew: PropTypes.bool.isRequired,
 };
 
 export default OpenSource;

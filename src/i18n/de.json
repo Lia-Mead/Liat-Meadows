@@ -48,5 +48,18 @@
   "card_description_petition": "Petitionsprojekt zum Sammeln von E-Signaturen gegen stampfende Nachbarn",
   "card_description_connect": "Connect Four-Spiel im Retro-Stil. Kombiniere vier diagonale Avatare und gewinne die Runde",
 
-  "footer_imprint": "Impressum"
+  "footer_imprint": "Impressum",
+  "footer_accessibility": "Barrierefreiheit",
+  "footer_open_source": "Open Source",
+  "accessibility_statement_title": "Erklärung zur Barrierefreiheit",
+  "accessibility_statement_text_1": "Wir befürworten die Barrierefreiheit der Website zum Nutzen aller Surfer.",
+  "accessibility_statement_text_2": "Ich würde mich über Kommentare und Anfragen zur E-Mail-Erreichbarkeit freuen.",
+  "accessibility_statement_text_3": "Sie können mich per E-Mail kontaktieren: meadowsliat@gmail.com",
+  "imprint_title": "Impressum",
+  "imprint_text_1": "Die verantwortliche Person für diese Website und ihren gesamten Inhalt ist Liat Meadows.",
+  "imprint_text_2": "Für jede Anfrage können Sie mich über meine E-Mail erreichen.",
+  "imprint_text_3": "Liat Meadows",
+  "imprint_text_4": "E-Mail: meadowsliat@gmail.com",
+  "oss_title": "Open-Source-Bibliotheken",
+  "oss_text_1": "Diese Website verwendet die folgenden Open-Source-Bibliotheken:"
 }

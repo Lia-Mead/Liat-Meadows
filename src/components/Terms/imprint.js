@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 
-const Imprint = ({ isHebrew }) => {
+const Imprint = () => {
   const { t, i18n } = useTranslation();
   return (
     <div
       id="imprint"
-      className={`terms-con ${isHebrew ? 'rtl-text' : 'ltr-text'}`}
+      // className={`terms-con ${isHebrew ? 'rtl-text' : 'ltr-text'}`}
+      className={`terms-con`}
     >
       <div className="box">
         <div className="text-content">
@@ -23,7 +24,7 @@ const Imprint = ({ isHebrew }) => {
 };
 
 Imprint.propTypes = {
-  isHebrew: PropTypes.func.isRequired,
+  isHebrew: PropTypes.bool,
 };
 
 export default Imprint;

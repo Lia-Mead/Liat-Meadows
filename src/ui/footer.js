@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 
 import github from '../assets/icons/github.svg';
 
-const Footer = ({ t }) => {
+const Footer = ({ t, isHebrew }) => {
   return (
     <footer className="footer">
       <div className="footer-box first">
-        <p>© Made with ♡ by Liat Meadows 2023</p>
+        <p>{t('footer_made_with_love')}</p>
         <a
           className="link-con"
           href="https://www.github.com/Lia-Mead"
@@ -23,7 +23,8 @@ const Footer = ({ t }) => {
         </p>
       </div>
 
-      <div className="footer-box second">
+      {/* <div className="footer-box second"> */}
+      <div className={`footer-box ${isHebrew ? 'rtl-text' : 'ltr-text'}`}>
         <Link className="footer-link" to="/imprint">
           {t('footer_imprint')}
         </Link>
@@ -40,6 +41,7 @@ const Footer = ({ t }) => {
 
 Footer.propTypes = {
   t: PropTypes.func.isRequired,
+  isHebrew: PropTypes.bool.isRequired,
 };
 
 export default Footer;

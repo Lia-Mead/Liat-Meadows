@@ -22,7 +22,7 @@ const AccessibilityStatement = ({ isHebrew }) => {
 };
 
 AccessibilityStatement.propTypes = {
-  isHebrew: PropTypes.func.isRequired,
+  isHebrew: PropTypes.bool,
 };
 
 export default AccessibilityStatement;

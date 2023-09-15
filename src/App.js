@@ -278,7 +278,11 @@ function App() {
             />
             <main
               id="container"
-              className={`main-content ${isScrolled ? 'is-scrolled' : ''}`}
+              // className={`header ${isHebrew ? 'rtl-text' : 'ltr-text'}`}
+              // className={`main-content ${isScrolled ? 'is-scrolled' : ''}`}
+              className={`main-content ${isScrolled ? 'is-scrolled' : ''} ${
+                isHebrew ? 'rtl-text' : 'ltr-text'
+              }`}
               onScroll={handleScroll}
             >
               <Switch>
@@ -319,7 +323,7 @@ function App() {
               )} */}
             </main>
 
-            {hasScrolledToBottom ? <Footer t={t} /> : null}
+            {hasScrolledToBottom ? <Footer t={t} isHebrew={isHebrew} /> : null}
           </div>
         </Router>
       </LanguageProvider>

@@ -1,15 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
+// import { useLocation } from 'react-router-dom';
+// import PropTypes from 'prop-types';
 
 const AccessibilityStatement = () => {
   const { t } = useTranslation();
+
+  // const location = useLocation();
+  // const scrollToTop = location.state?.toTop || false;
+
   return (
-    <div
-      id="accessibility"
-      className={`accessibility-con'}`}
-      // className={`accessibility-con ${isHebrew ? 'rtl-text' : 'ltr-text'}`}
-    >
+    <div id="accessibility" className={`terms-con`}>
       <div className="box">
         <div className="text-content">
           <h1>{t('accessibility_statement_title')}</h1>
@@ -23,7 +24,7 @@ const AccessibilityStatement = () => {
 };
 
 // AccessibilityStatement.propTypes = {
-//   isHebrew: PropTypes.bool,
+//   toTop: PropTypes.func,
 // };
 
 export default AccessibilityStatement;

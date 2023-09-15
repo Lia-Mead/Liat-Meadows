@@ -27,9 +27,19 @@ const Footer = ({ t, isHebrew }) => {
         <Link className="footer-link" to="/imprint">
           {t('footer_imprint')}
         </Link>
-        <Link className="footer-link" to="/accessibility-statement">
+        <Link
+          className="footer-link"
+          // to="/accessibility-statement"
+          to={{
+            pathname: '/accessibility-statement',
+            state: {
+              scrollToTop: true,
+            },
+          }}
+        >
           {t('footer_accessibility')}
         </Link>
+
         <Link className="footer-link" to="/open-source">
           {t('footer_open_source')}
         </Link>
@@ -41,6 +51,7 @@ const Footer = ({ t, isHebrew }) => {
 Footer.propTypes = {
   t: PropTypes.func.isRequired,
   isHebrew: PropTypes.bool.isRequired,
+  // toTop: PropTypes.func,
 };
 
 export default Footer;

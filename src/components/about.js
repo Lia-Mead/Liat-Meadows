@@ -16,9 +16,9 @@ const About = () => {
       className={`about-container ${isHebrew ? 'rtl-text' : 'ltr-text'}`}
     >
       <div className="box">
-        <h2>
+        <h1>
           <a href="#about">{t('about')}</a>
-        </h2>
+        </h1>
         <div className="text-box">
           <div className="text-con">
             <p>{t('about_para_1_1')}</p>
@@ -48,7 +48,9 @@ const About = () => {
           </div>
         </div>
 
-        <img className="avatar" src={Avatar} alt="liat-meadows" />
+        <div className={'avatar-box'}>
+          <img className="avatar" src={Avatar} alt="liat-meadows" />
+        </div>
       </div>
     </div>
   );

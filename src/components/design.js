@@ -18,9 +18,9 @@ const Design = ({ toTop }) => {
       className={`design-con ${isHebrew ? 'rtl-text' : 'ltr-text'}`}
     >
       <div className="box">
-        <h2>
+        <h1>
           <a href="#my-design-projects">{t('design_my_design_projects')}</a>
-        </h2>
+        </h1>
 
         <div className="cards-box">
           <Card

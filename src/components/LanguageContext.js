@@ -1,13 +1,19 @@
-// import React, { createContext, useContext, useState } from 'react';
+// import React, { createContext, useState, useContext, useEffect } from 'react';
 // import PropTypes from 'prop-types';
 
 // const LanguageContext = createContext();
 
 // export const LanguageProvider = ({ children }) => {
-//   const [isHebrew, setIsHebrew] = useState(false);
+//   const [language, setLanguage] = useState(
+//     localStorage.getItem('language') || 'en'
+//   );
+
+//   useEffect(() => {
+//     localStorage.setItem('language', language);
+//   }, [language]);
 
 //   return (
-//     <LanguageContext.Provider value={{ isHebrew, setIsHebrew }}>
+//     <LanguageContext.Provider value={{ language, setLanguage }}>
 //       {children}
 //     </LanguageContext.Provider>
 //   );
@@ -17,47 +23,38 @@
 //   children: PropTypes.node,
 // };
 
-// // Define a custom hook to access the language context
-// export const useLanguage = () => {
-//   const context = useContext(LanguageContext);
-//   if (!context) {
-//     throw new Error('useLanguage must be used within a LanguageProvider');
-//   }
-//   return context;
-// };
+// export default LanguageContext;
 
-// LanguageContext.js
-import React, { createContext, useState, useContext, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 // Create a context
 const LanguageContext = createContext();
 
-// Create a custom hook to access the language context
-// export const useLanguage = () => {
-//   return useContext(LanguageContext);
-// };
-
-// Create the LanguageProvider component
+// Create a provider component
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState(
-    localStorage.getItem('language') || 'en'
-  );
+  const [currentLanguage, setCurrentLanguage] = useState('en');
 
-  // Update the language in local storage whenever it changes
+  const switchLanguage = (newLanguage) => {
+    setCurrentLanguage(newLanguage);
+  };
+
   useEffect(() => {
-    localStorage.setItem('language', language);
-  }, [language]);
+    localStorage.setItem('language', currentLanguage);
+  }, [currentLanguage]);
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage }}>
+    <LanguageContext.Provider value={{ currentLanguage, switchLanguage }}>
       {children}
     </LanguageContext.Provider>
   );
 };
 
+// Create a custom hook to consume the context
+export const useLanguage = () => {
+  return useContext(LanguageContext);
+};
+
 LanguageProvider.propTypes = {
   children: PropTypes.node,
 };
-
-export default LanguageContext;

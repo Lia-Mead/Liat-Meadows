@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import styles from './styles.module.scss';
 import PropTypes from 'prop-types';
-import ProjectDetails from '../projectDetails';
 import { Link } from 'react-router-dom';
 
 const ProjectCardDescription = ({
@@ -15,7 +14,6 @@ const ProjectCardDescription = ({
   photos,
   published,
   isWideCard,
-  // toTop,
   isButtonActive = true,
 }) => {
   const buttonStyle = () => {
@@ -30,6 +28,14 @@ const ProjectCardDescription = ({
     }
   };
 
+  const [showFullContent, setShowFullContent] = useState(false);
+
+  const content = description;
+
+  const displayContent = showFullContent
+    ? content
+    : `${content.slice(0, 50)}...`;
+
   return (
     <div className={styles['product-card-description-box']}>
       <div className={styles['product-card-name']}>{title}</div>
@@ -40,7 +46,7 @@ const ProjectCardDescription = ({
             : styles['product-card-description']
         }
       >
-        {description}
+        {displayContent}
       </p>
 
       <Link
@@ -57,14 +63,11 @@ const ProjectCardDescription = ({
           },
         }}
         onClick={() => {
-          window.scrollTo(0, 0); // Scroll to the top of the page
+          window.scrollTo(0, 0);
+          setShowFullContent(true);
         }}
       >
-        <button
-          className={buttonStyle()}
-          disabled={!isButtonActive}
-          // onClick={toTop}
-        >
+        <button className={buttonStyle()} disabled={!isButtonActive}>
           {buttonText}
         </button>
       </Link>
@@ -83,7 +86,6 @@ ProjectCardDescription.propTypes = {
   photos: PropTypes.array.isRequired,
   published: PropTypes.bool,
   isWideCard: PropTypes.bool,
-  // toTop: PropTypes.func,
 };
 
 export default ProjectCardDescription;

@@ -17,11 +17,11 @@ const Development = ({ toTop }) => {
       className={`development-con ${isHebrew ? 'rtl-text' : 'ltr-text'}`}
     >
       <div className="box">
-        <h2>
+        <h1>
           <a href="#my-dev-projects">
             {t('development_my_development_projects')}
           </a>
-        </h2>
+        </h1>
         <div className={'cards-box'}>
           <Card
             t={t}

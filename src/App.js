@@ -5,7 +5,9 @@ import { I18nextProvider } from 'react-i18next';
 
 // import './nagishli.js';
 import i18n from './i18n/i18n';
+// import { LanguageProvider, useLanguage } from './components/LanguageContext';
 import { LanguageProvider } from './components/LanguageContext';
+
 import { useTranslation } from 'react-i18next';
 // import { Accessibility } from 'accessibility';
 
@@ -35,25 +37,27 @@ function App() {
 
   const [hasScrolledToBottom, setHasScrolledToBottom] = useState(false);
 
-  useEffect(() => {
-    if (i18n.language === 'he') {
-      setIsHebrew(true);
-    } else {
-      setIsHebrew(false);
-    }
+  // const { switchLanguage } = useLanguage();
 
-    if (i18n.language === 'de') {
-      setIsGerman(true);
-    } else {
-      setIsGerman(false);
-    }
+  // useEffect(() => {
+  //   if (i18n.language === 'he') {
+  //     setIsHebrew(true);
+  //   } else {
+  //     setIsHebrew(false);
+  //   }
 
-    if (i18n.language === 'en') {
-      setIsEnglish(true);
-    } else {
-      setIsEnglish(false);
-    }
-  }, []);
+  //   // if (i18n.language === 'de') {
+  //   //   setIsGerman(true);
+  //   // } else {
+  //   //   setIsGerman(false);
+  //   // }
+
+  //   // if (i18n.language === 'en') {
+  //   //   setIsEnglish(true);
+  //   // } else {
+  //   //   setIsEnglish(false);
+  //   // }
+  // }, []);
 
   useEffect(() => {
     // console.log('useEffect window', window);
@@ -263,16 +267,17 @@ function App() {
     <I18nextProvider i18n={i18n}>
       <LanguageProvider>
         <Router>
-          <div className={`wrapper ${isHebrew ? 'rtl-text' : 'ltr-text'}`}>
+          <div className="wrapper">
             <Header
               t={t}
               isHebrew={isHebrew}
               setIsHebrew={setIsHebrew}
+              setIsGerman={setIsGerman}
+              setIsEnglish={setIsEnglish}
               toTop={toTop}
             />
             <main
               id="container"
-              // className="main-content"
               className={`main-content ${isScrolled ? 'is-scrolled' : ''}`}
               onScroll={handleScroll}
             >

@@ -12,7 +12,14 @@ import Logo from '../components/logo';
 
 import { Link } from 'react-router-dom';
 
-export default function Header({ t, setIsHebrew, isHebrew, toTop }) {
+export default function Header({
+  t,
+  setIsHebrew,
+  isHebrew,
+  setIsGerman,
+  setIsEnglish,
+  toTop,
+}) {
   const [burgerOpen, setBurgerOpen] = useState(false);
   const [mQuery, setMQuery] = useState();
   const [screenSize, setScreenSize] = useState(window.innerWidth);
@@ -47,13 +54,14 @@ export default function Header({ t, setIsHebrew, isHebrew, toTop }) {
 
   return (
     <>
-      <header className={`header ${isHebrew ? 'rtl-text' : 'ltr-text'}`}>
+      {/* <header className={`header ${isHebrew ? 'rtl-text' : 'ltr-text'}`}> */}
+      <header className="header">
         <Link to="/" onClick={toTop}>
           <Logo />
         </Link>
 
-        <div className={isHebrew ? 'menu-right' : 'menu-left'} role="menu">
-          {/* <div ref={menuRef} className="menu-right" onClick={handleMenuClick}> */}
+        <div className="menu-left" role="menu">
+          {/* <div className={isHebrew ? 'menu-right' : 'menu-left'} role="menu"> */}
           {screenSize < 900 || mQuery ? (
             <img
               onClick={toggleBurgerMenu}
@@ -75,6 +83,8 @@ export default function Header({ t, setIsHebrew, isHebrew, toTop }) {
               t={t}
               setIsHebrew={setIsHebrew}
               isHebrew={isHebrew}
+              setIsGerman={setIsGerman}
+              setIsEnglish={setIsEnglish}
               toTop={toTop}
             />
           )}
@@ -88,6 +98,8 @@ export default function Header({ t, setIsHebrew, isHebrew, toTop }) {
           burgerOpen={burgerOpen}
           setBurgerOpen={setBurgerOpen}
           setIsHebrew={setIsHebrew}
+          setIsGerman={setIsGerman}
+          setIsEnglish={setIsEnglish}
           isHebrew={isHebrew}
           toTop={toTop}
         />
@@ -99,6 +111,8 @@ export default function Header({ t, setIsHebrew, isHebrew, toTop }) {
 Header.propTypes = {
   t: PropTypes.func.isRequired,
   setIsHebrew: PropTypes.func.isRequired,
+  setIsGerman: PropTypes.func.isRequired,
+  setIsEnglish: PropTypes.func.isRequired,
   toTop: PropTypes.func,
   isHebrew: PropTypes.bool.isRequired,
 };

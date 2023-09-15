@@ -9,6 +9,8 @@ export default function BurgerMenu({
   toggleBurgerMenu,
   setBurgerOpen,
   setIsHebrew,
+  setIsGerman,
+  setIsEnglish,
   isHebrew,
   toTop,
 }) {
@@ -90,7 +92,11 @@ export default function BurgerMenu({
         {t('about_about')}
       </NavLink>
 
-      <LanguageSwitch setIsHebrew={setIsHebrew} />
+      <LanguageSwitch
+        setIsHebrew={setIsHebrew}
+        setIsGerman={setIsGerman}
+        setIsEnglish={setIsEnglish}
+      />
     </nav>
   );
 }
@@ -100,6 +106,8 @@ BurgerMenu.propTypes = {
   toggleBurgerMenu: PropTypes.func.isRequired,
   setBurgerOpen: PropTypes.func.isRequired,
   setIsHebrew: PropTypes.func.isRequired,
+  setIsEnglish: PropTypes.func.isRequired,
+  setIsGerman: PropTypes.func.isRequired,
   isHebrew: PropTypes.bool.isRequired,
   toTop: PropTypes.func,
 };

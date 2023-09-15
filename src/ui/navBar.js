@@ -5,7 +5,14 @@ import LanguageSwitch from '../components/LanguageSwitch';
 
 import { Nav, NavLink } from '../components/navElements';
 
-const Navbar = ({ t, setIsHebrew, isHebrew, toTop }) => {
+const Navbar = ({
+  t,
+  setIsHebrew,
+  setIsEnglish,
+  setIsGerman,
+  isHebrew,
+  toTop,
+}) => {
   return (
     <div className="nav-con">
       <Nav className="nav" role="menu">
@@ -20,7 +27,11 @@ const Navbar = ({ t, setIsHebrew, isHebrew, toTop }) => {
             {t('about_about')}
           </NavLink>
         </div>
-        <LanguageSwitch setIsHebrew={setIsHebrew} />
+        <LanguageSwitch
+          setIsHebrew={setIsHebrew}
+          setIsGerman={setIsGerman}
+          setIsEnglish={setIsEnglish}
+        />
       </Nav>
     </div>
   );
@@ -29,6 +40,8 @@ const Navbar = ({ t, setIsHebrew, isHebrew, toTop }) => {
 Navbar.propTypes = {
   t: PropTypes.func.isRequired,
   setIsHebrew: PropTypes.func.isRequired,
+  setIsEnglish: PropTypes.func.isRequired,
+  setIsGerman: PropTypes.func.isRequired,
   toTop: PropTypes.func,
   isHebrew: PropTypes.bool.isRequired,
 };

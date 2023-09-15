@@ -28,10 +28,16 @@
   font-size: 0.75rem;
   letter-spacing: 2px;
   min-height: 65px;
+  @media screen and (max-width: 850px) {
+    min-height: 35px;
+  }
 }
 
 .product-card-description-wide {
   min-height: 72px;
+  @media screen and (max-width: 850px) {
+    min-height: 20px;
+  }
 }
 
 .go-button {

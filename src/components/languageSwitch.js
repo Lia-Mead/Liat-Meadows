@@ -1,8 +1,9 @@
 import { useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
+import { useLanguage } from './LanguageContext';
 
-const LanguageSwitch = ({ setIsHebrew }) => {
+const LanguageSwitch = ({ setIsHebrew, setIsEnglish, setIsGerman }) => {
   const { i18n } = useTranslation();
 
   const setIsHebrewCallback = useCallback(
@@ -11,6 +12,8 @@ const LanguageSwitch = ({ setIsHebrew }) => {
     },
     [setIsHebrew]
   );
+
+  const { switchLanguage } = useLanguage();
 
   const handleLanguageChange = useCallback(
     (newLanguage) => {
@@ -39,8 +42,7 @@ const LanguageSwitch = ({ setIsHebrew }) => {
       handleLanguageChange(browserLanguage);
     }
 
-    if (savedLanguage == 'he') {
-      // setIsHebrew(true);
+    if (savedLanguage === 'he') {
       setIsHebrewCallback(true);
     }
   }, [handleLanguageChange, i18n, setIsHebrewCallback]);
@@ -52,6 +54,9 @@ const LanguageSwitch = ({ setIsHebrew }) => {
         onClick={() => {
           handleLanguageChange('en');
           setIsHebrewCallback(false);
+          setIsEnglish(true);
+          switchLanguage('en');
+          setIsGerman(false);
         }}
       >
         English
@@ -61,6 +66,9 @@ const LanguageSwitch = ({ setIsHebrew }) => {
         onClick={() => {
           handleLanguageChange('de');
           setIsHebrewCallback(false);
+          setIsEnglish(false);
+          switchLanguage('de');
+          setIsGerman(true);
         }}
       >
         Deutsch
@@ -70,6 +78,9 @@ const LanguageSwitch = ({ setIsHebrew }) => {
         onClick={() => {
           handleLanguageChange('he');
           setIsHebrew(true);
+          switchLanguage('he');
+          setIsEnglish(false);
+          setIsGerman(false);
         }}
       >
         עברית
@@ -80,6 +91,8 @@ const LanguageSwitch = ({ setIsHebrew }) => {
 
 LanguageSwitch.propTypes = {
   setIsHebrew: PropTypes.func.isRequired,
+  setIsGerman: PropTypes.func.isRequired,
+  setIsEnglish: PropTypes.func.isRequired,
 };
 
 export default LanguageSwitch;

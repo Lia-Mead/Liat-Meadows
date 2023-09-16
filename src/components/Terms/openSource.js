@@ -9,7 +9,13 @@ const OpenSource = () => {
         <div className="text-content">
           <h1>{t('oss_title')}</h1>
           <p>{t('oss_text_1')}</p>
+          <p>@babel/core@7.22.11</p>
+          <p>@babel/eslint-parser@7.22.11</p>
+          <p>@babel/eslint-plugin@7.22.10</p>
+          <p>@babel/parser@7.22.14</p>
+          <p>@babel/preset-react@7.22.5</p>
           <p>@babel/plugin-proposal-private-property-in-object@7.21.11</p>
+          <p>babel-loader@9.1.3</p>
           <p> @testing-library/jest-dom@5.17.0</p>
           <p>@testing-library/react@13.4.0 </p>
           <p>@testing-library/user-event@13.5.0</p>
@@ -26,8 +32,13 @@ const OpenSource = () => {
           <p>react@18.2.0</p>
           <p>sass@1.66.1</p>
           <p>styled-components@5.3.11</p>
-          <p>uuid@9.0.0 </p>
-          <p> web-vitals@2.1.4</p>
+          <p>eslint-plugin-react-hooks@4.6.0</p>
+          <p>eslint@8.48.0</p>
+          <p>uuid@9.0.0</p>
+          <p>react-axe@3.5.4</p>
+          <p>web-vitals@2.1.4</p>
+          <p>webpack-cli@5.1.4</p>
+          <p>webpack@5.88.2</p>
         </div>
       </div>
     </div>

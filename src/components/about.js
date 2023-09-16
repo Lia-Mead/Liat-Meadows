@@ -6,9 +6,10 @@ import { useTranslation } from 'react-i18next';
 import Avatar from '../assets/images/liatm.jpg';
 import StackIcon from '../assets/icons/stack.svg';
 
-const About = () => {
+const About = ({ isHebrew }) => {
   const { t, i18n } = useTranslation();
-  const isHebrew = i18n.language === 'he';
+
+  //   const isHebrew = i18n.language === 'he';
 
   return (
     <div
@@ -58,7 +59,7 @@ const About = () => {
 
 About.propTypes = {
   t: PropTypes.func.isRequired,
-  // isHebrew: PropTypes.bool.isRequired,
+  isHebrew: PropTypes.bool,
 };
 
 export default withTranslation()(About);

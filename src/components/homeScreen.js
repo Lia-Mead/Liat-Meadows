@@ -12,6 +12,7 @@ import '../styles/homeScreen.scss';
 const HomeScreen = ({ toTop }) => {
   const { t, i18n } = useTranslation();
   const isHebrew = i18n.language === 'he';
+  // console.log('isHebrew home', isHebrew);
 
   const designProjects = getDesignProjects(t);
   const devProjects = getDevelopmentProjects(t);

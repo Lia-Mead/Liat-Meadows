@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import github from '../assets/icons/github.svg';
@@ -29,13 +30,13 @@ const Footer = ({ t, isHebrew }) => {
         </Link>
         <Link
           className="footer-link"
-          // to="/accessibility-statement"
-          to={{
-            pathname: '/accessibility-statement',
-            state: {
-              scrollToTop: true,
-            },
-          }}
+          to="/accessibility-statement"
+          // to={{
+          //   pathname: '/accessibility-statement',
+          //   state: {
+          //     scrollToTop: true,
+          //   },
+          // }}
         >
           {t('footer_accessibility')}
         </Link>

@@ -43,7 +43,7 @@ const About = () => {
               &#8226; Express &#8226; React-Native &#8226; React.js &#8226;
               Redux &#8226; Bootstrap &#8226; Git &#8226; GitHub &#8226; jQuery
               &#8226; Wordpress &#8226; Socket.IO &#8226; Sketch &#8226; Adobe
-              Creative Suite &#8226;
+              Creative Suite
             </p>
           </div>
         </div>

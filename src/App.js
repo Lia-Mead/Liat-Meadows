@@ -9,6 +9,7 @@ import i18n from './i18n/i18n';
 import { LanguageProvider } from './components/LanguageContext';
 
 import { useTranslation } from 'react-i18next';
+import ScrollToTop from './components/scrollToTop';
 
 // import { Accessibility } from 'accessibility';
 
@@ -267,6 +268,7 @@ function App() {
     <I18nextProvider i18n={i18n}>
       <LanguageProvider>
         <Router>
+          <ScrollToTop />
           <div className="wrapper">
             <Header
               t={t}

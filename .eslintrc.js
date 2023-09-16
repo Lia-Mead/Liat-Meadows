@@ -22,9 +22,9 @@ module.exports = {
   },
   plugins: ['react', 'react-hooks', 'jsx-a11y'],
   rules: {
-    'no-unused-vars':
-      // eslint-disable-next-line no-undef
-      process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-unused-vars': 'off',
+    // process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    // eslint-disable-next-line no-undef
     'react/react-in-jsx-scope': 'off',
     'jsx-a11y/accessible-emoji': 'warn',
     // 'jsx-a11y/': 'off',

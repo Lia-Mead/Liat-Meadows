@@ -12,9 +12,7 @@ import { useTranslation } from 'react-i18next';
 
 // import { Accessibility } from 'accessibility';
 
-// import ReactDOM from 'react-dom';
-
-import axe from 'react-axe';
+// import axe from 'react-axe';
 
 import HomeScreen from './components/homeScreen';
 import Header from './ui/header';
@@ -34,7 +32,7 @@ function App() {
   const [isGerman, setIsGerman] = useState(false);
   const [isEnglish, setIsEnglish] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isAccessibility, setIsAccessibility] = useState(true);
+  // const [isAccessibility, setIsAccessibility] = useState(true);
 
   const [hasScrolledToBottom, setHasScrolledToBottom] = useState(false);
 
@@ -280,8 +278,6 @@ function App() {
             />
             <main
               id="container"
-              // className={`header ${isHebrew ? 'rtl-text' : 'ltr-text'}`}
-              // className={`main-content ${isScrolled ? 'is-scrolled' : ''}`}
               className={`main-content ${isScrolled ? 'is-scrolled' : ''} ${
                 isHebrew ? 'rtl-text' : 'ltr-text'
               }`}

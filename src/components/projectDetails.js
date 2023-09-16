@@ -34,7 +34,7 @@ const ProjectDetails = ({ location, isButtonActive = true }) => {
             <div className="gallery-con">
               <OpenGallery className="gallery" photos={photos} />
 
-              {url != '' && (
+              {url !== '' && (
                 <button
                   className={'button'}
                   onClick={() => {

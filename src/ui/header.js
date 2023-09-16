@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import NavBar from './navBar';
 import BurgerMenu from '../ui/burgerMenu';
 // import LanguageSwitch from '../components/LanguageSwitch';
-import { useLanguage } from '../components/LanguageContext';
+// import { useLanguage } from '../components/LanguageContext';
 
 import close from '../assets/icons/close.svg';
 import burger from '../assets/icons/burger.svg';
@@ -61,7 +61,6 @@ export default function Header({
         </Link>
 
         <div className="menu-left" role="menu">
-          {/* <div className={isHebrew ? 'menu-right' : 'menu-left'} role="menu"> */}
           {screenSize < 900 || mQuery ? (
             <img
               onClick={toggleBurgerMenu}

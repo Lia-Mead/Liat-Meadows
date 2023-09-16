@@ -28,6 +28,8 @@ const About = ({ isHebrew }) => {
               {t('about_para_1_1_1')}
               <strong className="highlight">{t('about_para_1_2')}</strong>
               {t('about_para_1_3')}
+              <strong className="highlight">{t('about_para_1_3_1')}</strong>
+              {t('about_para_1_3_2')}
             </p>
             <p>{t('about_para_2_1')}</p>
             <p>

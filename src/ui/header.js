@@ -48,9 +48,9 @@ export default function Header({
     setScreenSize(window.innerWidth);
   }, []);
 
-  useEffect(() => {
-    console.log('isHebrew', isHebrew);
-  }, [isHebrew]);
+  // useEffect(() => {
+  //   console.log('isHebrew', isHebrew);
+  // }, [isHebrew]);
 
   return (
     <>

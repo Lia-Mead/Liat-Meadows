@@ -309,7 +309,7 @@ function App() {
                     toTop();
                   }}
                 >
-                  top
+                  {t('button_up')}
                 </button>
               )}
 

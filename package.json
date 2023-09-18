@@ -1,7 +1,7 @@
 {
   "proxy": "http://localhost:3000",
   "name": "liatmeadows",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://www.liatmeadows.com",
   "private": true,
   "dependencies": {

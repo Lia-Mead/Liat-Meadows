@@ -232,7 +232,7 @@ p {
   &:hover,
   &:focus,
   &:active {
-    background: linear-gradient(287deg, #3cb371, #0fa7ee);
+    background: linear-gradient(126deg, #22d367, #0e7336);
     border-color: transparent;
   }
 }
@@ -343,8 +343,6 @@ p {
   .footer-box.first {
     justify-content: center;
     background-image: linear-gradient(287deg, #3cb371, #0fa7ee);
-    // background-image: linear-gradient(287deg, #231557, #0fa7ee);
-    // background-image: linear-gradient(287deg, #7759e8, #0fa7ee);
     width: 100%;
     padding: 1% 0;
     flex-wrap: wrap;

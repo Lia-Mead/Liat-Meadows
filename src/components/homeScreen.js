@@ -21,11 +21,17 @@ const HomeScreen = ({ toTop }) => {
     <div id="home" className={`con home ${isHebrew ? 'rtl-text' : 'ltr-text'}`}>
       <div className="stage">
         <h1>{t('liat_meadows')}</h1>
-
-        <h2>
-          {t('home_development')}{' '}
-          <span className="high">{t('home_and_design')}</span>
-        </h2>
+        {isHebrew ? (
+          <h2>
+            <span className="high">{t('home_and_design')} </span>
+            {t('home_development')}
+          </h2>
+        ) : (
+          <h2>
+            {t('home_development')}
+            <span className="high">{t('home_and_design')}</span>
+          </h2>
+        )}
         <h3 className="animate-character">
           {t('home_slogan')} <br />
           {t('home_slogan2')}

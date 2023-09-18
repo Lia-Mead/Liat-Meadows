@@ -167,7 +167,8 @@ p {
 }
 
 .highlight {
-  color: #007bff;
+  color: #1ed367;
+  background-color: black;
 }
 
 .cards-box {
@@ -194,7 +195,7 @@ p {
     box-shadow: 0 10px 10px -10px rgba(#7f8c8d, 1);
   }
   &:focus {
-    outline: 2px solid #007bff;
+    outline: 2px solid #1ed367;
   }
 
   .image {
@@ -231,7 +232,6 @@ p {
   &:hover,
   &:focus,
   &:active {
-    // background-color: #007bff80;
     background: linear-gradient(287deg, #3cb371, #0fa7ee);
     border-color: transparent;
   }
@@ -402,7 +402,8 @@ p {
     &:hover,
     &:focus,
     &:active {
-      background-color: #66d5b0;
+      background-color: #00ca51;
+      // background-color: #66d5b0;
     }
   }
 
@@ -519,7 +520,8 @@ p {
   }
 
   .highlight {
-    color: #61dafb;
+    color: #00ca51;
+    background-color: transparent;
   }
 }
 

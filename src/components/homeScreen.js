@@ -22,7 +22,10 @@ const HomeScreen = ({ toTop }) => {
       <div className="stage">
         <h1>{t('liat_meadows')}</h1>
 
-        <h2>{t('development_and_design')}</h2>
+        <h2>
+          {t('home_development')}{' '}
+          <span className="high">{t('home_and_design')}</span>
+        </h2>
         <h3 className="animate-character">
           {t('home_slogan')} <br />
           {t('home_slogan2')}

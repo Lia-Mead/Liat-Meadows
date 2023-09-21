@@ -380,7 +380,7 @@ p {
 .open-nav {
   position: fixed;
   width: 40%;
-  background-color: #ffffff;
+  background-color: #221d1d;
   right: 0;
   top: 79px;
   z-index: 300;
@@ -395,7 +395,7 @@ p {
     align-items: flex-start;
   }
   a {
-    color: #271e1e;
+    color: #fff;
     padding: 30px 40px;
     text-decoration: underline;
     &:hover,

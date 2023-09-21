@@ -86,7 +86,8 @@ p {
 }
 
 .app-logo {
-  width: 60px;
+  // width: 60px;
+  width: 75%;
   padding: 7px;
   margin-left: 15px;
   cursor: pointer;
@@ -167,8 +168,8 @@ p {
 }
 
 .highlight {
-  color: #1ed367;
-  background-color: black;
+  color: #44107a;
+  font-weight: 700;
 }
 
 .cards-box {
@@ -318,7 +319,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #201f1f;
+  background: #000000;
   color: #fff;
   font-size: 0.8em;
   height: 130px;
@@ -428,8 +429,7 @@ p {
 .development-con {
   height: 100%;
   .box {
-    // background-color: #261e1e;
-    background-color: #6d6969;
+    background-color: #2d2b2b;
   }
   h1 > a {
     color: #ffffff;
@@ -492,7 +492,7 @@ p {
   }
 
   .box {
-    background-color: #6d6969;
+    background-color: #2d2b2b;
     padding-bottom: 100px;
     height: 100%;
   }
@@ -590,6 +590,9 @@ p {
       margin-top: 0px;
       padding-bottom: 30px;
     }
+    .highlight {
+      color: #1ed367;
+    }
   }
 
   .text-box {
@@ -622,5 +625,15 @@ p {
 
   .footer {
     height: 8rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .app-logo {
+    width: 50%;
+    margin-left: 5px;
+  }
+  .header > a {
+    width: 80%;
   }
 }

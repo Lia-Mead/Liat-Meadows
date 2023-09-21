@@ -1,4 +1,4 @@
-import logo from '../assets/icons/logo-g2.svg';
+import logo from '../assets/icons/logo-meadows.svg';
 
 export default function Logo() {
   return (

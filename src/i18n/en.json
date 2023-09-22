@@ -24,8 +24,8 @@
   "development_my_development_projects": "My development projects",
   "design_my_design_projects": "My design projects",
   "project_stack": "Stack",
-  "project_button_even_more": "even more",
-  "project_button_git_hub": "to git hub",
+  "project_detail_button": "to project",
+  "project_button_github": "to github",
   "detail_project_title_link": "Projects",
 
   "card_project_name_ziegert": "ZIEGERT Real Estate",

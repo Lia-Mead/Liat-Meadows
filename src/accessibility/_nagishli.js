@@ -15,17 +15,17 @@
 
 // export default Nagishli;
 
-window.nl_lang = 'en';
-window.nl_pos = 'bl';
-window.nl_compact = '1';
-window.nl_accordion = '1';
-window.nl_contact = 'n:Liat Meadows|u:meadowsliat+d:gmail.com';
+// window.nl_lang = 'en';
+// window.nl_pos = 'bl';
+// window.nl_compact = '1';
+// window.nl_accordion = '1';
+// window.nl_contact = 'n:Liat Meadows|u:meadowsliat+d:gmail.com';
 
-window.nl_lang = 'he';
-window.nl_pos = 'br';
-window.nl_compact = '1';
-window.nl_accordion = '1';
-window.nl_contact = 'n:Liat Meadows|u:meadowsliat+d:gmail.com';
+// window.nl_lang = 'he';
+// window.nl_pos = 'br';
+// window.nl_compact = '1';
+// window.nl_accordion = '1';
+// window.nl_contact = 'n:Liat Meadows|u:meadowsliat+d:gmail.com';
 
 {
   /* <script>

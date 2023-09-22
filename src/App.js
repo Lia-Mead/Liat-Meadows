@@ -10,6 +10,8 @@ import { LanguageProvider } from './components/LanguageContext';
 
 import { useTranslation } from 'react-i18next';
 import ScrollToTop from './components/scrollToTop';
+// import NagishLi from './accessibility/nagishli';
+// import NagishLiConfig from 'https://www.liatmeadows.com/nagishliconfig.js';
 
 // import { Accessibility } from 'accessibility';
 
@@ -57,6 +59,32 @@ function App() {
   //   // } else {
   //   //   setIsEnglish(false);
   //   // }
+  // }, []);
+
+  // useEffect(() => {
+  //   const script = document.createElement('script');
+
+  //   script.src = NagishLi;
+  //   script.async = true;
+
+  //   document.body.appendChild(script);
+
+  //   return () => {
+  //     document.body.removeChild(script);
+  //   };
+  // }, []);
+
+  // useEffect(() => {
+  //   const script = document.createElement('script');
+
+  //   script.src = 'https://www.liatmeadows.com/nagishliconfig.js';
+  //   script.async = true;
+
+  //   document.body.appendChild(script);
+
+  //   return () => {
+  //     document.body.removeChild(script);
+  //   };
   // }, []);
 
   useEffect(() => {

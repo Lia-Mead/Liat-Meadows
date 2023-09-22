@@ -44,8 +44,8 @@ const ProjectDetails = ({ location, isButtonActive = true }) => {
                   }}
                 >
                   {published
-                    ? t('project_button_even_more')
-                    : t('project_button_git_hub')}
+                    ? t('project_detail_button')
+                    : t('project_button_github')}
                 </button>
               )}
             </div>

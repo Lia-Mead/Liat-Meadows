@@ -26,8 +26,8 @@
   "development_my_development_projects": "פרוייקטים בפיתוח",
   "design_my_design_projects": "פרוייקטים בעיצוב",
   "project_stack": "תוכנות",
-  "project_button_even_more": "אפילו יותר",
-  "project_button_git_hub": "אל גיט האב",
+  "project_detail_button": "לפרוייקט",
+  "project_button_github": "אל גיטהאב",
   "detail_project_title_link": "פרוייקטים",
 
   "card_project_name_ziegert": "Ziegert נדל״ן ויעוץ פיננסי",

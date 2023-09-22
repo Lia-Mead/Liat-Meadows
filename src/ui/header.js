@@ -48,13 +48,8 @@ export default function Header({
     setScreenSize(window.innerWidth);
   }, []);
 
-  // useEffect(() => {
-  //   console.log('isHebrew', isHebrew);
-  // }, [isHebrew]);
-
   return (
     <>
-      {/* <header className={`header ${isHebrew ? 'rtl-text' : 'ltr-text'}`}> */}
       <header className="header">
         <Link to="/" onClick={toTop}>
           <Logo />

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next';
-// import PropTypes from 'prop-types';
 
 // import './nagishli.js';
 import i18n from './i18n/i18n';
@@ -358,10 +357,5 @@ function App() {
     </I18nextProvider>
   );
 }
-
-// App.propTypes = {
-//   // t: PropTypes.func.isRequired,
-//   history: PropTypes.object.isRequired,
-// };
 
 export default App;

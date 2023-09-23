@@ -27,7 +27,9 @@
   "design_my_design_projects": "פרוייקטים בעיצוב",
   "project_stack": "תוכנות",
   "project_detail_button": "לפרוייקט",
-  "project_button_github": "אל גיטהאב",
+  "details_button_behance": "צפייה ב- Behance",
+  "details_button_github": "צפייה ב- GitHub",
+  "details_button_online": "צפייה בפרוייקט אונליין",
   "detail_project_title_link": "פרוייקטים",
 
   "card_project_name_ziegert": "Ziegert נדל״ן ויעוץ פיננסי",

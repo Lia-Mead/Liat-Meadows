@@ -17,8 +17,9 @@ const ProjectCard = ({
   stack,
   buttonText,
   url,
-  published,
+  // published,
   isWideCard,
+  detailPageButton,
   toTop,
   ...rest
 }) => (
@@ -38,8 +39,9 @@ const ProjectCard = ({
       buttonText={buttonText}
       url={url}
       photos={photos}
-      published={published}
+      // published={published}
       isWideCard={isWideCard}
+      detailPageButton={detailPageButton}
       toTop={toTop}
     />
   </CustomCard>
@@ -52,9 +54,10 @@ ProjectCard.propTypes = {
   slug: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   stack: PropTypes.string.isRequired,
+  detailPageButton: PropTypes.string,
   buttonText: PropTypes.string,
   url: PropTypes.string,
-  published: PropTypes.bool,
+  // published: PropTypes.bool,
   isWideCard: PropTypes.bool,
   toTop: PropTypes.func,
 };

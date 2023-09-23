@@ -6,7 +6,15 @@ import { useTranslation } from 'react-i18next';
 import OpenGallery from './openGallery';
 
 const ProjectDetails = ({ location, isButtonActive = true }) => {
-  const { title, description, stack, url, photos, published } = location.state;
+  const {
+    title,
+    description,
+    stack,
+    url,
+    photos,
+    // published,
+    detailPageButton,
+  } = location.state;
   const { t, i18n } = useTranslation();
   const isHebrew = i18n.language === 'he';
 
@@ -43,9 +51,10 @@ const ProjectDetails = ({ location, isButtonActive = true }) => {
                     }
                   }}
                 >
-                  {published
+                  {/* {published
                     ? t('project_detail_button')
-                    : t('project_button_github')}
+                    : t('project_button_github')} */}
+                  {detailPageButton}
                 </button>
               )}
             </div>
@@ -58,7 +67,7 @@ const ProjectDetails = ({ location, isButtonActive = true }) => {
 
 ProjectDetails.propTypes = {
   t: PropTypes.func.isRequired,
-  buttonText: PropTypes.string,
+  // buttonText: PropTypes.string,
   className: PropTypes.string,
   isButtonActive: PropTypes.bool,
   project: PropTypes.object,

@@ -16,7 +16,6 @@ const Footer = ({ t, isHebrew }) => {
           rel="noopener noreferrer"
         >
           <img className="icon" src={github} alt="github" />
-          gitHub
         </a>
 
         <p>

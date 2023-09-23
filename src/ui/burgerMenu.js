@@ -16,8 +16,6 @@ export default function BurgerMenu({
 }) {
   const menuRef = useRef(null);
 
-  // console.log('ishebrew burgermenu', isHebrew);
-
   const handleMenuClick = (event) => {
     // Stop propagation to prevent closing when clicking inside the menu.
     event.stopPropagation();
@@ -27,10 +25,12 @@ export default function BurgerMenu({
     const handleClickOutside = (event) => {
       const clickedElement = event.target;
 
-      if (menuRef.current && !menuRef.current.contains(clickedElement)) {
-        if (!clickedElement.classList.contains('navbar-icon')) {
-          setBurgerOpen(false);
-        }
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(clickedElement) &&
+        !clickedElement.classList.contains('navbar-icon')
+      ) {
+        setBurgerOpen(false);
       }
     };
 
@@ -42,7 +42,7 @@ export default function BurgerMenu({
   }, [setBurgerOpen]);
 
   return (
-    <nav
+    <div
       ref={menuRef}
       className={`open-nav ${isHebrew ? 'rtl-text' : 'ltr-text'}`}
       onClick={handleMenuClick}
@@ -51,9 +51,9 @@ export default function BurgerMenu({
           handleMenuClick();
         }
       }}
-      // role="menu"
-      // aria-labelledby="menubutton"
-      // tabIndex="0"
+      role="button"
+      aria-labelledby="menubutton"
+      tabIndex="0"
     >
       <NavLink
         className="nav-icon"
@@ -97,7 +97,7 @@ export default function BurgerMenu({
         setIsGerman={setIsGerman}
         setIsEnglish={setIsEnglish}
       />
-    </nav>
+    </div>
   );
 }
 

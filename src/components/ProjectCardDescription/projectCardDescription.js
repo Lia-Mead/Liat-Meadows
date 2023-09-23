@@ -12,8 +12,9 @@ const ProjectCardDescription = ({
   url,
   stack,
   photos,
-  published,
+  // published,
   isWideCard,
+  detailPageButton,
   isButtonActive = true,
 }) => {
   const buttonStyle = () => {
@@ -59,7 +60,8 @@ const ProjectCardDescription = ({
             slug,
             url,
             photos,
-            published,
+            // published,
+            detailPageButton,
           },
         }}
         onClick={() => {
@@ -82,9 +84,10 @@ ProjectCardDescription.propTypes = {
   buttonText: PropTypes.string,
   url: PropTypes.string,
   stack: PropTypes.string.isRequired,
+  detailPageButton: PropTypes.string,
   isButtonActive: PropTypes.bool,
   photos: PropTypes.array.isRequired,
-  published: PropTypes.bool,
+  // published: PropTypes.bool,
   isWideCard: PropTypes.bool,
 };
 

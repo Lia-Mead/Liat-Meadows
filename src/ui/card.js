@@ -34,8 +34,9 @@ const Card = ({ projectArray, toTop }) => {
           stack: project.stack,
           buttonText: t('card_button'),
           url: project.url,
-          published: project.published,
+          // published: project.published,
           isWideCard: project.isWideCard,
+          detailPageButton: project.detailPageButton,
           gif,
         };
 

@@ -25,7 +25,9 @@
   "design_my_design_projects": "My design projects",
   "project_stack": "Stack",
   "project_detail_button": "to project",
-  "project_button_github": "to github",
+  "details_button_behance": "View on Behance",
+  "details_button_github": "View on GitHub",
+  "details_button_online": "View online",
   "detail_project_title_link": "Projects",
 
   "card_project_name_ziegert": "ZIEGERT Real Estate",

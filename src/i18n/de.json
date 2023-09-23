@@ -23,8 +23,10 @@
   "development_my_development_projects": "Meine Entwicklungs-Projekte",
   "design_my_design_projects": "Meine Design-Projekte",
   "project_stack": "Stack",
-  "project_detail_button": "zum Projekt",
-  "project_button_github": "zum github",
+  "project_detail_button": "Projekt ansehen",
+  "details_button_behance": "Auf Behance ansehen",
+  "details_button_github": "Auf GitHub ansehen",
+  "details_button_online": "Zur Projekts Webseite",
   "detail_project_title_link": "Projekte",
 
   "card_project_name_ziegert": "ZIEGERT Immobilien",

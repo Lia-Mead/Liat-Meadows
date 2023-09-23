@@ -27,23 +27,23 @@ module.exports = {
     // process.env.NODE_ENV === 'production' ? 'error' : 'off',
     // eslint-disable-next-line no-undef
     'react/react-in-jsx-scope': 'off',
-    'jsx-a11y/accessible-emoji': 'warn',
+    // 'jsx-a11y/accessible-emoji': 'warn',
     // 'jsx-a11y/': 'off',
-    'jsx-a11y/no-noninteractive-element-to-interactive-role': 'off',
-    'jsx-a11y/click-events-have-key-events': 'off',
-    'jsx-a11y/no-noninteractive-element-interactions': 'off',
+    // 'jsx-a11y/no-noninteractive-element-to-interactive-role': 'off',
+    // 'jsx-a11y/click-events-have-key-events': 'off',
+    // 'jsx-a11y/no-noninteractive-element-interactions': 'off',
 
     // quotes: ['error', 'single'],
     //add customize rules here as per your project's needs
   },
-  settings: {
-    'jsx-a11y': {
-      polymorphicPropName: 'as',
-      components: {
-        Logo: 'button',
-        NavBar: 'button',
-        BurgerMenu: 'button',
-      },
-    },
-  },
+  // settings: {
+  //   'jsx-a11y': {
+  //     polymorphicPropName: 'as',
+  //     components: {
+  //       Logo: 'button',
+  //       NavBar: 'button',
+  //       BurgerMenu: 'button',
+  //     },
+  //   },
+  // },
 };

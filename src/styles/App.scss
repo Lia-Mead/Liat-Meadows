@@ -80,7 +80,7 @@ p {
 //   z-index: 9000;
 // }
 
-.menu-left {
+.menu-con {
   display: flex;
   padding-right: 3%;
 }
@@ -232,6 +232,7 @@ p {
 .button {
   padding: 0.75rem 1.5rem;
   font-size: 0.75rem;
+  line-height: 1.6;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -305,6 +306,35 @@ p {
   }
 }
 
+.nav-menu {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.nav-button {
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 12;
+}
+
+.nav-link,
+.nav-link > a {
+  color: #000000;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 0.5rem;
+  height: 100%;
+  cursor: pointer;
+  &.active {
+    color: #000000;
+  }
+}
+
 .lang-btn {
   border-radius: 4px;
   padding: 10px;
@@ -317,7 +347,7 @@ p {
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
-    color: #808080;
+    font-weight: 700;
   }
 }
 
@@ -420,7 +450,6 @@ p {
     &:focus,
     &:active {
       background-color: #00ca51;
-      // background-color: #66d5b0;
     }
   }
 
@@ -438,10 +467,11 @@ p {
   }
 }
 
-.navbar-icon {
-  width: 2.5rem;
+.navbar-icon-box {
+  width: 3.5rem;
   min-height: 4rem;
   z-index: 300;
+  border: none;
 }
 
 .development-con {
@@ -645,12 +675,6 @@ p {
     height: 8rem;
   }
 }
-
-// @media screen and (min-width: 1000px) and (max-width: 1200px) {
-//   .menu-left {
-//     padding-right: 0;
-//   }
-// }
 
 @media screen and (max-width: 850px) {
   // .header > a {

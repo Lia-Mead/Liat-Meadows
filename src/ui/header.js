@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 import NavBar from './navBar';
@@ -24,12 +24,15 @@ export default function Header({
   const [mQuery, setMQuery] = useState();
   const [screenSize, setScreenSize] = useState(window.innerWidth);
 
+  const menuRef = useRef(null);
+
   const updateSize = () => {
     let mql = window.matchMedia('(max-width: 1074px)');
     setMQuery(mql.matches);
   };
 
   const toggleBurgerMenu = () => {
+    console.log('toggle menu');
     setBurgerOpen(!burgerOpen);
   };
 
@@ -48,6 +51,31 @@ export default function Header({
     setScreenSize(window.innerWidth);
   }, []);
 
+  // const handleMenuClick = (event) => {
+  //   // Stop propagation to prevent closing when clicking inside the menu.
+  //   event.stopPropagation();
+  // };
+
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     const clickedElement = event.target;
+
+  //     if (
+  //       menuRef.current &&
+  //       !menuRef.current.contains(clickedElement) &&
+  //       !clickedElement.classList.contains('navbar-icon')
+  //     ) {
+  //       setBurgerOpen(false);
+  //     }
+  //   };
+
+  //   document.addEventListener('mousedown', handleClickOutside);
+
+  //   return () => {
+  //     document.removeEventListener('mousedown', handleClickOutside);
+  //   };
+  // }, [setBurgerOpen]);
+
   return (
     <>
       <header className="header">
@@ -55,22 +83,22 @@ export default function Header({
           <Logo />
         </Link>
 
-        <div className="menu-left" role="menu">
+        <div className="menu-con" role="group">
           {screenSize < 900 || mQuery ? (
-            <img
+            <button
+              ref={menuRef}
               onClick={toggleBurgerMenu}
-              className="navbar-icon"
-              src={src}
-              alt="menu-burger"
+              className="navbar-icon-box"
               onKeyDown={(e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                   toggleBurgerMenu();
                 }
               }}
-              role="menu"
               aria-labelledby="menubutton"
-              // tabIndex="0"
-            />
+              tabIndex="0"
+            >
+              <img className="navbar-icon" src={src} alt="menu-burger" />
+            </button>
           ) : (
             <NavBar
               t={t}

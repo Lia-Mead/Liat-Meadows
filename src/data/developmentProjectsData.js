@@ -28,6 +28,7 @@ export const getDevelopmentProjects = (t) => {
       stack: 'React Native, Node.js',
       slug: 'user-chi',
       published: true,
+      detailPageButton: 'View on YouTube',
     },
     {
       title: t('card_project_name_jazz'),
@@ -38,7 +39,8 @@ export const getDevelopmentProjects = (t) => {
       url: 'https://github.com/Lia-Mead/allthatjazz',
       stack: 'React, Node.js, PostgreSQL, Socket.IO, AWS',
       slug: 'allthatjazz',
-      published: false,
+      // published: false,
+      detailPageButton: t('details_button_github'),
     },
     {
       title: t('card_project_name_epic'),
@@ -50,7 +52,8 @@ export const getDevelopmentProjects = (t) => {
       url: 'https://github.com/Lia-Mead/epic-time',
       stack: 'React, Node.js, PostgreSQL, Socket.IO, AWS',
       slug: 'epic-time',
-      published: false,
+      // published: false,
+      detailPageButton: t('details_button_github'),
     },
     {
       title: t('card_project_name_mureal'),
@@ -60,7 +63,8 @@ export const getDevelopmentProjects = (t) => {
       url: 'https://github.com/Lia-Mead/mureal',
       stack: 'Vue.js, Node.js, PostgreSQL, AWS',
       slug: 'mureal',
-      published: false,
+      // published: false,
+      detailPageButton: t('details_button_github'),
     },
     {
       title: t('card_project_name_searchify'),
@@ -70,7 +74,8 @@ export const getDevelopmentProjects = (t) => {
       url: 'https://searchify-alpha.vercel.app',
       stack: 'Node.js, Spotify API',
       slug: 'searchify',
-      published: true,
+      // published: true,
+      detailPageButton: t('details_button_online'),
     },
     {
       title: t('card_project_name_petition'),
@@ -80,7 +85,8 @@ export const getDevelopmentProjects = (t) => {
       url: 'https://stop-the-stomp.vercel.app/',
       stack: 'Handlebars, Node.js, PostgreSQL',
       slug: 'stop-the-stomp',
-      published: false,
+      // published: false,
+      detailPageButton: t('details_button_github'),
     },
     {
       title: t('card_project_connect'),
@@ -90,7 +96,8 @@ export const getDevelopmentProjects = (t) => {
       url: 'https://connect-four-retro.vercel.app',
       stack: 'Node.js, JavaScript',
       slug: 'connect-four',
-      published: true,
+      // published: true,
+      detailPageButton: t('details_button_online'),
     },
   ];
 };

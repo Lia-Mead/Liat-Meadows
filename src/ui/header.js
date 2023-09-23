@@ -67,10 +67,9 @@ export default function Header({
                   toggleBurgerMenu();
                 }
               }}
-              // eslint-disable-next-line jsx-a11y/no-noninteractive-element-to-interactive-role
               role="menu"
               aria-labelledby="menubutton"
-              tabIndex="0"
+              // tabIndex="0"
             />
           ) : (
             <NavBar

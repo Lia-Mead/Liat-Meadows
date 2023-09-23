@@ -88,23 +88,25 @@ p {
 .logo-box {
   display: flex;
   align-items: center;
+  height: 100%;
+}
+
+.app-logo {
+  width: 50px;
+  padding: 7px;
+  margin-left: 15px;
+  cursor: pointer;
+  z-index: 300;
 }
 
 .app-logo-font {
-  width: 23%;
+  width: 150px;
   padding: 7px;
   margin-left: -8px;
   cursor: pointer;
   z-index: 300;
 }
 
-.app-logo {
-  width: 10%;
-  padding: 7px;
-  margin-left: 15px;
-  cursor: pointer;
-  z-index: 300;
-}
 .rotate-center:hover {
   -webkit-animation: rotate-center 0.6s ease-in-out both;
   animation: rotate-center 0.6s ease-in-out both;
@@ -286,6 +288,9 @@ p {
   width: 100%;
   z-index: 3000;
   box-shadow: 6px 0px 6px 0px rgb(61 53 53 / 24%);
+}
+.header > a {
+  width: 30%;
 }
 
 .nav {
@@ -641,15 +646,26 @@ p {
   }
 }
 
+// @media screen and (min-width: 1000px) and (max-width: 1200px) {
+//   .menu-left {
+//     padding-right: 0;
+//   }
+// }
+
 @media screen and (max-width: 850px) {
+  // .header > a {
+  //   width: 30%;
+  // }
+
   .app-logo {
-    width: 20%;
     margin-left: 5px;
   }
-  .app-logo-font {
-    width: 35%;
-  }
-  .header > a {
-    width: 80%;
-  }
 }
+// @media screen and (max-width: 550px) {
+//   .app-logo {
+//     // width: 40%;
+//   }
+//   .app-logo-font {
+//     // width: 80%;
+//   }
+// }

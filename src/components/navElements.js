@@ -9,7 +9,7 @@ export const Nav = styled.nav`
 `;
 
 export const NavLink = styled(Link)`
-  color: #808080;
+  color: #000000;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -57,6 +57,6 @@ export const NavBtnLink = styled(Link)`
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
-    color: #808080;
+    color: #000000;
   }
 `;

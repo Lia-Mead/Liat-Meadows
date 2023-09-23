@@ -20,6 +20,7 @@ module.exports = {
       jsx: true,
     },
   },
+  // plugins: ['react', 'react-hooks'],
   plugins: ['react', 'react-hooks', 'jsx-a11y'],
   rules: {
     'no-unused-vars': 'off',
@@ -34,5 +35,15 @@ module.exports = {
 
     // quotes: ['error', 'single'],
     //add customize rules here as per your project's needs
+  },
+  settings: {
+    'jsx-a11y': {
+      polymorphicPropName: 'as',
+      components: {
+        Logo: 'button',
+        NavBar: 'button',
+        BurgerMenu: 'button',
+      },
+    },
   },
 };

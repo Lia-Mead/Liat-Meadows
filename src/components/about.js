@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import PropTypes from 'prop-types';
 import { withTranslation } from 'react-i18next';
 import { useTranslation } from 'react-i18next';
@@ -7,9 +6,7 @@ import Avatar from '../assets/images/liatm.jpg';
 import StackIcon from '../assets/icons/stack.svg';
 
 const About = ({ isHebrew }) => {
-  const { t, i18n } = useTranslation();
-
-  //   const isHebrew = i18n.language === 'he';
+  const { t } = useTranslation();
 
   return (
     <div

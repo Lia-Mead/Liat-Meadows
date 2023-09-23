@@ -38,6 +38,8 @@ function App() {
 
   const [hasScrolledToBottom, setHasScrolledToBottom] = useState(false);
 
+  const ReactDOM = require('react-dom');
+
   // const { switchLanguage } = useLanguage();
 
   // useEffect(() => {
@@ -85,6 +87,11 @@ function App() {
   //     document.body.removeChild(script);
   //   };
   // }, []);
+
+  if (process.env.NODE_ENV !== 'production') {
+    const axe = require('@axe-core/react');
+    axe(React, ReactDOM, 1000);
+  }
 
   useEffect(() => {
     // console.log('useEffect window', window);

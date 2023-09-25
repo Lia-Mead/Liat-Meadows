@@ -1,10 +1,8 @@
 import PropTypes from 'prop-types';
 import { withTranslation } from 'react-i18next';
-import { BrowserRouter, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import LanguageSwitch from '../components/LanguageSwitch';
-
-// import { Nav, NavLink } from '../components/navElements';
 
 const Navbar = ({
   t,

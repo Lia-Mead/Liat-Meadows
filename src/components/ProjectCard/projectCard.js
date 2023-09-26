@@ -1,7 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-import { useTranslation } from 'react-i18next';
 
 import CustomCard from './CustomCard/customCard';
 import ProjectCardDescription from '../ProjectCardDescription/projectCardDescription';
@@ -23,7 +22,6 @@ const ProjectCard = ({
   toTop,
   ...rest
 }) => {
-  // const { t } = useTranslation();
   return (
     <CustomCard
       className={cx(

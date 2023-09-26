@@ -1,6 +1,7 @@
+import { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { withTranslation } from 'react-i18next';
+// import { withTranslation } from 'react-i18next';
 import { useTranslation } from 'react-i18next';
 
 import OpenGallery from './openGallery';
@@ -18,6 +19,10 @@ const ProjectDetails = ({ location, isButtonActive = true }) => {
   const { t, i18n } = useTranslation();
   const isHebrew = i18n.language === 'he';
 
+  console.log('location.state', location.state);
+
+  // const projects = useMemo(() => getDesignProjects(t), [t]);
+
   return (
     <>
       <div className={`detail-con ${isHebrew ? 'rtl-text' : 'ltr-text'}`}>
@@ -26,16 +31,16 @@ const ProjectDetails = ({ location, isButtonActive = true }) => {
             <Link to="/development" className="link">
               {t('detail_project_title_link')}
             </Link>
-            <span className="highlight"> / {title}</span>
+            <span className="highlight"> / {t(title)}</span>
           </h1>
         </div>
         <div className="box">
           <div className="stage">
             <div className="text">
-              <p>{description}</p>
+              <p>{t(description)}</p>
               <p>
                 <span className="highlight">{t('project_stack')}: </span>
-                {stack}
+                {t(stack)}
               </p>
             </div>
 
@@ -54,7 +59,7 @@ const ProjectDetails = ({ location, isButtonActive = true }) => {
                   {/* {published
                     ? t('project_detail_button')
                     : t('project_button_github')} */}
-                  {detailPageButton}
+                  {t(detailPageButton)}
                 </button>
               )}
             </div>
@@ -66,7 +71,7 @@ const ProjectDetails = ({ location, isButtonActive = true }) => {
 };
 
 ProjectDetails.propTypes = {
-  t: PropTypes.func.isRequired,
+  // t: PropTypes.func.isRequired,
   // buttonText: PropTypes.string,
   className: PropTypes.string,
   isButtonActive: PropTypes.bool,
@@ -76,4 +81,4 @@ ProjectDetails.propTypes = {
   }),
 };
 
-export default withTranslation()(ProjectDetails);
+export default ProjectDetails;

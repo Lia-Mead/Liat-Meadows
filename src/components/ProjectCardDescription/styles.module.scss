@@ -58,9 +58,10 @@
   &:hover,
   &:focus,
   &:active {
-    background: linear-gradient(126deg, #22d367, #0e7336);
+    background: linear-gradient(126deg, #66e196, #43ea85);
     border-color: transparent;
-    color: #ffffff;
+    color: #000000;
+    font-weight: 700;
   }
 }
 

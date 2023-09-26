@@ -1,25 +1,21 @@
 import { useRef, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 
 import LanguageSwitch from '../components/LanguageSwitch';
 
 export default function BurgerMenu({
-  t,
   toggleBurgerMenu,
   setBurgerOpen,
-  setIsHebrew,
-  setIsGerman,
-  setIsEnglish,
-  isHebrew,
+
   toTop,
 }) {
   const menuRef = useRef(null);
 
-  const handleMenuClick = (event) => {
-    // Stop propagation to prevent closing when clicking inside the menu.
-    event.stopPropagation();
-  };
+  const { t, i18n } = useTranslation();
+
+  const isHebrew = i18n.language === 'he';
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -42,72 +38,65 @@ export default function BurgerMenu({
   }, [setBurgerOpen]);
 
   return (
-    <div
-      ref={menuRef}
+    <nav
       className={`open-nav ${isHebrew ? 'rtl-text' : 'ltr-text'}`}
-      onClick={handleMenuClick}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          handleMenuClick();
-        }
-      }}
-      role="button"
-      aria-labelledby="menubutton"
-      tabIndex="0"
+      role="navigation"
+      aria-label="Main navigation"
+      id="primary-nav"
+      ref={menuRef}
     >
-      <NavLink
-        className="nav-icon"
-        activeClassName="active-b"
-        onClick={() => {
-          toggleBurgerMenu();
-          toTop();
-        }}
-        exact
-        to="/development"
-      >
-        {t('about_development')}
-      </NavLink>
-
-      <NavLink
-        className="nav-icon"
-        activeClassName="active-b"
-        onClick={() => {
-          toggleBurgerMenu();
-          toTop();
-        }}
-        to="/design"
-      >
-        {t('about_design')}
-      </NavLink>
-
-      <NavLink
-        className="nav-icon"
-        activeClassName="active-b"
-        onClick={() => {
-          toggleBurgerMenu();
-          toTop();
-        }}
-        to="/about"
-      >
-        {t('about_about')}
-      </NavLink>
-
-      <LanguageSwitch
-        setIsHebrew={setIsHebrew}
-        setIsGerman={setIsGerman}
-        setIsEnglish={setIsEnglish}
-      />
-    </div>
+      <ul>
+        <li>
+          <NavLink
+            className="nav-icon"
+            activeClassName="active-b"
+            onClick={() => {
+              toggleBurgerMenu();
+              toTop();
+            }}
+            exact
+            to="/development"
+            role="button"
+          >
+            {t('about_development')}
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            className="nav-icon"
+            activeClassName="active-b"
+            onClick={() => {
+              toggleBurgerMenu();
+              toTop();
+            }}
+            to="/design"
+            role="button"
+          >
+            {t('about_design')}
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            className="nav-icon"
+            activeClassName="active-b"
+            onClick={() => {
+              toggleBurgerMenu();
+              toTop();
+            }}
+            to="/about"
+            role="button"
+          >
+            {t('about_about')}
+          </NavLink>
+        </li>
+      </ul>
+      <LanguageSwitch />
+    </nav>
   );
 }
 
 BurgerMenu.propTypes = {
-  t: PropTypes.func.isRequired,
   toggleBurgerMenu: PropTypes.func.isRequired,
   setBurgerOpen: PropTypes.func.isRequired,
-  setIsHebrew: PropTypes.func.isRequired,
-  setIsEnglish: PropTypes.func.isRequired,
-  setIsGerman: PropTypes.func.isRequired,
-  isHebrew: PropTypes.bool.isRequired,
   toTop: PropTypes.func,
 };

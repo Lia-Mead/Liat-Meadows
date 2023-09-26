@@ -19,11 +19,11 @@ import Ziegert2 from '../assets/images/ziegert2.jpg';
 import Ziegert3 from '../assets/images/ziegert3.jpg';
 import Ziegert4 from '../assets/images/ziegert4.jpg';
 
-export const getDesignProjects = (t) => {
+export const getDesignProjects = () => {
   return [
     {
-      title: t('card_project_name_ziegert'),
-      description: t('card_description_ziegert'),
+      title: 'card_project_name_ziegert',
+      description: 'card_description_ziegert',
       image1: Ziegert1,
       image2: Ziegert2,
       image3: Ziegert3,
@@ -34,8 +34,8 @@ export const getDesignProjects = (t) => {
       isWideCard: true,
     },
     {
-      title: t('card_project_name_flamingo'),
-      description: t('card_description_flamingo'),
+      title: 'card_project_name_flamingo',
+      description: 'card_description_flamingo',
       image1: flamingoBook,
       image2: flamingoWeb,
       image3: flamingoPhone,
@@ -45,11 +45,11 @@ export const getDesignProjects = (t) => {
       slug: 'flamingo-generation',
       isWideCard: true,
       // published: true,
-      detailPageButton: t('details_button_behance'),
+      detailPageButton: 'details_button_behance',
     },
     {
-      title: t('card_project_name_les_voyageurs'),
-      description: t('card_description_les'),
+      title: 'card_project_name_les_voyageurs',
+      description: 'card_description_les',
       image1: lvComp,
       image2: lvIllu,
       url: 'https://www.behance.net/gallery/24510341/Les-Voyageurs',
@@ -57,11 +57,11 @@ export const getDesignProjects = (t) => {
       slug: 'les-voyageurs',
       isWideCard: true,
       // published: true,
-      detailPageButton: t('details_button_behance'),
+      detailPageButton: 'details_button_behance',
     },
     {
-      title: t('card_project_name_fine_corner'),
-      description: t('card_description_fine'),
+      title: 'card_project_name_fine_corner',
+      description: 'card_description_fine',
       image1: fcWindow,
       image2: fcTitle,
       image3: fcPages,
@@ -69,14 +69,14 @@ export const getDesignProjects = (t) => {
       image5: fcBrowse,
       url: 'https://www.behance.net/gallery/11271997/A-Fine-Corner-(Ein-schoenes-Eck)',
       stack: 'Photography, InDesign, Photoshop, Illustrator',
-      slug: 'les-voyageurs',
+      slug: 'fine-corner',
       isWideCard: true,
       // published: true,
-      detailPageButton: t('details_button_behance'),
+      detailPageButton: 'details_button_behance',
     },
     {
-      title: t('card_project_name_simply'),
-      description: t('card_description_simply'),
+      title: 'card_project_name_simply',
+      description: 'card_description_simply',
       image1: legendaryPoster,
       image2: legendaryWoods,
       image3: legendaryPWolf,
@@ -84,10 +84,10 @@ export const getDesignProjects = (t) => {
       image5: legendaryGrandma,
       url: 'https://www.behance.net/gallery/11274551/Simply-legendary',
       stack: 'Photoshop, Illustrator',
-      slug: 'les-voyageurs',
+      slug: 'simply-legendary',
       isWideCard: true,
       // published: true,
-      detailPageButton: t('details_button_behance'),
+      detailPageButton: 'details_button_behance',
     },
   ];
 };

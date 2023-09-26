@@ -1,5 +1,8 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+// import Backend from 'i18next-chained-backend';
+// import LocalStorageBackend from 'i18next-localstorage-backend'; // primary use cache
+// import LanguageDetector from 'i18next-browser-languagedetector';
 
 import enTranslation from '../i18n/en.json';
 import deTranslation from '../i18n/de.json';
@@ -23,10 +26,19 @@ i18n.use(initReactI18next).init({
       },
     },
   },
-  lng: 'en',
+  // lng: 'en',
+  debug: false,
   fallbackLng: 'en',
   interpolation: {
     escapeValue: false,
+  },
+  react: {
+    bindI18n: 'languageChanged',
+    bindI18nStore: '',
+    transEmptyNodeValue: '',
+    transSupportBasicHtmlNodes: true,
+    transKeepBasicHtmlNodesFor: ['br', 'strong', 'i'],
+    useSuspense: false,
   },
 });
 

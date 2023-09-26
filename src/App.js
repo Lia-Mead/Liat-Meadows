@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next';
 
 // import './nagishli.js';
-import i18n from './i18n/i18n';
-// import { LanguageProvider, useLanguage } from './components/LanguageContext';
-import { LanguageProvider } from './components/LanguageContext';
+import i18nConfig from './i18n/i18n';
+// // import { LanguageProvider, useLanguage } from './components/LanguageContext';
+// import { LanguageProvider } from './components/LanguageContext';
 
 import { useTranslation } from 'react-i18next';
 import ScrollToTop from './components/scrollToTop';
@@ -29,10 +29,10 @@ import OpenSource from './components/Terms/openSource';
 import './styles/App.scss';
 
 function App() {
-  const { t } = useTranslation();
-  const [isHebrew, setIsHebrew] = useState(false);
-  const [isGerman, setIsGerman] = useState(false);
-  const [isEnglish, setIsEnglish] = useState(false);
+  const { t, i18n } = useTranslation();
+  // const [isHebrew, setIsHebrew] = useState(false);
+  // const [isGerman, setIsGerman] = useState(false);
+  // const [isEnglish, setIsEnglish] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   // const [isAccessibility, setIsAccessibility] = useState(true);
 
@@ -41,6 +41,15 @@ function App() {
   const ReactDOM = require('react-dom');
 
   // const { switchLanguage } = useLanguage();
+
+  const isHebrew = i18n.language === 'he';
+  // const isGerman = i18n.language === 'de';
+  // const isEnglish = i18n.language === 'en';
+
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('selectedLanguage');
+    i18n.changeLanguage(savedLanguage);
+  }, []);
 
   // useEffect(() => {
   //   if (i18n.language === 'he') {
@@ -299,55 +308,51 @@ function App() {
   // };
 
   return (
-    <I18nextProvider i18n={i18n}>
-      <LanguageProvider>
-        <Router>
-          <ScrollToTop />
-          <div className="wrapper">
-            <Header
-              t={t}
-              isHebrew={isHebrew}
-              setIsHebrew={setIsHebrew}
-              setIsGerman={setIsGerman}
-              setIsEnglish={setIsEnglish}
-              toTop={toTop}
+    // <I18nextProvider i18n={i18nConfig}>
+    <Router>
+      <ScrollToTop />
+      <div className="wrapper">
+        <Header
+          t={t}
+          // isHebrew={isHebrew}
+          // setIsHebrew={setIsHebrew}
+          // setIsGerman={setIsGerman}
+          // setIsEnglish={setIsEnglish}
+          toTop={toTop}
+        />
+        <main
+          id="container"
+          className={`main-content ${isScrolled ? 'is-scrolled' : ''} ${
+            isHebrew ? 'rtl-text' : 'ltr-text'
+          }`}
+          onScroll={handleScroll}
+        >
+          <Switch>
+            <Route path="/" exact component={HomeScreen} />
+            <Route path="/development" component={Development} />
+            <Route path="/design" component={Design} />
+            <Route path="/about" component={About} />
+            <Route path="/projectDetails/:slug" component={ProjectDetails} />
+            <Route
+              path="/accessibility-statement"
+              component={AccessibilityStatement}
             />
-            <main
-              id="container"
-              className={`main-content ${isScrolled ? 'is-scrolled' : ''} ${
-                isHebrew ? 'rtl-text' : 'ltr-text'
-              }`}
-              onScroll={handleScroll}
+            <Route path="/imprint" component={Imprint} />
+            <Route path="/open-source" component={OpenSource} />
+          </Switch>
+
+          {isScrolled && (
+            <button
+              className="top"
+              onClick={() => {
+                toTop();
+              }}
             >
-              <Switch>
-                <Route path="/" exact component={HomeScreen} />
-                <Route path="/development" component={Development} />
-                <Route path="/design" component={Design} />
-                <Route path="/about" component={About} />
-                <Route
-                  path="/projectDetails/:slug"
-                  component={ProjectDetails}
-                />
-                <Route
-                  path="/accessibility-statement"
-                  component={AccessibilityStatement}
-                />
-                <Route path="/imprint" component={Imprint} />
-                <Route path="/open-source" component={OpenSource} />
-              </Switch>
+              {t('button_up')}
+            </button>
+          )}
 
-              {isScrolled && (
-                <button
-                  className="top"
-                  onClick={() => {
-                    toTop();
-                  }}
-                >
-                  {t('button_up')}
-                </button>
-              )}
-
-              {/* {isAccessibility && (
+          {/* {isAccessibility && (
                 <button
                   className="accessibility-question"
                   onClick={hideAccessibility}
@@ -355,13 +360,12 @@ function App() {
                   hide accessibility
                 </button>
               )} */}
-            </main>
+        </main>
 
-            {hasScrolledToBottom ? <Footer t={t} isHebrew={isHebrew} /> : null}
-          </div>
-        </Router>
-      </LanguageProvider>
-    </I18nextProvider>
+        {hasScrolledToBottom ? <Footer t={t} isHebrew={isHebrew} /> : null}
+      </div>
+    </Router>
+    // </I18nextProvider>
   );
 }
 

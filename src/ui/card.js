@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 
@@ -8,12 +8,12 @@ import ProjectCard from '../components/ProjectCard/projectCard';
 import ProjectDetails from '../components/projectDetails';
 
 const Card = ({ projectArray, toTop }) => {
-  const { t } = useTranslation();
-  const [selectedProject, setSelectedProject] = useState(null);
+  const { t, i18n } = useTranslation();
+  // const [selectedProject, setSelectedProject] = useState(null);
 
-  return (
-    <>
-      {projectArray.map((project) => {
+  const projects = useMemo(
+    () =>
+      projectArray.map((project) => {
         const filteredPhotos = [
           project.image1,
           project.image2,
@@ -32,18 +32,24 @@ const Card = ({ projectArray, toTop }) => {
           slug: project.slug,
           description: project.description,
           stack: project.stack,
-          buttonText: t('card_button'),
+          buttonText: 'card_button',
           url: project.url,
-          // published: project.published,
           isWideCard: project.isWideCard,
           detailPageButton: project.detailPageButton,
           gif,
         };
+        console.log('projectData', projectData);
 
         return <ProjectCard key={uuidv4()} {...projectData} toTop={toTop} />;
-      })}
+      }),
+    [projectArray, t, toTop, i18n.language]
+  );
 
-      {selectedProject && <ProjectDetails project={selectedProject} />}
+  return (
+    <>
+      {projects}
+
+      {/* {selectedProject && <ProjectDetails t={t} project={selectedProject} />} */}
     </>
   );
 };

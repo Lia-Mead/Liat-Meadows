@@ -1,5 +1,5 @@
+import { useMemo } from 'react';
 import PropTypes from 'prop-types';
-import { withTranslation } from 'react-i18next';
 import { useTranslation } from 'react-i18next';
 
 import Card from '../ui/card';
@@ -10,7 +10,7 @@ const Design = ({ toTop }) => {
   const { t, i18n } = useTranslation();
   const isHebrew = i18n.language === 'he';
 
-  const designProjects = getDesignProjects(t);
+  const designProjects = useMemo(() => getDesignProjects(t), [t]);
 
   return (
     <div
@@ -24,7 +24,7 @@ const Design = ({ toTop }) => {
 
         <div className="cards-box">
           <Card
-            t={t}
+            // t={t}
             projectArray={designProjects}
             isWideCard={true}
             toTop={toTop}
@@ -39,7 +39,8 @@ Design.propTypes = {
   projectArray: PropTypes.array,
   isWideCard: PropTypes.bool,
   toTop: PropTypes.func,
-  t: PropTypes.func.isRequired,
+  // t: PropTypes.func,
 };
 
-export default withTranslation()(Design);
+export default Design;
+// export default withTranslation()(Design);

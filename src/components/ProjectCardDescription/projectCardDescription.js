@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.scss';
 import PropTypes from 'prop-types';
@@ -29,9 +30,11 @@ const ProjectCardDescription = ({
     }
   };
 
+  const { t, i18n } = useTranslation();
+
   const [showFullContent, setShowFullContent] = useState(false);
 
-  const content = description;
+  const content = t(description);
 
   const displayContent = showFullContent
     ? content
@@ -39,7 +42,7 @@ const ProjectCardDescription = ({
 
   return (
     <div className={styles['product-card-description-box']}>
-      <div className={styles['product-card-name']}>{title}</div>
+      <div className={styles['product-card-name']}>{t(title)}</div>
       <p
         className={
           isWideCard
@@ -60,7 +63,6 @@ const ProjectCardDescription = ({
             slug,
             url,
             photos,
-            // published,
             detailPageButton,
           },
         }}
@@ -70,7 +72,7 @@ const ProjectCardDescription = ({
         }}
       >
         <button className={buttonStyle()} disabled={!isButtonActive}>
-          {buttonText}
+          {t(buttonText)}
         </button>
       </Link>
     </div>

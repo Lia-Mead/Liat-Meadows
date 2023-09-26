@@ -38,18 +38,19 @@ const HomeScreen = ({ toTop }) => {
         </h3>
       </div>
       <Development
-        t={t}
+        // t={t}
         isHebrew={isHebrew}
         projectArray={devProjects}
         onClick={toTop}
       />
       <Design
-        t={t}
+        // t={t}
         isHebrew={isHebrew}
         projectArray={designProjects}
         onClick={toTop}
       />
-      <About t={t} isHebrew={isHebrew} onClick={toTop} />
+      <About onClick={toTop} />
+      {/* <About t={t} isHebrew={isHebrew} onClick={toTop} /> */}
     </div>
   );
 };

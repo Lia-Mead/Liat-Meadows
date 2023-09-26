@@ -1,10 +1,14 @@
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 
 import github from '../assets/icons/github.svg';
 
-const Footer = ({ t, isHebrew }) => {
+const Footer = () => {
+  const { t, i18n } = useTranslation();
+  const isHebrew = i18n.language === 'he';
+
   return (
     <footer className="footer">
       <div className="footer-box first">
@@ -49,8 +53,8 @@ const Footer = ({ t, isHebrew }) => {
 };
 
 Footer.propTypes = {
-  t: PropTypes.func.isRequired,
-  isHebrew: PropTypes.bool.isRequired,
+  // t: PropTypes.func.isRequired,
+  // isHebrew: PropTypes.bool.isRequired,
   // toTop: PropTypes.func,
 };
 

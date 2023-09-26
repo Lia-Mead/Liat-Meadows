@@ -1,6 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 
 import CustomCard from './CustomCard/customCard';
 import ProjectCardDescription from '../ProjectCardDescription/projectCardDescription';
@@ -17,35 +18,37 @@ const ProjectCard = ({
   stack,
   buttonText,
   url,
-  // published,
   isWideCard,
   detailPageButton,
   toTop,
   ...rest
-}) => (
-  <CustomCard
-    className={cx(
-      styles[isWideCard ? 'product-card-wide' : 'product-card'],
-      className
-    )}
-    {...rest}
-  >
-    <ProjectCardGallery photos={photos} />
-    <ProjectCardDescription
-      title={title}
-      slug={slug}
-      description={description}
-      stack={stack}
-      buttonText={buttonText}
-      url={url}
-      photos={photos}
-      // published={published}
-      isWideCard={isWideCard}
-      detailPageButton={detailPageButton}
-      toTop={toTop}
-    />
-  </CustomCard>
-);
+}) => {
+  // const { t } = useTranslation();
+  return (
+    <CustomCard
+      className={cx(
+        styles[isWideCard ? 'product-card-wide' : 'product-card'],
+        className
+      )}
+      {...rest}
+    >
+      <ProjectCardGallery photos={photos} />
+      <ProjectCardDescription
+        title={title}
+        slug={slug}
+        description={description}
+        stack={stack}
+        buttonText={buttonText}
+        url={url}
+        photos={photos}
+        // published={published}
+        isWideCard={isWideCard}
+        detailPageButton={detailPageButton}
+        toTop={toTop}
+      />
+    </CustomCard>
+  );
+};
 
 ProjectCard.propTypes = {
   className: PropTypes.string,

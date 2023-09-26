@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import LanguageSwitch from '../components/LanguageSwitch';
 
@@ -12,19 +12,23 @@ const Navbar = ({ toTop }) => {
       <nav className="nav-button" role="navigation">
         <ul className={`nav-menu ${isHebrew ? 'rtl-text' : 'ltr-text'}`}>
           <li className="nav-link">
-            <Link to="/development" onClick={toTop}>
+            <NavLink
+              to="/development"
+              onClick={toTop}
+              activeClassName="active-tab"
+            >
               {t('about_development')}
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-link">
-            <Link to="/design" onClick={toTop}>
+            <NavLink to="/design" onClick={toTop} activeClassName="active-tab">
               {t('about_design')}
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-link">
-            <Link to="/about" onClick={toTop}>
+            <NavLink to="/about" onClick={toTop} activeClassName="active-tab">
               {t('about_about')}
-            </Link>
+            </NavLink>
           </li>
         </ul>
 

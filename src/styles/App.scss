@@ -1,14 +1,4 @@
-// @import 'colors';
-
-// :root {
-//   --primary-color: ${colors.primary};
-//   --secondary-color: ${colors.secondary};
-//   --grey-color: ${colors.grey};
-//   --highlight-color: ${colors.highlight};
-//   --highlight-green-color: ${colors['highlight-green']};
-//   --light-color: ${colors.light};
-//   --dark-color: ${colors.dark};
-// }
+@import '_colors.scss';
 
 html,
 body {
@@ -29,7 +19,7 @@ body {
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
-  position: relative; /* Required for positioning the "top" button */
+  position: relative;
 }
 
 header,
@@ -173,7 +163,7 @@ p {
     width: 100vw;
     height: calc(100vh - 150px);
     flex-direction: row;
-    background-color: #261e1e;
+    background-color: $dark;
 }
 
 .box {
@@ -201,8 +191,7 @@ p {
 }
 
 .highlight {
-  // color: #44107a;
-  color: #000000;
+  color: $black;
   font-weight: 700;
 }
 
@@ -256,8 +245,8 @@ p {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #000000;
-  background-color: #ffffff;
+  color: $black;
+  background-color: $white;
   border: 2px solid black;
   border-radius: 0.25rem;
   transition: 0.25s;
@@ -270,7 +259,7 @@ p {
   &:active {
     background: linear-gradient(126deg, #66e196, #43ea85);
     border-color: transparent;
-    color: #000000;
+    color: $black;
     font-weight: 700;
   }
 }
@@ -279,21 +268,21 @@ p {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  color: #000000;
-  background-color: #ffffff;
+  color: $black;
+  background-color: $white;
   position: fixed;
   right: 15px;
   bottom: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #261e1e;
+  border: 1px solid $dark;
   z-index: 3000;
 }
 
 .text-box {
   width: 63%;
-  color: #ffffff;
+  color: $white;
 }
 
 .header {
@@ -344,7 +333,7 @@ p {
 
 .nav-link,
 .nav-link > a {
-  color: #000000;
+  color: $black;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -352,16 +341,16 @@ p {
   height: 100%;
   cursor: pointer;
   &.active {
-    color: #000000;
+    color: $black;
   }
 }
 
 .lang-btn {
   border-radius: 4px;
   padding: 10px;
-  color: #000000;
+  color: $black;
   outline: none;
-  border: 1px black;
+  border: 1px $black;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
 
@@ -388,7 +377,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #000000;
+  background: $black;
   color: #fff;
   font-size: 0.8em;
   height: 130px;
@@ -498,10 +487,10 @@ p {
 .development-con {
   height: 100%;
   .box {
-    background-color: #2d2b2b;
+    background-color: $dark-bg;
   }
   h1 > a {
-    color: #ffffff;
+    color: $white;
   }
 }
 
@@ -509,7 +498,7 @@ p {
   height: 100%;
 
   h1 > a {
-    color: #261e1e;
+    color: $dark;
   }
 }
 
@@ -562,7 +551,7 @@ p {
   }
 
   .box {
-    background-color: #2d2b2b;
+    background-color: $dark-bg;
     padding-bottom: 100px;
     height: 100%;
   }
@@ -576,7 +565,7 @@ p {
   }
 
   h1 > a {
-    color: #ffffff;
+    color: $white;
   }
 
   a {

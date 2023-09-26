@@ -1,6 +1,4 @@
-import { useEffect } from 'react';
 import PropTypes from 'prop-types';
-// import { withTranslation } from 'react-i18next';
 import { useTranslation } from 'react-i18next';
 
 import Card from '../ui/card';
@@ -24,12 +22,7 @@ const Development = ({ toTop }) => {
           </a>
         </h1>
         <div className={'cards-box'}>
-          <Card
-            // t={t}
-            projectArray={devProjects}
-            isWideCard={false}
-            toTop={toTop}
-          />
+          <Card projectArray={devProjects} isWideCard={false} toTop={toTop} />
         </div>
       </div>
     </div>
@@ -40,7 +33,6 @@ Development.propTypes = {
   projectArray: PropTypes.array,
   isWideCard: PropTypes.bool,
   toTop: PropTypes.func,
-  // t: PropTypes.func,
 };
 
 export default Development;

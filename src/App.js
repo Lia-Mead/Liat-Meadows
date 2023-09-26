@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { I18nextProvider } from 'react-i18next';
 
 // import './nagishli.js';
 import i18nConfig from './i18n/i18n';
-// // import { LanguageProvider, useLanguage } from './components/LanguageContext';
-// import { LanguageProvider } from './components/LanguageContext';
 
 import { useTranslation } from 'react-i18next';
 import ScrollToTop from './components/scrollToTop';
@@ -30,9 +27,6 @@ import './styles/App.scss';
 
 function App() {
   const { t, i18n } = useTranslation();
-  // const [isHebrew, setIsHebrew] = useState(false);
-  // const [isGerman, setIsGerman] = useState(false);
-  // const [isEnglish, setIsEnglish] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   // const [isAccessibility, setIsAccessibility] = useState(true);
 
@@ -40,36 +34,12 @@ function App() {
 
   const ReactDOM = require('react-dom');
 
-  // const { switchLanguage } = useLanguage();
-
   const isHebrew = i18n.language === 'he';
-  // const isGerman = i18n.language === 'de';
-  // const isEnglish = i18n.language === 'en';
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem('selectedLanguage');
     i18n.changeLanguage(savedLanguage);
   }, []);
-
-  // useEffect(() => {
-  //   if (i18n.language === 'he') {
-  //     setIsHebrew(true);
-  //   } else {
-  //     setIsHebrew(false);
-  //   }
-
-  //   // if (i18n.language === 'de') {
-  //   //   setIsGerman(true);
-  //   // } else {
-  //   //   setIsGerman(false);
-  //   // }
-
-  //   // if (i18n.language === 'en') {
-  //   //   setIsEnglish(true);
-  //   // } else {
-  //   //   setIsEnglish(false);
-  //   // }
-  // }, []);
 
   // useEffect(() => {
   //   const script = document.createElement('script');
@@ -308,7 +278,6 @@ function App() {
   // };
 
   return (
-    // <I18nextProvider i18n={i18nConfig}>
     <Router>
       <ScrollToTop />
       <div className="wrapper">
@@ -365,7 +334,6 @@ function App() {
         {hasScrolledToBottom ? <Footer t={t} isHebrew={isHebrew} /> : null}
       </div>
     </Router>
-    // </I18nextProvider>
   );
 }
 

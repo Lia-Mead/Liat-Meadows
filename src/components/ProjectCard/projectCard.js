@@ -41,7 +41,6 @@ const ProjectCard = ({
         buttonText={buttonText}
         url={url}
         photos={photos}
-        // published={published}
         isWideCard={isWideCard}
         detailPageButton={detailPageButton}
         toTop={toTop}
@@ -60,7 +59,6 @@ ProjectCard.propTypes = {
   detailPageButton: PropTypes.string,
   buttonText: PropTypes.string,
   url: PropTypes.string,
-  // published: PropTypes.bool,
   isWideCard: PropTypes.bool,
   toTop: PropTypes.func,
 };

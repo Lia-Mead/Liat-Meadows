@@ -13,7 +13,6 @@ const ProjectCardDescription = ({
   url,
   stack,
   photos,
-  // published,
   isWideCard,
   detailPageButton,
   isButtonActive = true,
@@ -89,7 +88,6 @@ ProjectCardDescription.propTypes = {
   detailPageButton: PropTypes.string,
   isButtonActive: PropTypes.bool,
   photos: PropTypes.array.isRequired,
-  // published: PropTypes.bool,
   isWideCard: PropTypes.bool,
 };
 

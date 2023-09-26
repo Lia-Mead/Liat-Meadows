@@ -44,7 +44,6 @@ export const getDesignProjects = () => {
       stack: 'InDesign, Photoshop, Illustrator',
       slug: 'flamingo-generation',
       isWideCard: true,
-      // published: true,
       detailPageButton: 'details_button_behance',
     },
     {
@@ -56,7 +55,6 @@ export const getDesignProjects = () => {
       stack: 'Photoshop, Illustrator',
       slug: 'les-voyageurs',
       isWideCard: true,
-      // published: true,
       detailPageButton: 'details_button_behance',
     },
     {
@@ -71,7 +69,6 @@ export const getDesignProjects = () => {
       stack: 'Photography, InDesign, Photoshop, Illustrator',
       slug: 'fine-corner',
       isWideCard: true,
-      // published: true,
       detailPageButton: 'details_button_behance',
     },
     {
@@ -86,7 +83,6 @@ export const getDesignProjects = () => {
       stack: 'Photoshop, Illustrator',
       slug: 'simply-legendary',
       isWideCard: true,
-      // published: true,
       detailPageButton: 'details_button_behance',
     },
   ];

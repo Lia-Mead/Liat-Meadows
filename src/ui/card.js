@@ -38,11 +38,11 @@ const Card = ({ projectArray, toTop }) => {
           detailPageButton: project.detailPageButton,
           gif,
         };
-        console.log('projectData', projectData);
+        // console.log('projectData', projectData);
 
         return <ProjectCard key={uuidv4()} {...projectData} toTop={toTop} />;
       }),
-    [projectArray, t, toTop, i18n.language]
+    [projectArray, toTop]
   );
 
   return (

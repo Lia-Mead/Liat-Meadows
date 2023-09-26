@@ -39,7 +39,7 @@ function App() {
   useEffect(() => {
     const savedLanguage = localStorage.getItem('selectedLanguage');
     i18n.changeLanguage(savedLanguage);
-  }, []);
+  }, [i18n]);
 
   // useEffect(() => {
   //   const script = document.createElement('script');

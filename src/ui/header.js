@@ -63,7 +63,11 @@ export default function Header({ toTop }) {
               tabIndex="0"
             >
               {/* <span aria-hidden="true">&#9776;</span> */}
-              <img src={src} alt="menu-burger" className="navbar-icon" />
+              <img
+                src={src}
+                alt="responsive-menu-button"
+                className="navbar-icon"
+              />
             </button>
           ) : (
             <NavBar toTop={toTop} />

@@ -7,7 +7,6 @@ import About from './about';
 import { getDesignProjects } from '../data/designProjectsData';
 import { getDevelopmentProjects } from '../data/developmentProjectsData';
 import '../styles/homeScreen.scss';
-// import { useEffect } from 'react';
 
 const HomeScreen = ({ toTop }) => {
   const { t, i18n } = useTranslation();
@@ -38,13 +37,11 @@ const HomeScreen = ({ toTop }) => {
         </h3>
       </div>
       <Development
-        // t={t}
         isHebrew={isHebrew}
         projectArray={devProjects}
         onClick={toTop}
       />
       <Design
-        // t={t}
         isHebrew={isHebrew}
         projectArray={designProjects}
         onClick={toTop}

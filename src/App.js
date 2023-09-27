@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // import './nagishli.js';
-import i18nConfig from './i18n/i18n';
 
 import { useTranslation } from 'react-i18next';
 import ScrollToTop from './components/scrollToTop';
@@ -281,14 +280,7 @@ function App() {
     <Router>
       <ScrollToTop />
       <div className="wrapper">
-        <Header
-          t={t}
-          // isHebrew={isHebrew}
-          // setIsHebrew={setIsHebrew}
-          // setIsGerman={setIsGerman}
-          // setIsEnglish={setIsEnglish}
-          toTop={toTop}
-        />
+        <Header t={t} toTop={toTop} />
         <main
           id="container"
           className={`main-content ${isScrolled ? 'is-scrolled' : ''} ${

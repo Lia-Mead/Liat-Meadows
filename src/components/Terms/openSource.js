@@ -39,6 +39,11 @@ const OpenSource = () => {
           <p>web-vitals@2.1.4</p>
           <p>webpack-cli@5.1.4</p>
           <p>webpack@5.88.2</p>
+          <p>@axe-core/react@4.7.3</p>
+          <p>eslint-plugin-jsx-a11y@6.7.1</p>
+          <p>eslint-plugin-react@7.33.2</p>
+          <p>eslint@8.50.0</p>
+          <p>node-sass@7.0.3</p>
         </div>
       </div>
     </div>

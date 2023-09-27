@@ -8,7 +8,7 @@ const OpenSource = () => {
       <div className="box">
         <div className="text-content">
           <h1>{t('oss_title')}</h1>
-          <p>{t('oss_text_1')}</p>
+          <h2>{t('oss_text_1')}</h2>
           <p>@babel/core@7.22.11</p>
           <p>@babel/eslint-parser@7.22.11</p>
           <p>@babel/eslint-plugin@7.22.10</p>

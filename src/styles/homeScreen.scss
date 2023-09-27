@@ -1,5 +1,7 @@
+@import '_colors.scss';
+
 .con.home {
-  background-color: #e2e2e2;
+  background-color: $grey;
   .stage {
     padding: 3% 5%;
     margin: 0 auto;
@@ -12,12 +14,11 @@
     }
     h2 {
       font-weight: 500;
-      // color: #1ed367;
-      color: #028838;
+      color: $highlight-on-light;
     }
 
     .high {
-      color: #231557;
+      color: $secondary;
     }
   }
   .animate-character {
@@ -32,7 +33,7 @@
     background-size: auto auto;
     background-clip: border-box;
     background-size: 200% auto;
-    color: #fff;
+    color: $white;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;

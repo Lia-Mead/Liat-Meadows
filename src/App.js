@@ -88,7 +88,9 @@ function App() {
       document.body.scrollTop ||
       0;
 
-    if (position > 400) {
+    // console.log('position', position);
+
+    if (position > 700) {
       setIsScrolled(true);
       // document.getElementsByClassName('.footer').style.display = 'block';
       // document.querySelector('.footer').style.display = 'block';

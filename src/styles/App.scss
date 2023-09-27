@@ -5,9 +5,9 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  color: #2c3e50;
-  // box-sizing: border-box;
-  box-sizing: content-box;
+  color: $grease;
+  box-sizing: border-box;
+  // box-sizing: content-box;
 }
 
 #root {
@@ -37,7 +37,7 @@ ul {
 
 .main-content {
   flex-grow: 1;
-  background-color: #d7d7d7;
+  background-color: $light-bg;
   width: 100%;
   height: 100%;
   max-width: 1920px;
@@ -58,7 +58,7 @@ h1 > a {
   text-transform: uppercase;
   font-size: 1.5rem;
   letter-spacing: 2.9px;
-  color: #2c3e50;
+  color: $grease;
   font-weight: 300;
   margin: 40px 0px 20px 0px;
   width: 80%;
@@ -75,8 +75,7 @@ p {
 }
 
 .link {
-  // color: #2c3e50;
-  color: #00790a;
+  color: $highlight-on-light;
 }
 
 // .accessibility-question {
@@ -185,7 +184,7 @@ p {
 }
 
 .box {
-  background-color: #d7d7d7;
+  background-color: $light-bg;
   justify-content: center;
   padding-bottom: 120px;
 }
@@ -219,7 +218,7 @@ p {
     box-shadow: 0 10px 10px -10px rgba(#7f8c8d, 1);
   }
   &:focus {
-    outline: 2px solid #1ed367;
+    outline: 2px solid $primary;
   }
 
   .image {
@@ -299,6 +298,7 @@ p {
   width: 100%;
   z-index: 3000;
   box-shadow: 6px 0px 6px 0px rgb(61 53 53 / 24%);
+  // border-bottom: 1px solid #9097a0;
 }
 .header > a {
   width: 30%;
@@ -485,7 +485,7 @@ p {
 }
 
 .active-tab {
-  color: #00790a !important;
+  color: $grease !important;
   font-weight: 600;
 }
 
@@ -517,7 +517,7 @@ p {
     height: 100%;
   }
   .box {
-    background-color: #d7d7d7;
+    background-color: $light-bg;
     padding-bottom: 110px;
     margin: 0 auto;
     width: 90%;
@@ -533,7 +533,7 @@ p {
   }
 
   p {
-    color: #2c3e50;
+    color: $grease;
     font-size: 1em;
     letter-spacing: 2px;
     min-height: 42px;
@@ -550,7 +550,7 @@ p {
     width: 220px;
     height: 220px;
     border-radius: 50%;
-    border: 3px solid #fff;
+    border: 3px solid $white;
     object-fit: cover;
     z-index: 200;
   }
@@ -582,7 +582,7 @@ p {
   }
 
   .highlight {
-    color: #00ca51;
+    color: $highlight-on-dark;
     background-color: transparent;
   }
 }
@@ -655,7 +655,7 @@ p {
       padding-bottom: 30px;
     }
     .highlight {
-      color: #1ed367;
+      color: $primary;
     }
   }
 
@@ -693,19 +693,7 @@ p {
 }
 
 @media screen and (max-width: 850px) {
-  // .header > a {
-  //   width: 30%;
-  // }
-
   .app-logo {
     margin-left: 5px;
   }
 }
-// @media screen and (max-width: 550px) {
-//   .app-logo {
-//     // width: 40%;
-//   }
-//   .app-logo-font {
-//     // width: 80%;
-//   }
-// }

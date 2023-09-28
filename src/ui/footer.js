@@ -1,6 +1,4 @@
-// import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 
 import github from '../assets/icons/github.svg';
@@ -31,16 +29,7 @@ const Footer = () => {
         <Link className="footer-link" to="/imprint">
           {t('footer_imprint')}
         </Link>
-        <Link
-          className="footer-link"
-          to="/accessibility-statement"
-          // to={{
-          //   pathname: '/accessibility-statement',
-          //   state: {
-          //     scrollToTop: true,
-          //   },
-          // }}
-        >
+        <Link className="footer-link" to="/accessibility-statement">
           {t('footer_accessibility')}
         </Link>
 
@@ -50,12 +39,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
-
-Footer.propTypes = {
-  // t: PropTypes.func.isRequired,
-  // isHebrew: PropTypes.bool.isRequired,
-  // toTop: PropTypes.func,
 };
 
 export default Footer;

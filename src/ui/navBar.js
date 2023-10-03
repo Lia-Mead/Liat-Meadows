@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 
-import LanguageSwitch from '../components/LanguageSwitch';
+import LanguageSwitch from '../components/languageSwitch';
 
 const Navbar = ({ toTop }) => {
   const { t, i18n } = useTranslation();

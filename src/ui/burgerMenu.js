@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 
-import LanguageSwitch from '../components/LanguageSwitch';
+import LanguageSwitch from '../components/languageSwitch';
 
 export default function BurgerMenu({
   toggleBurgerMenu,

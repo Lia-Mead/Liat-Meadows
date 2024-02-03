@@ -287,13 +287,14 @@ p {
 .header {
   display: flex;
   flex-direction: row;
-  background-color: rgb(239, 238, 237);
+  background-color: $black;
   align-items: center;
   justify-content: space-between;
   flex: 1 0 auto;
   flex-flow: wrap;
-  height: 80px;
   position: fixed;
+  padding: 10px 0;
+  height: 80px;
   top: 0;
   width: 100%;
   z-index: 3000;
@@ -333,7 +334,7 @@ p {
 
 .nav-link,
 .nav-link > a {
-  color: $black;
+  color: $white;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -341,18 +342,19 @@ p {
   height: 100%;
   cursor: pointer;
   &.active {
-    color: $black;
+    color: $primary;
   }
 }
 
 .lang-btn {
   border-radius: 4px;
-  padding: 10px;
+  padding: 5px 10px;
   color: $black;
   outline: none;
   border: 1px $black;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
+  margin: 0 3px;
 
   &:hover {
     transition: all 0.2s ease-in-out;
@@ -428,6 +430,7 @@ p {
   width: 12%;
   padding: 3%;
 }
+
 .link-con {
   display: flex;
   align-items: center;
@@ -479,13 +482,13 @@ p {
 
 .navbar-icon-box {
   width: 3.2rem;
-  min-height: 4rem;
+  min-height: 3rem;
   z-index: 300;
   border: none;
 }
 
 .active-tab {
-  color: $grease !important;
+  color: $primary !important;
   font-weight: 600;
 }
 
@@ -584,6 +587,21 @@ p {
   .highlight {
     color: $highlight-on-dark;
     background-color: transparent;
+  }
+
+  .pill-box {
+    margin: 20px 0;
+  }
+  .pill {
+    background-color: $light-bg;
+    border: none;
+    color: $black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 8px;
+    border-radius: 16px;
   }
 }
 

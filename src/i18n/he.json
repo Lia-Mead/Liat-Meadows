@@ -5,17 +5,14 @@
   "development_and_design": "עיצוב ובניית אתרים",
   "home_development": "ובניית אתרים ",
   "home_and_design": "עיצוב",
-
-  "liat_meadows": "ליאת מדואס",
+  "liat_meadows": "ליה מדואס",
   "button_up": "למעלה",
-
   "about_development": "פיתוח",
   "about_design": "עיצוב",
   "about_about": "אודות",
   "about_para_1_1": "הי, נחמד שהגעת לפה. קוראים לי ליאת.\n",
   "about_para_1_1_1": "אני מפתחת אתרים ואפליקציות בפרונט אנד עם רקע עשיר בעיצוב. אני מתמחה ב- ",
   "about_para_1_2": "React Native",
-
   "about_para_1_3": " וב- ",
   "about_para_1_3_1": "React.\n",
   "about_para_1_3_2": "אני מביאה איתי נסיון רב שנים כמעצבת אתרים וחווית משתמש. זו אחת הסיבות שאני אוהבת להשקיע ולתת המון תשומת לב לפרטים.",
@@ -32,7 +29,6 @@
   "details_button_online": "צפייה בפרוייקט אונליין",
   "details_button_youtube": "צפייה ב- YouTube",
   "detail_project_title_link": "פרוייקטים",
-
   "card_project_name_ziegert": "Ziegert נדל״ן ויעוץ פיננסי",
   "card_project_name_flamingo": "דור הפלמיגו",
   "card_project_name_les_voyageurs": "Les Voyageurs",
@@ -58,7 +54,6 @@
   "card_description_searchify": "חפש את האמנים והאלבומים שלך עם ה-API של Spotify",
   "card_description_petition": "פרויקט עצומה לאיסוף חתימות אלקטרוניות נגד שכנים מרעישים מלמעלה",
   "card_description_connect": "משחקי רטרו בסגנון Connect Four. התאם ארבעה אווטארים אלכסוניים ונצח את הסיבוב",
-
   "footer_imprint": "מדיניות פרטיות",
   "footer_accessibility": "נגישות באתר",
   "accessibility_statement_title": "הצהרת נגישות",

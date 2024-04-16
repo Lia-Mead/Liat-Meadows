@@ -36,7 +36,7 @@ const About = () => {
             <p>{t('about_para_4_1')}</p>
             <br />
             <br />
-            <img className="icon" src={StackIcon} alt="liat-meadows" />
+            <img className="icon" src={StackIcon} alt="lia-meadows" />
             <div className='pill-box'>
               <button className="pill">JavaScript</button>
               <button className="pill">HTML5</button>
@@ -54,7 +54,7 @@ const About = () => {
               <button className="pill">Sketch</button>
               <button className="pill">Adobe Creative Suite</button>
             </div>
-   
+
             {/* <p>
               JavaScript &#8226; HTML5 &#8226; CSS &#8226; SASS &#8226; Node.js
               &#8226; Express &#8226; React-Native &#8226; React.js &#8226;
@@ -66,7 +66,7 @@ const About = () => {
         </div>
 
         <div className={'avatar-box'}>
-          <img className="avatar" src={Avatar} alt="liat-meadows" />
+          <img className="avatar" src={Avatar} alt="lia-meadows" />
         </div>
       </div>
     </div>

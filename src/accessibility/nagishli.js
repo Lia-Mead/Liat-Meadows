@@ -13,7 +13,7 @@ window.nl_lang = 'he';
 window.nl_pos = 'br';
 window.nl_compact = '1';
 window.nl_accordion = '1';
-window.nl_contact = 'n:Liat Meadows|u:meadowsliat+d:gmail.com';
+window.nl_contact = 'n:Lia Meadows|u:meadowsliat+d:gmail.com';
 
 if ('undefined' == typeof jQuery) {
   var docHead = document.getElementsByTagName('head')[0],
@@ -36,9 +36,9 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
       /^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i
     )) && 4 === a.length
       ? '#' +
-          ('0' + parseInt(a[1], 10).toString(16)).slice(-2) +
-          ('0' + parseInt(a[2], 10).toString(16)).slice(-2) +
-          ('0' + parseInt(a[3], 10).toString(16)).slice(-2)
+      ('0' + parseInt(a[1], 10).toString(16)).slice(-2) +
+      ('0' + parseInt(a[2], 10).toString(16)).slice(-2) +
+      ('0' + parseInt(a[3], 10).toString(16)).slice(-2)
       : '';
   }
   function W(a) {
@@ -96,15 +96,15 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
         return 'object' === typeof e && (f[d] = f[d].charAt(e.pos)), f[d];
       'change' == a
         ? ((f[d] =
-            'object' === typeof e
-              ? f[d].substring(0, e.pos) + e.to + f[d].substring(e.pos + 1)
-              : e),
+          'object' === typeof e
+            ? f[d].substring(0, e.pos) + e.to + f[d].substring(e.pos + 1)
+            : e),
           localStorage.setItem(
             'Localize-NagishLi-A11y-Plugin-Settings',
             JSON.stringify(f)
           ))
         : 'delete' == a &&
-          localStorage.removeItem('Localize-NagishLi-A11y-Plugin-Settings');
+        localStorage.removeItem('Localize-NagishLi-A11y-Plugin-Settings');
     } else return !1;
   }
   var K,
@@ -117,8 +117,8 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
   let nl_link;
   var m =
     (K = 'undefined' != typeof nl_link && '0' != nl_link ? nl_link : !1) ||
-    'undefined' == typeof nl_contact ||
-    -1 == nl_contact.indexOf(':')
+      'undefined' == typeof nl_contact ||
+      -1 == nl_contact.indexOf(':')
       ? !1
       : nl_contact;
   var g =
@@ -131,9 +131,9 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
       : 'TL';
   var P =
     'undefined' != typeof nl_color &&
-    /^(blue|red|green|purple|yellow|pink|gray|brown|orange|turquoise|black)$/i.test(
-      nl_color
-    )
+      /^(blue|red|green|purple|yellow|pink|gray|brown|orange|turquoise|black)$/i.test(
+        nl_color
+      )
       ? nl_color.toLowerCase()
       : 'blue';
   var na = 'undefined' != typeof nl_compact && '1' == nl_compact ? !0 : !1;
@@ -160,11 +160,11 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
   var qa = !window.ActiveXObject && 'ActiveXObject' in window ? !0 : !1;
   var X =
     'en' == g &&
-    (window.webkitSpeechSynthesisUtterance ||
-      window.mozSpeechSynthesisUtterance ||
-      window.msSpeechSynthesisUtterance ||
-      window.oSpeechSynthesisUtterance ||
-      window.SpeechSynthesisUtterance)
+      (window.webkitSpeechSynthesisUtterance ||
+        window.mozSpeechSynthesisUtterance ||
+        window.msSpeechSynthesisUtterance ||
+        window.oSpeechSynthesisUtterance ||
+        window.SpeechSynthesisUtterance)
       ? !0
       : !1;
   (function (a) {
@@ -187,7 +187,7 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
       var e = d.getItem(a) == a;
       d.removeItem(a);
       return e && d;
-    } catch (ra) {}
+    } catch (ra) { }
   })();
   if ('undefined' != typeof nl_dir)
     var q = '/' == nl_dir.substr(-1) ? nl_dir.slice(0, -1) : nl_dir;
@@ -216,489 +216,489 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
           !1 !== !!~a.indexOf('f:') && (z = a.replace('f:', ''));
         }))
       : -1 != m.indexOf('n:')
-      ? (p = m.replace('n:', ''))
-      : -1 != m.indexOf('p:')
-      ? (v = m.replace('p:', ''))
-      : -1 != m.indexOf('u:')
-      ? (u =
-          -1 != m.indexOf('d:')
-            ? m.replace('+', '@').replace('u:', '').replace('d:', '')
-            : m.replace('u:', '') + '@' + D)
-      : -1 != m.indexOf('f:') && (z = m.replace('f:', ''));
+        ? (p = m.replace('n:', ''))
+        : -1 != m.indexOf('p:')
+          ? (v = m.replace('p:', ''))
+          : -1 != m.indexOf('u:')
+            ? (u =
+              -1 != m.indexOf('d:')
+                ? m.replace('+', '@').replace('u:', '').replace('d:', '')
+                : m.replace('u:', '') + '@' + D)
+            : -1 != m.indexOf('f:') && (z = m.replace('f:', ''));
   }
   phrases =
     'en' == g
       ? {
-          a11y_info: 'Accessibilty Statement',
-          a11y_info_exp: "This website's accessibilty statement",
-          a11y_title: 'Accessibility',
-          about: 'About NagishLi',
-          about_text:
-            '<span class="nlap-stitle">How this website was made accessible?</span><br />This website was made accessible with <a href="https://www.nagish.li/' +
-            g +
-            '/" target="_blank" tabindex="1">NagishLi</a>, a free accessibility plugin developed by <a href="http://www.localize.co.il" target="_blank" tabindex="1">Localize*</a> and using it is under its <a href="https://www.nagish.li/' +
-            g +
-            '/license.html" target="_blank" tabindex="1">license terms</a>.<br /><br /><span class="nlap-stitle">Why develop such a plugin?</span><br />Since the accessibility subject got more attention, free accessibility plugins were offered mostly to WordPress users. Other scripts and website owners were pretty much "left out". Making a website accessible is a complicated and relatively long process (or at least that\'s how people describe it). Localize* also needed a plugin for its own websites, and if you need to manage a few websites, the time and cost of making them accessible can be expensive.<br /><br /><span class="nlap-stitle">Is it really free? Why?</span><br />The plugin was developed initially for Localize\'s personal use, which later decided to release it to the public in order to make every website accessible to impaired people. It still has a long way to develop and improve, but if it\'ll help make more websites accessible to impaired people - Localize* is happy to be a part of that.',
-          about_text_lic:
-            '<span class="nlap-stitle">How this website was made accessible?</span><br />This website was made accessible with <a href="https://www.nagish.li/' +
-            g +
-            '/" target="_blank" tabindex="1">NagishLi</a> and using it is under its <a href="https://www.nagish.li/' +
-            g +
-            '/license.html" target="_blank" tabindex="1">license terms</a>.<br /><br /><span class="nlap-stitle">Why develop such a plugin?</span><br />Since the accessibility subject got more attention, free accessibility plugins were offered mostly to WordPress users. Other scripts and website owners were pretty much "left out". Making a website accessible is a complicated and relatively long process (or at least that\'s how people describe it) and if you need to manage a few websites, the time and cost of making them accessible can be expensive. This plugin was developed also for non-WordPress websites.',
-          accessibility_statement:
-            'This website takes accessibilty seriously and make every effort possible to be comfortably accessed by the general population and people with disabilties so that every user will be able to make the most out of the content it presents. For this important purpose, this website uses <a href="https://www.nagish.li/' +
-            g +
-            '/" target="_blank" tabindex="1">NagishLi</a> - a free accessibility plugin. The usage of NagishLi is subject to the terms of <a href="https://www.nagish.li/' +
-            g +
-            '/license.html" target="_blank" tabindex="1">license</a> attached to it.<br /><br />' +
-            (m
-              ? 'If you have any questions or comments about this website accessibility, please contact us:<br /><br />' +
-                (p ? 'Contact Person: ' + p + '<br />' : '') +
-                (v ? 'Phone: ' + v + '<br />' : '') +
-                (u
-                  ? 'E-Mail: <a href="mailto:' + u + '">' + u + '</a><br />'
-                  : '') +
-                (z ? 'Fax: ' + z + '<br />' : '') +
-                '<br />'
+        a11y_info: 'Accessibilty Statement',
+        a11y_info_exp: "This website's accessibilty statement",
+        a11y_title: 'Accessibility',
+        about: 'About NagishLi',
+        about_text:
+          '<span class="nlap-stitle">How this website was made accessible?</span><br />This website was made accessible with <a href="https://www.nagish.li/' +
+          g +
+          '/" target="_blank" tabindex="1">NagishLi</a>, a free accessibility plugin developed by <a href="http://www.localize.co.il" target="_blank" tabindex="1">Localize*</a> and using it is under its <a href="https://www.nagish.li/' +
+          g +
+          '/license.html" target="_blank" tabindex="1">license terms</a>.<br /><br /><span class="nlap-stitle">Why develop such a plugin?</span><br />Since the accessibility subject got more attention, free accessibility plugins were offered mostly to WordPress users. Other scripts and website owners were pretty much "left out". Making a website accessible is a complicated and relatively long process (or at least that\'s how people describe it). Localize* also needed a plugin for its own websites, and if you need to manage a few websites, the time and cost of making them accessible can be expensive.<br /><br /><span class="nlap-stitle">Is it really free? Why?</span><br />The plugin was developed initially for Localize\'s personal use, which later decided to release it to the public in order to make every website accessible to impaired people. It still has a long way to develop and improve, but if it\'ll help make more websites accessible to impaired people - Localize* is happy to be a part of that.',
+        about_text_lic:
+          '<span class="nlap-stitle">How this website was made accessible?</span><br />This website was made accessible with <a href="https://www.nagish.li/' +
+          g +
+          '/" target="_blank" tabindex="1">NagishLi</a> and using it is under its <a href="https://www.nagish.li/' +
+          g +
+          '/license.html" target="_blank" tabindex="1">license terms</a>.<br /><br /><span class="nlap-stitle">Why develop such a plugin?</span><br />Since the accessibility subject got more attention, free accessibility plugins were offered mostly to WordPress users. Other scripts and website owners were pretty much "left out". Making a website accessible is a complicated and relatively long process (or at least that\'s how people describe it) and if you need to manage a few websites, the time and cost of making them accessible can be expensive. This plugin was developed also for non-WordPress websites.',
+        accessibility_statement:
+          'This website takes accessibilty seriously and make every effort possible to be comfortably accessed by the general population and people with disabilties so that every user will be able to make the most out of the content it presents. For this important purpose, this website uses <a href="https://www.nagish.li/' +
+          g +
+          '/" target="_blank" tabindex="1">NagishLi</a> - a free accessibility plugin. The usage of NagishLi is subject to the terms of <a href="https://www.nagish.li/' +
+          g +
+          '/license.html" target="_blank" tabindex="1">license</a> attached to it.<br /><br />' +
+          (m
+            ? 'If you have any questions or comments about this website accessibility, please contact us:<br /><br />' +
+            (p ? 'Contact Person: ' + p + '<br />' : '') +
+            (v ? 'Phone: ' + v + '<br />' : '') +
+            (u
+              ? 'E-Mail: <a href="mailto:' + u + '">' + u + '</a><br />'
               : '') +
-            "<span class=\"nlas-stitle\">How to use the accessibility plugin</span><br />After clicking the accesibility button, the accessibility plugin's menus will expand, presenting you with the following options:<ul><li>Adjusting text size (also accessible by using the keyboard shortcuts SHIFT and A, SHIFT and S)</li><li>Changing website's colors (also accessible by the keyboard shortcuts SHIFT and Q, SHIFT and W, SHIFT and E)</li><li>Changing website's display</li><li>Highlight titles and links (also accessible by using the keyboard shortcuts SHIFT and D, SHIFT and F)</li><li>Navigate quickly through areas of the page (also accessible by using the keyboard shortcuts ALT and V, ALT and B)</li><li>Shrink or magnify the website's display (zoom)</li><li>Make the website's font easier to read</li><li>Pause animations in the website</li><li>Listen to substituted audio for the pictures in the website using a text-to-speech program</li><li>Listen to an audio reading of phone numbers</li><li>Change the mouse cursor</li><li>Navigate through the plugin options using the Tab key (and also Shift+Tab) and activate them using the Enter key</li></ul>Despite the efforts invested in the development of this plugin, in some scenarios content may not be made accessible by it, such as contents presented by a third party (e.g. YouTube, other external embedded content, etc.). Note that NagishLi is in continuous development in order to improve and comply with the latest accessibility standards.<br /><br />",
-          align_left: 'right',
-          align_right: 'left',
-          and: 'and ',
-          animations: 'Animations',
-          animations_exp: 'Stop moving and flickering elements',
-          animations_on: 'On',
-          animations_off: 'Off',
-          aria_close_modal: 'Close this info',
-          aria_select_bgcolor: 'Choose background color',
-          aria_select_color: 'Choose the color of the ',
-          aria_select_txtcolor: 'Choose text color',
-          aria_the_option: 'The option ',
-          aria_toggle_open_alt: 'Open the menu options of ',
-          aria_toggle_close_alt: 'Close the menu options of ',
-          bg: 'Background',
-          bl_filter: 'Blue light filter',
-          bl_filter_exp: 'Warm colors',
-          blind: 'Color blind',
-          blind_exp: 'Gray colors',
-          body_missing:
-            "NagishLi says: the <body> is missing! the accessibility plugin can't work without it.",
-          branding: 'NagishLi',
-          branding_exp: 'NagishLi - Free accessibilty plugin',
-          chrome: 'Chrome',
-          clr_black: 'Black',
-          clr_blue: 'Blue',
-          clr_custom: 'Custom color',
-          clr_gray: 'Gray',
-          clr_green: 'Green',
-          clr_orange: 'Orange',
-          clr_pink: 'Pink',
-          clr_purple: 'Purple',
-          clr_red: 'Red',
-          clr_white: 'White',
-          clr_yellow: 'Yellow',
-          collapse_all: 'Collapse all the menus',
-          color_select: 'Choose color',
-          color: 'color',
-          colors: 'Colors',
-          cursor: 'Cursor',
-          cursor_exp: 'Change the cursor icon',
-          cursor_black: 'Black',
-          cursor_white: 'White',
-          custom_colors: 'Custom',
-          custom_colors_close: 'Close custom colors options',
-          custom_colors_exp: 'Change background and text colors',
-          developed_by: 'developed by',
-          developed_in: 'Developed in Israel',
-          developed_in_link: 'https://en.wikipedia.org/wiki/Israel',
-          developer: 'Localize',
-          developer_exp: 'Web development services',
-          developer_message:
-            "A few words from the main person working on the plugin: \"I'm still studying and investigating the website accessibility subject when I can, and I'm interested in developing more features for this free plugin (there's already a feature list for the next versions), but I'm a busy guy - I can usually only work on this plugin in my free time. I do try my best to make it useful to as many website owners and visitors as possible. If you do decide to use the plugin, and like it - you can donate towards its developement. Any amount is more than welcome. If you choose not to donate, or can't donate, I still hope that the plugin will be useful to you and help your website's visitors.\"",
-          dir: 'ltr',
-          display: 'Display',
-          edge: 'Edge',
-          expand_all: 'Expand all the menus',
-          experimental_feat: 'This is an experimental feature',
-          explorer: 'Internet Explorer',
-          firefox: 'Firefox',
-          font: 'Font',
-          font_exp: 'Change the font of the page',
-          font_readable: 'Readable',
-          help: 'Help',
-          help_exp: 'Click here for help',
-          highlight: 'Highlight',
-          hl_headings: 'Highlight titles',
-          hl_headings_exp: 'Highlight all the titles on the page',
-          hl_links: 'Highlight links',
-          hl_links_exp: 'Highlight all the links on the page',
-          how_accessible: 'About this website accessibility',
-          how_accessible_exp: 'About this accessibilty plugin',
-          images_only: 'Images only',
-          images_only_exp: 'Hide the text on the page',
-          img_alt_missing: 'Image with no description',
-          img_alt: 'Possible image description: ',
-          impaired: 'Impaired vision',
-          impaired_exp: 'Maximum contrast',
-          jq_too_low:
-            "%cNagishLi%c says: your jQuery version is too low, it's possible that some (or all) options of the accessibility plugin won't work.",
-          jq_not_found_msg:
-            "%cNagishLi%c says: it seems that jQuery do not exist on this page. The plugin can't function without it, and added the required minimum jQuery version to the page automatically.",
-          kbnav: 'Keyboard navigation',
-          kbnav_exp: 'Navigate this site using a keyboard',
-          kbnav_off: 'Off',
-          kbnav_on: 'On',
-          kbshortcuts: 'Keyboard shortcuts',
-          kbshortcuts_exp: 'Accessible key combinations and instructions',
-          kbshortcuts_text:
-            "To make it easier to use NagishLi, there are few keyboard shortcuts you can press to use the options it has to offer.<br /><br /><kbd>ALT and Z</kbd> - Collapse and expand the accessibility plugin.<br /><br /><kbd>ALT and X</kbd> - Show help inside the plugin. Repeating this combination will undo this option.<br /><br /><kbd>ALT and C</kbd> - Reset the accessibilty options set by the plugin.<br /><br /><kbd>ALT and V</kbd> - Quick navigation to the top of the page.<br /><br /><kbd>ALT and B</kbd> - Quick navigation to the bottom of page.<br /><br /><kbd>SHIFT and A</kbd> - Enlarge the text of the page.<br /><br /><kbd>SHIFT and S</kbd> - Shrink the text of the page.<br /><br /><kbd>SHIFT and D</kbd> - Highlight the links on the page. Repeating this combination will undo this option.<br /><br /><kbd>SHIFT and F</kbd> - Highlight the titles on the page. Repeating this combination will undo this option.<br /><br /><kbd>SHIFT and Q</kbd> - Activate the option 'Color blind' (Gray colors). Repeating this combination will undo this option.<br /><br /><kbd>SHIFT and W</kbd> - Activate the option 'Impaired vision' (High contrast). Repeating this combination will undo this option.<br /><br /><kbd>SHIFT and E</kbd> - Activate the option 'Strong colors' (Saturated colors). Repeating this combination will undo this option.<br /><br />",
-          larger_text: 'Larger',
-          larger_text_exp: 'Enlarge the text with each click',
-          lc_filter: 'Living colors filter',
-          lc_filter_exp: 'Cold colors',
-          lic_warn:
-            'This website is using an unlicensed version of NagishLi. A lot of time and effort were put into this plugin, please <a href="https://www.nagish.li/en/contact.html" target="_blank" style="color: black !important; text-decoration: underline !important;" tabindex="1">click here</a> to send an anonymous report about this website. Thank you!',
-          logo_alt: 'Logo',
-          misc: 'Misc',
-          missing_setting: '%cNagishLi%c says: %cThe setting is missing.%c',
-          move_bl: 'Move to Bottom Left',
-          move_br: 'Move to Bottom Right',
-          move_tl: 'Move to Top Left',
-          move_tr: 'Move to Top Right',
-          normal: 'Normal',
-          normal_display: 'Normal',
-          normal_plu: 'Normal',
-          not_supported: 'This feature is not supported by your browser.',
-          opera: 'Opera',
-          r2m: 'Audio reading',
-          r2m_exp: 'Listen to audio version of digits',
-          r2m_na:
-            'Audio reading is not available at the moment. Try again later.',
-          r2m_off: 'Off',
-          r2m_on: 'On',
-          reset_prompt: 'Would you like to reset the accessibilty settings?',
-          reset_settings: 'Reset settings',
-          reset_settings_exp: 'Reset all of the settings set by the plugin',
-          saturated: 'Bright colors',
-          saturated_exp: 'Saturate the page colors',
-          settings: 'Info & Settings',
-          settings_prompt:
-            'It seems that the current accessibility settings might be problematic. Would you like to reset the settings? (Recommended)',
-          settings_reset_alert_ok:
-            'The settings have been reset. Please refresh the page.',
-          settings_reset_html_ok:
-            'The settings have been reset. <a href="javascript:void(0);" onclick="javascript:location.replace(window.location.href.split(\'#\')[0]);" style="color: black !important; text-decoration: underline !important; outline: 5px solid rgba(88, 144, 255, 0.75) !important;" tabindex="1">Refresh the page</a>',
-          settings_save: 'The settings will be saved.',
-          settings_save_reminder:
-            "Remember: You can also reset them under 'Info & Settings'.",
-          settings_upgrade_html:
-            'NagishLi was upgraded. <a href="javascript:void(0);" onclick="javascript:location.replace(window.location.href.split(\'#\')[0]);" style="color: black !important; text-decoration: underline !important;" tabindex="1">Refresh the page</a>',
-          skiplinks: 'Go to',
-          skiplinks_exp: 'Quick navigation to website and page areas',
-          skiplinks_default: 'Choose location',
-          skiplinks_page_nav: 'Page navigation',
-          skiplinks_site_nav: 'Site navigation',
-          skiplinks_to_top: 'Top of the page',
-          skiplinks_to_menu: 'Menu',
-          skiplinks_to_header: 'Main title',
-          skiplinks_to_paragraph: 'First paragraph',
-          skiplinks_to_content: 'Content',
-          skiplinks_to_bottom: 'Bottom of the page',
-          skiplinks_to_home: 'Home page',
-          smaller_text: 'Smaller',
-          smaller_text_exp: 'Shrink the text with each click',
-          supported_browsers: 'Supported browsers',
-          supported_browsers_exp:
-            'Supported browsers: Google Chrome, Microsoft Edge, Mozilla Firefox, Opera and Internet Explorer. The accessibility plugin makes use of advanced features in your browser. Please use an up-to-date browser.',
-          text_only: 'Text only',
-          text_only_exp: 'Hide the images on the page',
-          text_size: 'Text Size',
-          txt: 'Text',
-          unsupported_media:
-            'Playing this video or audio is unavailable in your browser.',
-          untitled_page: 'Untitled page',
-          zoom: 'Zoom',
-          zoom_exp: 'Zoom in and out of the page',
-          zoom_in: 'Zoom in',
-          zoom_out: 'Zoom out',
-        }
+            (z ? 'Fax: ' + z + '<br />' : '') +
+            '<br />'
+            : '') +
+          "<span class=\"nlas-stitle\">How to use the accessibility plugin</span><br />After clicking the accesibility button, the accessibility plugin's menus will expand, presenting you with the following options:<ul><li>Adjusting text size (also accessible by using the keyboard shortcuts SHIFT and A, SHIFT and S)</li><li>Changing website's colors (also accessible by the keyboard shortcuts SHIFT and Q, SHIFT and W, SHIFT and E)</li><li>Changing website's display</li><li>Highlight titles and links (also accessible by using the keyboard shortcuts SHIFT and D, SHIFT and F)</li><li>Navigate quickly through areas of the page (also accessible by using the keyboard shortcuts ALT and V, ALT and B)</li><li>Shrink or magnify the website's display (zoom)</li><li>Make the website's font easier to read</li><li>Pause animations in the website</li><li>Listen to substituted audio for the pictures in the website using a text-to-speech program</li><li>Listen to an audio reading of phone numbers</li><li>Change the mouse cursor</li><li>Navigate through the plugin options using the Tab key (and also Shift+Tab) and activate them using the Enter key</li></ul>Despite the efforts invested in the development of this plugin, in some scenarios content may not be made accessible by it, such as contents presented by a third party (e.g. YouTube, other external embedded content, etc.). Note that NagishLi is in continuous development in order to improve and comply with the latest accessibility standards.<br /><br />",
+        align_left: 'right',
+        align_right: 'left',
+        and: 'and ',
+        animations: 'Animations',
+        animations_exp: 'Stop moving and flickering elements',
+        animations_on: 'On',
+        animations_off: 'Off',
+        aria_close_modal: 'Close this info',
+        aria_select_bgcolor: 'Choose background color',
+        aria_select_color: 'Choose the color of the ',
+        aria_select_txtcolor: 'Choose text color',
+        aria_the_option: 'The option ',
+        aria_toggle_open_alt: 'Open the menu options of ',
+        aria_toggle_close_alt: 'Close the menu options of ',
+        bg: 'Background',
+        bl_filter: 'Blue light filter',
+        bl_filter_exp: 'Warm colors',
+        blind: 'Color blind',
+        blind_exp: 'Gray colors',
+        body_missing:
+          "NagishLi says: the <body> is missing! the accessibility plugin can't work without it.",
+        branding: 'NagishLi',
+        branding_exp: 'NagishLi - Free accessibilty plugin',
+        chrome: 'Chrome',
+        clr_black: 'Black',
+        clr_blue: 'Blue',
+        clr_custom: 'Custom color',
+        clr_gray: 'Gray',
+        clr_green: 'Green',
+        clr_orange: 'Orange',
+        clr_pink: 'Pink',
+        clr_purple: 'Purple',
+        clr_red: 'Red',
+        clr_white: 'White',
+        clr_yellow: 'Yellow',
+        collapse_all: 'Collapse all the menus',
+        color_select: 'Choose color',
+        color: 'color',
+        colors: 'Colors',
+        cursor: 'Cursor',
+        cursor_exp: 'Change the cursor icon',
+        cursor_black: 'Black',
+        cursor_white: 'White',
+        custom_colors: 'Custom',
+        custom_colors_close: 'Close custom colors options',
+        custom_colors_exp: 'Change background and text colors',
+        developed_by: 'developed by',
+        developed_in: 'Developed in Israel',
+        developed_in_link: 'https://en.wikipedia.org/wiki/Israel',
+        developer: 'Localize',
+        developer_exp: 'Web development services',
+        developer_message:
+          "A few words from the main person working on the plugin: \"I'm still studying and investigating the website accessibility subject when I can, and I'm interested in developing more features for this free plugin (there's already a feature list for the next versions), but I'm a busy guy - I can usually only work on this plugin in my free time. I do try my best to make it useful to as many website owners and visitors as possible. If you do decide to use the plugin, and like it - you can donate towards its developement. Any amount is more than welcome. If you choose not to donate, or can't donate, I still hope that the plugin will be useful to you and help your website's visitors.\"",
+        dir: 'ltr',
+        display: 'Display',
+        edge: 'Edge',
+        expand_all: 'Expand all the menus',
+        experimental_feat: 'This is an experimental feature',
+        explorer: 'Internet Explorer',
+        firefox: 'Firefox',
+        font: 'Font',
+        font_exp: 'Change the font of the page',
+        font_readable: 'Readable',
+        help: 'Help',
+        help_exp: 'Click here for help',
+        highlight: 'Highlight',
+        hl_headings: 'Highlight titles',
+        hl_headings_exp: 'Highlight all the titles on the page',
+        hl_links: 'Highlight links',
+        hl_links_exp: 'Highlight all the links on the page',
+        how_accessible: 'About this website accessibility',
+        how_accessible_exp: 'About this accessibilty plugin',
+        images_only: 'Images only',
+        images_only_exp: 'Hide the text on the page',
+        img_alt_missing: 'Image with no description',
+        img_alt: 'Possible image description: ',
+        impaired: 'Impaired vision',
+        impaired_exp: 'Maximum contrast',
+        jq_too_low:
+          "%cNagishLi%c says: your jQuery version is too low, it's possible that some (or all) options of the accessibility plugin won't work.",
+        jq_not_found_msg:
+          "%cNagishLi%c says: it seems that jQuery do not exist on this page. The plugin can't function without it, and added the required minimum jQuery version to the page automatically.",
+        kbnav: 'Keyboard navigation',
+        kbnav_exp: 'Navigate this site using a keyboard',
+        kbnav_off: 'Off',
+        kbnav_on: 'On',
+        kbshortcuts: 'Keyboard shortcuts',
+        kbshortcuts_exp: 'Accessible key combinations and instructions',
+        kbshortcuts_text:
+          "To make it easier to use NagishLi, there are few keyboard shortcuts you can press to use the options it has to offer.<br /><br /><kbd>ALT and Z</kbd> - Collapse and expand the accessibility plugin.<br /><br /><kbd>ALT and X</kbd> - Show help inside the plugin. Repeating this combination will undo this option.<br /><br /><kbd>ALT and C</kbd> - Reset the accessibilty options set by the plugin.<br /><br /><kbd>ALT and V</kbd> - Quick navigation to the top of the page.<br /><br /><kbd>ALT and B</kbd> - Quick navigation to the bottom of page.<br /><br /><kbd>SHIFT and A</kbd> - Enlarge the text of the page.<br /><br /><kbd>SHIFT and S</kbd> - Shrink the text of the page.<br /><br /><kbd>SHIFT and D</kbd> - Highlight the links on the page. Repeating this combination will undo this option.<br /><br /><kbd>SHIFT and F</kbd> - Highlight the titles on the page. Repeating this combination will undo this option.<br /><br /><kbd>SHIFT and Q</kbd> - Activate the option 'Color blind' (Gray colors). Repeating this combination will undo this option.<br /><br /><kbd>SHIFT and W</kbd> - Activate the option 'Impaired vision' (High contrast). Repeating this combination will undo this option.<br /><br /><kbd>SHIFT and E</kbd> - Activate the option 'Strong colors' (Saturated colors). Repeating this combination will undo this option.<br /><br />",
+        larger_text: 'Larger',
+        larger_text_exp: 'Enlarge the text with each click',
+        lc_filter: 'Living colors filter',
+        lc_filter_exp: 'Cold colors',
+        lic_warn:
+          'This website is using an unlicensed version of NagishLi. A lot of time and effort were put into this plugin, please <a href="https://www.nagish.li/en/contact.html" target="_blank" style="color: black !important; text-decoration: underline !important;" tabindex="1">click here</a> to send an anonymous report about this website. Thank you!',
+        logo_alt: 'Logo',
+        misc: 'Misc',
+        missing_setting: '%cNagishLi%c says: %cThe setting is missing.%c',
+        move_bl: 'Move to Bottom Left',
+        move_br: 'Move to Bottom Right',
+        move_tl: 'Move to Top Left',
+        move_tr: 'Move to Top Right',
+        normal: 'Normal',
+        normal_display: 'Normal',
+        normal_plu: 'Normal',
+        not_supported: 'This feature is not supported by your browser.',
+        opera: 'Opera',
+        r2m: 'Audio reading',
+        r2m_exp: 'Listen to audio version of digits',
+        r2m_na:
+          'Audio reading is not available at the moment. Try again later.',
+        r2m_off: 'Off',
+        r2m_on: 'On',
+        reset_prompt: 'Would you like to reset the accessibilty settings?',
+        reset_settings: 'Reset settings',
+        reset_settings_exp: 'Reset all of the settings set by the plugin',
+        saturated: 'Bright colors',
+        saturated_exp: 'Saturate the page colors',
+        settings: 'Info & Settings',
+        settings_prompt:
+          'It seems that the current accessibility settings might be problematic. Would you like to reset the settings? (Recommended)',
+        settings_reset_alert_ok:
+          'The settings have been reset. Please refresh the page.',
+        settings_reset_html_ok:
+          'The settings have been reset. <a href="javascript:void(0);" onclick="javascript:location.replace(window.location.href.split(\'#\')[0]);" style="color: black !important; text-decoration: underline !important; outline: 5px solid rgba(88, 144, 255, 0.75) !important;" tabindex="1">Refresh the page</a>',
+        settings_save: 'The settings will be saved.',
+        settings_save_reminder:
+          "Remember: You can also reset them under 'Info & Settings'.",
+        settings_upgrade_html:
+          'NagishLi was upgraded. <a href="javascript:void(0);" onclick="javascript:location.replace(window.location.href.split(\'#\')[0]);" style="color: black !important; text-decoration: underline !important;" tabindex="1">Refresh the page</a>',
+        skiplinks: 'Go to',
+        skiplinks_exp: 'Quick navigation to website and page areas',
+        skiplinks_default: 'Choose location',
+        skiplinks_page_nav: 'Page navigation',
+        skiplinks_site_nav: 'Site navigation',
+        skiplinks_to_top: 'Top of the page',
+        skiplinks_to_menu: 'Menu',
+        skiplinks_to_header: 'Main title',
+        skiplinks_to_paragraph: 'First paragraph',
+        skiplinks_to_content: 'Content',
+        skiplinks_to_bottom: 'Bottom of the page',
+        skiplinks_to_home: 'Home page',
+        smaller_text: 'Smaller',
+        smaller_text_exp: 'Shrink the text with each click',
+        supported_browsers: 'Supported browsers',
+        supported_browsers_exp:
+          'Supported browsers: Google Chrome, Microsoft Edge, Mozilla Firefox, Opera and Internet Explorer. The accessibility plugin makes use of advanced features in your browser. Please use an up-to-date browser.',
+        text_only: 'Text only',
+        text_only_exp: 'Hide the images on the page',
+        text_size: 'Text Size',
+        txt: 'Text',
+        unsupported_media:
+          'Playing this video or audio is unavailable in your browser.',
+        untitled_page: 'Untitled page',
+        zoom: 'Zoom',
+        zoom_exp: 'Zoom in and out of the page',
+        zoom_in: 'Zoom in',
+        zoom_out: 'Zoom out',
+      }
       : {
-          a11y_info:
-            '\u05d4\u05e6\u05d4\u05e8\u05ea \u05e0\u05d2\u05d9\u05e9\u05d5\u05ea',
-          a11y_info_exp:
-            '\u05d4\u05e6\u05d4\u05e8\u05ea \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05e9\u05dc \u05d0\u05ea\u05e8 \u05d6\u05d4',
-          a11y_title: '\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea',
-          about:
-            '\u05d0\u05d5\u05d3\u05d5\u05ea \u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9',
-          about_text:
-            '<span class="nlap-stitle">\u05db\u05d9\u05e6\u05d3 \u05d4\u05d5\u05e0\u05d2\u05e9 \u05d0\u05ea\u05e8 \u05d6\u05d4?</span><br />\u05d0\u05ea\u05e8 \u05d6\u05d4 \u05d4\u05d5\u05e0\u05d2\u05e9 \u05e2\u05dc \u05d9\u05d3\u05d9 <a href="https://www.nagish.li/' +
-            g +
-            '/" target="_blank" tabindex="1">\u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9</a>, \u05ea\u05d5\u05e1\u05e3 \u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05dc\u05dc\u05d0 \u05e2\u05dc\u05d5\u05ea \u05e9\u05e4\u05d5\u05ea\u05d7 \u05e2\u05dc \u05d9\u05d3\u05d9 <a href="http://www.localize.co.il" target="_blank" tabindex="1">\u05dc\u05d5\u05e7\u05dc\u05d9\u05d9\u05d6*</a> \u05d5\u05d4\u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05d5 \u05db\u05e4\u05d5\u05e3 \u05dc\u05ea\u05e0\u05d0\u05d9 <a href="https://www.nagish.li/' +
-            g +
-            '/license.html" target="_blank" tabindex="1">\u05d4\u05e8\u05d9\u05e9\u05d9\u05d5\u05df</a> \u05d4\u05de\u05e6\u05d5\u05e8\u05e4\u05d9\u05dd \u05d0\u05dc\u05d9\u05d5.<br /><br /><span class="nlap-stitle">\u05dc\u05de\u05d4 \u05e4\u05d5\u05ea\u05d7 \u05ea\u05d5\u05e1\u05e3 \u05d6\u05d4?</span><br />\u05de\u05d0\u05d6 \u05e9\u05e0\u05d5\u05e9\u05d0 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05e2\u05dc\u05d4, \u05ea\u05d5\u05e1\u05e4\u05d9 \u05d4\u05e0\u05d2\u05e9\u05d4 \u05d7\u05d9\u05e0\u05de\u05d9\u05d9\u05dd \u05d4\u05d5\u05e6\u05e2\u05d5 \u05d1\u05e2\u05d9\u05e7\u05e8 \u05dc\u05de\u05e9\u05ea\u05de\u05e9\u05d9 \u05de\u05e2\u05e8\u05db\u05ea \u05d5\u05d5\u05e8\u05d3\u05e4\u05e8\u05e1. \u05d1\u05e2\u05dc\u05d9 \u05d0\u05ea\u05e8\u05d9\u05dd \u05d0\u05d7\u05e8\u05d9\u05dd \u05d5\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05d0\u05d7\u05e8\u05d5\u05ea \u05d3\u05d9 "\u05d4\u05d5\u05d6\u05e0\u05d7\u05d5". \u05d4\u05e0\u05d2\u05e9\u05ea \u05d0\u05ea\u05e8 \u05d4\u05d9\u05d0 \u05ea\u05d4\u05dc\u05d9\u05da \u05de\u05d5\u05e8\u05db\u05d1, \u05de\u05e1\u05d5\u05d1\u05da \u05d5\u05d0\u05e8\u05d5\u05da \u05d9\u05d7\u05e1\u05d9\u05ea (\u05d0\u05d5 \u05dc\u05e4\u05d7\u05d5\u05ea \u05db\u05db\u05d4 \u05de\u05ea\u05d0\u05e8\u05d9\u05dd \u05d0\u05d5\u05ea\u05d5). \u05d2\u05dd \u05dc\u05d5\u05e7\u05dc\u05d9\u05d9\u05d6* \u05e0\u05d6\u05e7\u05e7\u05d4 \u05dc\u05ea\u05d5\u05e1\u05e3 \u05dc\u05d0\u05ea\u05e8\u05d9\u05dd \u05e9\u05dc\u05d4, \u05d5\u05d0\u05dd \u05e6\u05e8\u05d9\u05da \u05dc\u05ea\u05d7\u05d6\u05e7 \u05db\u05de\u05d4 \u05d0\u05ea\u05e8\u05d9\u05dd, \u05e2\u05dc\u05d5\u05ea \u05d5\u05d6\u05de\u05df \u05d4\u05d4\u05e0\u05d2\u05e9\u05d4 \u05e9\u05dc \u05d4\u05d0\u05ea\u05e8\u05d9\u05dd \u05d4\u05d0\u05dc\u05d4 \u05d9\u05db\u05d5\u05dc\u05d9\u05dd \u05dc\u05d4\u05d9\u05d5\u05ea \u05d9\u05e7\u05e8\u05d9\u05dd.<br /><br /><span class="nlap-stitle">\u05d4\u05d5\u05d0 \u05d1\u05d0\u05de\u05ea \u05d1\u05d7\u05d9\u05e0\u05dd? \u05dc\u05de\u05d4?</span><br />\u05d4\u05ea\u05d5\u05e1\u05e3 \u05e4\u05d5\u05ea\u05d7 \u05d1\u05ea\u05d7\u05d9\u05dc\u05d4 \u05e2\u05d1\u05d5\u05e8 \u05d4\u05e9\u05d9\u05de\u05d5\u05e9 \u05d4\u05d0\u05d9\u05e9\u05d9 \u05e9\u05dc \u05dc\u05d5\u05e7\u05dc\u05d9\u05d9\u05d6*, \u05e9\u05dc\u05d0\u05d7\u05e8 \u05de\u05db\u05df \u05d4\u05d7\u05dc\u05d9\u05d8\u05d4 \u05dc\u05e9\u05d7\u05e8\u05e8 \u05d0\u05d5\u05ea\u05d5 \u05dc\u05e6\u05d9\u05d1\u05d5\u05e8 \u05d4\u05e8\u05d7\u05d1 \u05d1\u05de\u05d8\u05e8\u05d4 \u05dc\u05d4\u05e0\u05d2\u05d9\u05e9 \u05db\u05dc \u05d0\u05ea\u05e8 \u05e2\u05d1\u05d5\u05e8 \u05d0\u05e0\u05e9\u05d9\u05dd \u05e2\u05dd \u05de\u05d5\u05d2\u05d1\u05dc\u05d5\u05ea. \u05dc\u05ea\u05d5\u05e1\u05e3 \u05d9\u05e9 \u05e2\u05d5\u05d3 \u05d3\u05e8\u05da \u05d0\u05e8\u05d5\u05db\u05d4 \u05dc\u05d4\u05ea\u05e4\u05ea\u05d7 \u05d5\u05dc\u05d4\u05e9\u05ea\u05e4\u05e8, \u05d0\u05d1\u05dc \u05d0\u05dd \u05d4\u05d5\u05d0 \u05d9\u05e1\u05d9\u05d9\u05e2 \u05dc\u05d4\u05e4\u05d5\u05da \u05d9\u05d5\u05ea\u05e8 \u05d0\u05ea\u05e8\u05d9\u05dd \u05dc\u05e0\u05d2\u05d9\u05e9\u05d9\u05dd \u05e2\u05d1\u05d5\u05e8 \u05d0\u05e0\u05e9\u05d9\u05dd \u05e2\u05dd \u05de\u05d5\u05d2\u05d1\u05dc\u05d5\u05ea - \u05dc\u05d5\u05e7\u05dc\u05d9\u05d9\u05d6* \u05e9\u05de\u05d7\u05d4 \u05e9\u05d4\u05d9\u05d0 \u05d9\u05db\u05d5\u05dc\u05d4 \u05dc\u05e7\u05d7\u05ea \u05d7\u05dc\u05e7 \u05d1\u05d6\u05d4.',
-          about_text_lic:
-            '<span class="nlap-stitle">\u05db\u05d9\u05e6\u05d3 \u05d4\u05d5\u05e0\u05d2\u05e9 \u05d0\u05ea\u05e8 \u05d6\u05d4?</span><br />\u05d0\u05ea\u05e8 \u05d6\u05d4 \u05d4\u05d5\u05e0\u05d2\u05e9 \u05e2\u05dc \u05d9\u05d3\u05d9 <a href="https://www.nagish.li/' +
-            g +
-            '/" target="_blank" tabindex="1">\u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9</a> \u05d5\u05d4\u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05d5 \u05db\u05e4\u05d5\u05e3 \u05dc\u05ea\u05e0\u05d0\u05d9 <a href="https://www.nagish.li/' +
-            g +
-            '/license.html" target="_blank" tabindex="1">\u05d4\u05e8\u05d9\u05e9\u05d9\u05d5\u05df</a> \u05d4\u05de\u05e6\u05d5\u05e8\u05e4\u05d9\u05dd \u05d0\u05dc\u05d9\u05d5.<br /><br /><span class="nlap-stitle">\u05dc\u05de\u05d4 \u05e4\u05d5\u05ea\u05d7 \u05ea\u05d5\u05e1\u05e3 \u05d6\u05d4?</span><br />\u05de\u05d0\u05d6 \u05e9\u05e0\u05d5\u05e9\u05d0 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05e2\u05dc\u05d4, \u05ea\u05d5\u05e1\u05e4\u05d9 \u05d4\u05e0\u05d2\u05e9\u05d4 \u05d7\u05d9\u05e0\u05de\u05d9\u05d9\u05dd \u05d4\u05d5\u05e6\u05e2\u05d5 \u05d1\u05e2\u05d9\u05e7\u05e8 \u05dc\u05de\u05e9\u05ea\u05de\u05e9\u05d9 \u05de\u05e2\u05e8\u05db\u05ea \u05d5\u05d5\u05e8\u05d3\u05e4\u05e8\u05e1. \u05d1\u05e2\u05dc\u05d9 \u05d0\u05ea\u05e8\u05d9\u05dd \u05d0\u05d7\u05e8\u05d9\u05dd \u05d5\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05d0\u05d7\u05e8\u05d5\u05ea \u05d3\u05d9 "\u05d4\u05d5\u05d6\u05e0\u05d7\u05d5". \u05d4\u05e0\u05d2\u05e9\u05ea \u05d0\u05ea\u05e8 \u05d4\u05d9\u05d0 \u05ea\u05d4\u05dc\u05d9\u05da \u05de\u05d5\u05e8\u05db\u05d1, \u05de\u05e1\u05d5\u05d1\u05da \u05d5\u05d0\u05e8\u05d5\u05da \u05d9\u05d7\u05e1\u05d9\u05ea (\u05d0\u05d5 \u05dc\u05e4\u05d7\u05d5\u05ea \u05db\u05db\u05d4 \u05de\u05ea\u05d0\u05e8\u05d9\u05dd \u05d0\u05d5\u05ea\u05d5). \u05ea\u05d5\u05e1\u05e3 \u05d6\u05d4 \u05e4\u05d5\u05ea\u05d7 \u05d2\u05dd \u05e2\u05d1\u05d5\u05e8 \u05d0\u05ea\u05e8\u05d9\u05dd \u05e9\u05d0\u05d9\u05e0\u05dd \u05de\u05d5\u05e4\u05e2\u05dc\u05d9\u05dd \u05e2\u05dc \u05d9\u05d3\u05d9 \u05de\u05e2\u05e8\u05db\u05ea \u05d5\u05d5\u05e8\u05d3\u05e4\u05e8\u05e1.',
-          accessibility_statement:
-            '\u05d0\u05ea\u05e8 \u05d6\u05d4 \u05de\u05d9\u05d9\u05d7\u05e1 \u05d7\u05e9\u05d9\u05d1\u05d5\u05ea \u05e8\u05d1\u05d4 \u05dc\u05d4\u05e0\u05d2\u05e9\u05ea \u05d4\u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05d5 \u05dc\u05db\u05dc\u05dc \u05d4\u05d0\u05d5\u05db\u05dc\u05d5\u05e1\u05d9\u05d9\u05d4 \u05d5\u05e2\u05d5\u05e9\u05d4 \u05db\u05dc \u05e9\u05d1\u05d9\u05db\u05d5\u05dc\u05ea\u05d5 \u05dc\u05d4\u05d1\u05d8\u05d9\u05d7 \u05e9\u05d0\u05e0\u05e9\u05d9\u05dd \u05e2\u05dd \u05de\u05d5\u05d2\u05d1\u05dc\u05d5\u05ea \u05d9\u05d5\u05db\u05dc\u05d5 \u05dc\u05d4\u05e4\u05d9\u05e7 \u05d0\u05ea \u05d4\u05de\u05d9\u05d8\u05d1 \u05de\u05d4\u05ea\u05db\u05e0\u05d9\u05dd \u05d4\u05de\u05d5\u05e6\u05d2\u05d9\u05dd \u05d1\u05d5. \u05d0\u05ea\u05e8 \u05d6\u05d4 \u05de\u05e9\u05ea\u05de\u05e9 \u05d1\u05ea\u05d5\u05e1\u05e3 <a href="https://www.nagish.li/' +
-            g +
-            '/" target="_blank" tabindex="1">\u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9</a> \u05dc\u05e9\u05dd \u05de\u05d8\u05e8\u05d4 \u05d7\u05e9\u05d5\u05d1\u05d4 \u05d6\u05d5, \u05d5\u05d4\u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05ea\u05d5\u05e1\u05e3 \u05db\u05e4\u05d5\u05e3 \u05dc\u05ea\u05e0\u05d0\u05d9 <a href="https://www.nagish.li/' +
-            g +
-            '/license.html" target="_blank" tabindex="1">\u05d4\u05e8\u05d9\u05e9\u05d9\u05d5\u05df</a> \u05d4\u05de\u05e6\u05d5\u05e8\u05e4\u05d9\u05dd \u05d0\u05dc\u05d9\u05d5.<br /><br />' +
-            (m
-              ? '\u05d0\u05dd \u05d9\u05e9 \u05dc\u05da \u05e9\u05d0\u05dc\u05d5\u05ea \u05d0\u05d5 \u05d4\u05e2\u05e8\u05d5\u05ea \u05db\u05dc\u05e9\u05d4\u05df \u05dc\u05d2\u05d1\u05d9 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05e9\u05dc \u05d0\u05ea\u05e8 \u05d6\u05d4, \u05d1\u05d0\u05e4\u05e9\u05e8\u05d5\u05ea\u05da \u05dc\u05d9\u05e6\u05d5\u05e8 \u05e7\u05e9\u05e8:<br /><br />' +
-                (p
-                  ? '\u05de\u05de\u05d5\u05e0\u05d4 \u05e2\u05dc \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea: ' +
-                    p +
-                    '<br />'
-                  : '') +
-                (v ? '\u05d8\u05dc\u05e4\u05d5\u05df: ' + v + '<br />' : '') +
-                (u
-                  ? '\u05d3\u05d5\u05d0\u05e8 \u05d0\u05dc\u05e7\u05d8\u05e8\u05d5\u05e0\u05d9: <a href="mailto:' +
-                    u +
-                    '">' +
-                    u +
-                    '</a><br />'
-                  : '') +
-                (z ? '\u05e4\u05e7\u05e1: ' + z + '<br />' : '') +
-                '<br />'
+        a11y_info:
+          '\u05d4\u05e6\u05d4\u05e8\u05ea \u05e0\u05d2\u05d9\u05e9\u05d5\u05ea',
+        a11y_info_exp:
+          '\u05d4\u05e6\u05d4\u05e8\u05ea \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05e9\u05dc \u05d0\u05ea\u05e8 \u05d6\u05d4',
+        a11y_title: '\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea',
+        about:
+          '\u05d0\u05d5\u05d3\u05d5\u05ea \u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9',
+        about_text:
+          '<span class="nlap-stitle">\u05db\u05d9\u05e6\u05d3 \u05d4\u05d5\u05e0\u05d2\u05e9 \u05d0\u05ea\u05e8 \u05d6\u05d4?</span><br />\u05d0\u05ea\u05e8 \u05d6\u05d4 \u05d4\u05d5\u05e0\u05d2\u05e9 \u05e2\u05dc \u05d9\u05d3\u05d9 <a href="https://www.nagish.li/' +
+          g +
+          '/" target="_blank" tabindex="1">\u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9</a>, \u05ea\u05d5\u05e1\u05e3 \u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05dc\u05dc\u05d0 \u05e2\u05dc\u05d5\u05ea \u05e9\u05e4\u05d5\u05ea\u05d7 \u05e2\u05dc \u05d9\u05d3\u05d9 <a href="http://www.localize.co.il" target="_blank" tabindex="1">\u05dc\u05d5\u05e7\u05dc\u05d9\u05d9\u05d6*</a> \u05d5\u05d4\u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05d5 \u05db\u05e4\u05d5\u05e3 \u05dc\u05ea\u05e0\u05d0\u05d9 <a href="https://www.nagish.li/' +
+          g +
+          '/license.html" target="_blank" tabindex="1">\u05d4\u05e8\u05d9\u05e9\u05d9\u05d5\u05df</a> \u05d4\u05de\u05e6\u05d5\u05e8\u05e4\u05d9\u05dd \u05d0\u05dc\u05d9\u05d5.<br /><br /><span class="nlap-stitle">\u05dc\u05de\u05d4 \u05e4\u05d5\u05ea\u05d7 \u05ea\u05d5\u05e1\u05e3 \u05d6\u05d4?</span><br />\u05de\u05d0\u05d6 \u05e9\u05e0\u05d5\u05e9\u05d0 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05e2\u05dc\u05d4, \u05ea\u05d5\u05e1\u05e4\u05d9 \u05d4\u05e0\u05d2\u05e9\u05d4 \u05d7\u05d9\u05e0\u05de\u05d9\u05d9\u05dd \u05d4\u05d5\u05e6\u05e2\u05d5 \u05d1\u05e2\u05d9\u05e7\u05e8 \u05dc\u05de\u05e9\u05ea\u05de\u05e9\u05d9 \u05de\u05e2\u05e8\u05db\u05ea \u05d5\u05d5\u05e8\u05d3\u05e4\u05e8\u05e1. \u05d1\u05e2\u05dc\u05d9 \u05d0\u05ea\u05e8\u05d9\u05dd \u05d0\u05d7\u05e8\u05d9\u05dd \u05d5\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05d0\u05d7\u05e8\u05d5\u05ea \u05d3\u05d9 "\u05d4\u05d5\u05d6\u05e0\u05d7\u05d5". \u05d4\u05e0\u05d2\u05e9\u05ea \u05d0\u05ea\u05e8 \u05d4\u05d9\u05d0 \u05ea\u05d4\u05dc\u05d9\u05da \u05de\u05d5\u05e8\u05db\u05d1, \u05de\u05e1\u05d5\u05d1\u05da \u05d5\u05d0\u05e8\u05d5\u05da \u05d9\u05d7\u05e1\u05d9\u05ea (\u05d0\u05d5 \u05dc\u05e4\u05d7\u05d5\u05ea \u05db\u05db\u05d4 \u05de\u05ea\u05d0\u05e8\u05d9\u05dd \u05d0\u05d5\u05ea\u05d5). \u05d2\u05dd \u05dc\u05d5\u05e7\u05dc\u05d9\u05d9\u05d6* \u05e0\u05d6\u05e7\u05e7\u05d4 \u05dc\u05ea\u05d5\u05e1\u05e3 \u05dc\u05d0\u05ea\u05e8\u05d9\u05dd \u05e9\u05dc\u05d4, \u05d5\u05d0\u05dd \u05e6\u05e8\u05d9\u05da \u05dc\u05ea\u05d7\u05d6\u05e7 \u05db\u05de\u05d4 \u05d0\u05ea\u05e8\u05d9\u05dd, \u05e2\u05dc\u05d5\u05ea \u05d5\u05d6\u05de\u05df \u05d4\u05d4\u05e0\u05d2\u05e9\u05d4 \u05e9\u05dc \u05d4\u05d0\u05ea\u05e8\u05d9\u05dd \u05d4\u05d0\u05dc\u05d4 \u05d9\u05db\u05d5\u05dc\u05d9\u05dd \u05dc\u05d4\u05d9\u05d5\u05ea \u05d9\u05e7\u05e8\u05d9\u05dd.<br /><br /><span class="nlap-stitle">\u05d4\u05d5\u05d0 \u05d1\u05d0\u05de\u05ea \u05d1\u05d7\u05d9\u05e0\u05dd? \u05dc\u05de\u05d4?</span><br />\u05d4\u05ea\u05d5\u05e1\u05e3 \u05e4\u05d5\u05ea\u05d7 \u05d1\u05ea\u05d7\u05d9\u05dc\u05d4 \u05e2\u05d1\u05d5\u05e8 \u05d4\u05e9\u05d9\u05de\u05d5\u05e9 \u05d4\u05d0\u05d9\u05e9\u05d9 \u05e9\u05dc \u05dc\u05d5\u05e7\u05dc\u05d9\u05d9\u05d6*, \u05e9\u05dc\u05d0\u05d7\u05e8 \u05de\u05db\u05df \u05d4\u05d7\u05dc\u05d9\u05d8\u05d4 \u05dc\u05e9\u05d7\u05e8\u05e8 \u05d0\u05d5\u05ea\u05d5 \u05dc\u05e6\u05d9\u05d1\u05d5\u05e8 \u05d4\u05e8\u05d7\u05d1 \u05d1\u05de\u05d8\u05e8\u05d4 \u05dc\u05d4\u05e0\u05d2\u05d9\u05e9 \u05db\u05dc \u05d0\u05ea\u05e8 \u05e2\u05d1\u05d5\u05e8 \u05d0\u05e0\u05e9\u05d9\u05dd \u05e2\u05dd \u05de\u05d5\u05d2\u05d1\u05dc\u05d5\u05ea. \u05dc\u05ea\u05d5\u05e1\u05e3 \u05d9\u05e9 \u05e2\u05d5\u05d3 \u05d3\u05e8\u05da \u05d0\u05e8\u05d5\u05db\u05d4 \u05dc\u05d4\u05ea\u05e4\u05ea\u05d7 \u05d5\u05dc\u05d4\u05e9\u05ea\u05e4\u05e8, \u05d0\u05d1\u05dc \u05d0\u05dd \u05d4\u05d5\u05d0 \u05d9\u05e1\u05d9\u05d9\u05e2 \u05dc\u05d4\u05e4\u05d5\u05da \u05d9\u05d5\u05ea\u05e8 \u05d0\u05ea\u05e8\u05d9\u05dd \u05dc\u05e0\u05d2\u05d9\u05e9\u05d9\u05dd \u05e2\u05d1\u05d5\u05e8 \u05d0\u05e0\u05e9\u05d9\u05dd \u05e2\u05dd \u05de\u05d5\u05d2\u05d1\u05dc\u05d5\u05ea - \u05dc\u05d5\u05e7\u05dc\u05d9\u05d9\u05d6* \u05e9\u05de\u05d7\u05d4 \u05e9\u05d4\u05d9\u05d0 \u05d9\u05db\u05d5\u05dc\u05d4 \u05dc\u05e7\u05d7\u05ea \u05d7\u05dc\u05e7 \u05d1\u05d6\u05d4.',
+        about_text_lic:
+          '<span class="nlap-stitle">\u05db\u05d9\u05e6\u05d3 \u05d4\u05d5\u05e0\u05d2\u05e9 \u05d0\u05ea\u05e8 \u05d6\u05d4?</span><br />\u05d0\u05ea\u05e8 \u05d6\u05d4 \u05d4\u05d5\u05e0\u05d2\u05e9 \u05e2\u05dc \u05d9\u05d3\u05d9 <a href="https://www.nagish.li/' +
+          g +
+          '/" target="_blank" tabindex="1">\u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9</a> \u05d5\u05d4\u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05d5 \u05db\u05e4\u05d5\u05e3 \u05dc\u05ea\u05e0\u05d0\u05d9 <a href="https://www.nagish.li/' +
+          g +
+          '/license.html" target="_blank" tabindex="1">\u05d4\u05e8\u05d9\u05e9\u05d9\u05d5\u05df</a> \u05d4\u05de\u05e6\u05d5\u05e8\u05e4\u05d9\u05dd \u05d0\u05dc\u05d9\u05d5.<br /><br /><span class="nlap-stitle">\u05dc\u05de\u05d4 \u05e4\u05d5\u05ea\u05d7 \u05ea\u05d5\u05e1\u05e3 \u05d6\u05d4?</span><br />\u05de\u05d0\u05d6 \u05e9\u05e0\u05d5\u05e9\u05d0 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05e2\u05dc\u05d4, \u05ea\u05d5\u05e1\u05e4\u05d9 \u05d4\u05e0\u05d2\u05e9\u05d4 \u05d7\u05d9\u05e0\u05de\u05d9\u05d9\u05dd \u05d4\u05d5\u05e6\u05e2\u05d5 \u05d1\u05e2\u05d9\u05e7\u05e8 \u05dc\u05de\u05e9\u05ea\u05de\u05e9\u05d9 \u05de\u05e2\u05e8\u05db\u05ea \u05d5\u05d5\u05e8\u05d3\u05e4\u05e8\u05e1. \u05d1\u05e2\u05dc\u05d9 \u05d0\u05ea\u05e8\u05d9\u05dd \u05d0\u05d7\u05e8\u05d9\u05dd \u05d5\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05d0\u05d7\u05e8\u05d5\u05ea \u05d3\u05d9 "\u05d4\u05d5\u05d6\u05e0\u05d7\u05d5". \u05d4\u05e0\u05d2\u05e9\u05ea \u05d0\u05ea\u05e8 \u05d4\u05d9\u05d0 \u05ea\u05d4\u05dc\u05d9\u05da \u05de\u05d5\u05e8\u05db\u05d1, \u05de\u05e1\u05d5\u05d1\u05da \u05d5\u05d0\u05e8\u05d5\u05da \u05d9\u05d7\u05e1\u05d9\u05ea (\u05d0\u05d5 \u05dc\u05e4\u05d7\u05d5\u05ea \u05db\u05db\u05d4 \u05de\u05ea\u05d0\u05e8\u05d9\u05dd \u05d0\u05d5\u05ea\u05d5). \u05ea\u05d5\u05e1\u05e3 \u05d6\u05d4 \u05e4\u05d5\u05ea\u05d7 \u05d2\u05dd \u05e2\u05d1\u05d5\u05e8 \u05d0\u05ea\u05e8\u05d9\u05dd \u05e9\u05d0\u05d9\u05e0\u05dd \u05de\u05d5\u05e4\u05e2\u05dc\u05d9\u05dd \u05e2\u05dc \u05d9\u05d3\u05d9 \u05de\u05e2\u05e8\u05db\u05ea \u05d5\u05d5\u05e8\u05d3\u05e4\u05e8\u05e1.',
+        accessibility_statement:
+          '\u05d0\u05ea\u05e8 \u05d6\u05d4 \u05de\u05d9\u05d9\u05d7\u05e1 \u05d7\u05e9\u05d9\u05d1\u05d5\u05ea \u05e8\u05d1\u05d4 \u05dc\u05d4\u05e0\u05d2\u05e9\u05ea \u05d4\u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05d5 \u05dc\u05db\u05dc\u05dc \u05d4\u05d0\u05d5\u05db\u05dc\u05d5\u05e1\u05d9\u05d9\u05d4 \u05d5\u05e2\u05d5\u05e9\u05d4 \u05db\u05dc \u05e9\u05d1\u05d9\u05db\u05d5\u05dc\u05ea\u05d5 \u05dc\u05d4\u05d1\u05d8\u05d9\u05d7 \u05e9\u05d0\u05e0\u05e9\u05d9\u05dd \u05e2\u05dd \u05de\u05d5\u05d2\u05d1\u05dc\u05d5\u05ea \u05d9\u05d5\u05db\u05dc\u05d5 \u05dc\u05d4\u05e4\u05d9\u05e7 \u05d0\u05ea \u05d4\u05de\u05d9\u05d8\u05d1 \u05de\u05d4\u05ea\u05db\u05e0\u05d9\u05dd \u05d4\u05de\u05d5\u05e6\u05d2\u05d9\u05dd \u05d1\u05d5. \u05d0\u05ea\u05e8 \u05d6\u05d4 \u05de\u05e9\u05ea\u05de\u05e9 \u05d1\u05ea\u05d5\u05e1\u05e3 <a href="https://www.nagish.li/' +
+          g +
+          '/" target="_blank" tabindex="1">\u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9</a> \u05dc\u05e9\u05dd \u05de\u05d8\u05e8\u05d4 \u05d7\u05e9\u05d5\u05d1\u05d4 \u05d6\u05d5, \u05d5\u05d4\u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05ea\u05d5\u05e1\u05e3 \u05db\u05e4\u05d5\u05e3 \u05dc\u05ea\u05e0\u05d0\u05d9 <a href="https://www.nagish.li/' +
+          g +
+          '/license.html" target="_blank" tabindex="1">\u05d4\u05e8\u05d9\u05e9\u05d9\u05d5\u05df</a> \u05d4\u05de\u05e6\u05d5\u05e8\u05e4\u05d9\u05dd \u05d0\u05dc\u05d9\u05d5.<br /><br />' +
+          (m
+            ? '\u05d0\u05dd \u05d9\u05e9 \u05dc\u05da \u05e9\u05d0\u05dc\u05d5\u05ea \u05d0\u05d5 \u05d4\u05e2\u05e8\u05d5\u05ea \u05db\u05dc\u05e9\u05d4\u05df \u05dc\u05d2\u05d1\u05d9 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05e9\u05dc \u05d0\u05ea\u05e8 \u05d6\u05d4, \u05d1\u05d0\u05e4\u05e9\u05e8\u05d5\u05ea\u05da \u05dc\u05d9\u05e6\u05d5\u05e8 \u05e7\u05e9\u05e8:<br /><br />' +
+            (p
+              ? '\u05de\u05de\u05d5\u05e0\u05d4 \u05e2\u05dc \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea: ' +
+              p +
+              '<br />'
               : '') +
-            '<span class="nlas-stitle">\u05d0\u05d9\u05da \u05dc\u05d4\u05e9\u05ea\u05de\u05e9 \u05d1\u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea</span><br />\u05dc\u05d0\u05d7\u05e8 \u05d4\u05dc\u05d7\u05d9\u05e6\u05d4 \u05e2\u05dc \u05db\u05e4\u05ea\u05d5\u05e8 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05d9\u05d9\u05e4\u05ea\u05d7\u05d5 \u05d1\u05e4\u05e0\u05d9\u05db\u05dd \u05ea\u05e4\u05e8\u05d9\u05d8\u05d9 \u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea, \u05d1\u05d0\u05de\u05e6\u05e2\u05d5\u05ea\u05dd \u05ea\u05d5\u05db\u05dc\u05d5:<ul><li>\u05dc\u05e9\u05e0\u05d5\u05ea \u05d0\u05ea \u05d2\u05d5\u05d3\u05dc \u05d4\u05d8\u05e7\u05e1\u05d8 (\u05e0\u05d9\u05ea\u05df \u05dc\u05d4\u05e9\u05ea\u05de\u05e9 \u05d2\u05dd \u05d1\u05e7\u05d9\u05e6\u05d5\u05e8\u05d9 \u05d4\u05de\u05e7\u05e9\u05d9\u05dd <span dir="rtl">SHIFT \u05d5- A</span>, SHIFT \u05d5- S)</li><li>\u05dc\u05e9\u05e0\u05d5\u05ea \u05d0\u05ea \u05e6\u05d1\u05e2\u05d9 \u05d4\u05d0\u05ea\u05e8 (\u05e0\u05d9\u05ea\u05df \u05dc\u05d4\u05e9\u05ea\u05de\u05e9 \u05d2\u05dd \u05d1\u05e7\u05d9\u05e6\u05d5\u05e8\u05d9 \u05d4\u05de\u05e7\u05e9\u05d9\u05dd <span dir="rtl">SHIFT \u05d5- Q</span>, <span dir="rtl">SHIFT \u05d5- W</span>, SHIFT \u05d5- E)</li><li>\u05dc\u05e9\u05e0\u05d5\u05ea \u05d0\u05ea \u05ea\u05e6\u05d5\u05d2\u05ea \u05d4\u05d0\u05ea\u05e8</li><li>\u05dc\u05e1\u05de\u05df \u05e7\u05d9\u05e9\u05d5\u05e8\u05d9\u05dd \u05d5\u05db\u05d5\u05ea\u05e8\u05d5\u05ea \u05d1\u05d0\u05ea\u05e8 (\u05e0\u05d9\u05ea\u05df \u05dc\u05d4\u05e9\u05ea\u05de\u05e9 \u05d2\u05dd \u05d1\u05e7\u05d9\u05e6\u05d5\u05e8\u05d9 \u05d4\u05de\u05e7\u05e9\u05d9\u05dd <span dir="rtl">SHIFT \u05d5- D</span>, SHIFT \u05d5- F)</li><li>\u05dc\u05e0\u05d5\u05d5\u05d8 \u05d1\u05de\u05d4\u05d9\u05e8\u05d5\u05ea \u05d1\u05d9\u05df \u05d0\u05d6\u05d5\u05e8\u05d9\u05dd \u05d1\u05db\u05dc \u05e2\u05de\u05d5\u05d3 (\u05e0\u05d9\u05ea\u05df \u05dc\u05d4\u05e9\u05ea\u05de\u05e9 \u05d2\u05dd \u05d1\u05e7\u05d9\u05e6\u05d5\u05e8\u05d9 \u05d4\u05de\u05e7\u05e9\u05d9\u05dd <span dir="rtl">ALT \u05d5- V</span>, ALT \u05d5- B)</li><li>\u05dc\u05d4\u05d2\u05d3\u05d9\u05dc \u05d5\u05dc\u05d4\u05e7\u05d8\u05d9\u05df \u05d0\u05ea \u05ea\u05e6\u05d5\u05d2\u05ea \u05d4\u05d0\u05ea\u05e8 (\u05d6\u05d5\u05dd)</li><li>\u05dc\u05e9\u05e0\u05d5\u05ea \u05d0\u05ea \u05d2\u05d5\u05e4\u05df \u05d4\u05d0\u05ea\u05e8 \u05dc\u05e7\u05e8\u05d9\u05d0</li><li>\u05dc\u05e2\u05e6\u05d5\u05e8 \u05d4\u05e0\u05e4\u05e9\u05d5\u05ea (\u05d0\u05e0\u05d9\u05de\u05e6\u05d9\u05d5\u05ea) \u05d1\u05d0\u05ea\u05e8</li><li>\u05dc\u05d4\u05d0\u05d6\u05d9\u05df \u05dc\u05d8\u05e7\u05e1\u05d8 \u05d7\u05dc\u05d5\u05e4\u05d9 \u05e2\u05d1\u05d5\u05e8 \u05ea\u05de\u05d5\u05e0\u05d5\u05ea \u05d1\u05d0\u05de\u05e6\u05e2\u05d5\u05ea \u05ea\u05d5\u05db\u05e0\u05ea \u05d4\u05e7\u05e8\u05d0\u05d4</li><li>\u05dc\u05d4\u05d0\u05d6\u05d9\u05df \u05dc\u05de\u05e1\u05e4\u05e8\u05d9 \u05d8\u05dc\u05e4\u05d5\u05df \u05d1\u05d0\u05de\u05e6\u05e2\u05d5\u05ea \u05d4\u05e7\u05e8\u05d0\u05d4 \u05e7\u05d5\u05dc\u05d9\u05ea</li><li>\u05dc\u05e9\u05e0\u05d5\u05ea \u05d0\u05ea \u05e1\u05de\u05df \u05d4\u05e2\u05db\u05d1\u05e8</li><li>\u05dc\u05e0\u05d5\u05d5\u05d8 \u05d1\u05d9\u05df \u05d0\u05e4\u05e9\u05e8\u05d5\u05d9\u05d5\u05ea \u05d4\u05ea\u05d5\u05e1\u05e3 \u05d1\u05d0\u05de\u05e6\u05e2\u05d5\u05ea \u05d4\u05de\u05e7\u05e9 Tab (\u05d5\u05d2\u05dd Shift+Tab) \u05d5\u05d4\u05e4\u05e2\u05dc\u05ea\u05df \u05d1\u05d0\u05de\u05e6\u05e2\u05d5\u05ea \u05d4\u05de\u05e7\u05e9 Enter</li></ul>\u05dc\u05de\u05e8\u05d5\u05ea \u05d4\u05de\u05d0\u05de\u05e6\u05d9\u05dd \u05e9\u05d4\u05d5\u05e9\u05e7\u05e2\u05d5 \u05d1\u05e4\u05d9\u05ea\u05d5\u05d7 \u05ea\u05d5\u05e1\u05e3 \u05d6\u05d4, \u05d9\u05d9\u05ea\u05db\u05e0\u05d5 \u05de\u05e6\u05d1\u05d9\u05dd \u05e9\u05d1\u05d4\u05dd \u05dc\u05d0 \u05ea\u05d4\u05d9\u05d4 \u05dc\u05d5 \u05d0\u05e4\u05e9\u05e8\u05d5\u05ea \u05dc\u05d4\u05e0\u05d2\u05d9\u05e9 \u05d7\u05dc\u05e7 \u05de\u05ea\u05db\u05e0\u05d9 \u05d4\u05d0\u05ea\u05e8, \u05db\u05d2\u05d5\u05df \u05ea\u05db\u05e0\u05d9\u05dd \u05d4\u05de\u05d5\u05e6\u05e2\u05d9\u05dd \u05d3\u05e8\u05da \u05d2\u05d5\u05e8\u05de\u05d9 \u05e6\u05d3 \u05e9\u05dc\u05d9\u05e9\u05d9 (\u05db\u05d3\u05d5\u05d2\u05de\u05ea YouTube, \u05ea\u05db\u05e0\u05d9\u05dd \u05de\u05d5\u05d8\u05de\u05e2\u05d9\u05dd \u05de\u05d0\u05ea\u05e8\u05d9\u05dd \u05d0\u05d7\u05e8\u05d9\u05dd \u05d5\u05db\u05d3\u05d5\u05de\u05d4). \u05d7\u05e9\u05d5\u05d1 \u05dc\u05e6\u05d9\u05d9\u05df \u05e9\u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9 \u05e0\u05de\u05e6\u05d0 \u05d1\u05e4\u05d9\u05ea\u05d5\u05d7 \u05de\u05ea\u05de\u05d9\u05d3 \u05e2\u05dc \u05de\u05e0\u05ea \u05dc\u05d4\u05e9\u05ea\u05e4\u05e8 \u05d5\u05dc\u05e2\u05de\u05d5\u05d3 \u05d1\u05ea\u05e7\u05e0\u05d9 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05d4\u05e2\u05d3\u05db\u05e0\u05d9\u05d9\u05dd \u05d1\u05d9\u05d5\u05ea\u05e8.<br /><br />',
-          align_left: 'left',
-          align_right: 'right',
-          and: '\u05d5',
-          animations: '\u05d4\u05e0\u05e4\u05e9\u05d5\u05ea \u05d1\u05d3\u05e3',
-          animations_exp:
-            '\u05d4\u05e4\u05e1\u05e7\u05ea \u05ea\u05d6\u05d5\u05d6\u05d5\u05ea \u05d5\u05d4\u05d1\u05d4\u05d5\u05d1\u05d9\u05dd \u05d1\u05d3\u05e3',
-          animations_on: '\u05e4\u05e2\u05d9\u05dc\u05d5\u05ea',
-          animations_off: '\u05de\u05d5\u05e4\u05e1\u05e7\u05d5\u05ea',
-          aria_close_modal:
-            '\u05dc\u05e1\u05d2\u05d5\u05e8 \u05d0\u05ea \u05d4\u05de\u05d9\u05d3\u05e2 \u05d4\u05de\u05d5\u05e6\u05d2',
-          aria_select_bgcolor:
-            '\u05d1\u05d7\u05d9\u05e8\u05ea \u05e6\u05d1\u05e2 \u05e8\u05e7\u05e2',
-          aria_select_color:
-            '\u05d1\u05d7\u05d9\u05e8\u05ea \u05e6\u05d1\u05e2 ',
-          aria_select_txtcolor:
-            '\u05d1\u05d7\u05d9\u05e8\u05ea \u05e6\u05d1\u05e2 \u05d8\u05e7\u05e1\u05d8',
-          aria_the_option: '\u05d4\u05d0\u05e4\u05e9\u05e8\u05d5\u05ea ',
-          aria_toggle_open_alt:
-            '\u05dc\u05e4\u05ea\u05d5\u05d7 \u05d0\u05ea \u05d4\u05ea\u05e4\u05e8\u05d9\u05d8 ',
-          aria_toggle_close_alt:
-            '\u05dc\u05e1\u05d2\u05d5\u05e8 \u05d0\u05ea \u05d4\u05ea\u05e4\u05e8\u05d9\u05d8 ',
-          bg: '\u05e8\u05e7\u05e2',
-          bl_filter:
-            '\u05de\u05e1\u05e0\u05df \u05d0\u05d5\u05e8 \u05db\u05d7\u05d5\u05dc',
-          bl_filter_exp:
-            '\u05e6\u05d1\u05e2\u05d9\u05dd \u05d7\u05de\u05d9\u05dd',
-          blind:
-            '\u05e2\u05d9\u05d5\u05d5\u05e8\u05d9 \u05e6\u05d1\u05e2\u05d9\u05dd',
-          blind_exp:
-            '\u05d2\u05d5\u05d5\u05e0\u05d9 \u05e9\u05d7\u05d5\u05e8 \u05dc\u05d1\u05df',
-          body_missing:
-            '\u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9 \u05d0\u05d5\u05de\u05e8: \u05ea\u05d2 \u05d4-<body> \u05d7\u05e1\u05e8! \u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05dc\u05d0 \u05d9\u05db\u05d5\u05dc \u05dc\u05e2\u05d1\u05d5\u05d3 \u05d1\u05dc\u05e2\u05d3\u05d9\u05d5.',
-          branding: '\u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9',
-          branding_exp:
-            '\u05ea\u05d5\u05e1\u05e3 \u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05d1\u05d7\u05d9\u05e0\u05dd',
-          chrome: '\u05db\u05e8\u05d5\u05dd',
-          clr_black: '\u05e9\u05d7\u05d5\u05e8',
-          clr_blue: '\u05db\u05d7\u05d5\u05dc',
-          clr_custom:
-            '\u05d1\u05d7\u05d9\u05e8\u05d4 \u05d0\u05d9\u05e9\u05d9\u05ea',
-          clr_gray: '\u05d0\u05e4\u05d5\u05e8',
-          clr_green: '\u05d9\u05e8\u05d5\u05e7',
-          clr_orange: '\u05db\u05ea\u05d5\u05dd',
-          clr_pink: '\u05d5\u05e8\u05d5\u05d3',
-          clr_purple: '\u05e1\u05d2\u05d5\u05dc',
-          clr_red: '\u05d0\u05d3\u05d5\u05dd',
-          clr_white: '\u05dc\u05d1\u05df',
-          clr_yellow: '\u05e6\u05d4\u05d5\u05d1',
-          collapse_all:
-            '\u05dc\u05e1\u05d2\u05d5\u05e8 \u05d0\u05ea \u05db\u05dc \u05d4\u05ea\u05e4\u05e8\u05d9\u05d8\u05d9\u05dd',
-          color: '\u05e6\u05d1\u05e2',
-          colors: '\u05e6\u05d1\u05e2\u05d9\u05dd',
-          cursor: '\u05e1\u05de\u05df \u05e2\u05db\u05d1\u05e8',
-          cursor_exp:
-            '\u05e9\u05d9\u05e0\u05d5\u05d9 \u05e1\u05de\u05df \u05d4\u05e2\u05db\u05d1\u05e8 \u05dc\u05d4\u05ea\u05d0\u05de\u05d4 \u05e2\u05d1\u05d5\u05e8 \u05e6\u05d1\u05e2\u05d9 \u05e8\u05e7\u05e2 \u05e9\u05d5\u05e0\u05d9\u05dd',
-          cursor_black: '\u05e9\u05d7\u05d5\u05e8',
-          cursor_white: '\u05dc\u05d1\u05df',
-          custom_colors:
-            '\u05d4\u05ea\u05d0\u05de\u05d4 \u05d0\u05d9\u05e9\u05d9\u05ea',
-          custom_colors_close:
-            '\u05dc\u05e1\u05d2\u05d5\u05e8 \u05d0\u05ea \u05d0\u05e4\u05e9\u05e8\u05d5\u05d9\u05d5\u05ea \u05e6\u05d1\u05e2\u05d9 \u05d4\u05d4\u05ea\u05d0\u05de\u05d4 \u05d4\u05d0\u05d9\u05e9\u05d9\u05ea',
-          custom_colors_exp:
-            '\u05e9\u05d9\u05e0\u05d5\u05d9 \u05e6\u05d1\u05e2\u05d9 \u05d4\u05e8\u05e7\u05e2 \u05d5\u05d4\u05d8\u05e7\u05e1\u05d8',
-          developed_by:
-            '\u05e4\u05d5\u05ea\u05d7 \u05e2\u05dc \u05d9\u05d3\u05d9',
-          developed_in:
-            '\u05e4\u05d5\u05ea\u05d7 \u05d1\u05d9\u05e9\u05e8\u05d0\u05dc',
-          developed_in_link:
-            'https://he.wikipedia.org/wiki/\u05d9\u05e9\u05e8\u05d0\u05dc',
-          developer: '\u05dc\u05d5\u05e7\u05dc\u05d9\u05d9\u05d6',
-          developer_exp:
-            '\u05e9\u05d9\u05e8\u05d5\u05ea\u05d9 \u05d1\u05e0\u05d9\u05d9\u05ea \u05d0\u05ea\u05e8\u05d9\u05dd',
-          developer_message:
-            '\u05db\u05de\u05d4 \u05de\u05d9\u05dc\u05d9\u05dd \u05de\u05d4\u05de\u05e4\u05ea\u05d7 \u05d4\u05e2\u05d9\u05e7\u05e8\u05d9 \u05e9\u05dc \u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9: "\u05d0\u05e0\u05d9 \u05e2\u05d3\u05d9\u05d9\u05df \u05d1\u05d5\u05d3\u05e7 \u05d5\u05dc\u05d5\u05de\u05d3 \u05d0\u05ea \u05e0\u05d5\u05e9\u05d0 \u05d4\u05e0\u05d2\u05e9\u05ea \u05d4\u05d0\u05ea\u05e8\u05d9\u05dd \u05db\u05e9\u05d0\u05e0\u05d9 \u05d9\u05db\u05d5\u05dc, \u05d5\u05de\u05e2\u05d5\u05e0\u05d9\u05d9\u05df \u05dc\u05e4\u05ea\u05d7 \u05d0\u05e4\u05e9\u05e8\u05d5\u05d9\u05d5\u05ea \u05e0\u05d5\u05e1\u05e4\u05d5\u05ea \u05e2\u05d1\u05d5\u05e8 \u05d4\u05ea\u05d5\u05e1\u05e3 \u05d4\u05d7\u05d9\u05e0\u05de\u05d9 \u05d4\u05d6\u05d4 (\u05d9\u05e9 \u05db\u05d1\u05e8 \u05e8\u05e9\u05d9\u05de\u05ea \u05d0\u05e4\u05e9\u05e8\u05d5\u05d9\u05d5\u05ea \u05dc\u05d2\u05d9\u05e8\u05e1\u05d0\u05d5\u05ea \u05d4\u05d1\u05d0\u05d5\u05ea), \u05d0\u05d1\u05dc \u05d0\u05e0\u05d9 \u05d0\u05d3\u05dd \u05e2\u05d5\u05d1\u05d3 \u05e9\u05dc\u05d0 \u05ea\u05de\u05d9\u05d3 \u05d9\u05db\u05d5\u05dc \u05dc\u05de\u05e6\u05d5\u05d0 \u05d0\u05ea \u05d4\u05d6\u05de\u05df \u05dc\u05d4\u05de\u05e9\u05d9\u05da \u05d5\u05dc\u05e4\u05ea\u05d7 \u05d0\u05ea \u05d4\u05ea\u05d5\u05e1\u05e3 \u05de\u05e2\u05d1\u05e8 \u05dc\u05d6\u05de\u05e0\u05d9 \u05d4\u05e4\u05e0\u05d5\u05d9. \u05d0\u05e0\u05d9 \u05de\u05e9\u05ea\u05d3\u05dc \u05dc\u05d4\u05e9\u05e7\u05d9\u05e2 \u05d1\u05d5 \u05db\u05d3\u05d9 \u05e9\u05d9\u05d5\u05db\u05dc \u05dc\u05d4\u05d5\u05e2\u05d9\u05dc \u05dc\u05db\u05de\u05d4 \u05e9\u05d9\u05d5\u05ea\u05e8 \u05de\u05e9\u05ea\u05de\u05e9\u05d9\u05dd \u05d5\u05d1\u05e2\u05dc\u05d9 \u05d0\u05ea\u05e8\u05d9\u05dd. \u05d0\u05dd \u05d4\u05d7\u05dc\u05d8\u05ea\u05dd \u05dc\u05d4\u05e9\u05ea\u05de\u05e9 \u05d1\u05ea\u05d5\u05e1\u05e3, \u05d5\u05d0\u05d4\u05d1\u05ea\u05dd \u05d0\u05d5\u05ea\u05d5 - \u05d0\u05ea\u05dd \u05de\u05d5\u05d6\u05de\u05e0\u05d9\u05dd \u05dc\u05ea\u05e8\u05d5\u05dd \u05e2\u05d1\u05d5\u05e8 \u05d4\u05ea\u05e7\u05d3\u05de\u05d5\u05ea \u05d4\u05e4\u05d9\u05ea\u05d5\u05d7 \u05e9\u05dc\u05d5. \u05db\u05dc \u05e1\u05db\u05d5\u05dd \u05d9\u05ea\u05e7\u05d1\u05dc \u05d1\u05d1\u05e8\u05db\u05d4. \u05d0\u05dd \u05d4\u05d7\u05dc\u05d8\u05ea\u05dd \u05dc\u05d0 \u05dc\u05ea\u05e8\u05d5\u05dd \u05d0\u05d5 \u05e9\u05d0\u05d9\u05df \u05d1\u05d0\u05e4\u05e9\u05e8\u05d5\u05ea\u05db\u05dd \u05dc\u05ea\u05e8\u05d5\u05dd, \u05d0\u05e0\u05d9 \u05de\u05e7\u05d5\u05d5\u05d4 \u05e9\u05d4\u05ea\u05d5\u05e1\u05e3 \u05d1\u05db\u05dc \u05d6\u05d0\u05ea \u05d9\u05d5\u05e2\u05d9\u05dc \u05dc\u05db\u05dd \u05d5\u05d9\u05e1\u05d9\u05d9\u05e2 \u05dc\u05d2\u05d5\u05dc\u05e9\u05d9\u05dd \u05d1\u05d0\u05ea\u05e8 \u05e9\u05dc\u05db\u05dd."',
-          dir: 'rtl',
-          display: '\u05ea\u05e6\u05d5\u05d2\u05d4',
-          edge: "\u05d0\u05d3\u05d2'",
-          expand_all:
-            '\u05dc\u05e4\u05ea\u05d5\u05d7 \u05d0\u05ea \u05db\u05dc \u05d4\u05ea\u05e4\u05e8\u05d9\u05d8\u05d9\u05dd',
-          experimental_feat:
-            '\u05d6\u05d5\u05d4\u05d9 \u05ea\u05db\u05d5\u05e0\u05d4 \u05e0\u05d9\u05e1\u05d9\u05d5\u05e0\u05d9\u05ea',
-          explorer:
-            '\u05d0\u05d9\u05e0\u05d8\u05e8\u05e0\u05d8 \u05d0\u05e7\u05e1\u05e4\u05dc\u05d5\u05e8\u05e8',
-          firefox: '\u05e4\u05d9\u05d9\u05e8\u05e4\u05d5\u05e7\u05e1',
-          font: '\u05d2\u05d5\u05e4\u05df',
-          font_exp:
-            '\u05e9\u05d9\u05e0\u05d5\u05d9 \u05d4\u05d2\u05d5\u05e4\u05df \u05e9\u05dc \u05d4\u05d3\u05e3',
-          font_readable: '\u05e7\u05e8\u05d9\u05d0',
-          help: '\u05e2\u05d6\u05e8\u05d4',
-          help_exp:
-            '\u05dc\u05d7\u05e6\u05d5 \u05db\u05d0\u05df \u05dc\u05d4\u05e6\u05d2\u05ea \u05e2\u05d6\u05e8\u05d4 \u05d1\u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea',
-          highlight: '\u05d4\u05d3\u05d2\u05e9\u05d4',
-          hl_headings:
-            '\u05e1\u05d9\u05de\u05d5\u05df \u05db\u05d5\u05ea\u05e8\u05d5\u05ea',
-          hl_headings_exp:
-            '\u05e1\u05d9\u05de\u05d5\u05df \u05db\u05dc \u05d4\u05db\u05d5\u05ea\u05e8\u05d5\u05ea \u05d1\u05d3\u05e3',
-          hl_links:
-            '\u05e1\u05d9\u05de\u05d5\u05df \u05e7\u05d9\u05e9\u05d5\u05e8\u05d9\u05dd',
-          hl_links_exp:
-            '\u05e1\u05d9\u05de\u05d5\u05df \u05db\u05dc \u05d4\u05e7\u05d9\u05e9\u05d5\u05e8\u05d9\u05dd \u05d1\u05d3\u05e3',
-          how_accessible:
-            '\u05db\u05d9\u05e6\u05d3 \u05d4\u05d5\u05e0\u05d2\u05e9 \u05d0\u05ea\u05e8 \u05d6\u05d4',
-          how_accessible_exp:
-            '\u05d0\u05d5\u05d3\u05d5\u05ea \u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea',
-          images_only:
-            '\u05ea\u05de\u05d5\u05e0\u05d5\u05ea \u05d1\u05dc\u05d1\u05d3',
-          images_only_exp:
-            '\u05d4\u05e1\u05ea\u05e8\u05ea \u05d4\u05d8\u05e7\u05e1\u05d8 \u05d1\u05d3\u05e3',
-          img_alt_missing:
-            '\u05ea\u05de\u05d5\u05e0\u05d4 \u05dc\u05dc\u05d0 \u05ea\u05d9\u05d0\u05d5\u05e8',
-          img_alt:
-            '\u05ea\u05d9\u05d0\u05d5\u05e8 \u05d0\u05e4\u05e9\u05e8\u05d9 \u05e9\u05dc \u05ea\u05de\u05d5\u05e0\u05d4: ',
-          impaired: '\u05db\u05d1\u05d3\u05d9 \u05e8\u05d0\u05d9\u05d9\u05d4',
-          impaired_exp:
-            '\u05e0\u05d9\u05d2\u05d5\u05d3\u05d9\u05d5\u05ea \u05de\u05e7\u05e1\u05d9\u05de\u05dc\u05d9\u05ea',
-          jq_too_low:
-            '%c\u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9%c \u05d0\u05d5\u05de\u05e8: \u05d2\u05d9\u05e8\u05e1\u05ea jQuery \u05d1\u05d0\u05ea\u05e8 \u05d6\u05d4 \u05e0\u05de\u05d5\u05db\u05d4 \u05de\u05d3\u05d9. \u05d9\u05d9\u05ea\u05db\u05df \u05e9\u05d7\u05dc\u05e7 \u05de\u05d0\u05e4\u05e9\u05e8\u05d5\u05d9\u05d5\u05ea \u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05dc\u05d0 \u05d9\u05e2\u05d1\u05d3\u05d5 (\u05d0\u05d5 \u05db\u05d5\u05dc\u05df).',
-          jq_not_found_msg:
-            '%c\u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9%c \u05d0\u05d5\u05de\u05e8: \u05e0\u05e8\u05d0\u05d4 \u05e9-jQuery \u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d1\u05d3\u05e3 \u05d6\u05d4. \u05d4\u05ea\u05d5\u05e1\u05e3 \u05dc\u05d0 \u05d9\u05db\u05d5\u05dc \u05dc\u05e4\u05e2\u05d5\u05dc \u05d1\u05dc\u05e2\u05d3\u05d9\u05d4, \u05d5\u05d4\u05d8\u05de\u05d9\u05e2 \u05d1\u05d3\u05e3 \u05d0\u05ea \u05d4\u05d2\u05d9\u05e8\u05e1\u05d4 \u05d4\u05de\u05d9\u05e0\u05d9\u05de\u05dc\u05d9\u05ea \u05d4\u05d3\u05e8\u05d5\u05e9\u05d4 \u05e2\u05d1\u05d5\u05e8\u05d5 \u05d1\u05d0\u05d5\u05e4\u05df \u05d0\u05d5\u05d8\u05d5\u05de\u05d8\u05d9.',
-          kbnav:
-            '\u05e0\u05d9\u05d5\u05d5\u05d8 \u05de\u05e7\u05dc\u05d3\u05ea',
-          kbnav_exp:
-            '\u05e0\u05d9\u05d5\u05d5\u05d8 \u05d1\u05d0\u05ea\u05e8 \u05d1\u05d0\u05de\u05e6\u05e2\u05d5\u05ea \u05de\u05e7\u05e9\u05d9 \u05d4\u05de\u05e7\u05dc\u05d3\u05ea',
-          kbnav_off: '\u05db\u05d1\u05d5\u05d9',
-          kbnav_on: '\u05e4\u05e2\u05d9\u05dc',
-          kbshortcuts:
-            '\u05e7\u05d9\u05e6\u05d5\u05e8\u05d9 \u05de\u05e7\u05e9\u05d9\u05dd',
-          kbshortcuts_exp:
-            '\u05e7\u05d9\u05e6\u05d5\u05e8\u05d9 \u05de\u05e7\u05e9\u05d9\u05dd \u05d5\u05d4\u05d5\u05e8\u05d0\u05d5\u05ea \u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea',
-          kbshortcuts_text:
-            "\u05dc\u05e0\u05d5\u05d7\u05d9\u05d5\u05ea\u05db\u05dd, \u05d1\u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9 \u05d9\u05e9 \u05de\u05e1\u05e4\u05e8 \u05e7\u05d9\u05e6\u05d5\u05e8\u05d9 \u05de\u05e7\u05e9\u05d9\u05dd \u05d1\u05de\u05e7\u05dc\u05d3\u05ea \u05e9\u05d1\u05d4\u05dd \u05ea\u05d5\u05db\u05dc\u05d5 \u05dc\u05d4\u05d9\u05e2\u05d6\u05e8 \u05db\u05d3\u05d9 \u05dc\u05d4\u05e9\u05ea\u05de\u05e9 \u05d1\u05d7\u05dc\u05e7 \u05de\u05d4\u05d0\u05e4\u05e9\u05e8\u05d5\u05d9\u05d5\u05ea \u05d4\u05de\u05d5\u05e6\u05e2\u05d5\u05ea \u05d1\u05d5.<br /><br /><kbd>ALT \u05d5- Z</kbd> - \u05dc\u05e4\u05ea\u05d5\u05d7 \u05d5\u05dc\u05e6\u05de\u05e6\u05dd \u05d0\u05ea \u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea.<br /><br /><kbd>ALT \u05d5- X</kbd> - \u05dc\u05d4\u05e6\u05d9\u05d2 \u05e2\u05d6\u05e8\u05d4 \u05d1\u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea. \u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05e7\u05d9\u05e6\u05d5\u05e8 \u05d6\u05d4 \u05d9\u05d1\u05d8\u05dc \u05d0\u05e4\u05e9\u05e8\u05d5\u05ea \u05d6\u05d5.<br /><br /><kbd>ALT \u05d5- C</kbd> - \u05dc\u05d0\u05e4\u05e1 \u05d0\u05ea \u05d4\u05d4\u05d2\u05d3\u05e8\u05d5\u05ea \u05e9\u05dc \u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea.<br /><br /><kbd>ALT \u05d5- V</kbd> - \u05e0\u05d9\u05d5\u05d5\u05d8 \u05de\u05d4\u05d9\u05e8 \u05d0\u05dc \u05e8\u05d0\u05e9 \u05d4\u05d3\u05e3.<br /><br /><kbd>ALT \u05d5- B</kbd> - \u05e0\u05d9\u05d5\u05d5\u05d8 \u05de\u05d4\u05d9\u05e8 \u05d0\u05dc \u05ea\u05d7\u05ea\u05d9\u05ea \u05d4\u05d3\u05e3.<br /><br /><kbd>SHIFT \u05d5- A</kbd> - \u05dc\u05d4\u05d2\u05d3\u05d9\u05dc \u05d0\u05ea \u05d4\u05d8\u05e7\u05e1\u05d8 \u05d1\u05d3\u05e3.<br /><br /><kbd>SHIFT \u05d5- S</kbd> - \u05dc\u05d4\u05e7\u05d8\u05d9\u05df \u05d0\u05ea \u05d4\u05d8\u05e7\u05e1\u05d8 \u05d1\u05d3\u05e3.<br /><br /><kbd>SHIFT \u05d5- D</kbd> - \u05e1\u05d9\u05de\u05d5\u05df \u05d4\u05e7\u05d9\u05e9\u05d5\u05e8\u05d9\u05dd \u05d1\u05d3\u05e3. \u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05e7\u05d9\u05e6\u05d5\u05e8 \u05d6\u05d4 \u05e4\u05e2\u05dd \u05e0\u05d5\u05e1\u05e4\u05ea \u05d9\u05d1\u05d8\u05dc \u05d0\u05e4\u05e9\u05e8\u05d5\u05ea \u05d6\u05d5.<br /><br /><kbd>SHIFT \u05d5- F</kbd> - \u05e1\u05d9\u05de\u05d5\u05df \u05d4\u05db\u05d5\u05ea\u05e8\u05d5\u05ea \u05d1\u05d3\u05e3. \u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05e7\u05d9\u05e6\u05d5\u05e8 \u05d6\u05d4 \u05e4\u05e2\u05dd \u05e0\u05d5\u05e1\u05e4\u05ea \u05d9\u05d1\u05d8\u05dc \u05d0\u05e4\u05e9\u05e8\u05d5\u05ea \u05d6\u05d5.<br /><br /><kbd>SHIFT \u05d5- Q</kbd> - \u05dc\u05d4\u05e4\u05e2\u05d9\u05dc \u05d0\u05ea \u05d4\u05d0\u05e4\u05e9\u05e8\u05d5\u05ea '\u05e2\u05d9\u05d5\u05d5\u05e8\u05d9 \u05e6\u05d1\u05e2\u05d9\u05dd' (\u05d2\u05d5\u05d5\u05e0\u05d9 \u05e9\u05d7\u05d5\u05e8 \u05dc\u05d1\u05df). \u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05e7\u05d9\u05e6\u05d5\u05e8 \u05d6\u05d4 \u05e4\u05e2\u05dd \u05e0\u05d5\u05e1\u05e4\u05ea \u05d9\u05d1\u05d8\u05dc \u05d0\u05e4\u05e9\u05e8\u05d5\u05ea \u05d6\u05d5.<br /><br /><kbd>SHIFT \u05d5- W</kbd> - \u05dc\u05d4\u05e4\u05e2\u05d9\u05dc \u05d0\u05ea \u05d4\u05d0\u05e4\u05e9\u05e8\u05d5\u05ea '\u05db\u05d1\u05d3\u05d9 \u05e8\u05d0\u05d9\u05d9\u05d4' (\u05e0\u05d9\u05d2\u05d5\u05d3\u05d9\u05d5\u05ea \u05d2\u05d1\u05d5\u05d4\u05d4). \u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05e7\u05d9\u05e6\u05d5\u05e8 \u05d6\u05d4 \u05e4\u05e2\u05dd \u05e0\u05d5\u05e1\u05e4\u05ea \u05d9\u05d1\u05d8\u05dc \u05d0\u05e4\u05e9\u05e8\u05d5\u05ea \u05d6\u05d5.<br /><br /><kbd>SHIFT \u05d5- E</kbd> - \u05dc\u05d4\u05e4\u05e2\u05d9\u05dc \u05d0\u05ea \u05d4\u05d0\u05e4\u05e9\u05e8\u05d5\u05ea '\u05e6\u05d1\u05e2\u05d9\u05dd \u05d1\u05d4\u05d9\u05e8\u05d9\u05dd' (\u05d4\u05d1\u05d4\u05e8\u05ea \u05e6\u05d1\u05e2\u05d9\u05dd). \u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05e7\u05d9\u05e6\u05d5\u05e8 \u05d6\u05d4 \u05e4\u05e2\u05dd \u05e0\u05d5\u05e1\u05e4\u05ea \u05d9\u05d1\u05d8\u05dc \u05d0\u05e4\u05e9\u05e8\u05d5\u05ea \u05d6\u05d5.<br /><br />",
-          larger_text: '\u05d2\u05d3\u05d5\u05dc \u05d9\u05d5\u05ea\u05e8',
-          larger_text_exp:
-            '\u05d4\u05d2\u05d3\u05dc\u05ea \u05d4\u05d8\u05e7\u05e1\u05d8 \u05d1\u05db\u05dc \u05dc\u05d7\u05d9\u05e6\u05d4',
-          lc_filter:
-            '\u05de\u05e1\u05e0\u05df \u05e6\u05d1\u05e2\u05d9\u05dd \u05d7\u05d9\u05d9\u05dd',
-          lc_filter_exp:
-            '\u05e6\u05d1\u05e2\u05d9\u05dd \u05e7\u05e8\u05d9\u05dd',
-          lic_warn:
-            '\u05d0\u05ea\u05e8 \u05d6\u05d4 \u05de\u05e9\u05ea\u05de\u05e9 \u05d1\u05e2\u05d5\u05ea\u05e7 \u05dc\u05d0 \u05d7\u05d5\u05e7\u05d9 \u05e9\u05dc \u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9. \u05de\u05d0\u05de\u05e5 \u05d5\u05d6\u05de\u05df \u05e8\u05d1\u05d9\u05dd \u05d4\u05d5\u05e9\u05e7\u05e2\u05d5 \u05d1\u05e4\u05d9\u05ea\u05d5\u05d7 \u05d4\u05ea\u05d5\u05e1\u05e3, \u05d0\u05e0\u05d0 <a href="https://www.nagish.li/he/contact.html" target="_blank" style="color: black !important; text-decoration: underline !important;" tabindex="1">\u05dc\u05d7\u05e6\u05d5 \u05db\u05d0\u05df</a> \u05db\u05d3\u05d9 \u05dc\u05d3\u05d5\u05d5\u05d7 \u05e2\u05dc \u05d0\u05ea\u05e8 \u05d6\u05d4 \u05d1\u05d0\u05d5\u05e4\u05df \u05d0\u05e0\u05d5\u05e0\u05d9\u05de\u05d9. \u05ea\u05d5\u05d3\u05d4!',
-          logo_alt: '\u05dc\u05d5\u05d2\u05d5',
-          misc: '\u05e9\u05d5\u05e0\u05d5\u05ea',
-          missing_setting:
-            '%c\u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9%c \u05d0\u05d5\u05de\u05e8: %c\u05d4\u05d4\u05d2\u05d3\u05e8\u05d4 \u05d7\u05e1\u05e8\u05d4.%c',
-          move_bl:
-            '\u05dc\u05d4\u05d6\u05d9\u05d6 \u05e9\u05de\u05d0\u05dc\u05d4 \u05d5\u05dc\u05de\u05d8\u05d4',
-          move_br:
-            '\u05dc\u05d4\u05d6\u05d9\u05d6 \u05d9\u05de\u05d9\u05e0\u05d4 \u05d5\u05dc\u05de\u05d8\u05d4',
-          move_tl:
-            '\u05dc\u05d4\u05d6\u05d9\u05d6 \u05e9\u05de\u05d0\u05dc\u05d4 \u05d5\u05dc\u05de\u05e2\u05dc\u05d4',
-          move_tr:
-            '\u05dc\u05d4\u05d6\u05d9\u05d6 \u05d9\u05de\u05d9\u05e0\u05d4 \u05d5\u05dc\u05de\u05e2\u05dc\u05d4',
-          normal: '\u05e8\u05d2\u05d9\u05dc',
-          normal_display: '\u05e8\u05d2\u05d9\u05dc\u05d4',
-          normal_plu: '\u05e8\u05d2\u05d9\u05dc\u05d9\u05dd',
-          not_supported:
-            '\u05d0\u05e4\u05e9\u05e8\u05d5\u05ea \u05d6\u05d5 \u05d0\u05d9\u05e0\u05d4 \u05e0\u05ea\u05de\u05db\u05ea \u05e2\u05dc \u05d9\u05d3\u05d9 \u05d4\u05d3\u05e4\u05d3\u05e4\u05df \u05e9\u05dc\u05da.',
-          opera: '\u05d0\u05d5\u05e4\u05e8\u05d4',
-          r2m: '\u05d4\u05e7\u05e8\u05d0\u05d4 \u05e7\u05d5\u05dc\u05d9\u05ea',
-          r2m_exp:
-            '\u05d4\u05e7\u05e8\u05d0\u05ea \u05e1\u05e4\u05e8\u05d5\u05ea',
-          r2m_na:
-            '\u05d4\u05e7\u05e8\u05d0\u05d4 \u05e7\u05d5\u05dc\u05d9\u05ea \u05d0\u05d9\u05e0\u05d4 \u05d6\u05de\u05d9\u05e0\u05d4 \u05db\u05e8\u05d2\u05e2. \u05e0\u05e1\u05d5 \u05e9\u05d5\u05d1 \u05de\u05d0\u05d5\u05d7\u05e8 \u05d9\u05d5\u05ea\u05e8.',
-          r2m_off: '\u05db\u05d1\u05d5\u05d9\u05d4',
-          r2m_on: '\u05e4\u05e2\u05d9\u05dc\u05d4',
-          reset_prompt:
-            '\u05dc\u05d0\u05e4\u05e1 \u05d0\u05ea \u05d4\u05d2\u05d3\u05e8\u05d5\u05ea \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea?',
-          reset_settings:
-            '\u05d0\u05d9\u05e4\u05d5\u05e1 \u05d4\u05d2\u05d3\u05e8\u05d5\u05ea',
-          reset_settings_exp:
-            '\u05d0\u05d9\u05e4\u05d5\u05e1 \u05db\u05dc \u05d4\u05d4\u05d2\u05d3\u05e8\u05d5\u05ea \u05e9\u05dc \u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea',
-          saturated:
-            '\u05e6\u05d1\u05e2\u05d9\u05dd \u05d1\u05d4\u05d9\u05e8\u05d9\u05dd',
-          saturated_exp:
-            '\u05d4\u05d1\u05d4\u05e8\u05ea \u05d4\u05e6\u05d1\u05e2\u05d9\u05dd \u05d1\u05d3\u05e3',
-          settings:
-            '\u05de\u05d9\u05d3\u05e2 \u05d5\u05d4\u05d2\u05d3\u05e8\u05d5\u05ea',
-          settings_prompt:
-            '\u05e0\u05e8\u05d0\u05d4 \u05e9\u05de\u05d9\u05e9\u05d4\u05d5 \u05d4\u05ea\u05e2\u05e1\u05e7 \u05e2\u05dd \u05d4\u05d2\u05d3\u05e8\u05d5\u05ea \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea. \u05d4\u05d0\u05dd \u05d1\u05e8\u05e6\u05d5\u05e0\u05da \u05dc\u05d0\u05e4\u05e1 \u05d0\u05ea \u05d4\u05d4\u05d2\u05d3\u05e8\u05d5\u05ea? (\u05de\u05d5\u05de\u05dc\u05e5)',
-          settings_reset_alert_ok:
-            '\u05d4\u05d4\u05d2\u05d3\u05e8\u05d5\u05ea \u05d0\u05d5\u05e4\u05e1\u05d5. \u05e0\u05d0 \u05dc\u05e8\u05e2\u05e0\u05df \u05d0\u05ea \u05d4\u05e2\u05de\u05d5\u05d3.',
-          settings_reset_html_ok:
-            '\u05d4\u05d4\u05d2\u05d3\u05e8\u05d5\u05ea \u05d0\u05d5\u05e4\u05e1\u05d5. <a href="javascript:void(0);" onclick="javascript:location.replace(window.location.href.split(\'#\')[0]);" style="color: black !important; text-decoration: underline !important; outline: 5px solid rgba(88, 144, 255, 0.75) !important;" tabindex="1">\u05dc\u05e8\u05e2\u05e0\u05df \u05d0\u05ea \u05d4\u05e2\u05de\u05d5\u05d3</a>',
-          settings_save:
-            '\u05d4\u05d4\u05d2\u05d3\u05e8\u05d5\u05ea \u05d9\u05d9\u05e9\u05de\u05e8\u05d5.',
-          settings_save_reminder:
-            "\u05d7\u05e9\u05d5\u05d1 \u05dc\u05d6\u05db\u05d5\u05e8: \u05d0\u05e4\u05e9\u05e8 \u05dc\u05d0\u05e4\u05e1 \u05d0\u05d5\u05ea\u05df \u05d2\u05dd \u05d1\u05ea\u05e4\u05e8\u05d9\u05d8 '\u05de\u05d9\u05d3\u05e2 \u05d5\u05d4\u05d2\u05d3\u05e8\u05d5\u05ea'.",
-          settings_upgrade_html:
-            '\u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9 \u05e9\u05d5\u05d3\u05e8\u05d2. <a href="javascript:void(0);" onclick="javascript:location.replace(window.location.href.split(\'#\')[0]);" style="color: black !important; text-decoration: underline !important;" tabindex="1">\u05dc\u05e8\u05e2\u05e0\u05df \u05d0\u05ea \u05d4\u05e2\u05de\u05d5\u05d3</a>',
-          skiplinks: '\u05e0\u05d9\u05d5\u05d5\u05d8 \u05de\u05d4\u05d9\u05e8',
-          skiplinks_exp:
-            '\u05d2\u05d9\u05e9\u05d4 \u05de\u05d4\u05d9\u05e8\u05d4 \u05dc\u05d0\u05d6\u05d5\u05e8\u05d9\u05dd \u05d1\u05d3\u05e3 \u05d5\u05d1\u05d0\u05ea\u05e8',
-          skiplinks_default:
-            '\u05d1\u05d7\u05e8\u05d5 \u05de\u05d9\u05e7\u05d5\u05dd',
-          skiplinks_page_nav:
-            '\u05e0\u05d9\u05d5\u05d5\u05d8 \u05d1\u05d3\u05e3',
-          skiplinks_site_nav:
-            '\u05e0\u05d9\u05d5\u05d5\u05d8 \u05d1\u05d0\u05ea\u05e8',
-          skiplinks_to_top: '\u05e8\u05d0\u05e9 \u05d4\u05d3\u05e3',
-          skiplinks_to_menu: '\u05ea\u05e4\u05e8\u05d9\u05d8',
-          skiplinks_to_header:
-            '\u05db\u05d5\u05ea\u05e8\u05ea \u05e8\u05d0\u05e9\u05d9\u05ea',
-          skiplinks_to_paragraph:
-            '\u05e4\u05e1\u05e7\u05d4 \u05e8\u05d0\u05e9\u05d5\u05e0\u05d4',
-          skiplinks_to_content:
-            '\u05ea\u05d5\u05db\u05df \u05de\u05e8\u05db\u05d6\u05d9',
-          skiplinks_to_bottom:
-            '\u05ea\u05d7\u05ea\u05d9\u05ea \u05d4\u05d3\u05e3',
-          skiplinks_to_home:
-            '\u05e2\u05de\u05d5\u05d3 \u05e8\u05d0\u05e9\u05d9',
-          smaller_text: '\u05e7\u05d8\u05df \u05d9\u05d5\u05ea\u05e8',
-          smaller_text_exp:
-            '\u05d4\u05e7\u05d8\u05e0\u05ea \u05d4\u05d8\u05e7\u05e1\u05d8 \u05d1\u05db\u05dc \u05dc\u05d7\u05d9\u05e6\u05d4',
-          supported_browsers:
-            '\u05d3\u05e4\u05d3\u05e4\u05e0\u05d9\u05dd \u05e0\u05ea\u05de\u05db\u05d9\u05dd',
-          supported_browsers_exp:
-            "\u05d3\u05e4\u05d3\u05e4\u05e0\u05d9\u05dd \u05e0\u05ea\u05de\u05db\u05d9\u05dd: \u05d2\u05d5\u05d2\u05dc \u05db\u05e8\u05d5\u05dd, \u05de\u05d9\u05e7\u05e8\u05d5\u05e1\u05d5\u05e4\u05d8 \u05d0\u05d3\u05d2', \u05de\u05d5\u05d6\u05d9\u05dc\u05d4 \u05e4\u05d9\u05d9\u05e8\u05e4\u05d5\u05e7\u05e1, \u05d0\u05d5\u05e4\u05e8\u05d4 \u05d5\u05d0\u05d9\u05e0\u05d8\u05e8\u05e0\u05d8 \u05d0\u05e7\u05e1\u05e4\u05dc\u05d5\u05e8\u05e8. \u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05e2\u05d5\u05e9\u05d4 \u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05d0\u05e4\u05e9\u05e8\u05d5\u05d9\u05d5\u05ea \u05de\u05ea\u05e7\u05d3\u05de\u05d5\u05ea \u05d1\u05d3\u05e4\u05d3\u05e4\u05df \u05e9\u05dc\u05db\u05dd. \u05d4\u05e7\u05e4\u05d9\u05d3\u05d5 \u05ea\u05de\u05d9\u05d3 \u05dc\u05d4\u05e9\u05ea\u05de\u05e9 \u05d1\u05d3\u05e4\u05d3\u05e4\u05df \u05e2\u05d3\u05db\u05e0\u05d9.",
-          text_only: '\u05d8\u05e7\u05e1\u05d8 \u05d1\u05dc\u05d1\u05d3',
-          text_only_exp:
-            '\u05d4\u05e1\u05ea\u05e8\u05ea \u05d4\u05ea\u05de\u05d5\u05e0\u05d5\u05ea \u05d1\u05d3\u05e3',
-          text_size: '\u05d2\u05d5\u05d3\u05dc \u05d8\u05e7\u05e1\u05d8',
-          txt: '\u05d8\u05e7\u05e1\u05d8',
-          unsupported_media:
-            '\u05d0\u05e4\u05e9\u05e8\u05d5\u05ea \u05e0\u05d9\u05d2\u05d5\u05df \u05e7\u05d5\u05d1\u05e5 \u05d4\u05e9\u05de\u05e2 \u05d0\u05d5 \u05d4\u05e1\u05e8\u05d8\u05d5\u05df \u05d4\u05d6\u05d4 \u05d0\u05d9\u05e0\u05d4 \u05d6\u05de\u05d9\u05e0\u05d4 \u05d1\u05d3\u05e4\u05d3\u05e4\u05df \u05e9\u05dc\u05da.',
-          untitled_page:
-            '\u05d3\u05e3 \u05dc\u05dc\u05d0 \u05db\u05d5\u05ea\u05e8\u05ea',
-          zoom: '\u05d6\u05d5\u05dd',
-          zoom_exp:
-            '\u05d6\u05d5\u05dd \u05e4\u05e0\u05d9\u05de\u05d4 \u05d5\u05d4\u05d7\u05d5\u05e6\u05d4 \u05dc\u05d3\u05e3',
-          zoom_in: '\u05d4\u05d2\u05d3\u05dc\u05ea \u05d6\u05d5\u05dd',
-          zoom_out: '\u05d4\u05e7\u05d8\u05e0\u05ea \u05d6\u05d5\u05dd',
-        };
+            (v ? '\u05d8\u05dc\u05e4\u05d5\u05df: ' + v + '<br />' : '') +
+            (u
+              ? '\u05d3\u05d5\u05d0\u05e8 \u05d0\u05dc\u05e7\u05d8\u05e8\u05d5\u05e0\u05d9: <a href="mailto:' +
+              u +
+              '">' +
+              u +
+              '</a><br />'
+              : '') +
+            (z ? '\u05e4\u05e7\u05e1: ' + z + '<br />' : '') +
+            '<br />'
+            : '') +
+          '<span class="nlas-stitle">\u05d0\u05d9\u05da \u05dc\u05d4\u05e9\u05ea\u05de\u05e9 \u05d1\u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea</span><br />\u05dc\u05d0\u05d7\u05e8 \u05d4\u05dc\u05d7\u05d9\u05e6\u05d4 \u05e2\u05dc \u05db\u05e4\u05ea\u05d5\u05e8 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05d9\u05d9\u05e4\u05ea\u05d7\u05d5 \u05d1\u05e4\u05e0\u05d9\u05db\u05dd \u05ea\u05e4\u05e8\u05d9\u05d8\u05d9 \u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea, \u05d1\u05d0\u05de\u05e6\u05e2\u05d5\u05ea\u05dd \u05ea\u05d5\u05db\u05dc\u05d5:<ul><li>\u05dc\u05e9\u05e0\u05d5\u05ea \u05d0\u05ea \u05d2\u05d5\u05d3\u05dc \u05d4\u05d8\u05e7\u05e1\u05d8 (\u05e0\u05d9\u05ea\u05df \u05dc\u05d4\u05e9\u05ea\u05de\u05e9 \u05d2\u05dd \u05d1\u05e7\u05d9\u05e6\u05d5\u05e8\u05d9 \u05d4\u05de\u05e7\u05e9\u05d9\u05dd <span dir="rtl">SHIFT \u05d5- A</span>, SHIFT \u05d5- S)</li><li>\u05dc\u05e9\u05e0\u05d5\u05ea \u05d0\u05ea \u05e6\u05d1\u05e2\u05d9 \u05d4\u05d0\u05ea\u05e8 (\u05e0\u05d9\u05ea\u05df \u05dc\u05d4\u05e9\u05ea\u05de\u05e9 \u05d2\u05dd \u05d1\u05e7\u05d9\u05e6\u05d5\u05e8\u05d9 \u05d4\u05de\u05e7\u05e9\u05d9\u05dd <span dir="rtl">SHIFT \u05d5- Q</span>, <span dir="rtl">SHIFT \u05d5- W</span>, SHIFT \u05d5- E)</li><li>\u05dc\u05e9\u05e0\u05d5\u05ea \u05d0\u05ea \u05ea\u05e6\u05d5\u05d2\u05ea \u05d4\u05d0\u05ea\u05e8</li><li>\u05dc\u05e1\u05de\u05df \u05e7\u05d9\u05e9\u05d5\u05e8\u05d9\u05dd \u05d5\u05db\u05d5\u05ea\u05e8\u05d5\u05ea \u05d1\u05d0\u05ea\u05e8 (\u05e0\u05d9\u05ea\u05df \u05dc\u05d4\u05e9\u05ea\u05de\u05e9 \u05d2\u05dd \u05d1\u05e7\u05d9\u05e6\u05d5\u05e8\u05d9 \u05d4\u05de\u05e7\u05e9\u05d9\u05dd <span dir="rtl">SHIFT \u05d5- D</span>, SHIFT \u05d5- F)</li><li>\u05dc\u05e0\u05d5\u05d5\u05d8 \u05d1\u05de\u05d4\u05d9\u05e8\u05d5\u05ea \u05d1\u05d9\u05df \u05d0\u05d6\u05d5\u05e8\u05d9\u05dd \u05d1\u05db\u05dc \u05e2\u05de\u05d5\u05d3 (\u05e0\u05d9\u05ea\u05df \u05dc\u05d4\u05e9\u05ea\u05de\u05e9 \u05d2\u05dd \u05d1\u05e7\u05d9\u05e6\u05d5\u05e8\u05d9 \u05d4\u05de\u05e7\u05e9\u05d9\u05dd <span dir="rtl">ALT \u05d5- V</span>, ALT \u05d5- B)</li><li>\u05dc\u05d4\u05d2\u05d3\u05d9\u05dc \u05d5\u05dc\u05d4\u05e7\u05d8\u05d9\u05df \u05d0\u05ea \u05ea\u05e6\u05d5\u05d2\u05ea \u05d4\u05d0\u05ea\u05e8 (\u05d6\u05d5\u05dd)</li><li>\u05dc\u05e9\u05e0\u05d5\u05ea \u05d0\u05ea \u05d2\u05d5\u05e4\u05df \u05d4\u05d0\u05ea\u05e8 \u05dc\u05e7\u05e8\u05d9\u05d0</li><li>\u05dc\u05e2\u05e6\u05d5\u05e8 \u05d4\u05e0\u05e4\u05e9\u05d5\u05ea (\u05d0\u05e0\u05d9\u05de\u05e6\u05d9\u05d5\u05ea) \u05d1\u05d0\u05ea\u05e8</li><li>\u05dc\u05d4\u05d0\u05d6\u05d9\u05df \u05dc\u05d8\u05e7\u05e1\u05d8 \u05d7\u05dc\u05d5\u05e4\u05d9 \u05e2\u05d1\u05d5\u05e8 \u05ea\u05de\u05d5\u05e0\u05d5\u05ea \u05d1\u05d0\u05de\u05e6\u05e2\u05d5\u05ea \u05ea\u05d5\u05db\u05e0\u05ea \u05d4\u05e7\u05e8\u05d0\u05d4</li><li>\u05dc\u05d4\u05d0\u05d6\u05d9\u05df \u05dc\u05de\u05e1\u05e4\u05e8\u05d9 \u05d8\u05dc\u05e4\u05d5\u05df \u05d1\u05d0\u05de\u05e6\u05e2\u05d5\u05ea \u05d4\u05e7\u05e8\u05d0\u05d4 \u05e7\u05d5\u05dc\u05d9\u05ea</li><li>\u05dc\u05e9\u05e0\u05d5\u05ea \u05d0\u05ea \u05e1\u05de\u05df \u05d4\u05e2\u05db\u05d1\u05e8</li><li>\u05dc\u05e0\u05d5\u05d5\u05d8 \u05d1\u05d9\u05df \u05d0\u05e4\u05e9\u05e8\u05d5\u05d9\u05d5\u05ea \u05d4\u05ea\u05d5\u05e1\u05e3 \u05d1\u05d0\u05de\u05e6\u05e2\u05d5\u05ea \u05d4\u05de\u05e7\u05e9 Tab (\u05d5\u05d2\u05dd Shift+Tab) \u05d5\u05d4\u05e4\u05e2\u05dc\u05ea\u05df \u05d1\u05d0\u05de\u05e6\u05e2\u05d5\u05ea \u05d4\u05de\u05e7\u05e9 Enter</li></ul>\u05dc\u05de\u05e8\u05d5\u05ea \u05d4\u05de\u05d0\u05de\u05e6\u05d9\u05dd \u05e9\u05d4\u05d5\u05e9\u05e7\u05e2\u05d5 \u05d1\u05e4\u05d9\u05ea\u05d5\u05d7 \u05ea\u05d5\u05e1\u05e3 \u05d6\u05d4, \u05d9\u05d9\u05ea\u05db\u05e0\u05d5 \u05de\u05e6\u05d1\u05d9\u05dd \u05e9\u05d1\u05d4\u05dd \u05dc\u05d0 \u05ea\u05d4\u05d9\u05d4 \u05dc\u05d5 \u05d0\u05e4\u05e9\u05e8\u05d5\u05ea \u05dc\u05d4\u05e0\u05d2\u05d9\u05e9 \u05d7\u05dc\u05e7 \u05de\u05ea\u05db\u05e0\u05d9 \u05d4\u05d0\u05ea\u05e8, \u05db\u05d2\u05d5\u05df \u05ea\u05db\u05e0\u05d9\u05dd \u05d4\u05de\u05d5\u05e6\u05e2\u05d9\u05dd \u05d3\u05e8\u05da \u05d2\u05d5\u05e8\u05de\u05d9 \u05e6\u05d3 \u05e9\u05dc\u05d9\u05e9\u05d9 (\u05db\u05d3\u05d5\u05d2\u05de\u05ea YouTube, \u05ea\u05db\u05e0\u05d9\u05dd \u05de\u05d5\u05d8\u05de\u05e2\u05d9\u05dd \u05de\u05d0\u05ea\u05e8\u05d9\u05dd \u05d0\u05d7\u05e8\u05d9\u05dd \u05d5\u05db\u05d3\u05d5\u05de\u05d4). \u05d7\u05e9\u05d5\u05d1 \u05dc\u05e6\u05d9\u05d9\u05df \u05e9\u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9 \u05e0\u05de\u05e6\u05d0 \u05d1\u05e4\u05d9\u05ea\u05d5\u05d7 \u05de\u05ea\u05de\u05d9\u05d3 \u05e2\u05dc \u05de\u05e0\u05ea \u05dc\u05d4\u05e9\u05ea\u05e4\u05e8 \u05d5\u05dc\u05e2\u05de\u05d5\u05d3 \u05d1\u05ea\u05e7\u05e0\u05d9 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05d4\u05e2\u05d3\u05db\u05e0\u05d9\u05d9\u05dd \u05d1\u05d9\u05d5\u05ea\u05e8.<br /><br />',
+        align_left: 'left',
+        align_right: 'right',
+        and: '\u05d5',
+        animations: '\u05d4\u05e0\u05e4\u05e9\u05d5\u05ea \u05d1\u05d3\u05e3',
+        animations_exp:
+          '\u05d4\u05e4\u05e1\u05e7\u05ea \u05ea\u05d6\u05d5\u05d6\u05d5\u05ea \u05d5\u05d4\u05d1\u05d4\u05d5\u05d1\u05d9\u05dd \u05d1\u05d3\u05e3',
+        animations_on: '\u05e4\u05e2\u05d9\u05dc\u05d5\u05ea',
+        animations_off: '\u05de\u05d5\u05e4\u05e1\u05e7\u05d5\u05ea',
+        aria_close_modal:
+          '\u05dc\u05e1\u05d2\u05d5\u05e8 \u05d0\u05ea \u05d4\u05de\u05d9\u05d3\u05e2 \u05d4\u05de\u05d5\u05e6\u05d2',
+        aria_select_bgcolor:
+          '\u05d1\u05d7\u05d9\u05e8\u05ea \u05e6\u05d1\u05e2 \u05e8\u05e7\u05e2',
+        aria_select_color:
+          '\u05d1\u05d7\u05d9\u05e8\u05ea \u05e6\u05d1\u05e2 ',
+        aria_select_txtcolor:
+          '\u05d1\u05d7\u05d9\u05e8\u05ea \u05e6\u05d1\u05e2 \u05d8\u05e7\u05e1\u05d8',
+        aria_the_option: '\u05d4\u05d0\u05e4\u05e9\u05e8\u05d5\u05ea ',
+        aria_toggle_open_alt:
+          '\u05dc\u05e4\u05ea\u05d5\u05d7 \u05d0\u05ea \u05d4\u05ea\u05e4\u05e8\u05d9\u05d8 ',
+        aria_toggle_close_alt:
+          '\u05dc\u05e1\u05d2\u05d5\u05e8 \u05d0\u05ea \u05d4\u05ea\u05e4\u05e8\u05d9\u05d8 ',
+        bg: '\u05e8\u05e7\u05e2',
+        bl_filter:
+          '\u05de\u05e1\u05e0\u05df \u05d0\u05d5\u05e8 \u05db\u05d7\u05d5\u05dc',
+        bl_filter_exp:
+          '\u05e6\u05d1\u05e2\u05d9\u05dd \u05d7\u05de\u05d9\u05dd',
+        blind:
+          '\u05e2\u05d9\u05d5\u05d5\u05e8\u05d9 \u05e6\u05d1\u05e2\u05d9\u05dd',
+        blind_exp:
+          '\u05d2\u05d5\u05d5\u05e0\u05d9 \u05e9\u05d7\u05d5\u05e8 \u05dc\u05d1\u05df',
+        body_missing:
+          '\u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9 \u05d0\u05d5\u05de\u05e8: \u05ea\u05d2 \u05d4-<body> \u05d7\u05e1\u05e8! \u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05dc\u05d0 \u05d9\u05db\u05d5\u05dc \u05dc\u05e2\u05d1\u05d5\u05d3 \u05d1\u05dc\u05e2\u05d3\u05d9\u05d5.',
+        branding: '\u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9',
+        branding_exp:
+          '\u05ea\u05d5\u05e1\u05e3 \u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05d1\u05d7\u05d9\u05e0\u05dd',
+        chrome: '\u05db\u05e8\u05d5\u05dd',
+        clr_black: '\u05e9\u05d7\u05d5\u05e8',
+        clr_blue: '\u05db\u05d7\u05d5\u05dc',
+        clr_custom:
+          '\u05d1\u05d7\u05d9\u05e8\u05d4 \u05d0\u05d9\u05e9\u05d9\u05ea',
+        clr_gray: '\u05d0\u05e4\u05d5\u05e8',
+        clr_green: '\u05d9\u05e8\u05d5\u05e7',
+        clr_orange: '\u05db\u05ea\u05d5\u05dd',
+        clr_pink: '\u05d5\u05e8\u05d5\u05d3',
+        clr_purple: '\u05e1\u05d2\u05d5\u05dc',
+        clr_red: '\u05d0\u05d3\u05d5\u05dd',
+        clr_white: '\u05dc\u05d1\u05df',
+        clr_yellow: '\u05e6\u05d4\u05d5\u05d1',
+        collapse_all:
+          '\u05dc\u05e1\u05d2\u05d5\u05e8 \u05d0\u05ea \u05db\u05dc \u05d4\u05ea\u05e4\u05e8\u05d9\u05d8\u05d9\u05dd',
+        color: '\u05e6\u05d1\u05e2',
+        colors: '\u05e6\u05d1\u05e2\u05d9\u05dd',
+        cursor: '\u05e1\u05de\u05df \u05e2\u05db\u05d1\u05e8',
+        cursor_exp:
+          '\u05e9\u05d9\u05e0\u05d5\u05d9 \u05e1\u05de\u05df \u05d4\u05e2\u05db\u05d1\u05e8 \u05dc\u05d4\u05ea\u05d0\u05de\u05d4 \u05e2\u05d1\u05d5\u05e8 \u05e6\u05d1\u05e2\u05d9 \u05e8\u05e7\u05e2 \u05e9\u05d5\u05e0\u05d9\u05dd',
+        cursor_black: '\u05e9\u05d7\u05d5\u05e8',
+        cursor_white: '\u05dc\u05d1\u05df',
+        custom_colors:
+          '\u05d4\u05ea\u05d0\u05de\u05d4 \u05d0\u05d9\u05e9\u05d9\u05ea',
+        custom_colors_close:
+          '\u05dc\u05e1\u05d2\u05d5\u05e8 \u05d0\u05ea \u05d0\u05e4\u05e9\u05e8\u05d5\u05d9\u05d5\u05ea \u05e6\u05d1\u05e2\u05d9 \u05d4\u05d4\u05ea\u05d0\u05de\u05d4 \u05d4\u05d0\u05d9\u05e9\u05d9\u05ea',
+        custom_colors_exp:
+          '\u05e9\u05d9\u05e0\u05d5\u05d9 \u05e6\u05d1\u05e2\u05d9 \u05d4\u05e8\u05e7\u05e2 \u05d5\u05d4\u05d8\u05e7\u05e1\u05d8',
+        developed_by:
+          '\u05e4\u05d5\u05ea\u05d7 \u05e2\u05dc \u05d9\u05d3\u05d9',
+        developed_in:
+          '\u05e4\u05d5\u05ea\u05d7 \u05d1\u05d9\u05e9\u05e8\u05d0\u05dc',
+        developed_in_link:
+          'https://he.wikipedia.org/wiki/\u05d9\u05e9\u05e8\u05d0\u05dc',
+        developer: '\u05dc\u05d5\u05e7\u05dc\u05d9\u05d9\u05d6',
+        developer_exp:
+          '\u05e9\u05d9\u05e8\u05d5\u05ea\u05d9 \u05d1\u05e0\u05d9\u05d9\u05ea \u05d0\u05ea\u05e8\u05d9\u05dd',
+        developer_message:
+          '\u05db\u05de\u05d4 \u05de\u05d9\u05dc\u05d9\u05dd \u05de\u05d4\u05de\u05e4\u05ea\u05d7 \u05d4\u05e2\u05d9\u05e7\u05e8\u05d9 \u05e9\u05dc \u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9: "\u05d0\u05e0\u05d9 \u05e2\u05d3\u05d9\u05d9\u05df \u05d1\u05d5\u05d3\u05e7 \u05d5\u05dc\u05d5\u05de\u05d3 \u05d0\u05ea \u05e0\u05d5\u05e9\u05d0 \u05d4\u05e0\u05d2\u05e9\u05ea \u05d4\u05d0\u05ea\u05e8\u05d9\u05dd \u05db\u05e9\u05d0\u05e0\u05d9 \u05d9\u05db\u05d5\u05dc, \u05d5\u05de\u05e2\u05d5\u05e0\u05d9\u05d9\u05df \u05dc\u05e4\u05ea\u05d7 \u05d0\u05e4\u05e9\u05e8\u05d5\u05d9\u05d5\u05ea \u05e0\u05d5\u05e1\u05e4\u05d5\u05ea \u05e2\u05d1\u05d5\u05e8 \u05d4\u05ea\u05d5\u05e1\u05e3 \u05d4\u05d7\u05d9\u05e0\u05de\u05d9 \u05d4\u05d6\u05d4 (\u05d9\u05e9 \u05db\u05d1\u05e8 \u05e8\u05e9\u05d9\u05de\u05ea \u05d0\u05e4\u05e9\u05e8\u05d5\u05d9\u05d5\u05ea \u05dc\u05d2\u05d9\u05e8\u05e1\u05d0\u05d5\u05ea \u05d4\u05d1\u05d0\u05d5\u05ea), \u05d0\u05d1\u05dc \u05d0\u05e0\u05d9 \u05d0\u05d3\u05dd \u05e2\u05d5\u05d1\u05d3 \u05e9\u05dc\u05d0 \u05ea\u05de\u05d9\u05d3 \u05d9\u05db\u05d5\u05dc \u05dc\u05de\u05e6\u05d5\u05d0 \u05d0\u05ea \u05d4\u05d6\u05de\u05df \u05dc\u05d4\u05de\u05e9\u05d9\u05da \u05d5\u05dc\u05e4\u05ea\u05d7 \u05d0\u05ea \u05d4\u05ea\u05d5\u05e1\u05e3 \u05de\u05e2\u05d1\u05e8 \u05dc\u05d6\u05de\u05e0\u05d9 \u05d4\u05e4\u05e0\u05d5\u05d9. \u05d0\u05e0\u05d9 \u05de\u05e9\u05ea\u05d3\u05dc \u05dc\u05d4\u05e9\u05e7\u05d9\u05e2 \u05d1\u05d5 \u05db\u05d3\u05d9 \u05e9\u05d9\u05d5\u05db\u05dc \u05dc\u05d4\u05d5\u05e2\u05d9\u05dc \u05dc\u05db\u05de\u05d4 \u05e9\u05d9\u05d5\u05ea\u05e8 \u05de\u05e9\u05ea\u05de\u05e9\u05d9\u05dd \u05d5\u05d1\u05e2\u05dc\u05d9 \u05d0\u05ea\u05e8\u05d9\u05dd. \u05d0\u05dd \u05d4\u05d7\u05dc\u05d8\u05ea\u05dd \u05dc\u05d4\u05e9\u05ea\u05de\u05e9 \u05d1\u05ea\u05d5\u05e1\u05e3, \u05d5\u05d0\u05d4\u05d1\u05ea\u05dd \u05d0\u05d5\u05ea\u05d5 - \u05d0\u05ea\u05dd \u05de\u05d5\u05d6\u05de\u05e0\u05d9\u05dd \u05dc\u05ea\u05e8\u05d5\u05dd \u05e2\u05d1\u05d5\u05e8 \u05d4\u05ea\u05e7\u05d3\u05de\u05d5\u05ea \u05d4\u05e4\u05d9\u05ea\u05d5\u05d7 \u05e9\u05dc\u05d5. \u05db\u05dc \u05e1\u05db\u05d5\u05dd \u05d9\u05ea\u05e7\u05d1\u05dc \u05d1\u05d1\u05e8\u05db\u05d4. \u05d0\u05dd \u05d4\u05d7\u05dc\u05d8\u05ea\u05dd \u05dc\u05d0 \u05dc\u05ea\u05e8\u05d5\u05dd \u05d0\u05d5 \u05e9\u05d0\u05d9\u05df \u05d1\u05d0\u05e4\u05e9\u05e8\u05d5\u05ea\u05db\u05dd \u05dc\u05ea\u05e8\u05d5\u05dd, \u05d0\u05e0\u05d9 \u05de\u05e7\u05d5\u05d5\u05d4 \u05e9\u05d4\u05ea\u05d5\u05e1\u05e3 \u05d1\u05db\u05dc \u05d6\u05d0\u05ea \u05d9\u05d5\u05e2\u05d9\u05dc \u05dc\u05db\u05dd \u05d5\u05d9\u05e1\u05d9\u05d9\u05e2 \u05dc\u05d2\u05d5\u05dc\u05e9\u05d9\u05dd \u05d1\u05d0\u05ea\u05e8 \u05e9\u05dc\u05db\u05dd."',
+        dir: 'rtl',
+        display: '\u05ea\u05e6\u05d5\u05d2\u05d4',
+        edge: "\u05d0\u05d3\u05d2'",
+        expand_all:
+          '\u05dc\u05e4\u05ea\u05d5\u05d7 \u05d0\u05ea \u05db\u05dc \u05d4\u05ea\u05e4\u05e8\u05d9\u05d8\u05d9\u05dd',
+        experimental_feat:
+          '\u05d6\u05d5\u05d4\u05d9 \u05ea\u05db\u05d5\u05e0\u05d4 \u05e0\u05d9\u05e1\u05d9\u05d5\u05e0\u05d9\u05ea',
+        explorer:
+          '\u05d0\u05d9\u05e0\u05d8\u05e8\u05e0\u05d8 \u05d0\u05e7\u05e1\u05e4\u05dc\u05d5\u05e8\u05e8',
+        firefox: '\u05e4\u05d9\u05d9\u05e8\u05e4\u05d5\u05e7\u05e1',
+        font: '\u05d2\u05d5\u05e4\u05df',
+        font_exp:
+          '\u05e9\u05d9\u05e0\u05d5\u05d9 \u05d4\u05d2\u05d5\u05e4\u05df \u05e9\u05dc \u05d4\u05d3\u05e3',
+        font_readable: '\u05e7\u05e8\u05d9\u05d0',
+        help: '\u05e2\u05d6\u05e8\u05d4',
+        help_exp:
+          '\u05dc\u05d7\u05e6\u05d5 \u05db\u05d0\u05df \u05dc\u05d4\u05e6\u05d2\u05ea \u05e2\u05d6\u05e8\u05d4 \u05d1\u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea',
+        highlight: '\u05d4\u05d3\u05d2\u05e9\u05d4',
+        hl_headings:
+          '\u05e1\u05d9\u05de\u05d5\u05df \u05db\u05d5\u05ea\u05e8\u05d5\u05ea',
+        hl_headings_exp:
+          '\u05e1\u05d9\u05de\u05d5\u05df \u05db\u05dc \u05d4\u05db\u05d5\u05ea\u05e8\u05d5\u05ea \u05d1\u05d3\u05e3',
+        hl_links:
+          '\u05e1\u05d9\u05de\u05d5\u05df \u05e7\u05d9\u05e9\u05d5\u05e8\u05d9\u05dd',
+        hl_links_exp:
+          '\u05e1\u05d9\u05de\u05d5\u05df \u05db\u05dc \u05d4\u05e7\u05d9\u05e9\u05d5\u05e8\u05d9\u05dd \u05d1\u05d3\u05e3',
+        how_accessible:
+          '\u05db\u05d9\u05e6\u05d3 \u05d4\u05d5\u05e0\u05d2\u05e9 \u05d0\u05ea\u05e8 \u05d6\u05d4',
+        how_accessible_exp:
+          '\u05d0\u05d5\u05d3\u05d5\u05ea \u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea',
+        images_only:
+          '\u05ea\u05de\u05d5\u05e0\u05d5\u05ea \u05d1\u05dc\u05d1\u05d3',
+        images_only_exp:
+          '\u05d4\u05e1\u05ea\u05e8\u05ea \u05d4\u05d8\u05e7\u05e1\u05d8 \u05d1\u05d3\u05e3',
+        img_alt_missing:
+          '\u05ea\u05de\u05d5\u05e0\u05d4 \u05dc\u05dc\u05d0 \u05ea\u05d9\u05d0\u05d5\u05e8',
+        img_alt:
+          '\u05ea\u05d9\u05d0\u05d5\u05e8 \u05d0\u05e4\u05e9\u05e8\u05d9 \u05e9\u05dc \u05ea\u05de\u05d5\u05e0\u05d4: ',
+        impaired: '\u05db\u05d1\u05d3\u05d9 \u05e8\u05d0\u05d9\u05d9\u05d4',
+        impaired_exp:
+          '\u05e0\u05d9\u05d2\u05d5\u05d3\u05d9\u05d5\u05ea \u05de\u05e7\u05e1\u05d9\u05de\u05dc\u05d9\u05ea',
+        jq_too_low:
+          '%c\u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9%c \u05d0\u05d5\u05de\u05e8: \u05d2\u05d9\u05e8\u05e1\u05ea jQuery \u05d1\u05d0\u05ea\u05e8 \u05d6\u05d4 \u05e0\u05de\u05d5\u05db\u05d4 \u05de\u05d3\u05d9. \u05d9\u05d9\u05ea\u05db\u05df \u05e9\u05d7\u05dc\u05e7 \u05de\u05d0\u05e4\u05e9\u05e8\u05d5\u05d9\u05d5\u05ea \u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05dc\u05d0 \u05d9\u05e2\u05d1\u05d3\u05d5 (\u05d0\u05d5 \u05db\u05d5\u05dc\u05df).',
+        jq_not_found_msg:
+          '%c\u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9%c \u05d0\u05d5\u05de\u05e8: \u05e0\u05e8\u05d0\u05d4 \u05e9-jQuery \u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d1\u05d3\u05e3 \u05d6\u05d4. \u05d4\u05ea\u05d5\u05e1\u05e3 \u05dc\u05d0 \u05d9\u05db\u05d5\u05dc \u05dc\u05e4\u05e2\u05d5\u05dc \u05d1\u05dc\u05e2\u05d3\u05d9\u05d4, \u05d5\u05d4\u05d8\u05de\u05d9\u05e2 \u05d1\u05d3\u05e3 \u05d0\u05ea \u05d4\u05d2\u05d9\u05e8\u05e1\u05d4 \u05d4\u05de\u05d9\u05e0\u05d9\u05de\u05dc\u05d9\u05ea \u05d4\u05d3\u05e8\u05d5\u05e9\u05d4 \u05e2\u05d1\u05d5\u05e8\u05d5 \u05d1\u05d0\u05d5\u05e4\u05df \u05d0\u05d5\u05d8\u05d5\u05de\u05d8\u05d9.',
+        kbnav:
+          '\u05e0\u05d9\u05d5\u05d5\u05d8 \u05de\u05e7\u05dc\u05d3\u05ea',
+        kbnav_exp:
+          '\u05e0\u05d9\u05d5\u05d5\u05d8 \u05d1\u05d0\u05ea\u05e8 \u05d1\u05d0\u05de\u05e6\u05e2\u05d5\u05ea \u05de\u05e7\u05e9\u05d9 \u05d4\u05de\u05e7\u05dc\u05d3\u05ea',
+        kbnav_off: '\u05db\u05d1\u05d5\u05d9',
+        kbnav_on: '\u05e4\u05e2\u05d9\u05dc',
+        kbshortcuts:
+          '\u05e7\u05d9\u05e6\u05d5\u05e8\u05d9 \u05de\u05e7\u05e9\u05d9\u05dd',
+        kbshortcuts_exp:
+          '\u05e7\u05d9\u05e6\u05d5\u05e8\u05d9 \u05de\u05e7\u05e9\u05d9\u05dd \u05d5\u05d4\u05d5\u05e8\u05d0\u05d5\u05ea \u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea',
+        kbshortcuts_text:
+          "\u05dc\u05e0\u05d5\u05d7\u05d9\u05d5\u05ea\u05db\u05dd, \u05d1\u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9 \u05d9\u05e9 \u05de\u05e1\u05e4\u05e8 \u05e7\u05d9\u05e6\u05d5\u05e8\u05d9 \u05de\u05e7\u05e9\u05d9\u05dd \u05d1\u05de\u05e7\u05dc\u05d3\u05ea \u05e9\u05d1\u05d4\u05dd \u05ea\u05d5\u05db\u05dc\u05d5 \u05dc\u05d4\u05d9\u05e2\u05d6\u05e8 \u05db\u05d3\u05d9 \u05dc\u05d4\u05e9\u05ea\u05de\u05e9 \u05d1\u05d7\u05dc\u05e7 \u05de\u05d4\u05d0\u05e4\u05e9\u05e8\u05d5\u05d9\u05d5\u05ea \u05d4\u05de\u05d5\u05e6\u05e2\u05d5\u05ea \u05d1\u05d5.<br /><br /><kbd>ALT \u05d5- Z</kbd> - \u05dc\u05e4\u05ea\u05d5\u05d7 \u05d5\u05dc\u05e6\u05de\u05e6\u05dd \u05d0\u05ea \u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea.<br /><br /><kbd>ALT \u05d5- X</kbd> - \u05dc\u05d4\u05e6\u05d9\u05d2 \u05e2\u05d6\u05e8\u05d4 \u05d1\u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea. \u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05e7\u05d9\u05e6\u05d5\u05e8 \u05d6\u05d4 \u05d9\u05d1\u05d8\u05dc \u05d0\u05e4\u05e9\u05e8\u05d5\u05ea \u05d6\u05d5.<br /><br /><kbd>ALT \u05d5- C</kbd> - \u05dc\u05d0\u05e4\u05e1 \u05d0\u05ea \u05d4\u05d4\u05d2\u05d3\u05e8\u05d5\u05ea \u05e9\u05dc \u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea.<br /><br /><kbd>ALT \u05d5- V</kbd> - \u05e0\u05d9\u05d5\u05d5\u05d8 \u05de\u05d4\u05d9\u05e8 \u05d0\u05dc \u05e8\u05d0\u05e9 \u05d4\u05d3\u05e3.<br /><br /><kbd>ALT \u05d5- B</kbd> - \u05e0\u05d9\u05d5\u05d5\u05d8 \u05de\u05d4\u05d9\u05e8 \u05d0\u05dc \u05ea\u05d7\u05ea\u05d9\u05ea \u05d4\u05d3\u05e3.<br /><br /><kbd>SHIFT \u05d5- A</kbd> - \u05dc\u05d4\u05d2\u05d3\u05d9\u05dc \u05d0\u05ea \u05d4\u05d8\u05e7\u05e1\u05d8 \u05d1\u05d3\u05e3.<br /><br /><kbd>SHIFT \u05d5- S</kbd> - \u05dc\u05d4\u05e7\u05d8\u05d9\u05df \u05d0\u05ea \u05d4\u05d8\u05e7\u05e1\u05d8 \u05d1\u05d3\u05e3.<br /><br /><kbd>SHIFT \u05d5- D</kbd> - \u05e1\u05d9\u05de\u05d5\u05df \u05d4\u05e7\u05d9\u05e9\u05d5\u05e8\u05d9\u05dd \u05d1\u05d3\u05e3. \u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05e7\u05d9\u05e6\u05d5\u05e8 \u05d6\u05d4 \u05e4\u05e2\u05dd \u05e0\u05d5\u05e1\u05e4\u05ea \u05d9\u05d1\u05d8\u05dc \u05d0\u05e4\u05e9\u05e8\u05d5\u05ea \u05d6\u05d5.<br /><br /><kbd>SHIFT \u05d5- F</kbd> - \u05e1\u05d9\u05de\u05d5\u05df \u05d4\u05db\u05d5\u05ea\u05e8\u05d5\u05ea \u05d1\u05d3\u05e3. \u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05e7\u05d9\u05e6\u05d5\u05e8 \u05d6\u05d4 \u05e4\u05e2\u05dd \u05e0\u05d5\u05e1\u05e4\u05ea \u05d9\u05d1\u05d8\u05dc \u05d0\u05e4\u05e9\u05e8\u05d5\u05ea \u05d6\u05d5.<br /><br /><kbd>SHIFT \u05d5- Q</kbd> - \u05dc\u05d4\u05e4\u05e2\u05d9\u05dc \u05d0\u05ea \u05d4\u05d0\u05e4\u05e9\u05e8\u05d5\u05ea '\u05e2\u05d9\u05d5\u05d5\u05e8\u05d9 \u05e6\u05d1\u05e2\u05d9\u05dd' (\u05d2\u05d5\u05d5\u05e0\u05d9 \u05e9\u05d7\u05d5\u05e8 \u05dc\u05d1\u05df). \u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05e7\u05d9\u05e6\u05d5\u05e8 \u05d6\u05d4 \u05e4\u05e2\u05dd \u05e0\u05d5\u05e1\u05e4\u05ea \u05d9\u05d1\u05d8\u05dc \u05d0\u05e4\u05e9\u05e8\u05d5\u05ea \u05d6\u05d5.<br /><br /><kbd>SHIFT \u05d5- W</kbd> - \u05dc\u05d4\u05e4\u05e2\u05d9\u05dc \u05d0\u05ea \u05d4\u05d0\u05e4\u05e9\u05e8\u05d5\u05ea '\u05db\u05d1\u05d3\u05d9 \u05e8\u05d0\u05d9\u05d9\u05d4' (\u05e0\u05d9\u05d2\u05d5\u05d3\u05d9\u05d5\u05ea \u05d2\u05d1\u05d5\u05d4\u05d4). \u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05e7\u05d9\u05e6\u05d5\u05e8 \u05d6\u05d4 \u05e4\u05e2\u05dd \u05e0\u05d5\u05e1\u05e4\u05ea \u05d9\u05d1\u05d8\u05dc \u05d0\u05e4\u05e9\u05e8\u05d5\u05ea \u05d6\u05d5.<br /><br /><kbd>SHIFT \u05d5- E</kbd> - \u05dc\u05d4\u05e4\u05e2\u05d9\u05dc \u05d0\u05ea \u05d4\u05d0\u05e4\u05e9\u05e8\u05d5\u05ea '\u05e6\u05d1\u05e2\u05d9\u05dd \u05d1\u05d4\u05d9\u05e8\u05d9\u05dd' (\u05d4\u05d1\u05d4\u05e8\u05ea \u05e6\u05d1\u05e2\u05d9\u05dd). \u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05e7\u05d9\u05e6\u05d5\u05e8 \u05d6\u05d4 \u05e4\u05e2\u05dd \u05e0\u05d5\u05e1\u05e4\u05ea \u05d9\u05d1\u05d8\u05dc \u05d0\u05e4\u05e9\u05e8\u05d5\u05ea \u05d6\u05d5.<br /><br />",
+        larger_text: '\u05d2\u05d3\u05d5\u05dc \u05d9\u05d5\u05ea\u05e8',
+        larger_text_exp:
+          '\u05d4\u05d2\u05d3\u05dc\u05ea \u05d4\u05d8\u05e7\u05e1\u05d8 \u05d1\u05db\u05dc \u05dc\u05d7\u05d9\u05e6\u05d4',
+        lc_filter:
+          '\u05de\u05e1\u05e0\u05df \u05e6\u05d1\u05e2\u05d9\u05dd \u05d7\u05d9\u05d9\u05dd',
+        lc_filter_exp:
+          '\u05e6\u05d1\u05e2\u05d9\u05dd \u05e7\u05e8\u05d9\u05dd',
+        lic_warn:
+          '\u05d0\u05ea\u05e8 \u05d6\u05d4 \u05de\u05e9\u05ea\u05de\u05e9 \u05d1\u05e2\u05d5\u05ea\u05e7 \u05dc\u05d0 \u05d7\u05d5\u05e7\u05d9 \u05e9\u05dc \u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9. \u05de\u05d0\u05de\u05e5 \u05d5\u05d6\u05de\u05df \u05e8\u05d1\u05d9\u05dd \u05d4\u05d5\u05e9\u05e7\u05e2\u05d5 \u05d1\u05e4\u05d9\u05ea\u05d5\u05d7 \u05d4\u05ea\u05d5\u05e1\u05e3, \u05d0\u05e0\u05d0 <a href="https://www.nagish.li/he/contact.html" target="_blank" style="color: black !important; text-decoration: underline !important;" tabindex="1">\u05dc\u05d7\u05e6\u05d5 \u05db\u05d0\u05df</a> \u05db\u05d3\u05d9 \u05dc\u05d3\u05d5\u05d5\u05d7 \u05e2\u05dc \u05d0\u05ea\u05e8 \u05d6\u05d4 \u05d1\u05d0\u05d5\u05e4\u05df \u05d0\u05e0\u05d5\u05e0\u05d9\u05de\u05d9. \u05ea\u05d5\u05d3\u05d4!',
+        logo_alt: '\u05dc\u05d5\u05d2\u05d5',
+        misc: '\u05e9\u05d5\u05e0\u05d5\u05ea',
+        missing_setting:
+          '%c\u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9%c \u05d0\u05d5\u05de\u05e8: %c\u05d4\u05d4\u05d2\u05d3\u05e8\u05d4 \u05d7\u05e1\u05e8\u05d4.%c',
+        move_bl:
+          '\u05dc\u05d4\u05d6\u05d9\u05d6 \u05e9\u05de\u05d0\u05dc\u05d4 \u05d5\u05dc\u05de\u05d8\u05d4',
+        move_br:
+          '\u05dc\u05d4\u05d6\u05d9\u05d6 \u05d9\u05de\u05d9\u05e0\u05d4 \u05d5\u05dc\u05de\u05d8\u05d4',
+        move_tl:
+          '\u05dc\u05d4\u05d6\u05d9\u05d6 \u05e9\u05de\u05d0\u05dc\u05d4 \u05d5\u05dc\u05de\u05e2\u05dc\u05d4',
+        move_tr:
+          '\u05dc\u05d4\u05d6\u05d9\u05d6 \u05d9\u05de\u05d9\u05e0\u05d4 \u05d5\u05dc\u05de\u05e2\u05dc\u05d4',
+        normal: '\u05e8\u05d2\u05d9\u05dc',
+        normal_display: '\u05e8\u05d2\u05d9\u05dc\u05d4',
+        normal_plu: '\u05e8\u05d2\u05d9\u05dc\u05d9\u05dd',
+        not_supported:
+          '\u05d0\u05e4\u05e9\u05e8\u05d5\u05ea \u05d6\u05d5 \u05d0\u05d9\u05e0\u05d4 \u05e0\u05ea\u05de\u05db\u05ea \u05e2\u05dc \u05d9\u05d3\u05d9 \u05d4\u05d3\u05e4\u05d3\u05e4\u05df \u05e9\u05dc\u05da.',
+        opera: '\u05d0\u05d5\u05e4\u05e8\u05d4',
+        r2m: '\u05d4\u05e7\u05e8\u05d0\u05d4 \u05e7\u05d5\u05dc\u05d9\u05ea',
+        r2m_exp:
+          '\u05d4\u05e7\u05e8\u05d0\u05ea \u05e1\u05e4\u05e8\u05d5\u05ea',
+        r2m_na:
+          '\u05d4\u05e7\u05e8\u05d0\u05d4 \u05e7\u05d5\u05dc\u05d9\u05ea \u05d0\u05d9\u05e0\u05d4 \u05d6\u05de\u05d9\u05e0\u05d4 \u05db\u05e8\u05d2\u05e2. \u05e0\u05e1\u05d5 \u05e9\u05d5\u05d1 \u05de\u05d0\u05d5\u05d7\u05e8 \u05d9\u05d5\u05ea\u05e8.',
+        r2m_off: '\u05db\u05d1\u05d5\u05d9\u05d4',
+        r2m_on: '\u05e4\u05e2\u05d9\u05dc\u05d4',
+        reset_prompt:
+          '\u05dc\u05d0\u05e4\u05e1 \u05d0\u05ea \u05d4\u05d2\u05d3\u05e8\u05d5\u05ea \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea?',
+        reset_settings:
+          '\u05d0\u05d9\u05e4\u05d5\u05e1 \u05d4\u05d2\u05d3\u05e8\u05d5\u05ea',
+        reset_settings_exp:
+          '\u05d0\u05d9\u05e4\u05d5\u05e1 \u05db\u05dc \u05d4\u05d4\u05d2\u05d3\u05e8\u05d5\u05ea \u05e9\u05dc \u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea',
+        saturated:
+          '\u05e6\u05d1\u05e2\u05d9\u05dd \u05d1\u05d4\u05d9\u05e8\u05d9\u05dd',
+        saturated_exp:
+          '\u05d4\u05d1\u05d4\u05e8\u05ea \u05d4\u05e6\u05d1\u05e2\u05d9\u05dd \u05d1\u05d3\u05e3',
+        settings:
+          '\u05de\u05d9\u05d3\u05e2 \u05d5\u05d4\u05d2\u05d3\u05e8\u05d5\u05ea',
+        settings_prompt:
+          '\u05e0\u05e8\u05d0\u05d4 \u05e9\u05de\u05d9\u05e9\u05d4\u05d5 \u05d4\u05ea\u05e2\u05e1\u05e7 \u05e2\u05dd \u05d4\u05d2\u05d3\u05e8\u05d5\u05ea \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea. \u05d4\u05d0\u05dd \u05d1\u05e8\u05e6\u05d5\u05e0\u05da \u05dc\u05d0\u05e4\u05e1 \u05d0\u05ea \u05d4\u05d4\u05d2\u05d3\u05e8\u05d5\u05ea? (\u05de\u05d5\u05de\u05dc\u05e5)',
+        settings_reset_alert_ok:
+          '\u05d4\u05d4\u05d2\u05d3\u05e8\u05d5\u05ea \u05d0\u05d5\u05e4\u05e1\u05d5. \u05e0\u05d0 \u05dc\u05e8\u05e2\u05e0\u05df \u05d0\u05ea \u05d4\u05e2\u05de\u05d5\u05d3.',
+        settings_reset_html_ok:
+          '\u05d4\u05d4\u05d2\u05d3\u05e8\u05d5\u05ea \u05d0\u05d5\u05e4\u05e1\u05d5. <a href="javascript:void(0);" onclick="javascript:location.replace(window.location.href.split(\'#\')[0]);" style="color: black !important; text-decoration: underline !important; outline: 5px solid rgba(88, 144, 255, 0.75) !important;" tabindex="1">\u05dc\u05e8\u05e2\u05e0\u05df \u05d0\u05ea \u05d4\u05e2\u05de\u05d5\u05d3</a>',
+        settings_save:
+          '\u05d4\u05d4\u05d2\u05d3\u05e8\u05d5\u05ea \u05d9\u05d9\u05e9\u05de\u05e8\u05d5.',
+        settings_save_reminder:
+          "\u05d7\u05e9\u05d5\u05d1 \u05dc\u05d6\u05db\u05d5\u05e8: \u05d0\u05e4\u05e9\u05e8 \u05dc\u05d0\u05e4\u05e1 \u05d0\u05d5\u05ea\u05df \u05d2\u05dd \u05d1\u05ea\u05e4\u05e8\u05d9\u05d8 '\u05de\u05d9\u05d3\u05e2 \u05d5\u05d4\u05d2\u05d3\u05e8\u05d5\u05ea'.",
+        settings_upgrade_html:
+          '\u05e0\u05d2\u05d9\u05e9 \u05dc\u05d9 \u05e9\u05d5\u05d3\u05e8\u05d2. <a href="javascript:void(0);" onclick="javascript:location.replace(window.location.href.split(\'#\')[0]);" style="color: black !important; text-decoration: underline !important;" tabindex="1">\u05dc\u05e8\u05e2\u05e0\u05df \u05d0\u05ea \u05d4\u05e2\u05de\u05d5\u05d3</a>',
+        skiplinks: '\u05e0\u05d9\u05d5\u05d5\u05d8 \u05de\u05d4\u05d9\u05e8',
+        skiplinks_exp:
+          '\u05d2\u05d9\u05e9\u05d4 \u05de\u05d4\u05d9\u05e8\u05d4 \u05dc\u05d0\u05d6\u05d5\u05e8\u05d9\u05dd \u05d1\u05d3\u05e3 \u05d5\u05d1\u05d0\u05ea\u05e8',
+        skiplinks_default:
+          '\u05d1\u05d7\u05e8\u05d5 \u05de\u05d9\u05e7\u05d5\u05dd',
+        skiplinks_page_nav:
+          '\u05e0\u05d9\u05d5\u05d5\u05d8 \u05d1\u05d3\u05e3',
+        skiplinks_site_nav:
+          '\u05e0\u05d9\u05d5\u05d5\u05d8 \u05d1\u05d0\u05ea\u05e8',
+        skiplinks_to_top: '\u05e8\u05d0\u05e9 \u05d4\u05d3\u05e3',
+        skiplinks_to_menu: '\u05ea\u05e4\u05e8\u05d9\u05d8',
+        skiplinks_to_header:
+          '\u05db\u05d5\u05ea\u05e8\u05ea \u05e8\u05d0\u05e9\u05d9\u05ea',
+        skiplinks_to_paragraph:
+          '\u05e4\u05e1\u05e7\u05d4 \u05e8\u05d0\u05e9\u05d5\u05e0\u05d4',
+        skiplinks_to_content:
+          '\u05ea\u05d5\u05db\u05df \u05de\u05e8\u05db\u05d6\u05d9',
+        skiplinks_to_bottom:
+          '\u05ea\u05d7\u05ea\u05d9\u05ea \u05d4\u05d3\u05e3',
+        skiplinks_to_home:
+          '\u05e2\u05de\u05d5\u05d3 \u05e8\u05d0\u05e9\u05d9',
+        smaller_text: '\u05e7\u05d8\u05df \u05d9\u05d5\u05ea\u05e8',
+        smaller_text_exp:
+          '\u05d4\u05e7\u05d8\u05e0\u05ea \u05d4\u05d8\u05e7\u05e1\u05d8 \u05d1\u05db\u05dc \u05dc\u05d7\u05d9\u05e6\u05d4',
+        supported_browsers:
+          '\u05d3\u05e4\u05d3\u05e4\u05e0\u05d9\u05dd \u05e0\u05ea\u05de\u05db\u05d9\u05dd',
+        supported_browsers_exp:
+          "\u05d3\u05e4\u05d3\u05e4\u05e0\u05d9\u05dd \u05e0\u05ea\u05de\u05db\u05d9\u05dd: \u05d2\u05d5\u05d2\u05dc \u05db\u05e8\u05d5\u05dd, \u05de\u05d9\u05e7\u05e8\u05d5\u05e1\u05d5\u05e4\u05d8 \u05d0\u05d3\u05d2', \u05de\u05d5\u05d6\u05d9\u05dc\u05d4 \u05e4\u05d9\u05d9\u05e8\u05e4\u05d5\u05e7\u05e1, \u05d0\u05d5\u05e4\u05e8\u05d4 \u05d5\u05d0\u05d9\u05e0\u05d8\u05e8\u05e0\u05d8 \u05d0\u05e7\u05e1\u05e4\u05dc\u05d5\u05e8\u05e8. \u05ea\u05d5\u05e1\u05e3 \u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05e2\u05d5\u05e9\u05d4 \u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05d0\u05e4\u05e9\u05e8\u05d5\u05d9\u05d5\u05ea \u05de\u05ea\u05e7\u05d3\u05de\u05d5\u05ea \u05d1\u05d3\u05e4\u05d3\u05e4\u05df \u05e9\u05dc\u05db\u05dd. \u05d4\u05e7\u05e4\u05d9\u05d3\u05d5 \u05ea\u05de\u05d9\u05d3 \u05dc\u05d4\u05e9\u05ea\u05de\u05e9 \u05d1\u05d3\u05e4\u05d3\u05e4\u05df \u05e2\u05d3\u05db\u05e0\u05d9.",
+        text_only: '\u05d8\u05e7\u05e1\u05d8 \u05d1\u05dc\u05d1\u05d3',
+        text_only_exp:
+          '\u05d4\u05e1\u05ea\u05e8\u05ea \u05d4\u05ea\u05de\u05d5\u05e0\u05d5\u05ea \u05d1\u05d3\u05e3',
+        text_size: '\u05d2\u05d5\u05d3\u05dc \u05d8\u05e7\u05e1\u05d8',
+        txt: '\u05d8\u05e7\u05e1\u05d8',
+        unsupported_media:
+          '\u05d0\u05e4\u05e9\u05e8\u05d5\u05ea \u05e0\u05d9\u05d2\u05d5\u05df \u05e7\u05d5\u05d1\u05e5 \u05d4\u05e9\u05de\u05e2 \u05d0\u05d5 \u05d4\u05e1\u05e8\u05d8\u05d5\u05df \u05d4\u05d6\u05d4 \u05d0\u05d9\u05e0\u05d4 \u05d6\u05de\u05d9\u05e0\u05d4 \u05d1\u05d3\u05e4\u05d3\u05e4\u05df \u05e9\u05dc\u05da.',
+        untitled_page:
+          '\u05d3\u05e3 \u05dc\u05dc\u05d0 \u05db\u05d5\u05ea\u05e8\u05ea',
+        zoom: '\u05d6\u05d5\u05dd',
+        zoom_exp:
+          '\u05d6\u05d5\u05dd \u05e4\u05e0\u05d9\u05de\u05d4 \u05d5\u05d4\u05d7\u05d5\u05e6\u05d4 \u05dc\u05d3\u05e3',
+        zoom_in: '\u05d4\u05d2\u05d3\u05dc\u05ea \u05d6\u05d5\u05dd',
+        zoom_out: '\u05d4\u05e7\u05d8\u05e0\u05ea \u05d6\u05d5\u05dd',
+      };
   let positions = {
     TR: 'top: 0vh; right: 0 !important;',
     TL: 'top: 0vh; left: 0 !important;',
@@ -766,71 +766,71 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
             (a('*')
               .not(commons.not)
               .each(function () {
-                for (var b = a(this).length; b--; )
+                for (var b = a(this).length; b--;)
                   a(this)[b].style.setProperty('background-color', '', ''),
                     a(this)[b].style.setProperty('color', '', ''),
                     a(this)[b].style.setProperty('border-color', '', '');
               }),
-            a(
-              commons.dd +
+              a(
+                commons.dd +
                 ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsBG > #NLCurrentBG, ' +
                 commons.dd +
                 ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsTXT > #NLCurrentTXT'
-            ).css({ 'background-color': 'transparent', display: 'none' }),
-            a(commons.dd + ' > #NagishLiColors > li > #NLCustomColors')
-              .children('span.sign')
-              .remove(),
-            a(
-              commons.dd +
+              ).css({ 'background-color': 'transparent', display: 'none' }),
+              a(commons.dd + ' > #NagishLiColors > li > #NLCustomColors')
+                .children('span.sign')
+                .remove(),
+              a(
+                commons.dd +
                 ' > #NagishLiColors > li > #NLCustomColors > #NLcolorPanel > li.selected'
-            ).removeClass('selected'),
-            a(
-              commons.dd +
+              ).removeClass('selected'),
+              a(
+                commons.dd +
                 " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
                 phrases.bg +
                 "'] > li[aria-label='" +
                 phrases.clr_custom +
                 "'] > input#NLColorPicker"
-            ).attr('value', h(a('body').css('background-color'))),
-            a(
-              commons.dd +
+              ).attr('value', h(a('body').css('background-color'))),
+              a(
+                commons.dd +
                 " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
                 phrases.txt +
                 "'] > li[aria-label='" +
                 phrases.clr_custom +
                 "'] > input#NLColorPicker"
-            ).attr('value', h(a('body').css('color'))),
-            a(
-              commons.dd +
+              ).attr('value', h(a('body').css('color'))),
+              a(
+                commons.dd +
                 " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
                 phrases.bg +
                 "'] > li[aria-label='" +
                 phrases.clr_custom +
                 "']"
-            )
-              .attr('aria-label', phrases.aria_select_bgcolor)
-              .css('background-color', a('body').css('background-color')),
-            a(
-              commons.dd +
+              )
+                .attr('aria-label', phrases.aria_select_bgcolor)
+                .css('background-color', a('body').css('background-color')),
+              a(
+                commons.dd +
                 " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
                 phrases.txt +
                 "'] > li[aria-label='" +
                 phrases.clr_custom +
                 "']"
-            )
-              .attr('aria-label', phrases.aria_select_txtcolor)
-              .css('color', a('body').css('color'))),
-          '100%' != a('html').css('height') && a('html').css('height', '100%'),
-          a(':root').css({
-            filter: 'grayscale(100%)',
-            '-webkit-filter': 'grayscale(100%)',
-            '-khtml-filter': 'grayscale(100%)',
-            '-ms-filter': 'grayscale(100%)',
-            '-o-filter': 'grayscale(100%)',
-            '-moz-filter': 'grayscale(100%)',
-          }),
-          a('body').attr('nl-colors', c),
-          b)
+              )
+                .attr('aria-label', phrases.aria_select_txtcolor)
+                .css('color', a('body').css('color'))),
+            '100%' != a('html').css('height') && a('html').css('height', '100%'),
+            a(':root').css({
+              filter: 'grayscale(100%)',
+              '-webkit-filter': 'grayscale(100%)',
+              '-khtml-filter': 'grayscale(100%)',
+              '-ms-filter': 'grayscale(100%)',
+              '-o-filter': 'grayscale(100%)',
+              '-moz-filter': 'grayscale(100%)',
+            }),
+            a('body').attr('nl-colors', c),
+            b)
         )
           return (
             a(commons.dd + ' > #NagishLiColors > li > #NLGrayscaleColors')
@@ -848,13 +848,13 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
             a(commons.dd + ' > #NagishLiColors')
               .prev('div.nl-dropdown-toggle')
               .hasClass('open') ||
-              a(
-                '<span class="selected">' + phrases.blind + '</span>'
-              ).insertAfter(
-                a(commons.dd + ' > #NagishLiColors')
-                  .prev('div', '.nl-dropdown-toggle')
-                  .children('.nl-dropdown-title')
-              ),
+            a(
+              '<span class="selected">' + phrases.blind + '</span>'
+            ).insertAfter(
+              a(commons.dd + ' > #NagishLiColors')
+                .prev('div', '.nl-dropdown-toggle')
+                .children('.nl-dropdown-title')
+            ),
             !1
           );
       } else a('body').removeAttr('nl-colors'), a('html').css('height', ''), a(':root').css({ filter: '', '-webkit-filter': '', '-khtml-filter': '', '-ms-filter': '', '-o-filter': '', '-moz-filter': '' }), (c = 'normal');
@@ -869,80 +869,80 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
             (a('*')
               .not(commons.not)
               .each(function () {
-                for (var b = a(this).length; b--; )
+                for (var b = a(this).length; b--;)
                   a(this)[b].style.setProperty('background-color', '', ''),
                     a(this)[b].style.setProperty('color', '', ''),
                     a(this)[b].style.setProperty('border-color', '', '');
               }),
-            a(
-              commons.dd +
+              a(
+                commons.dd +
                 ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsBG > #NLCurrentBG, ' +
                 commons.dd +
                 ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsTXT > #NLCurrentTXT'
-            ).css({ 'background-color': 'transparent', display: 'none' }),
-            a(commons.dd + ' > #NagishLiColors > li > #NLCustomColors')
-              .children('span.sign')
-              .remove(),
-            a(
-              commons.dd +
+              ).css({ 'background-color': 'transparent', display: 'none' }),
+              a(commons.dd + ' > #NagishLiColors > li > #NLCustomColors')
+                .children('span.sign')
+                .remove(),
+              a(
+                commons.dd +
                 ' > #NagishLiColors > li > #NLCustomColors > #NLcolorPanel > li.selected'
-            ).removeClass('selected'),
-            a(
-              commons.dd +
+              ).removeClass('selected'),
+              a(
+                commons.dd +
                 " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
                 phrases.bg +
                 "'] > li[aria-label='" +
                 phrases.clr_custom +
                 "'] > input#NLColorPicker"
-            ).attr('value', h(a('body').css('background-color'))),
-            a(
-              commons.dd +
+              ).attr('value', h(a('body').css('background-color'))),
+              a(
+                commons.dd +
                 " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
                 phrases.txt +
                 "'] > li[aria-label='" +
                 phrases.clr_custom +
                 "'] > input#NLColorPicker"
-            ).attr('value', h(a('body').css('color'))),
-            a(
-              commons.dd +
+              ).attr('value', h(a('body').css('color'))),
+              a(
+                commons.dd +
                 " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
                 phrases.bg +
                 "'] > li[aria-label='" +
                 phrases.clr_custom +
                 "']"
-            )
-              .attr('aria-label', phrases.aria_select_bgcolor)
-              .css('background-color', a('body').css('background-color')),
-            a(
-              commons.dd +
+              )
+                .attr('aria-label', phrases.aria_select_bgcolor)
+                .css('background-color', a('body').css('background-color')),
+              a(
+                commons.dd +
                 " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
                 phrases.txt +
                 "'] > li[aria-label='" +
                 phrases.clr_custom +
                 "']"
-            )
-              .attr('aria-label', phrases.aria_select_txtcolor)
-              .css('color', a('body').css('color'))),
-          '100%' != a('html').css('height') && a('html').css('height', '100%'),
-          a(':root').css({
-            filter: 'invert(100%)',
-            '-webkit-filter': 'invert(100%)',
-            '-khtml-filter': 'invert(100%)',
-            '-ms-filter': 'invert(100%)',
-            '-o-filter': 'invert(100%)',
-            '-moz-filter': 'invert(100%)',
-          }),
-          a('body').attr('nl-colors', c),
-          b)
+              )
+                .attr('aria-label', phrases.aria_select_txtcolor)
+                .css('color', a('body').css('color'))),
+            '100%' != a('html').css('height') && a('html').css('height', '100%'),
+            a(':root').css({
+              filter: 'invert(100%)',
+              '-webkit-filter': 'invert(100%)',
+              '-khtml-filter': 'invert(100%)',
+              '-ms-filter': 'invert(100%)',
+              '-o-filter': 'invert(100%)',
+              '-moz-filter': 'invert(100%)',
+            }),
+            a('body').attr('nl-colors', c),
+            b)
         )
           return (
             a(commons.dd + ' > #NagishLiColors > li > #NLInvertColors')
               .attr(
                 'aria-label',
                 phrases.aria_the_option +
-                  phrases.impaired +
-                  ' ' +
-                  phrases.r2m_on
+                phrases.impaired +
+                ' ' +
+                phrases.r2m_on
               )
               .prepend(commons.checkmark)
               .parent('li')
@@ -954,13 +954,13 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
             a(commons.dd + ' > #NagishLiColors')
               .prev('div.nl-dropdown-toggle')
               .hasClass('open') ||
-              a(
-                '<span class="selected">' + phrases.impaired + '</span>'
-              ).insertAfter(
-                a(commons.dd + ' > #NagishLiColors')
-                  .prev('div', '.nl-dropdown-toggle')
-                  .children('.nl-dropdown-title')
-              ),
+            a(
+              '<span class="selected">' + phrases.impaired + '</span>'
+            ).insertAfter(
+              a(commons.dd + ' > #NagishLiColors')
+                .prev('div', '.nl-dropdown-toggle')
+                .children('.nl-dropdown-title')
+            ),
             !1
           );
       } else a('body').removeAttr('nl-colors'), a('html').css('height', ''), a(':root').css({ filter: '', '-webkit-filter': '', '-khtml-filter': '', '-ms-filter': '', '-o-filter': '', '-moz-filter': '' }), (c = 'normal');
@@ -974,60 +974,60 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
           (a('*')
             .not(commons.not)
             .each(function () {
-              for (var b = a(this).length; b--; )
+              for (var b = a(this).length; b--;)
                 a(this)[b].style.setProperty('background-color', '', ''),
                   a(this)[b].style.setProperty('color', '', ''),
                   a(this)[b].style.setProperty('border-color', '', '');
             }),
-          a(
-            commons.dd +
+            a(
+              commons.dd +
               ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsBG > #NLCurrentBG, ' +
               commons.dd +
               ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsTXT > #NLCurrentTXT'
-          ).css({ 'background-color': 'transparent', display: 'none' }),
-          a(commons.dd + ' > #NagishLiColors > li > #NLCustomColors')
-            .children('span.sign')
-            .remove(),
-          a(
-            commons.dd +
+            ).css({ 'background-color': 'transparent', display: 'none' }),
+            a(commons.dd + ' > #NagishLiColors > li > #NLCustomColors')
+              .children('span.sign')
+              .remove(),
+            a(
+              commons.dd +
               ' > #NagishLiColors > li > #NLCustomColors > #NLcolorPanel > li.selected'
-          ).removeClass('selected'),
-          a(
-            commons.dd +
+            ).removeClass('selected'),
+            a(
+              commons.dd +
               " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
               phrases.bg +
               "'] > li[aria-label='" +
               phrases.clr_custom +
               "'] > input#NLColorPicker"
-          ).attr('value', h(a('body').css('background-color'))),
-          a(
-            commons.dd +
+            ).attr('value', h(a('body').css('background-color'))),
+            a(
+              commons.dd +
               " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
               phrases.txt +
               "'] > li[aria-label='" +
               phrases.clr_custom +
               "'] > input#NLColorPicker"
-          ).attr('value', h(a('body').css('color'))),
-          a(
-            commons.dd +
+            ).attr('value', h(a('body').css('color'))),
+            a(
+              commons.dd +
               " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
               phrases.bg +
               "'] > li[aria-label='" +
               phrases.clr_custom +
               "']"
-          )
-            .attr('aria-label', phrases.aria_select_bgcolor)
-            .css('background-color', a('body').css('background-color')),
-          a(
-            commons.dd +
+            )
+              .attr('aria-label', phrases.aria_select_bgcolor)
+              .css('background-color', a('body').css('background-color')),
+            a(
+              commons.dd +
               " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
               phrases.txt +
               "'] > li[aria-label='" +
               phrases.clr_custom +
               "']"
-          )
-            .attr('aria-label', phrases.aria_select_txtcolor)
-            .css('color', a('body').css('color')));
+            )
+              .attr('aria-label', phrases.aria_select_txtcolor)
+              .css('color', a('body').css('color')));
         var d = 'sepia(80%)' + ('cold' == b ? ' hue-rotate(200deg)' : '');
         'normal' != b &&
           '100%' != a('html').css('height') &&
@@ -1045,55 +1045,55 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
           return (
             'warm' == b
               ? (a(commons.dd + ' > #NagishLiColors > li > #NLWarmColors')
-                  .attr(
-                    'aria-label',
-                    phrases.aria_the_option +
-                      phrases.bl_filter +
-                      ' ' +
-                      phrases.r2m_on
-                  )
-                  .prepend(commons.checkmark)
-                  .parent('li')
-                  .addClass('active')
-                  .siblings('li')
-                  .removeClass('active')
-                  .find('span.sign')
-                  .remove(),
+                .attr(
+                  'aria-label',
+                  phrases.aria_the_option +
+                  phrases.bl_filter +
+                  ' ' +
+                  phrases.r2m_on
+                )
+                .prepend(commons.checkmark)
+                .parent('li')
+                .addClass('active')
+                .siblings('li')
+                .removeClass('active')
+                .find('span.sign')
+                .remove(),
                 a(commons.dd + ' > #NagishLiColors')
                   .prev('div.nl-dropdown-toggle')
                   .hasClass('open') ||
-                  a(
-                    '<span class="selected">' + phrases.bl_filter + '</span>'
-                  ).insertAfter(
-                    a(commons.dd + ' > #NagishLiColors')
-                      .prev('div', '.nl-dropdown-toggle')
-                      .children('.nl-dropdown-title')
-                  ))
+                a(
+                  '<span class="selected">' + phrases.bl_filter + '</span>'
+                ).insertAfter(
+                  a(commons.dd + ' > #NagishLiColors')
+                    .prev('div', '.nl-dropdown-toggle')
+                    .children('.nl-dropdown-title')
+                ))
               : (a(commons.dd + ' > #NagishLiColors > li > #NLColdColors')
-                  .attr(
-                    'aria-label',
-                    phrases.aria_the_option +
-                      phrases.lc_filter +
-                      ' ' +
-                      phrases.r2m_on
-                  )
-                  .prepend(commons.checkmark)
-                  .parent('li')
-                  .addClass('active')
-                  .siblings('li')
-                  .removeClass('active')
-                  .find('span.sign')
-                  .remove(),
+                .attr(
+                  'aria-label',
+                  phrases.aria_the_option +
+                  phrases.lc_filter +
+                  ' ' +
+                  phrases.r2m_on
+                )
+                .prepend(commons.checkmark)
+                .parent('li')
+                .addClass('active')
+                .siblings('li')
+                .removeClass('active')
+                .find('span.sign')
+                .remove(),
                 a(commons.dd + ' > #NagishLiColors')
                   .prev('div.nl-dropdown-toggle')
                   .hasClass('open') ||
-                  a(
-                    '<span class="selected">' + phrases.lc_filter + '</span>'
-                  ).insertAfter(
-                    a(commons.dd + ' > #NagishLiColors')
-                      .prev('div', '.nl-dropdown-toggle')
-                      .children('.nl-dropdown-title')
-                  )),
+                a(
+                  '<span class="selected">' + phrases.lc_filter + '</span>'
+                ).insertAfter(
+                  a(commons.dd + ' > #NagishLiColors')
+                    .prev('div', '.nl-dropdown-toggle')
+                    .children('.nl-dropdown-title')
+                )),
             !1
           );
       } else a('body').removeAttr('nl-colors'), a('html').css('height', ''), a(':root').css({ filter: '', '-webkit-filter': '', '-khtml-filter': '', '-ms-filter': '', '-o-filter': '', '-moz-filter': '' }), (b = 'normal');
@@ -1108,80 +1108,80 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
             (a('*')
               .not(commons.not)
               .each(function () {
-                for (var b = a(this).length; b--; )
+                for (var b = a(this).length; b--;)
                   a(this)[b].style.setProperty('background-color', '', ''),
                     a(this)[b].style.setProperty('color', '', ''),
                     a(this)[b].style.setProperty('border-color', '', '');
               }),
-            a(
-              commons.dd +
+              a(
+                commons.dd +
                 ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsBG > #NLCurrentBG, ' +
                 commons.dd +
                 ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsTXT > #NLCurrentTXT'
-            ).css({ 'background-color': 'transparent', display: 'none' }),
-            a(commons.dd + ' > #NagishLiColors > li > #NLCustomColors')
-              .children('span.sign')
-              .remove(),
-            a(
-              commons.dd +
+              ).css({ 'background-color': 'transparent', display: 'none' }),
+              a(commons.dd + ' > #NagishLiColors > li > #NLCustomColors')
+                .children('span.sign')
+                .remove(),
+              a(
+                commons.dd +
                 ' > #NagishLiColors > li > #NLCustomColors > #NLcolorPanel > li.selected'
-            ).removeClass('selected'),
-            a(
-              commons.dd +
+              ).removeClass('selected'),
+              a(
+                commons.dd +
                 " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
                 phrases.bg +
                 "'] > li[aria-label='" +
                 phrases.clr_custom +
                 "'] > input#NLColorPicker"
-            ).attr('value', h(a('body').css('background-color'))),
-            a(
-              commons.dd +
+              ).attr('value', h(a('body').css('background-color'))),
+              a(
+                commons.dd +
                 " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
                 phrases.txt +
                 "'] > li[aria-label='" +
                 phrases.clr_custom +
                 "'] > input#NLColorPicker"
-            ).attr('value', h(a('body').css('color'))),
-            a(
-              commons.dd +
+              ).attr('value', h(a('body').css('color'))),
+              a(
+                commons.dd +
                 " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
                 phrases.bg +
                 "'] > li[aria-label='" +
                 phrases.clr_custom +
                 "']"
-            )
-              .attr('aria-label', phrases.aria_select_bgcolor)
-              .css('background-color', a('body').css('background-color')),
-            a(
-              commons.dd +
+              )
+                .attr('aria-label', phrases.aria_select_bgcolor)
+                .css('background-color', a('body').css('background-color')),
+              a(
+                commons.dd +
                 " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
                 phrases.txt +
                 "'] > li[aria-label='" +
                 phrases.clr_custom +
                 "']"
-            )
-              .attr('aria-label', phrases.aria_select_txtcolor)
-              .css('color', a('body').css('color'))),
-          '100%' != a('html').css('height') && a('html').css('height', '100%'),
-          a(':root').css({
-            filter: 'saturate(800%)',
-            '-webkit-filter': 'saturate(800%)',
-            '-khtml-filter': 'saturate(800%)',
-            '-ms-filter': 'saturate(800%)',
-            '-o-filter': 'saturate(800%)',
-            '-moz-filter': 'saturate(800%)',
-          }),
-          a('body').attr('nl-colors', c),
-          b)
+              )
+                .attr('aria-label', phrases.aria_select_txtcolor)
+                .css('color', a('body').css('color'))),
+            '100%' != a('html').css('height') && a('html').css('height', '100%'),
+            a(':root').css({
+              filter: 'saturate(800%)',
+              '-webkit-filter': 'saturate(800%)',
+              '-khtml-filter': 'saturate(800%)',
+              '-ms-filter': 'saturate(800%)',
+              '-o-filter': 'saturate(800%)',
+              '-moz-filter': 'saturate(800%)',
+            }),
+            a('body').attr('nl-colors', c),
+            b)
         )
           return (
             a(commons.dd + ' > #NagishLiColors > li > #NLSaturateColors')
               .attr(
                 'aria-label',
                 phrases.aria_the_option +
-                  phrases.saturated +
-                  ' ' +
-                  phrases.r2m_on
+                phrases.saturated +
+                ' ' +
+                phrases.r2m_on
               )
               .prepend(commons.checkmark)
               .parent('li')
@@ -1193,13 +1193,13 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
             a(commons.dd + ' > #NagishLiColors')
               .prev('div.nl-dropdown-toggle')
               .hasClass('open') ||
-              a(
-                '<span class="selected">' + phrases.saturated + '</span>'
-              ).insertAfter(
-                a(commons.dd + ' > #NagishLiColors')
-                  .prev('div', '.nl-dropdown-toggle')
-                  .children('.nl-dropdown-title')
-              ),
+            a(
+              '<span class="selected">' + phrases.saturated + '</span>'
+            ).insertAfter(
+              a(commons.dd + ' > #NagishLiColors')
+                .prev('div', '.nl-dropdown-toggle')
+                .children('.nl-dropdown-title')
+            ),
             !1
           );
       } else a('body').removeAttr('nl-colors'), a('html').css('height', ''), a(':root').css({ filter: '', '-webkit-filter': '', '-khtml-filter': '', '-ms-filter': '', '-o-filter': '', '-moz-filter': '' }), (c = 'normal');
@@ -1210,10 +1210,10 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
       d = void 0 === d ? !1 : d;
       A &&
         ((l = f('read', 'colors')),
-        -1 !== l.indexOf(',')
-          ? ((e = 1 < l.split(',')[0].length ? l.split(',')[0] : '-'),
-            (l = 1 < l.split(',')[1].length ? l.split(',')[1] : '-'))
-          : (l = e = '-'));
+          -1 !== l.indexOf(',')
+            ? ((e = 1 < l.split(',')[0].length ? l.split(',')[0] : '-'),
+              (l = 1 < l.split(',')[1].length ? l.split(',')[1] : '-'))
+            : (l = e = '-'));
       d
         ? (a('body').attr('nl-colors', 'custom'),
           (d = {
@@ -1231,17 +1231,17 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
           }),
           'bg' == b
             ? ((b =
-                'he' == g
-                  ? 'undefined' !== typeof d[h(c)]
-                    ? phrases.bg + ' ' + d[h(c)]
-                    : d.custom
-                  : 'undefined' !== typeof d[h(c)]
+              'he' == g
+                ? 'undefined' !== typeof d[h(c)]
+                  ? phrases.bg + ' ' + d[h(c)]
+                  : d.custom
+                : 'undefined' !== typeof d[h(c)]
                   ? d[h(c)] + ' ' + phrases.bg.toLowerCase()
                   : d.custom),
               a('*')
                 .not(commons.not)
                 .each(function () {
-                  for (var b = a(this).length; b--; )
+                  for (var b = a(this).length; b--;)
                     a(this)[b].style.setProperty(
                       'background-color',
                       c,
@@ -1250,22 +1250,22 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
                 }),
               a(
                 commons.dd +
-                  ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsBG > #NLCurrentBG'
+                ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsBG > #NLCurrentBG'
               )
                 .css({ 'background-color': c, display: 'inline-block' })
                 .attr('aria-label', b))
             : ((b =
-                'he' == g
-                  ? 'undefined' !== typeof d[h(c)]
-                    ? phrases.txt + ' ' + d[h(c)]
-                    : d.custom
-                  : 'undefined' !== typeof d[h(c)]
+              'he' == g
+                ? 'undefined' !== typeof d[h(c)]
+                  ? phrases.txt + ' ' + d[h(c)]
+                  : d.custom
+                : 'undefined' !== typeof d[h(c)]
                   ? d[h(c)] + ' ' + phrases.txt.toLowerCase()
                   : d.custom),
               a('*')
                 .not(commons.not)
                 .each(function () {
-                  for (var b = a(this).length; b--; )
+                  for (var b = a(this).length; b--;)
                     a(this)[b].style.setProperty('color', c, 'important'),
                       a(this)[b].style.setProperty(
                         'border-color',
@@ -1275,20 +1275,20 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
                 }),
               a(
                 commons.dd +
-                  ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsTXT > #NLCurrentTXT'
+                ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsTXT > #NLCurrentTXT'
               )
                 .css({ 'background-color': c, display: 'inline-block' })
                 .attr('aria-label', b)),
           a('div#NLCustomColors').children('span.sign').length ||
-            (a(commons.dd + ' > #NagishLiColors > li.active > #NLNormalColors')
-              .children('span.sign')
-              .remove(),
+          (a(commons.dd + ' > #NagishLiColors > li.active > #NLNormalColors')
+            .children('span.sign')
+            .remove(),
             a(commons.dd + ' > #NagishLiColors > li.active > #NLNormalColors')
               .parent('li.active')
               .removeClass('active'),
             a(
               commons.dd +
-                ' > #NagishLiColors > li.not-clickable > #NLCustomColors'
+              ' > #NagishLiColors > li.not-clickable > #NLCustomColors'
             )
               .parent('li.not-clickable')
               .addClass('active'),
@@ -1296,48 +1296,48 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
             a(commons.dd + ' > #NagishLiColors')
               .prev('div.nl-dropdown-toggle')
               .hasClass('open') ||
-              a(
-                '<span class="selected">' + phrases.custom_colors + '</span>'
-              ).insertAfter(
-                a(commons.dd + ' > #NagishLiColors')
-                  .prev('div', '.nl-dropdown-toggle')
-                  .children('.nl-dropdown-title')
-              )))
+            a(
+              '<span class="selected">' + phrases.custom_colors + '</span>'
+            ).insertAfter(
+              a(commons.dd + ' > #NagishLiColors')
+                .prev('div', '.nl-dropdown-toggle')
+                .children('.nl-dropdown-title')
+            )))
         : a(
-            commons.dd +
-              ' > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel > li.selected'
-          ).length
-        ? ('custom' != a('body').attr('nl-colors') &&
+          commons.dd +
+          ' > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel > li.selected'
+        ).length
+          ? ('custom' != a('body').attr('nl-colors') &&
             (a('html').css('height', ''),
-            a(':root').css({
-              filter: '',
-              '-webkit-filter': '',
-              '-moz-filter': '',
-              '-khtml-filter': '',
-              '-ms-filter': '',
-              '-o-filter': '',
-            })),
-          a('body').attr('nl-colors', 'custom'),
-          (c = a(
-            commons.dd +
+              a(':root').css({
+                filter: '',
+                '-webkit-filter': '',
+                '-moz-filter': '',
+                '-khtml-filter': '',
+                '-ms-filter': '',
+                '-o-filter': '',
+              })),
+            a('body').attr('nl-colors', 'custom'),
+            (c = a(
+              commons.dd +
               ' > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel > li.selected'
-          ).css('background-color')),
-          'bg' == b
-            ? (a('*')
+            ).css('background-color')),
+            'bg' == b
+              ? (a('*')
                 .not(commons.not)
                 .each(function () {
-                  for (var b = a(this).length; b--; )
+                  for (var b = a(this).length; b--;)
                     a(this)[b].style.setProperty(
                       'background-color',
                       c,
                       'important'
                     );
                 }),
-              (e = h(c)))
-            : (a('*')
+                (e = h(c)))
+              : (a('*')
                 .not(commons.not)
                 .each(function () {
-                  for (var b = a(this).length; b--; )
+                  for (var b = a(this).length; b--;)
                     a(this)[b].style.setProperty('color', c, 'important'),
                       a(this)[b].style.setProperty(
                         'border-color',
@@ -1345,43 +1345,43 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
                         'important'
                       );
                 }),
-              (l = h(c))),
-          f('change', 'colors', e + ',' + l))
-        : ('bg' == b
+                (l = h(c))),
+            f('change', 'colors', e + ',' + l))
+          : ('bg' == b
             ? (a('*')
-                .not(commons.not)
-                .each(function () {
-                  for (var b = a(this).length; b--; )
-                    a(this)[b].style.setProperty('background-color', '', '');
-                }),
+              .not(commons.not)
+              .each(function () {
+                for (var b = a(this).length; b--;)
+                  a(this)[b].style.setProperty('background-color', '', '');
+              }),
               (e = '-'))
             : (a('*')
-                .not(commons.not)
-                .each(function () {
-                  for (var b = a(this).length; b--; )
-                    a(this)[b].style.setProperty('color', '', ''),
-                      a(this)[b].style.setProperty('border-color', '', '');
-                }),
+              .not(commons.not)
+              .each(function () {
+                for (var b = a(this).length; b--;)
+                  a(this)[b].style.setProperty('color', '', ''),
+                    a(this)[b].style.setProperty('border-color', '', '');
+              }),
               (l = '-')),
-          f('change', 'colors', '-' == e && '-' == l ? 'normal' : e + ',' + l),
-          '-' == e && '-' == l && a('body').removeAttr('nl-colors'));
+            f('change', 'colors', '-' == e && '-' == l ? 'normal' : e + ',' + l),
+            '-' == e && '-' == l && a('body').removeAttr('nl-colors'));
     }
     function z(b) {
       b = void 0 === b ? 'normal' : b;
       'custom' == a('body').attr('nl-colors')
         ? (a('*')
-            .not(commons.not)
-            .each(function () {
-              for (var b = a(this).length; b--; )
-                a(this)[b].style.setProperty('background-color', '', ''),
-                  a(this)[b].style.setProperty('color', '', ''),
-                  a(this)[b].style.setProperty('border-color', '', '');
-            }),
+          .not(commons.not)
+          .each(function () {
+            for (var b = a(this).length; b--;)
+              a(this)[b].style.setProperty('background-color', '', ''),
+                a(this)[b].style.setProperty('color', '', ''),
+                a(this)[b].style.setProperty('border-color', '', '');
+          }),
           a(
             commons.dd +
-              ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsBG > #NLCurrentBG, ' +
-              commons.dd +
-              ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsTXT > #NLCurrentTXT'
+            ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsBG > #NLCurrentBG, ' +
+            commons.dd +
+            ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsTXT > #NLCurrentTXT'
           )
             .css({ 'background-color': 'transparent', display: 'none' })
             .removeAttr('aria-label'),
@@ -1390,42 +1390,42 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
             .remove(),
           a(
             commons.dd +
-              ' > #NagishLiColors > li > #NLCustomColors > #NLcolorPanel > li.selected'
+            ' > #NagishLiColors > li > #NLCustomColors > #NLcolorPanel > li.selected'
           ).removeClass('selected'),
           a(
             commons.dd +
-              " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
-              phrases.bg +
-              "'] > li[aria-label='" +
-              phrases.clr_custom +
-              "'] > input#NLColorPicker"
+            " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
+            phrases.bg +
+            "'] > li[aria-label='" +
+            phrases.clr_custom +
+            "'] > input#NLColorPicker"
           ).attr('value', h(a('body').css('background-color'))),
           a(
             commons.dd +
-              " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
-              phrases.txt +
-              "'] > li[aria-label='" +
-              phrases.clr_custom +
-              "'] > input#NLColorPicker"
+            " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
+            phrases.txt +
+            "'] > li[aria-label='" +
+            phrases.clr_custom +
+            "'] > input#NLColorPicker"
           ).attr('value', h(a('body').css('color'))),
           a(
             commons.dd +
-              " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
-              phrases.bg +
-              "'] > li[aria-label='" +
-              phrases.clr_custom +
-              "']"
+            " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
+            phrases.bg +
+            "'] > li[aria-label='" +
+            phrases.clr_custom +
+            "']"
           )
             .removeClass('selected')
             .attr('aria-label', phrases.aria_select_bgcolor)
             .css('background-color', a('body').css('background-color')),
           a(
             commons.dd +
-              " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
-              phrases.txt +
-              "'] > li[aria-label='" +
-              phrases.clr_custom +
-              "']"
+            " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
+            phrases.txt +
+            "'] > li[aria-label='" +
+            phrases.clr_custom +
+            "']"
           )
             .removeClass('selected')
             .attr('aria-label', phrases.aria_select_txtcolor)
@@ -1446,54 +1446,54 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
     function R(b) {
       (void 0 === b ? 0 : b)
         ? (a(commons.dd + ' > #NagishLiText > li > #NLNormalText')
-            .removeClass('active')
-            .find('span.sign')
-            .remove(),
+          .removeClass('active')
+          .find('span.sign')
+          .remove(),
           (b = f('read', 'text')))
         : ((b =
-            16 != parseInt(a('body').css('font-size'))
-              ? parseInt(a('body').css('font-size'))
-              : 16),
+          16 != parseInt(a('body').css('font-size'))
+            ? parseInt(a('body').css('font-size'))
+            : 16),
           (b += 1));
       var c = b;
       a('*')
         .not(commons.not)
         .each(function () {
-          for (var b = a(this).length; b--; )
+          for (var b = a(this).length; b--;)
             a(this)[b].style.setProperty('font-size', c + 'px', 'important');
         });
       'he' == g
         ? (a(commons.dd + ' > .nl-dropdown-toggle > #NLTextVal')[0].innerHTML =
-            ':&nbsp;' + c)
+          ':&nbsp;' + c)
         : (a(commons.dd + ' > .nl-dropdown-toggle > #NLTextVal')[0].innerHTML =
-            ':&nbsp;' + c + 'px');
+          ':&nbsp;' + c + 'px');
       a('body').attr('nl-text', c);
       f('change', 'text', c);
     }
     function S(b) {
       (void 0 === b ? 0 : b)
         ? (a(commons.dd + ' > #NagishLiText > li > #NLNormalText')
-            .removeClass('active')
-            .find('span.sign')
-            .remove(),
+          .removeClass('active')
+          .find('span.sign')
+          .remove(),
           (b = f('read', 'text')))
         : ((b =
-            16 != parseInt(a('body').css('font-size'))
-              ? parseInt(a('body').css('font-size'))
-              : 16),
+          16 != parseInt(a('body').css('font-size'))
+            ? parseInt(a('body').css('font-size'))
+            : 16),
           --b);
       var c = Math.max(0, b);
       a('*')
         .not(commons.not)
         .each(function () {
-          for (var b = a(this).length; b--; )
+          for (var b = a(this).length; b--;)
             a(this)[b].style.setProperty('font-size', c + 'px', 'important');
         });
       'he' == g
         ? (a(commons.dd + ' > .nl-dropdown-toggle > #NLTextVal')[0].innerHTML =
-            ':&nbsp;' + c)
+          ':&nbsp;' + c)
         : (a(commons.dd + ' > .nl-dropdown-toggle > #NLTextVal')[0].innerHTML =
-            ':&nbsp;' + c + 'px');
+          ':&nbsp;' + c + 'px');
       a('body').attr('nl-text', c);
       f('change', 'text', c);
     }
@@ -1501,17 +1501,17 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
       b = void 0 === b ? '0' : b;
       a('body[nl-text]').length &&
         (a('body').removeAttr('nl-text'),
-        a('*')
-          .not(commons.not)
-          .each(function () {
-            for (var b = a(this).length; b--; )
-              a(this)[b].style.setProperty('font-size', '', ''),
-                '0px' == a(this).css('font-size') &&
+          a('*')
+            .not(commons.not)
+            .each(function () {
+              for (var b = a(this).length; b--;)
+                a(this)[b].style.setProperty('font-size', '', ''),
+                  '0px' == a(this).css('font-size') &&
                   a(this)[b].style.setProperty('font-size', 'initial', '');
-          }),
-        (a(commons.dd + ' > .nl-dropdown-toggle > #NLTextVal')[0].innerHTML =
-          ''),
-        f('change', 'text', b));
+            }),
+          (a(commons.dd + ' > .nl-dropdown-toggle > #NLTextVal')[0].innerHTML =
+            ''),
+          f('change', 'text', b));
     }
     function Y(b) {
       b = void 0 === b ? !1 : b;
@@ -1544,13 +1544,13 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
           a('' + commons.dd + ' > #NagishLiDisplay')
             .prev('div.nl-dropdown-toggle')
             .hasClass('open') ||
-            a(
-              '<span class="selected">' + phrases.text_only + '</span>'
-            ).insertAfter(
-              a('' + commons.dd + ' > #NagishLiDisplay')
-                .prev('div', '.nl-dropdown-toggle')
-                .children('.nl-dropdown-title')
-            ),
+          a(
+            '<span class="selected">' + phrases.text_only + '</span>'
+          ).insertAfter(
+            a('' + commons.dd + ' > #NagishLiDisplay')
+              .prev('div', '.nl-dropdown-toggle')
+              .children('.nl-dropdown-title')
+          ),
           !1
         );
       f('change', 'display', c);
@@ -1560,7 +1560,7 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
         ? (a('body').attr('nl-display', 'images'),
           Z(),
           a("link[rel='stylesheet']").prop('disabled') &&
-            a("link[rel='stylesheet']").prop('disabled', !1),
+          a("link[rel='stylesheet']").prop('disabled', !1),
           a('body > *').not('#NagishLiTag').css('visibility', 'hidden'),
           a('body > .fb-like').css('display', 'none'),
           a("iframe[src*='youtube.com'], video").css('visibility', 'hidden'),
@@ -1577,9 +1577,9 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
             .attr(
               'aria-label',
               phrases.aria_the_option +
-                phrases.images_only +
-                ' ' +
-                phrases.r2m_on
+              phrases.images_only +
+              ' ' +
+              phrases.r2m_on
             )
             .prepend(commons.checkmark)
             .parent('li')
@@ -1591,13 +1591,13 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
           a(commons.dd + ' > #NagishLiDisplay')
             .prev('div.nl-dropdown-toggle')
             .hasClass('open') ||
-            a(
-              '<span class="selected">' + phrases.images_only + '</span>'
-            ).insertAfter(
-              a(commons.dd + ' > #NagishLiDisplay')
-                .prev('div', '.nl-dropdown-toggle')
-                .children('.nl-dropdown-title')
-            ),
+          a(
+            '<span class="selected">' + phrases.images_only + '</span>'
+          ).insertAfter(
+            a(commons.dd + ' > #NagishLiDisplay')
+              .prev('div', '.nl-dropdown-toggle')
+              .children('.nl-dropdown-title')
+          ),
           !1
         );
       f('change', 'display', c);
@@ -1606,25 +1606,25 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
       b = void 0 === b ? 'normal' : b;
       a('body[nl-display]').length &&
         (a('body').removeAttr('nl-display'),
-        a("link[rel='stylesheet']").prop('disabled') &&
+          a("link[rel='stylesheet']").prop('disabled') &&
           a("link[rel='stylesheet']").prop('disabled', !1),
-        a("body > *, img, iframe[src*='youtube.com'], video").css({
-          display: '',
-          visibility: '',
-        }),
-        a('body').css('background-image', ''),
-        f('change', 'display', b));
+          a("body > *, img, iframe[src*='youtube.com'], video").css({
+            display: '',
+            visibility: '',
+          }),
+          a('body').css('background-image', ''),
+          f('change', 'display', b));
     }
     function T(b) {
       b
         ? (a(commons.dd + ' > #NagishLiHighlight > li > #NLHighlightLinks')
-            .attr(
-              'aria-label',
-              phrases.aria_the_option + phrases.hl_links + ' ' + phrases.r2m_on
-            )
-            .prepend(commons.checkmark)
-            .parent('li')
-            .addClass('active'),
+          .attr(
+            'aria-label',
+            phrases.aria_the_option + phrases.hl_links + ' ' + phrases.r2m_on
+          )
+          .prepend(commons.checkmark)
+          .parent('li')
+          .addClass('active'),
           a('* a')
             .not('#NagishLiBar a')
             .each(function () {
@@ -1634,96 +1634,96 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
               a('body').attr('nl-hl-links', '1');
             }))
         : (a('body[nl-hl-links]').length
-            ? (a('* a')
-                .not('#NagishLiBar a')
-                .each(function () {
-                  this.style.setProperty('outline', '', '');
-                  this.style.setProperty('background-color', '', '');
-                  this.style.setProperty('color', '', '');
-                }),
-              a('body[nl-hl-headings]').length &&
-                a(
-                  'h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 span, h2 span, h3 span, h4 span, h5 span, h6 span'
-                ).each(function () {
-                  this.style.setProperty('color', 'inherit', 'important');
-                }),
-              a('body').removeAttr('nl-hl-links'),
-              (b = '0'))
-            : (a('* a')
-                .not('#NagishLiBar a')
-                .each(function () {
-                  this.style.setProperty(
-                    'outline',
-                    '3px red dotted',
-                    'important'
-                  );
-                  this.style.setProperty(
-                    'background-color',
-                    'black',
-                    'important'
-                  );
-                  this.style.setProperty('color', 'yellow', 'important');
-                }),
-              a('body').attr('nl-hl-links', '1'),
-              (b = '1')),
+          ? (a('* a')
+            .not('#NagishLiBar a')
+            .each(function () {
+              this.style.setProperty('outline', '', '');
+              this.style.setProperty('background-color', '', '');
+              this.style.setProperty('color', '', '');
+            }),
+            a('body[nl-hl-headings]').length &&
+            a(
+              'h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 span, h2 span, h3 span, h4 span, h5 span, h6 span'
+            ).each(function () {
+              this.style.setProperty('color', 'inherit', 'important');
+            }),
+            a('body').removeAttr('nl-hl-links'),
+            (b = '0'))
+          : (a('* a')
+            .not('#NagishLiBar a')
+            .each(function () {
+              this.style.setProperty(
+                'outline',
+                '3px red dotted',
+                'important'
+              );
+              this.style.setProperty(
+                'background-color',
+                'black',
+                'important'
+              );
+              this.style.setProperty('color', 'yellow', 'important');
+            }),
+            a('body').attr('nl-hl-links', '1'),
+            (b = '1')),
           f('change', 'highlight', { to: b, pos: 0 }));
     }
     function U(b) {
       b
         ? (a(commons.dd + ' > #NagishLiHighlight > li > #NLHighlightHeadings')
-            .attr(
-              'aria-label',
-              phrases.aria_the_option +
-                phrases.hl_headings +
-                ' ' +
-                phrases.r2m_on
-            )
-            .prepend(commons.checkmark)
-            .parent('li')
-            .addClass('active'),
+          .attr(
+            'aria-label',
+            phrases.aria_the_option +
+            phrases.hl_headings +
+            ' ' +
+            phrases.r2m_on
+          )
+          .prepend(commons.checkmark)
+          .parent('li')
+          .addClass('active'),
           a('h1, h2, h3, h4, h5, h6').each(function () {
             this.style.setProperty('outline', '3px red dotted', 'important');
             this.style.setProperty('background', 'black', 'important');
             this.style.setProperty('color', 'yellow', 'important');
           }),
           a('body[nl-hl-links]').length ||
+          a(
+            'h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 span, h2 span, h3 span, h4 span, h5 span, h6 span'
+          ).each(function () {
+            this.style.setProperty('color', 'inherit', 'important');
+          }),
+          a('body').attr('nl-hl-headings', '1'))
+        : (a('body[nl-hl-headings]').length
+          ? (a('h1, h2, h3, h4, h5, h6').each(function () {
+            this.style.setProperty('outline', '', '');
+            this.style.setProperty('background', '', '');
+            this.style.setProperty('color', '', '');
+          }),
+            a('body[nl-hl-links]').length ||
+            a(
+              'h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 span, h2 span, h3 span, h4 span, h5 span, h6 span'
+            ).each(function () {
+              this.style.setProperty('color', '', '');
+            }),
+            a('body').removeAttr('nl-hl-headings'),
+            (b = '0'))
+          : (a('h1, h2, h3, h4, h5, h6, h1').each(function () {
+            this.style.setProperty(
+              'outline',
+              '3px red dotted',
+              'important'
+            );
+            this.style.setProperty('background', 'black', 'important');
+            this.style.setProperty('color', 'yellow', 'important');
+          }),
+            a('body[nl-hl-links]').length ||
             a(
               'h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 span, h2 span, h3 span, h4 span, h5 span, h6 span'
             ).each(function () {
               this.style.setProperty('color', 'inherit', 'important');
             }),
-          a('body').attr('nl-hl-headings', '1'))
-        : (a('body[nl-hl-headings]').length
-            ? (a('h1, h2, h3, h4, h5, h6').each(function () {
-                this.style.setProperty('outline', '', '');
-                this.style.setProperty('background', '', '');
-                this.style.setProperty('color', '', '');
-              }),
-              a('body[nl-hl-links]').length ||
-                a(
-                  'h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 span, h2 span, h3 span, h4 span, h5 span, h6 span'
-                ).each(function () {
-                  this.style.setProperty('color', '', '');
-                }),
-              a('body').removeAttr('nl-hl-headings'),
-              (b = '0'))
-            : (a('h1, h2, h3, h4, h5, h6, h1').each(function () {
-                this.style.setProperty(
-                  'outline',
-                  '3px red dotted',
-                  'important'
-                );
-                this.style.setProperty('background', 'black', 'important');
-                this.style.setProperty('color', 'yellow', 'important');
-              }),
-              a('body[nl-hl-links]').length ||
-                a(
-                  'h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 span, h2 span, h3 span, h4 span, h5 span, h6 span'
-                ).each(function () {
-                  this.style.setProperty('color', 'inherit', 'important');
-                }),
-              (b = '1'),
-              a('body').attr('nl-hl-headings', '1')),
+            (b = '1'),
+            a('body').attr('nl-hl-headings', '1')),
           f('change', 'highlight', { to: b, pos: 1 }));
     }
     function ca(b) {
@@ -1731,10 +1731,10 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
         b
           ? ((b = f('read', 'zoom')), (b = +b))
           : ((b = a("body[style*='zoom']").length
-              ? -1 !== a('body').css('zoom').indexOf('%')
-                ? parseInt(a('body').css('zoom')) / 100
-                : parseFloat(a('body').css('zoom'))
-              : 1),
+            ? -1 !== a('body').css('zoom').indexOf('%')
+              ? parseInt(a('body').css('zoom')) / 100
+              : parseFloat(a('body').css('zoom'))
+            : 1),
             (b = +(b + 0.1).toFixed(1))),
           a('body').css('zoom', b),
           a('body > iframe').css({
@@ -1753,11 +1753,11 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
         b
           ? ((b = f('read', 'zoom')), (b = +b))
           : (a("body[style*='transform: scale']").length
-              ? ((b = a('body')
-                  .css('transform')
-                  .match(/-?[\d\.]+/g)),
-                (b = parseFloat(b[0])))
-              : (b = 1),
+            ? ((b = a('body')
+              .css('transform')
+              .match(/-?[\d\.]+/g)),
+              (b = parseFloat(b[0])))
+            : (b = 1),
             (b = +(b + 0.1).toFixed(1))),
           a('body, body > iframe').css({
             '-webkit-transform-origin': '0 0',
@@ -1776,7 +1776,7 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
       a('html')[0].style.setProperty('overflow-y', 'auto', 'important');
       a(
         commons.dd +
-          ' > #NagishLiMisc > li.not-clickable > #NLZoom > #NLZoomVal'
+        ' > #NagishLiMisc > li.not-clickable > #NLZoom > #NLZoomVal'
       )[0].innerHTML = b + '&nbsp;';
     }
     function da(b) {
@@ -1784,10 +1784,10 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
         b
           ? ((b = f('read', 'zoom')), (b = +b))
           : ((b = a("body[style*='zoom']").length
-              ? -1 !== a('body').css('zoom').indexOf('%')
-                ? parseInt(a('body').css('zoom')) / 100
-                : parseFloat(a('body').css('zoom'))
-              : 1),
+            ? -1 !== a('body').css('zoom').indexOf('%')
+              ? parseInt(a('body').css('zoom')) / 100
+              : parseFloat(a('body').css('zoom'))
+            : 1),
             (b = +(b - 0.1).toFixed(1))),
           a('body').css('zoom', b),
           a('body > iframe').css({
@@ -1806,11 +1806,11 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
         b
           ? ((b = f('read', 'zoom')), (b = +b))
           : (a("body[style*='transform: scale']").length
-              ? ((b = a('body')
-                  .css('transform')
-                  .match(/-?[\d\.]+/g)),
-                (b = parseFloat(b[0])))
-              : (b = 1),
+            ? ((b = a('body')
+              .css('transform')
+              .match(/-?[\d\.]+/g)),
+              (b = parseFloat(b[0])))
+            : (b = 1),
             (b = +(b - 0.1).toFixed(1))),
           a('body, body > iframe').css({
             '-webkit-transform-origin': '0 0',
@@ -1829,10 +1829,10 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
       1 >= b &&
         'absolute' == a(commons.bar).css('position') &&
         (a('html')[0].style.setProperty('overflow-y', '', ''),
-        a(commons.bar)[0].style.setProperty('position', 'fixed', 'important'));
+          a(commons.bar)[0].style.setProperty('position', 'fixed', 'important'));
       a(
         commons.dd +
-          ' > #NagishLiMisc > li.not-clickable > #NLZoom > #NLZoomVal'
+        ' > #NagishLiMisc > li.not-clickable > #NLZoom > #NLZoomVal'
       )[0].innerHTML = b + '&nbsp;';
     }
     function ea(b) {
@@ -1854,7 +1854,7 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
       a(commons.bar)[0].style.setProperty('position', 'fixed', 'important');
       a(
         commons.dd +
-          ' > #NagishLiMisc > li.not-clickable > #NLZoom > #NLZoomVal'
+        ' > #NagishLiMisc > li.not-clickable > #NLZoom > #NLZoomVal'
       ).empty();
       f('change', 'zoom', b);
     }
@@ -1894,36 +1894,36 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
           a(commons.bar)[0].style.setProperty('left', '0', 'important'),
           a(commons.bar)[0].style.setProperty('right', 'auto', 'important'),
           'he' == g &&
-            a('span#NagishLiMove > span').each(function () {
-              a(this).attr('data-balloon-pos', phrases.align_right);
-            }))
+          a('span#NagishLiMove > span').each(function () {
+            a(this).attr('data-balloon-pos', phrases.align_right);
+          }))
         : 'BR' == b
-        ? (a(commons.bar)[0].style.setProperty('bottom', '0vh', 'important'),
-          a(commons.bar)[0].style.setProperty('top', 'auto', 'important'),
-          a(commons.bar)[0].style.setProperty('right', '0', 'important'),
-          a(commons.bar)[0].style.setProperty('left', 'auto', 'important'),
-          'he' == g &&
+          ? (a(commons.bar)[0].style.setProperty('bottom', '0vh', 'important'),
+            a(commons.bar)[0].style.setProperty('top', 'auto', 'important'),
+            a(commons.bar)[0].style.setProperty('right', '0', 'important'),
+            a(commons.bar)[0].style.setProperty('left', 'auto', 'important'),
+            'he' == g &&
             a('span#NagishLiMove > span').each(function () {
               a(this).attr('data-balloon-pos', phrases.align_left);
             }))
-        : 'TR' == b
-        ? (a(commons.bar)[0].style.setProperty('bottom', 'auto', 'important'),
-          a(commons.bar)[0].style.setProperty('top', '0vh', 'important'),
-          a(commons.bar)[0].style.setProperty('right', '0', 'important'),
-          a(commons.bar)[0].style.setProperty('left', 'auto', 'important'),
-          'he' == g &&
-            a('span#NagishLiMove > span').each(function () {
-              a(this).attr('data-balloon-pos', phrases.align_left);
-            }))
-        : 'BL' == b &&
-          (a(commons.bar)[0].style.setProperty('bottom', '0vh', 'important'),
-          a(commons.bar)[0].style.setProperty('top', 'auto', 'important'),
-          a(commons.bar)[0].style.setProperty('right', 'auto', 'important'),
-          a(commons.bar)[0].style.setProperty('left', '0', 'important'),
-          'he' == g &&
-            a('span#NagishLiMove > span').each(function () {
-              a(this).attr('data-balloon-pos', phrases.align_right);
-            }));
+          : 'TR' == b
+            ? (a(commons.bar)[0].style.setProperty('bottom', 'auto', 'important'),
+              a(commons.bar)[0].style.setProperty('top', '0vh', 'important'),
+              a(commons.bar)[0].style.setProperty('right', '0', 'important'),
+              a(commons.bar)[0].style.setProperty('left', 'auto', 'important'),
+              'he' == g &&
+              a('span#NagishLiMove > span').each(function () {
+                a(this).attr('data-balloon-pos', phrases.align_left);
+              }))
+            : 'BL' == b &&
+            (a(commons.bar)[0].style.setProperty('bottom', '0vh', 'important'),
+              a(commons.bar)[0].style.setProperty('top', 'auto', 'important'),
+              a(commons.bar)[0].style.setProperty('right', 'auto', 'important'),
+              a(commons.bar)[0].style.setProperty('left', '0', 'important'),
+              'he' == g &&
+              a('span#NagishLiMove > span').each(function () {
+                a(this).attr('data-balloon-pos', phrases.align_right);
+              }));
       a(commons.bar + ' > #NagishLiBarStrip > #NagishLiMove > span').css(
         'visibility',
         'visible'
@@ -1947,7 +1947,7 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
           a('body').removeAttr('nl-animations'),
           (a(
             commons.dd +
-              ' > #NagishLiMisc > li > #NLAnimations > #NLAnimationsVal'
+            ' > #NagishLiMisc > li > #NLAnimations > #NLAnimationsVal'
           )[0].innerHTML = '&#x25ba;&nbsp;' + phrases.animations_on),
           (c = 'on'))
         : ((jQuery.fx.off = !0),
@@ -1964,7 +1964,7 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
           a('body').attr('nl-animations', c),
           (a(
             commons.dd +
-              ' > #NagishLiMisc > li > #NLAnimations > #NLAnimationsVal'
+            ' > #NagishLiMisc > li > #NLAnimations > #NLAnimationsVal'
           )[0].innerHTML =
             '<span aria-hidden="true">&#x275a;&#x275a;&nbsp;</span>' +
             phrases.animations_off));
@@ -1987,10 +1987,10 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
           (c = 'off');
       else {
         var d = function (b, c) {
-            3 === c.nodeType
-              ? e.test(c.data) && a(c).replaceWith(c.data.replace(e, l))
-              : a(c).not('iframe').contents().each(d);
-          },
+          3 === c.nodeType
+            ? e.test(c.data) && a(c).replaceWith(c.data.replace(e, l))
+            : a(c).not('iframe').contents().each(d);
+        },
           e = /([0|1][0-9-]{9,})/g,
           l =
             '$1<span style="display: inline !important; overflow-x: visible !important;" class="r2m" data-balloon="' +
@@ -2007,15 +2007,15 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
             (a(commons.bar + ' > #nlr2mp').length ||
               a(commons.bar + ' > #nlr2ms').length)) ||
           (ma(q + '/sfx/male/' + g + '_digits.js', 'nlr2ms'),
-          a('nagishli').append(
-            '<audio crossorigin="anonymous" id="nlr2mp" style="display: none !important;">' +
+            a('nagishli').append(
+              '<audio crossorigin="anonymous" id="nlr2mp" style="display: none !important;">' +
               phrases.not_supported +
               '</audio>'
-          ),
-          a('body').attr('nl-r2m', '1').not(commons.not).each(d),
-          (a(
-            commons.dd + ' > #NagishLiMisc > li > #NLR2M > #NLR2MVal'
-          )[0].innerHTML = phrases.r2m_on));
+            ),
+            a('body').attr('nl-r2m', '1').not(commons.not).each(d),
+            (a(
+              commons.dd + ' > #NagishLiMisc > li > #NLR2M > #NLR2MVal'
+            )[0].innerHTML = phrases.r2m_on));
         a('span.r2m > img').click(function (b) {
           b.preventDefault();
           if (X)
@@ -2031,10 +2031,10 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
               speechSynthesis.speak(b);
           else {
             var c = function (a) {
-                e.src = 'data:audio/mp3;base64,' + edgts[a];
-                e.load();
-                e.play();
-              },
+              e.src = 'data:audio/mp3;base64,' + edgts[a];
+              e.load();
+              e.play();
+            },
               d = a(this)
                 .parent('span.r2m')
                 .attr('nl-r2m-data')
@@ -2062,37 +2062,37 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
         return (
           'black' == b
             ? a(commons.checkmark).prependTo(
-                a(
-                  commons.dd +
-                    ' > #NagishLiMisc > li > #NLCursor > #NLCursorBlack'
-                )
-                  .attr(
-                    'aria-label',
-                    phrases.aria_the_option +
-                      phrases.cursor +
-                      ' ' +
-                      phrases.cursor_black +
-                      ' ' +
-                      phrases.r2m_on
-                  )
-                  .addClass('active')
+              a(
+                commons.dd +
+                ' > #NagishLiMisc > li > #NLCursor > #NLCursorBlack'
               )
-            : a(commons.checkmark).prependTo(
-                a(
-                  commons.dd +
-                    ' > #NagishLiMisc > li > #NLCursor > #NLCursorWhite'
+                .attr(
+                  'aria-label',
+                  phrases.aria_the_option +
+                  phrases.cursor +
+                  ' ' +
+                  phrases.cursor_black +
+                  ' ' +
+                  phrases.r2m_on
                 )
-                  .attr(
-                    'aria-label',
-                    phrases.aria_the_option +
-                      phrases.cursor +
-                      ' ' +
-                      phrases.cursor_white +
-                      ' ' +
-                      phrases.r2m_on
-                  )
-                  .addClass('active')
-              ),
+                .addClass('active')
+            )
+            : a(commons.checkmark).prependTo(
+              a(
+                commons.dd +
+                ' > #NagishLiMisc > li > #NLCursor > #NLCursorWhite'
+              )
+                .attr(
+                  'aria-label',
+                  phrases.aria_the_option +
+                  phrases.cursor +
+                  ' ' +
+                  phrases.cursor_white +
+                  ' ' +
+                  phrases.r2m_on
+                )
+                .addClass('active')
+            ),
           !1
         );
       f('change', 'cursor', b);
@@ -2100,65 +2100,65 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
     function ja() {
       a(commons.dd + ' > .nl-dropdown-toggle.open').length
         ? a(commons.bar + ' > #NagishLiBarStrip > #NagishLiToggleMenus').attr({
-            class: 'collapse-all',
-            'aria-label': phrases.collapse_all,
-          })
+          class: 'collapse-all',
+          'aria-label': phrases.collapse_all,
+        })
         : a(commons.bar + ' > #NagishLiBarStrip > #NagishLiToggleMenus').attr({
-            class: 'expand-all',
-            'aria-label': phrases.expand_all,
-          });
+          class: 'expand-all',
+          'aria-label': phrases.expand_all,
+        });
     }
     function V(b, c) {
       b = void 0 === b ? !1 : b;
       c = void 0 === c ? '1' : c;
       a(commons.dd + ' > #NagishLiInfo > #NagishLiHelp').hasClass('active')
         ? (a(commons.dd + ' > #NagishLiInfo > #NagishLiHelp')
-            .removeClass('active')
-            .find('span.sign')
-            .remove(),
+          .removeClass('active')
+          .find('span.sign')
+          .remove(),
           a(commons.dd + ' > .nl-dropdown-menu > li > div')
             .children('span.help, span.notice')
             .hide(),
           a(
             commons.dd +
-              ' > .nl-dropdown-menu > li > div > span.nagishli-option-title, ' +
-              commons.menus +
-              ' > li > div > span.nl-dropdown-title, ' +
-              commons.dd +
-              ' > .nl-dropdown-toggle > .nl-dropdown-arrow'
+            ' > .nl-dropdown-menu > li > div > span.nagishli-option-title, ' +
+            commons.menus +
+            ' > li > div > span.nl-dropdown-title, ' +
+            commons.dd +
+            ' > .nl-dropdown-toggle > .nl-dropdown-arrow'
           ).attr('aria-hidden', 'false'),
           a(
             commons.dd +
-              ' > .nl-dropdown-menu > li > div > span.nagishli-sr-only, ' +
-              commons.menus +
-              ' > li > div > span.nagishli-sr-only'
+            ' > .nl-dropdown-menu > li > div > span.nagishli-sr-only, ' +
+            commons.menus +
+            ' > li > div > span.nagishli-sr-only'
           ).attr('aria-hidden', 'true'),
           (c = '0'))
         : (a(commons.checkmark).prependTo(
-            a(commons.dd + ' > #NagishLiInfo > #NagishLiHelp')
-              .attr(
-                'aria-label',
-                phrases.aria_the_option + phrases.help + ' ' + phrases.r2m_on
-              )
-              .addClass('active')
-              .children('div')
-          ),
+          a(commons.dd + ' > #NagishLiInfo > #NagishLiHelp')
+            .attr(
+              'aria-label',
+              phrases.aria_the_option + phrases.help + ' ' + phrases.r2m_on
+            )
+            .addClass('active')
+            .children('div')
+        ),
           a(commons.dd + ' > .nl-dropdown-menu > li > div')
             .children('span.help, span.notice')
             .css('display', 'inline-block'),
           a(
             commons.dd +
-              ' > .nl-dropdown-menu > li > div > span.nagishli-option-title, ' +
-              commons.menus +
-              ' > li > div > span.nl-dropdown-title, ' +
-              commons.dd +
-              ' > .nl-dropdown-toggle > .nl-dropdown-arrow'
+            ' > .nl-dropdown-menu > li > div > span.nagishli-option-title, ' +
+            commons.menus +
+            ' > li > div > span.nl-dropdown-title, ' +
+            commons.dd +
+            ' > .nl-dropdown-toggle > .nl-dropdown-arrow'
           ).attr('aria-hidden', 'true'),
           a(
             commons.dd +
-              ' > .nl-dropdown-menu > li > div > span.nagishli-sr-only, ' +
-              commons.menus +
-              ' > li > div > span.nagishli-sr-only'
+            ' > .nl-dropdown-menu > li > div > span.nagishli-sr-only, ' +
+            commons.menus +
+            ' > li > div > span.nagishli-sr-only'
           ).attr('aria-hidden', 'false'));
       b || f('change', 'help', c);
     }
@@ -2174,92 +2174,92 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
           a('#NagishLiMenus .nl-dropdown-toggle').off('keypress.nlkbnavclk'),
           (c = 'off'))
         : (a(
-            commons.bar +
-              ' > #NagishLiBarStrip, ' +
-              commons.bar +
-              ' > #NagishLiBarStrip > #NagishLiMove > span#NagishLiMoveTL, ' +
-              commons.bar +
-              ' > #NagishLiBarStrip > #NagishLiMove > span#NagishLiMoveTR, ' +
-              commons.bar +
-              ' > #NagishLiBarStrip > #NagishLiMove > span#NagishLiMoveBL, ' +
-              commons.bar +
-              ' > #NagishLiBarStrip > #NagishLiMove > span#NagishLiMoveBR, ' +
-              commons.bar +
-              ' > #NagishLiBarStrip > #NagishLiToggleMenus, ' +
-              commons.dd +
-              ' > .nl-dropdown-toggle, ' +
-              commons.dd +
-              ' > .nl-dropdown-menu > li > div, ' +
-              commons.dd +
-              ' > .nl-dropdown-menu > li > div > a, ' +
-              commons.dd +
-              ' > .nl-dropdown-menu > li > div > span, ' +
-              commons.dd +
-              ' > .nl-dropdown-menu > li#NagishLiHelp, ' +
-              commons.dd +
-              ' > ul > li, ' +
-              commons.dd +
-              ' > .nl-dropdown-menu > li > div > ul > li, ' +
-              commons.dd +
-              ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsTXT, ' +
-              commons.dd +
-              ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsBG, ' +
-              commons.dd +
-              ' > #NagishLiColors > li > #NLCustomColors > ul > li#NLCloseColorPanel'
-          ).on('keypress.nlkbnavclk', function (b) {
-            13 === b.which && a(this).triggerHandler('click');
-          }),
+          commons.bar +
+          ' > #NagishLiBarStrip, ' +
+          commons.bar +
+          ' > #NagishLiBarStrip > #NagishLiMove > span#NagishLiMoveTL, ' +
+          commons.bar +
+          ' > #NagishLiBarStrip > #NagishLiMove > span#NagishLiMoveTR, ' +
+          commons.bar +
+          ' > #NagishLiBarStrip > #NagishLiMove > span#NagishLiMoveBL, ' +
+          commons.bar +
+          ' > #NagishLiBarStrip > #NagishLiMove > span#NagishLiMoveBR, ' +
+          commons.bar +
+          ' > #NagishLiBarStrip > #NagishLiToggleMenus, ' +
+          commons.dd +
+          ' > .nl-dropdown-toggle, ' +
+          commons.dd +
+          ' > .nl-dropdown-menu > li > div, ' +
+          commons.dd +
+          ' > .nl-dropdown-menu > li > div > a, ' +
+          commons.dd +
+          ' > .nl-dropdown-menu > li > div > span, ' +
+          commons.dd +
+          ' > .nl-dropdown-menu > li#NagishLiHelp, ' +
+          commons.dd +
+          ' > ul > li, ' +
+          commons.dd +
+          ' > .nl-dropdown-menu > li > div > ul > li, ' +
+          commons.dd +
+          ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsTXT, ' +
+          commons.dd +
+          ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsBG, ' +
+          commons.dd +
+          ' > #NagishLiColors > li > #NLCustomColors > ul > li#NLCloseColorPanel'
+        ).on('keypress.nlkbnavclk', function (b) {
+          13 === b.which && a(this).triggerHandler('click');
+        }),
           a('body').attr('nl-kbnav', '1'),
           a('nagishli').append(
             '<style type="text/css" id="NagishLiTabbingStyle">body *:focus { outline: 5px solid rgba(88, 144, 255, 0.75) !important; } ' +
-              commons.dd +
-              ' > .nl-dropdown-menu > li > div:focus, ' +
-              commons.dd +
-              ' > .nl-dropdown-toggle:focus, ' +
-              commons.dd +
-              ' > .nl-dropdown-menu > li > div > span:focus, ' +
-              commons.dd +
-              ':last-child > .nl-dropdown-menu > li:last-child > div:focus, ' +
-              commons.dd +
-              ' > .nl-dropdown-menu > li > div > a:focus, #NagishLiBarStrip:focus, ' +
-              commons.dd +
-              ' > #NagishLiMisc > li > #NLSkipLinks > select#NLSkipLinksVal:focus { border: 5px solid rgba(88, 144, 255, 0.75) !important; } ' +
-              commons.bar +
-              ' > #NagishLiBarStrip > #NagishLiMove > span:focus, ' +
-              commons.bar +
-              ' > #NagishLiBarStrip > #NagishLiToggleMenus:focus, nagishli#NagishLiTag > .NagishLiOverlay #closeBtn:focus, #NagishLiOverlayContent > .NagishLiStatementText > a:focus, #NagishLiOverlayContent > .NagishLiAboutText > a:focus, #NagishLiOverlayContent > .NagishLiAboutText > span#licWarn > a:focus, #NagishLiOverlayContent > .NagishLiStatementText > span#licWarn > a:focus, #NagishLiOverlayContent > .NagishLiAboutText > #DeveloperMsg > a:focus > img, ' +
-              commons.dd +
-              ' > .nl-dropdown-menu > li > div > ul > li:focus, ' +
-              commons.dd +
-              ' > .nl-dropdown-menu > li > div > ul > li > input:focus { outline: 5px solid rgba(88, 144, 255, 0.75) !important; } ' +
-              commons.dd +
-              ' > .nl-dropdown-menu > li > div > ul > li > input:focus { outline-width: 8px !important; } ' +
-              commons.dd +
-              ' > .nl-dropdown-menu > li > div:focus { background: #f6f6f6 !important; } ' +
-              commons.dd +
-              ' > .nl-dropdown-toggle:focus, ' +
-              commons.menus +
-              '.blue > .nl-dropdown > .nl-dropdown-toggle:focus { background: #5478E4 !important; } ' +
-              commons.menus +
-              '.red > .nl-dropdown > .nl-dropdown-toggle:focus { background: #EB2B36 !important; } ' +
-              commons.menus +
-              '.green > .nl-dropdown > .nl-dropdown-toggle:focus { background: #365E1B !important; } ' +
-              commons.menus +
-              '.purple > .nl-dropdown > .nl-dropdown-toggle:focus { background: #8562B1 !important; } ' +
-              commons.menus +
-              '.yellow > .nl-dropdown > .nl-dropdown-toggle:focus { background: #EDCA19 !important; } ' +
-              commons.menus +
-              '.pink > .nl-dropdown > .nl-dropdown-toggle:focus { background: #FF78BB !important; } ' +
-              commons.menus +
-              '.gray > .nl-dropdown > .nl-dropdown-toggle:focus { background: #8493A3 !important; } ' +
-              commons.menus +
-              '.brown > .nl-dropdown > .nl-dropdown-toggle:focus { background: #A96342 !important; } ' +
-              commons.menus +
-              '.orange > .nl-dropdown > .nl-dropdown-toggle:focus { background: #FF9719 !important; } ' +
-              commons.menus +
-              '.turquoise > .nl-dropdown > .nl-dropdown-toggle:focus { background: #36B9B2 !important; } ' +
-              commons.menus +
-              '.black > .nl-dropdown > .nl-dropdown-toggle:focus { background: #242424 !important; }</style>'
+            commons.dd +
+            ' > .nl-dropdown-menu > li > div:focus, ' +
+            commons.dd +
+            ' > .nl-dropdown-toggle:focus, ' +
+            commons.dd +
+            ' > .nl-dropdown-menu > li > div > span:focus, ' +
+            commons.dd +
+            ':last-child > .nl-dropdown-menu > li:last-child > div:focus, ' +
+            commons.dd +
+            ' > .nl-dropdown-menu > li > div > a:focus, #NagishLiBarStrip:focus, ' +
+            commons.dd +
+            ' > #NagishLiMisc > li > #NLSkipLinks > select#NLSkipLinksVal:focus { border: 5px solid rgba(88, 144, 255, 0.75) !important; } ' +
+            commons.bar +
+            ' > #NagishLiBarStrip > #NagishLiMove > span:focus, ' +
+            commons.bar +
+            ' > #NagishLiBarStrip > #NagishLiToggleMenus:focus, nagishli#NagishLiTag > .NagishLiOverlay #closeBtn:focus, #NagishLiOverlayContent > .NagishLiStatementText > a:focus, #NagishLiOverlayContent > .NagishLiAboutText > a:focus, #NagishLiOverlayContent > .NagishLiAboutText > span#licWarn > a:focus, #NagishLiOverlayContent > .NagishLiStatementText > span#licWarn > a:focus, #NagishLiOverlayContent > .NagishLiAboutText > #DeveloperMsg > a:focus > img, ' +
+            commons.dd +
+            ' > .nl-dropdown-menu > li > div > ul > li:focus, ' +
+            commons.dd +
+            ' > .nl-dropdown-menu > li > div > ul > li > input:focus { outline: 5px solid rgba(88, 144, 255, 0.75) !important; } ' +
+            commons.dd +
+            ' > .nl-dropdown-menu > li > div > ul > li > input:focus { outline-width: 8px !important; } ' +
+            commons.dd +
+            ' > .nl-dropdown-menu > li > div:focus { background: #f6f6f6 !important; } ' +
+            commons.dd +
+            ' > .nl-dropdown-toggle:focus, ' +
+            commons.menus +
+            '.blue > .nl-dropdown > .nl-dropdown-toggle:focus { background: #5478E4 !important; } ' +
+            commons.menus +
+            '.red > .nl-dropdown > .nl-dropdown-toggle:focus { background: #EB2B36 !important; } ' +
+            commons.menus +
+            '.green > .nl-dropdown > .nl-dropdown-toggle:focus { background: #365E1B !important; } ' +
+            commons.menus +
+            '.purple > .nl-dropdown > .nl-dropdown-toggle:focus { background: #8562B1 !important; } ' +
+            commons.menus +
+            '.yellow > .nl-dropdown > .nl-dropdown-toggle:focus { background: #EDCA19 !important; } ' +
+            commons.menus +
+            '.pink > .nl-dropdown > .nl-dropdown-toggle:focus { background: #FF78BB !important; } ' +
+            commons.menus +
+            '.gray > .nl-dropdown > .nl-dropdown-toggle:focus { background: #8493A3 !important; } ' +
+            commons.menus +
+            '.brown > .nl-dropdown > .nl-dropdown-toggle:focus { background: #A96342 !important; } ' +
+            commons.menus +
+            '.orange > .nl-dropdown > .nl-dropdown-toggle:focus { background: #FF9719 !important; } ' +
+            commons.menus +
+            '.turquoise > .nl-dropdown > .nl-dropdown-toggle:focus { background: #36B9B2 !important; } ' +
+            commons.menus +
+            '.black > .nl-dropdown > .nl-dropdown-toggle:focus { background: #242424 !important; }</style>'
           ),
           (a(
             commons.dd + ' > #NagishLiMisc > li > #NLKBNav > #NLKBNavVal'
@@ -2269,22 +2269,22 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
     function Z() {
       a("[nl-role*='media']").length &&
         (a("iframe[src*='youtube.com']").each(function () {
-          for (var b = a(this).length; b--; )
+          for (var b = a(this).length; b--;)
             'ytmedia' == a(this).attr('nl-role')
               ? (a("iframe[src*='youtube.com']")[b].contentWindow.postMessage(
-                  '{"event":"command","func":"pauseVideo","args":""}',
-                  '*'
-                ),
+                '{"event":"command","func":"pauseVideo","args":""}',
+                '*'
+              ),
                 a(this).attr('nl-role', 'ytmedia-paused'))
               : a(this).attr('nl-role', 'ytmedia');
         }),
-        a('video, audio').each(function () {
-          for (var b = a(this).length; b--; )
-            'media' == a(this).attr('nl-role')
-              ? (a('video, audio')[b].pause(),
-                a(this).attr('nl-role', 'media-paused'))
-              : a(this).attr('nl-role', 'media');
-        }));
+          a('video, audio').each(function () {
+            for (var b = a(this).length; b--;)
+              'media' == a(this).attr('nl-role')
+                ? (a('video, audio')[b].pause(),
+                  a(this).attr('nl-role', 'media-paused'))
+                : a(this).attr('nl-role', 'media');
+          }));
     }
     jq_not_found &&
       console.log(
@@ -2302,13 +2302,13 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
       throw (alert(phrases.body_missing), Error(phrases.body_missing));
     if (A) {
       var w = function (a) {
-          if ('string' != typeof a) return !1;
-          var b = a.split('.');
-          a = parseInt(b[0]) || 0;
-          var d = parseInt(b[1]) || 0;
-          b = parseInt(b[2]) || 0;
-          return { major: a, minor: d, patch: b };
-        },
+        if ('string' != typeof a) return !1;
+        var b = a.split('.');
+        a = parseInt(b[0]) || 0;
+        var d = parseInt(b[1]) || 0;
+        b = parseInt(b[2]) || 0;
+        return { major: a, minor: d, patch: b };
+      },
         J = w(f('read', 'version'));
       w = w(M);
       if (J.major < w.major || J.minor < w.minor || J.patch < w.patch)
@@ -2317,16 +2317,16 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
           a(commons.bar).css({ 'max-height': '', 'overflow-y': '' }),
           a(
             commons.bar +
-              ' > #NagishLiBarStrip > #NagishLiToggleMenus, ' +
-              commons.bar +
-              ' > #NagishLiBarStrip > #NagishLiMove'
+            ' > #NagishLiBarStrip > #NagishLiToggleMenus, ' +
+            commons.bar +
+            ' > #NagishLiBarStrip > #NagishLiMove'
           ).remove(),
           a(commons.bar + ' > #NagishLiBarStrip').addClass('open'),
           a(commons.menus).show(),
           a(commons.menus).html(
             '<li class="nl-dropdown"><ul class="nl-dropdown-menu show"><li class="not-clickable"><div href="#">' +
-              phrases.settings_upgrade_html +
-              '</div></li></ul></li>'
+            phrases.settings_upgrade_html +
+            '</div></li></ul></li>'
           ),
           !1
         );
@@ -2335,16 +2335,16 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
       'object' == typeof exports && 'undefined' != typeof module
         ? (module.exports = c())
         : 'function' == typeof define && define.amd
-        ? define(c)
-        : ((a = a || self).hotkeys = c());
+          ? define(c)
+          : ((a = a || self).hotkeys = c());
     })(this, function () {
       function a(a, b, c) {
         a.addEventListener
           ? a.addEventListener(b, c, !1)
           : a.attachEvent &&
-            a.attachEvent('on'.concat(b), function () {
-              c(window.event);
-            });
+          a.attachEvent('on'.concat(b), function () {
+            c(window.event);
+          });
       }
       function c(a, b) {
         for (var c = b.slice(0, b.length - 1), d = 0; d < c.length; d++)
@@ -2354,7 +2354,7 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
       function d(a) {
         a || (a = '');
         a = a.replace(/\s/g, '').split(',');
-        for (var b = a.lastIndexOf(''); 0 <= b; )
+        for (var b = a.lastIndexOf(''); 0 <= b;)
           (a[b - 1] += ','), a.splice(b, 1), (b = a.lastIndexOf(''));
         return a;
       }
@@ -2376,8 +2376,8 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
             '*' !== b.shortcut) ||
             (!1 === b.method(a, b) &&
               (a.preventDefault ? a.preventDefault() : (a.returnValue = !1),
-              a.stopPropagation && a.stopPropagation(),
-              a.cancelBubble && (a.cancelBubble = !0)));
+                a.stopPropagation && a.stopPropagation(),
+                a.cancelBubble && (a.cancelBubble = !0)));
         }
       }
       function h(a) {
@@ -2386,8 +2386,8 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
         if (m.filter.call(this, a)) {
           if (
             (~p.indexOf(c) || 229 === c || p.push(c),
-            (93 !== c && 224 !== c) || (c = 91),
-            c in t)
+              (93 !== c && 224 !== c) || (c = 91),
+              c in t)
           ) {
             for (var d in ((t[c] = !0), q)) q[d] === c && (m[d] = !0);
             if (!b) return;
@@ -2425,14 +2425,14 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
         void 0 === f && 'function' == typeof e && (f = e);
         '[object Object]' === Object.prototype.toString.call(e) &&
           (e.scope && (F = e.scope),
-          e.element && (B = e.element),
-          e.keyup && (n = e.keyup),
-          e.keydown && (E = e.keydown));
+            e.element && (B = e.element),
+            e.keyup && (n = e.keyup),
+            e.keydown && (E = e.keydown));
         for ('string' == typeof e && (F = e); k < l.length; k++)
           (g = []),
             1 < (b = l[k].split('+')).length && (g = c(q, b)),
             (b = '*' === (b = b[b.length - 1]) ? '*' : y(b)) in r ||
-              (r[b] = []),
+            (r[b] = []),
             r[b].push({
               keyup: n,
               keydown: E,
@@ -2446,81 +2446,81 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
           -1 < w.indexOf(B) ||
           !window ||
           (w.push(B),
-          a(B, 'keydown', function (a) {
-            h(a);
-          }),
-          a(window, 'focus', function () {
-            p = [];
-          }),
-          a(B, 'keyup', function (a) {
-            h(a);
-            var b = a.keyCode || a.which || a.charCode,
-              c = p.indexOf(b);
-            if (
-              (0 > c || p.splice(c, 1),
-              a.key && 'meta' == a.key.toLowerCase() && p.splice(0, p.length),
-              (93 !== b && 224 !== b) || (b = 91),
-              b in t)
-            )
-              for (var d in ((t[b] = !1), q)) q[d] === b && (m[d] = !1);
-          }));
+            a(B, 'keydown', function (a) {
+              h(a);
+            }),
+            a(window, 'focus', function () {
+              p = [];
+            }),
+            a(B, 'keyup', function (a) {
+              h(a);
+              var b = a.keyCode || a.which || a.charCode,
+                c = p.indexOf(b);
+              if (
+                (0 > c || p.splice(c, 1),
+                  a.key && 'meta' == a.key.toLowerCase() && p.splice(0, p.length),
+                  (93 !== b && 224 !== b) || (b = 91),
+                  b in t)
+              )
+                for (var d in ((t[b] = !1), q)) q[d] === b && (m[d] = !1);
+            }));
       }
       for (
         var k =
-            'undefined' != typeof navigator &&
-            0 < navigator.userAgent.toLowerCase().indexOf('firefox'),
-          u = {
-            backspace: 8,
-            tab: 9,
-            clear: 12,
-            enter: 13,
-            return: 13,
-            esc: 27,
-            escape: 27,
-            space: 32,
-            left: 37,
-            up: 38,
-            right: 39,
-            down: 40,
-            del: 46,
-            delete: 46,
-            ins: 45,
-            insert: 45,
-            home: 36,
-            end: 35,
-            pageup: 33,
-            pagedown: 34,
-            capslock: 20,
-            '\u21ea': 20,
-            ',': 188,
-            '.': 190,
-            '/': 191,
-            '`': 192,
-            '-': k ? 173 : 189,
-            '=': k ? 61 : 187,
-            ';': k ? 59 : 186,
-            "'": 222,
-            '[': 219,
-            ']': 221,
-            '\\': 220,
-          },
-          q = {
-            '\u21e7': 16,
-            shift: 16,
-            '\u2325': 18,
-            alt: 18,
-            option: 18,
-            '\u2303': 17,
-            ctrl: 17,
-            control: 17,
-            '\u2318': k ? 224 : 91,
-            cmd: k ? 224 : 91,
-            command: k ? 224 : 91,
-          },
-          v = { 16: 'shiftKey', 18: 'altKey', 17: 'ctrlKey' },
-          t = { 16: !1, 18: !1, 17: !1 },
-          r = {},
-          n = 1;
+          'undefined' != typeof navigator &&
+          0 < navigator.userAgent.toLowerCase().indexOf('firefox'),
+        u = {
+          backspace: 8,
+          tab: 9,
+          clear: 12,
+          enter: 13,
+          return: 13,
+          esc: 27,
+          escape: 27,
+          space: 32,
+          left: 37,
+          up: 38,
+          right: 39,
+          down: 40,
+          del: 46,
+          delete: 46,
+          ins: 45,
+          insert: 45,
+          home: 36,
+          end: 35,
+          pageup: 33,
+          pagedown: 34,
+          capslock: 20,
+          '\u21ea': 20,
+          ',': 188,
+          '.': 190,
+          '/': 191,
+          '`': 192,
+          '-': k ? 173 : 189,
+          '=': k ? 61 : 187,
+          ';': k ? 59 : 186,
+          "'": 222,
+          '[': 219,
+          ']': 221,
+          '\\': 220,
+        },
+        q = {
+          '\u21e7': 16,
+          shift: 16,
+          '\u2325': 18,
+          alt: 18,
+          option: 18,
+          '\u2303': 17,
+          ctrl: 17,
+          control: 17,
+          '\u2318': k ? 224 : 91,
+          cmd: k ? 224 : 91,
+          command: k ? 224 : 91,
+        },
+        v = { 16: 'shiftKey', 18: 'altKey', 17: 'ctrlKey' },
+        t = { 16: !1, 18: !1, 17: !1 },
+        r = {},
+        n = 1;
         20 > n;
         n++
       )
@@ -2544,7 +2544,7 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
           for (d in (a || (a = f()), r))
             if (Object.prototype.hasOwnProperty.call(r, d)) {
               var l = r[d];
-              for (c = 0; c < l.length; )
+              for (c = 0; c < l.length;)
                 l[c].scope === a ? l.splice(c, 1) : c++;
             }
           f() === a && e(b || 'all');
@@ -2563,7 +2563,7 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
             (!a.isContentEditable &&
               'TEXTAREA' !== b &&
               (('INPUT' !== b && 'TEXTAREA' !== b) || a.readOnly)) ||
-              (c = !1),
+            (c = !1),
             c
           );
         },
@@ -2576,9 +2576,9 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
             var k = 0;
             k < B.length &&
             ((g = 1 < (l = B[k].split('+')).length ? c(q, l) : []),
-            (a = '*' === (a = l[l.length - 1]) ? '*' : y(a)),
-            b || (b = f()),
-            r[a]);
+              (a = '*' === (a = l[l.length - 1]) ? '*' : y(a)),
+              b || (b = f()),
+              r[a]);
             k++
           )
             for (var m = 0; m < r[a].length; m++) {
@@ -2635,10 +2635,10 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
       (H
         ? ''
         : '<span id="NagishLiToggleMenus" class="expand-all" tabindex="6" aria-label="' +
-          phrases.expand_all +
-          '" style="background: ' +
-          icons.toggle_all +
-          ';"></span>');
+        phrases.expand_all +
+        '" style="background: ' +
+        icons.toggle_all +
+        ';"></span>');
     d +=
       '<span id="NagishLiMove" style="height: 21px !important; width: 21px !important; vertical-align: middle !important; float: ' +
       phrases.align_left +
@@ -2648,81 +2648,81 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
     d =
       'he' == g
         ? d +
-          ('<span id="NagishLiMoveTL" alt="" aria-label="' +
-            phrases.move_tl +
-            '" style="background-image: url(\'' +
-            icons.TL_pos +
-            '\');" tabindex="3" data-balloon="' +
-            phrases.move_tl +
-            '" data-balloon-pos="' +
-            phrases.align_right +
-            '"></span><span id="NagishLiMoveTR" alt="" aria-label="' +
-            phrases.move_tr +
-            '" style="background-image: url(\'' +
-            icons.TR_pos +
-            '\');" tabindex="2" data-balloon="' +
-            phrases.move_tr +
-            '" data-balloon-pos="' +
-            phrases.align_right +
-            '"></span><span id="NagishLiMoveBL" alt="" aria-label="' +
-            phrases.move_bl +
-            '" style="background-image: url(\'' +
-            icons.BL_pos +
-            '\');" tabindex="5" data-balloon="' +
-            phrases.move_bl +
-            '" data-balloon-pos="' +
-            phrases.align_right +
-            '"></span><span id="NagishLiMoveBR" alt="" aria-label="' +
-            phrases.move_br +
-            '" style="background-image: url(\'' +
-            icons.BR_pos +
-            '\');" tabindex="4" data-balloon="' +
-            phrases.move_br +
-            '" data-balloon-pos="' +
-            phrases.align_right +
-            '"></span>')
+        ('<span id="NagishLiMoveTL" alt="" aria-label="' +
+          phrases.move_tl +
+          '" style="background-image: url(\'' +
+          icons.TL_pos +
+          '\');" tabindex="3" data-balloon="' +
+          phrases.move_tl +
+          '" data-balloon-pos="' +
+          phrases.align_right +
+          '"></span><span id="NagishLiMoveTR" alt="" aria-label="' +
+          phrases.move_tr +
+          '" style="background-image: url(\'' +
+          icons.TR_pos +
+          '\');" tabindex="2" data-balloon="' +
+          phrases.move_tr +
+          '" data-balloon-pos="' +
+          phrases.align_right +
+          '"></span><span id="NagishLiMoveBL" alt="" aria-label="' +
+          phrases.move_bl +
+          '" style="background-image: url(\'' +
+          icons.BL_pos +
+          '\');" tabindex="5" data-balloon="' +
+          phrases.move_bl +
+          '" data-balloon-pos="' +
+          phrases.align_right +
+          '"></span><span id="NagishLiMoveBR" alt="" aria-label="' +
+          phrases.move_br +
+          '" style="background-image: url(\'' +
+          icons.BR_pos +
+          '\');" tabindex="4" data-balloon="' +
+          phrases.move_br +
+          '" data-balloon-pos="' +
+          phrases.align_right +
+          '"></span>')
         : d +
-          ('<span id="NagishLiMoveTR" alt="' +
-            phrases.move_tr +
-            '" aria-label="' +
-            phrases.move_tr +
-            '" style="background-image: url(\'' +
-            icons.TR_pos +
-            '\');" tabindex="3" data-balloon="' +
-            phrases.move_tr +
-            '" data-balloon-pos="' +
-            phrases.align_right +
-            '"></span><span id="NagishLiMoveTL" alt="' +
-            phrases.move_tl +
-            '" aria-label="' +
-            phrases.move_tl +
-            '" style="background-image: url(\'' +
-            icons.TL_pos +
-            '\');" tabindex="2" data-balloon="' +
-            phrases.move_tl +
-            '" data-balloon-pos="' +
-            phrases.align_right +
-            '"></span><span id="NagishLiMoveBR" alt="' +
-            phrases.move_br +
-            '" aria-label="' +
-            phrases.move_br +
-            '" style="background-image: url(\'' +
-            icons.BR_pos +
-            '\');" tabindex="5" data-balloon="' +
-            phrases.move_br +
-            '" data-balloon-pos="' +
-            phrases.align_right +
-            '"></span><span id="NagishLiMoveBL" alt="' +
-            phrases.move_bl +
-            '" aria-label="' +
-            phrases.move_bl +
-            '" style="background-image: url(\'' +
-            icons.BL_pos +
-            '\');" tabindex="4" data-balloon="' +
-            phrases.move_bl +
-            '" data-balloon-pos="' +
-            phrases.align_right +
-            '"></span></span>');
+        ('<span id="NagishLiMoveTR" alt="' +
+          phrases.move_tr +
+          '" aria-label="' +
+          phrases.move_tr +
+          '" style="background-image: url(\'' +
+          icons.TR_pos +
+          '\');" tabindex="3" data-balloon="' +
+          phrases.move_tr +
+          '" data-balloon-pos="' +
+          phrases.align_right +
+          '"></span><span id="NagishLiMoveTL" alt="' +
+          phrases.move_tl +
+          '" aria-label="' +
+          phrases.move_tl +
+          '" style="background-image: url(\'' +
+          icons.TL_pos +
+          '\');" tabindex="2" data-balloon="' +
+          phrases.move_tl +
+          '" data-balloon-pos="' +
+          phrases.align_right +
+          '"></span><span id="NagishLiMoveBR" alt="' +
+          phrases.move_br +
+          '" aria-label="' +
+          phrases.move_br +
+          '" style="background-image: url(\'' +
+          icons.BR_pos +
+          '\');" tabindex="5" data-balloon="' +
+          phrases.move_br +
+          '" data-balloon-pos="' +
+          phrases.align_right +
+          '"></span><span id="NagishLiMoveBL" alt="' +
+          phrases.move_bl +
+          '" aria-label="' +
+          phrases.move_bl +
+          '" style="background-image: url(\'' +
+          icons.BL_pos +
+          '\');" tabindex="4" data-balloon="' +
+          phrases.move_bl +
+          '" data-balloon-pos="' +
+          phrases.align_right +
+          '"></span></span>');
     d += '</span>';
     d += '</div>';
     d += '<ul id="NagishLiMenus" class="' + P + '">';
@@ -2803,17 +2803,17 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
     d += '</li>';
     A &&
       ((d += '<li>'),
-      (d +=
-        '<div id="NLResetSettings" tabindex="15"><span class="help" data-balloon="' +
-        phrases.reset_settings_exp +
-        '" aria-hidden="true">' +
-        commons.help +
-        '&nbsp;</span><span class="nagishli-sr-only" aria-hidden="true">' +
-        phrases.reset_settings_exp +
-        '</span><span class="nagishli-option-title">' +
-        phrases.reset_settings +
-        '</span></div>'),
-      (d += '</li>'));
+        (d +=
+          '<div id="NLResetSettings" tabindex="15"><span class="help" data-balloon="' +
+          phrases.reset_settings_exp +
+          '" aria-hidden="true">' +
+          commons.help +
+          '&nbsp;</span><span class="nagishli-sr-only" aria-hidden="true">' +
+          phrases.reset_settings_exp +
+          '</span><span class="nagishli-option-title">' +
+          phrases.reset_settings +
+          '</span></div>'),
+        (d += '</li>'));
     if ('0' == O || ('' != Q && D != oa))
       (d += '<li id="NagishLiDeveloper" class="not-clickable">'),
         (d += '<div>'),
@@ -2896,83 +2896,83 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
     d += '<ul id="NagishLiColors" class="nl-dropdown-menu">';
     qa ||
       ((d += '<li>'),
-      (d +=
-        '<div id="NLGrayscaleColors" tabindex="31"><span class="help" data-balloon="' +
-        phrases.blind_exp +
-        '" aria-hidden="true">' +
-        commons.help +
-        '&nbsp;</span><span class="nagishli-sr-only" aria-hidden="true">' +
-        phrases.blind_exp +
-        '</span><span class="nagishli-option-title">' +
-        phrases.blind +
-        '</span></div>'),
-      (d += '</li>'),
-      (d += '<li>'),
-      (d +=
-        '<div id="NLInvertColors" tabindex="32"><span class="help" data-balloon="' +
-        phrases.impaired_exp +
-        '" aria-hidden="true">' +
-        commons.help +
-        '&nbsp;</span><span class="nagishli-sr-only" aria-hidden="true">' +
-        phrases.impaired_exp +
-        '</span><span class="nagishli-option-title">' +
-        phrases.impaired +
-        '</span></div>'),
-      (d += '</li>'),
-      (d += '<li>'),
-      (d +=
-        '<div id="NLWarmColors" tabindex="33"><span class="help" data-balloon="' +
-        phrases.bl_filter_exp +
-        '" aria-hidden="true">' +
-        commons.help +
-        '&nbsp;</span><span class="nagishli-sr-only" aria-hidden="true">' +
-        phrases.bl_filter_exp +
-        '</span><span class="notice" data-balloon="' +
-        phrases.experimental_feat +
-        '" aria-hidden="true">' +
-        commons.warning +
-        '&nbsp;</span><span class="nagishli-sr-only" aria-hidden="true">' +
-        phrases.experimental_feat +
-        '</span><span class="nagishli-option-title">' +
-        phrases.bl_filter +
-        '</span></div>'),
-      (d += '</li>'),
-      (d += '<li>'),
-      (d +=
-        '<div id="NLColdColors" tabindex="34"><span class="help" data-balloon="' +
-        phrases.lc_filter_exp +
-        '" aria-hidden="true">' +
-        commons.help +
-        '&nbsp;</span><span class="nagishli-sr-only" aria-hidden="true">' +
-        phrases.lc_filter_exp +
-        '</span><span class="notice" data-balloon="' +
-        phrases.experimental_feat +
-        '" aria-hidden="true">' +
-        commons.warning +
-        '&nbsp;</span><span class="nagishli-sr-only" aria-hidden="true">' +
-        phrases.experimental_feat +
-        '</span><span class="nagishli-option-title">' +
-        phrases.lc_filter +
-        '</span></div>'),
-      (d += '</li>'),
-      (d += '<li>'),
-      (d +=
-        '<div id="NLSaturateColors" tabindex="35"><span class="help" data-balloon="' +
-        phrases.saturated_exp +
-        '" aria-hidden="true">' +
-        commons.help +
-        '&nbsp;</span><span class="nagishli-sr-only" aria-hidden="true">' +
-        phrases.saturated_exp +
-        '</span><span class="notice" data-balloon="' +
-        phrases.experimental_feat +
-        '" aria-hidden="true">' +
-        commons.warning +
-        '&nbsp;</span><span class="nagishli-sr-only" aria-hidden="true">' +
-        phrases.experimental_feat +
-        '</span><span class="nagishli-option-title">' +
-        phrases.saturated +
-        '</span></div>'),
-      (d += '</li>'));
+        (d +=
+          '<div id="NLGrayscaleColors" tabindex="31"><span class="help" data-balloon="' +
+          phrases.blind_exp +
+          '" aria-hidden="true">' +
+          commons.help +
+          '&nbsp;</span><span class="nagishli-sr-only" aria-hidden="true">' +
+          phrases.blind_exp +
+          '</span><span class="nagishli-option-title">' +
+          phrases.blind +
+          '</span></div>'),
+        (d += '</li>'),
+        (d += '<li>'),
+        (d +=
+          '<div id="NLInvertColors" tabindex="32"><span class="help" data-balloon="' +
+          phrases.impaired_exp +
+          '" aria-hidden="true">' +
+          commons.help +
+          '&nbsp;</span><span class="nagishli-sr-only" aria-hidden="true">' +
+          phrases.impaired_exp +
+          '</span><span class="nagishli-option-title">' +
+          phrases.impaired +
+          '</span></div>'),
+        (d += '</li>'),
+        (d += '<li>'),
+        (d +=
+          '<div id="NLWarmColors" tabindex="33"><span class="help" data-balloon="' +
+          phrases.bl_filter_exp +
+          '" aria-hidden="true">' +
+          commons.help +
+          '&nbsp;</span><span class="nagishli-sr-only" aria-hidden="true">' +
+          phrases.bl_filter_exp +
+          '</span><span class="notice" data-balloon="' +
+          phrases.experimental_feat +
+          '" aria-hidden="true">' +
+          commons.warning +
+          '&nbsp;</span><span class="nagishli-sr-only" aria-hidden="true">' +
+          phrases.experimental_feat +
+          '</span><span class="nagishli-option-title">' +
+          phrases.bl_filter +
+          '</span></div>'),
+        (d += '</li>'),
+        (d += '<li>'),
+        (d +=
+          '<div id="NLColdColors" tabindex="34"><span class="help" data-balloon="' +
+          phrases.lc_filter_exp +
+          '" aria-hidden="true">' +
+          commons.help +
+          '&nbsp;</span><span class="nagishli-sr-only" aria-hidden="true">' +
+          phrases.lc_filter_exp +
+          '</span><span class="notice" data-balloon="' +
+          phrases.experimental_feat +
+          '" aria-hidden="true">' +
+          commons.warning +
+          '&nbsp;</span><span class="nagishli-sr-only" aria-hidden="true">' +
+          phrases.experimental_feat +
+          '</span><span class="nagishli-option-title">' +
+          phrases.lc_filter +
+          '</span></div>'),
+        (d += '</li>'),
+        (d += '<li>'),
+        (d +=
+          '<div id="NLSaturateColors" tabindex="35"><span class="help" data-balloon="' +
+          phrases.saturated_exp +
+          '" aria-hidden="true">' +
+          commons.help +
+          '&nbsp;</span><span class="nagishli-sr-only" aria-hidden="true">' +
+          phrases.saturated_exp +
+          '</span><span class="notice" data-balloon="' +
+          phrases.experimental_feat +
+          '" aria-hidden="true">' +
+          commons.warning +
+          '&nbsp;</span><span class="nagishli-sr-only" aria-hidden="true">' +
+          phrases.experimental_feat +
+          '</span><span class="nagishli-option-title">' +
+          phrases.saturated +
+          '</span></div>'),
+        (d += '</li>'));
     if (
       null != a('body').css('background-color') ||
       null != a('body').css('color')
@@ -2987,16 +2987,16 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
           phrases.custom_colors +
           '</span>:&nbsp;' +
           (null != a('body').css('background-color') &&
-          'rgba(0, 0, 0, 0)' != a('body').css('background-color')
+            'rgba(0, 0, 0, 0)' != a('body').css('background-color')
             ? '<span id="NLCustomColorsBG" tabindex="35"><span id="NLCurrentBG" style="display: none;"></span>' +
-              phrases.bg +
-              '</span>&nbsp;'
+            phrases.bg +
+            '</span>&nbsp;'
             : '') +
           (null != a('body').css('color') &&
-          'rgba(0, 0, 0, 0)' != a('body').css('color')
+            'rgba(0, 0, 0, 0)' != a('body').css('color')
             ? '<span id="NLCustomColorsTXT" tabindex="35"><span id="NLCurrentTXT" style="display: none;"></span>' +
-              phrases.txt +
-              '</span></div>'
+            phrases.txt +
+            '</span></div>'
             : '')),
         (d += '</li>');
     d += '<li class="active">';
@@ -3603,20 +3603,20 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
       ': 10px !important; top: 12px !important; }';
     H
       ? ((e +=
-          commons.bar +
-          ' > #NagishLiBarStrip.open > #NagishLiMove { margin-' +
-          phrases.align_left +
-          ': 0 !important; }'),
+        commons.bar +
+        ' > #NagishLiBarStrip.open > #NagishLiMove { margin-' +
+        phrases.align_left +
+        ': 0 !important; }'),
         (e +=
           commons.bar +
           ' > #NagishLiBarStrip > #NagishLiMove { margin-' +
           phrases.align_right +
           ': 10px !important; }'))
       : (e +=
-          commons.bar +
-          ' > #NagishLiBarStrip.open > #NagishLiMove { margin-' +
-          phrases.align_left +
-          ': 30px !important; }');
+        commons.bar +
+        ' > #NagishLiBarStrip.open > #NagishLiMove { margin-' +
+        phrases.align_left +
+        ': 30px !important; }');
     na &&
       ((e +=
         commons.bar +
@@ -3625,23 +3625,23 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
         ' > #NagishLiBarStrip > #NagishLiMove, ' +
         commons.bar +
         ' > #NagishLiBarStrip > #NagishLiToggleMenus  { display: none !important; }'),
-      (e +=
-        commons.bar +
-        ' > #NagishLiBarStrip.open > #NagishLiTitle, ' +
-        commons.bar +
-        ' > #NagishLiBarStrip.open > #NagishLiMove, ' +
-        commons.bar +
-        ' > #NagishLiBarStrip.open > #NagishLiToggleMenus { display: inline-block !important; }'),
-      (e +=
-        commons.bar +
-        ' > #NagishLiBarStrip > #NagishLiLogo { width: 25px !important; height: 25px !important; margin-' +
-        phrases.align_right +
-        ': 7px !important; }'),
-      (e +=
-        commons.bar +
-        ' > #NagishLiBarStrip.open > #NagishLiLogo { width: 21px !important; height: 21px !important; margin-' +
-        phrases.align_right +
-        ': 0 !important; }'));
+        (e +=
+          commons.bar +
+          ' > #NagishLiBarStrip.open > #NagishLiTitle, ' +
+          commons.bar +
+          ' > #NagishLiBarStrip.open > #NagishLiMove, ' +
+          commons.bar +
+          ' > #NagishLiBarStrip.open > #NagishLiToggleMenus { display: inline-block !important; }'),
+        (e +=
+          commons.bar +
+          ' > #NagishLiBarStrip > #NagishLiLogo { width: 25px !important; height: 25px !important; margin-' +
+          phrases.align_right +
+          ': 7px !important; }'),
+        (e +=
+          commons.bar +
+          ' > #NagishLiBarStrip.open > #NagishLiLogo { width: 21px !important; height: 21px !important; margin-' +
+          phrases.align_right +
+          ': 0 !important; }'));
     e +=
       '.nagishli-sr-only { border: 0 !important; clip: rect(1px, 1px, 1px, 1px) !important; -webkit-clip-path: inset(50%) !important; clip-path: inset(50%) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important; white-space: nowrap !important;}';
     e +=
@@ -3649,11 +3649,11 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
     G ||
       ((e +=
         'button[data-balloon]{overflow:visible}[data-balloon]{position:relative;cursor:pointer}[data-balloon]:after{filter:alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";-moz-opacity:0;-khtml-opacity:0;opacity:0;pointer-events:none;-webkit-transition:all 0.18s ease-out 0.18s;-moz-transition:all 0.18s ease-out 0.18s;-ms-transition:all 0.18s ease-out 0.18s;-o-transition:all 0.18s ease-out 0.18s;transition:all 0.18s ease-out 0.18s;font-family:sans-serif !important;font-weight:normal !important;font-style:normal !important;text-shadow:none !important;font-size:12px !important;background:rgba(17,17,17,0.9);border-radius:4px;color:#fff;content:attr(data-balloon);padding:.5em 1em;position:absolute;white-space:nowrap;z-index:10}[data-balloon]:before{background:no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2236px%22%20height%3D%2212px%22%3E%3Cpath%20fill%3D%22rgba(17,17,17,0.9)%22%20transform%3D%22rotate(0)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");background-size:100% auto;width:18px;height:6px;filter:alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";-moz-opacity:0;-khtml-opacity:0;opacity:0;pointer-events:none;-webkit-transition:all 0.18s ease-out 0.18s;-moz-transition:all 0.18s ease-out 0.18s;-ms-transition:all 0.18s ease-out 0.18s;-o-transition:all 0.18s ease-out 0.18s;transition:all 0.18s ease-out 0.18s;content:"";position:absolute;z-index:10}[data-balloon]:hover:before,[data-balloon]:hover:after,[data-balloon][data-balloon-visible]:before,[data-balloon][data-balloon-visible]:after{filter:alpha(opacity=100);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";-moz-opacity:1;-khtml-opacity:1;opacity:1;pointer-events:auto}[data-balloon].font-awesome:after{font-family:FontAwesome}[data-balloon][data-balloon-break]:after{white-space:pre}[data-balloon][data-balloon-blunt]:before,[data-balloon][data-balloon-blunt]:after{-webkit-transition:none;-moz-transition:none;-ms-transition:none;-o-transition:none;transition:none}[data-balloon][data-balloon-pos="up"]:after{bottom:100%;left:50%;margin-bottom:11px;-webkit-transform:translate(-50%, 10px);-moz-transform:translate(-50%, 10px);-ms-transform:translate(-50%, 10px);transform:translate(-50%, 10px);-webkit-transform-origin:top;-moz-transform-origin:top;-ms-transform-origin:top;transform-origin:top}[data-balloon][data-balloon-pos="up"]:before{bottom:100%;left:50%;margin-bottom:5px;-webkit-transform:translate(-50%, 10px);-moz-transform:translate(-50%, 10px);-ms-transform:translate(-50%, 10px);transform:translate(-50%, 10px);-webkit-transform-origin:top;-moz-transform-origin:top;-ms-transform-origin:top;transform-origin:top}[data-balloon][data-balloon-pos="up"]:hover:after,[data-balloon][data-balloon-pos="up"][data-balloon-visible]:after{-webkit-transform:translate(-50%, 0);-moz-transform:translate(-50%, 0);-ms-transform:translate(-50%, 0);transform:translate(-50%, 0)}[data-balloon][data-balloon-pos="up"]:hover:before,[data-balloon][data-balloon-pos="up"][data-balloon-visible]:before{-webkit-transform:translate(-50%, 0);-moz-transform:translate(-50%, 0);-ms-transform:translate(-50%, 0);transform:translate(-50%, 0)}[data-balloon][data-balloon-pos="up-left"]:after{bottom:100%;left:0;margin-bottom:11px;-webkit-transform:translate(0, 10px);-moz-transform:translate(0, 10px);-ms-transform:translate(0, 10px);transform:translate(0, 10px);-webkit-transform-origin:top;-moz-transform-origin:top;-ms-transform-origin:top;transform-origin:top}[data-balloon][data-balloon-pos="up-left"]:before{bottom:100%;left:5px;margin-bottom:5px;-webkit-transform:translate(0, 10px);-moz-transform:translate(0, 10px);-ms-transform:translate(0, 10px);transform:translate(0, 10px);-webkit-transform-origin:top;-moz-transform-origin:top;-ms-transform-origin:top;transform-origin:top}[data-balloon][data-balloon-pos="up-left"]:hover:after,[data-balloon][data-balloon-pos="up-left"][data-balloon-visible]:after{-webkit-transform:translate(0, 0);-moz-transform:translate(0, 0);-ms-transform:translate(0, 0);transform:translate(0, 0)}[data-balloon][data-balloon-pos="up-left"]:hover:before,[data-balloon][data-balloon-pos="up-left"][data-balloon-visible]:before{-webkit-transform:translate(0, 0);-moz-transform:translate(0, 0);-ms-transform:translate(0, 0);transform:translate(0, 0)}[data-balloon][data-balloon-pos="up-right"]:after{bottom:100%;right:0;margin-bottom:11px;-webkit-transform:translate(0, 10px);-moz-transform:translate(0, 10px);-ms-transform:translate(0, 10px);transform:translate(0, 10px);-webkit-transform-origin:top;-moz-transform-origin:top;-ms-transform-origin:top;transform-origin:top}[data-balloon][data-balloon-pos="up-right"]:before{bottom:100%;right:5px;margin-bottom:5px;-webkit-transform:translate(0, 10px);-moz-transform:translate(0, 10px);-ms-transform:translate(0, 10px);transform:translate(0, 10px);-webkit-transform-origin:top;-moz-transform-origin:top;-ms-transform-origin:top;transform-origin:top}[data-balloon][data-balloon-pos="up-right"]:hover:after,[data-balloon][data-balloon-pos="up-right"][data-balloon-visible]:after{-webkit-transform:translate(0, 0);-moz-transform:translate(0, 0);-ms-transform:translate(0, 0);transform:translate(0, 0)}[data-balloon][data-balloon-pos="up-right"]:hover:before,[data-balloon][data-balloon-pos="up-right"][data-balloon-visible]:before{-webkit-transform:translate(0, 0);-moz-transform:translate(0, 0);-ms-transform:translate(0, 0);transform:translate(0, 0)}[data-balloon][data-balloon-pos="down"]:after{left:50%;margin-top:11px;top:100%;-webkit-transform:translate(-50%, -10px);-moz-transform:translate(-50%, -10px);-ms-transform:translate(-50%, -10px);transform:translate(-50%, -10px)}[data-balloon][data-balloon-pos="down"]:before{background:no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2236px%22%20height%3D%2212px%22%3E%3Cpath%20fill%3D%22rgba(17,17,17,0.9)%22%20transform%3D%22rotate(180 18 6)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");background-size:100% auto;width:18px;height:6px;left:50%;margin-top:5px;top:100%;-webkit-transform:translate(-50%, -10px);-moz-transform:translate(-50%, -10px);-ms-transform:translate(-50%, -10px);transform:translate(-50%, -10px)}[data-balloon][data-balloon-pos="down"]:hover:after,[data-balloon][data-balloon-pos="down"][data-balloon-visible]:after{-webkit-transform:translate(-50%, 0);-moz-transform:translate(-50%, 0);-ms-transform:translate(-50%, 0);transform:translate(-50%, 0)}[data-balloon][data-balloon-pos="down"]:hover:before,[data-balloon][data-balloon-pos="down"][data-balloon-visible]:before{-webkit-transform:translate(-50%, 0);-moz-transform:translate(-50%, 0);-ms-transform:translate(-50%, 0);transform:translate(-50%, 0)}[data-balloon][data-balloon-pos="down-left"]:after{left:0;margin-top:11px;top:100%;-webkit-transform:translate(0, -10px);-moz-transform:translate(0, -10px);-ms-transform:translate(0, -10px);transform:translate(0, -10px)}[data-balloon][data-balloon-pos="down-left"]:before{background:no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2236px%22%20height%3D%2212px%22%3E%3Cpath%20fill%3D%22rgba(17,17,17,0.9)%22%20transform%3D%22rotate(180 18 6)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");background-size:100% auto;width:18px;height:6px;left:5px;margin-top:5px;top:100%;-webkit-transform:translate(0, -10px);-moz-transform:translate(0, -10px);-ms-transform:translate(0, -10px);transform:translate(0, -10px)}[data-balloon][data-balloon-pos="down-left"]:hover:after,[data-balloon][data-balloon-pos="down-left"][data-balloon-visible]:after{-webkit-transform:translate(0, 0);-moz-transform:translate(0, 0);-ms-transform:translate(0, 0);transform:translate(0, 0)}[data-balloon][data-balloon-pos="down-left"]:hover:before,[data-balloon][data-balloon-pos="down-left"][data-balloon-visible]:before{-webkit-transform:translate(0, 0);-moz-transform:translate(0, 0);-ms-transform:translate(0, 0);transform:translate(0, 0)}[data-balloon][data-balloon-pos="down-right"]:after{right:0;margin-top:11px;top:100%;-webkit-transform:translate(0, -10px);-moz-transform:translate(0, -10px);-ms-transform:translate(0, -10px);transform:translate(0, -10px)}[data-balloon][data-balloon-pos="down-right"]:before{background:no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2236px%22%20height%3D%2212px%22%3E%3Cpath%20fill%3D%22rgba(17,17,17,0.9)%22%20transform%3D%22rotate(180 18 6)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");background-size:100% auto;width:18px;height:6px;right:5px;margin-top:5px;top:100%;-webkit-transform:translate(0, -10px);-moz-transform:translate(0, -10px);-ms-transform:translate(0, -10px);transform:translate(0, -10px)}[data-balloon][data-balloon-pos="down-right"]:hover:after,[data-balloon][data-balloon-pos="down-right"][data-balloon-visible]:after{-webkit-transform:translate(0, 0);-moz-transform:translate(0, 0);-ms-transform:translate(0, 0);transform:translate(0, 0)}[data-balloon][data-balloon-pos="down-right"]:hover:before,[data-balloon][data-balloon-pos="down-right"][data-balloon-visible]:before{-webkit-transform:translate(0, 0);-moz-transform:translate(0, 0);-ms-transform:translate(0, 0);transform:translate(0, 0)}[data-balloon][data-balloon-pos="left"]:after{margin-right:11px;right:100%;top:50%;-webkit-transform:translate(10px, -50%);-moz-transform:translate(10px, -50%);-ms-transform:translate(10px, -50%);transform:translate(10px, -50%)}[data-balloon][data-balloon-pos="left"]:before{background:no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2212px%22%20height%3D%2236px%22%3E%3Cpath%20fill%3D%22rgba(17,17,17,0.9)%22%20transform%3D%22rotate(-90 18 18)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");background-size:100% auto;width:6px;height:18px;margin-right:5px;right:100%;top:50%;-webkit-transform:translate(10px, -50%);-moz-transform:translate(10px, -50%);-ms-transform:translate(10px, -50%);transform:translate(10px, -50%)}[data-balloon][data-balloon-pos="left"]:hover:after,[data-balloon][data-balloon-pos="left"][data-balloon-visible]:after{-webkit-transform:translate(0, -50%);-moz-transform:translate(0, -50%);-ms-transform:translate(0, -50%);transform:translate(0, -50%)}[data-balloon][data-balloon-pos="left"]:hover:before,[data-balloon][data-balloon-pos="left"][data-balloon-visible]:before{-webkit-transform:translate(0, -50%);-moz-transform:translate(0, -50%);-ms-transform:translate(0, -50%);transform:translate(0, -50%)}[data-balloon][data-balloon-pos="right"]:after{left:100%;margin-left:11px;top:50%;-webkit-transform:translate(-10px, -50%);-moz-transform:translate(-10px, -50%);-ms-transform:translate(-10px, -50%);transform:translate(-10px, -50%)}[data-balloon][data-balloon-pos="right"]:before{background:no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2212px%22%20height%3D%2236px%22%3E%3Cpath%20fill%3D%22rgba(17,17,17,0.9)%22%20transform%3D%22rotate(90 6 6)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");background-size:100% auto;width:6px;height:18px;left:100%;margin-left:5px;top:50%;-webkit-transform:translate(-10px, -50%);-moz-transform:translate(-10px, -50%);-ms-transform:translate(-10px, -50%);transform:translate(-10px, -50%)}[data-balloon][data-balloon-pos="right"]:hover:after,[data-balloon][data-balloon-pos="right"][data-balloon-visible]:after{-webkit-transform:translate(0, -50%);-moz-transform:translate(0, -50%);-ms-transform:translate(0, -50%);transform:translate(0, -50%)}[data-balloon][data-balloon-pos="right"]:hover:before,[data-balloon][data-balloon-pos="right"][data-balloon-visible]:before{-webkit-transform:translate(0, -50%);-moz-transform:translate(0, -50%);-ms-transform:translate(0, -50%);transform:translate(0, -50%)}[data-balloon][data-balloon-length="small"]:after{white-space:normal;width:80px}[data-balloon][data-balloon-length="medium"]:after{white-space:normal;width:150px}[data-balloon][data-balloon-length="large"]:after{white-space:normal;width:260px}[data-balloon][data-balloon-length="xlarge"]:after{white-space:normal;width:380px}@media screen and (max-width: 768px){[data-balloon][data-balloon-length="xlarge"]:after{white-space:normal;width:90vw}}[data-balloon][data-balloon-length="fit"]:after{white-space:normal;width:100%}'),
-      (e +=
-        commons.dd +
-        ' > .nl-dropdown-menu > li > div > .notice { z-index: 9999997 !important; }'),
-      (e +=
-        '* nagishli#NagishLiTag *[data-balloon]:before, * nagishli#NagishLiTag *[data-balloon]:after, body span.r2m[data-balloon]:before, body span.r2m[data-balloon]:after { -webkit-transition: none !important; -moz-transition: none !important; -ms-transition: none !important; -o-transition: none !important; transition: none !important; font-weight: bold !important;}'));
+        (e +=
+          commons.dd +
+          ' > .nl-dropdown-menu > li > div > .notice { z-index: 9999997 !important; }'),
+        (e +=
+          '* nagishli#NagishLiTag *[data-balloon]:before, * nagishli#NagishLiTag *[data-balloon]:after, body span.r2m[data-balloon]:before, body span.r2m[data-balloon]:after { -webkit-transition: none !important; -moz-transition: none !important; -ms-transition: none !important; -o-transition: none !important; transition: none !important; font-weight: bold !important;}'));
     e +=
       'nagishli#NagishLiTag > .NagishLiOverlay { position: fixed !important; top: 0 !important; ' +
       phrases.align_left +
@@ -3816,16 +3816,16 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
             a(commons.bar).css({ 'max-height': '', 'overflow-y': '' }),
             a(
               commons.bar +
-                ' > #NagishLiBarStrip > #NagishLiToggleMenus, ' +
-                commons.bar +
-                ' > #NagishLiBarStrip > #NagishLiMove'
+              ' > #NagishLiBarStrip > #NagishLiToggleMenus, ' +
+              commons.bar +
+              ' > #NagishLiBarStrip > #NagishLiMove'
             ).remove(),
             a(commons.bar + ' > #NagishLiBarStrip').addClass('open'),
             a(commons.menus).show(),
             a(commons.menus).html(
               '<li class="nl-dropdown"><ul class="nl-dropdown-menu show"><li class="not-clickable"><div>' +
-                phrases.settings_reset_html_ok +
-                '</div></li></ul></li>'
+              phrases.settings_reset_html_ok +
+              '</div></li></ul></li>'
             ),
             alert(phrases.settings_reset_alert_ok),
             a(commons.menus + ' a').focus(),
@@ -3871,259 +3871,259 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
           'alt+x' == c.key || 'shift+x' == c.key
             ? V()
             : 'alt+v' == c.key || 'alt+b' == c.key
-            ? window.scrollTo(
+              ? window.scrollTo(
                 0,
                 'alt+v' == c.key
                   ? 0
                   : (document.scrollingElement || document.body).scrollHeight
               )
-            : 'shift+a' == c.key
-            ? R()
-            : 'shift+s' == c.key
-            ? S()
-            : 'shift+q' == c.key
-            ? (m(),
-              a(
-                commons.dd +
-                  ' > #NagishLiColors > li > #NLGrayscaleColors > .sign'
-              ).length
-                ? (a(
-                    commons.dd +
-                      ' > #NagishLiColors > li > #NLGrayscaleColors > .sign'
-                  ).remove(),
-                  a(commons.dd + ' > #NagishLiColors > li.active').removeClass(
-                    'active'
-                  ),
-                  a(commons.dd + ' > #NagishLiColors > li > #NLNormalColors')
-                    .addClass('active')
-                    .prepend(commons.checkmark),
-                  a(commons.dd + ' > #NagishLiColors')
-                    .prev('div.nl-dropdown-toggle')
-                    .children('.selected')
-                    .remove())
-                : (a(
-                    commons.dd + ' > #NagishLiColors > li > #NLGrayscaleColors'
-                  )
-                    .attr(
-                      'aria-label',
-                      phrases.aria_the_option +
-                        phrases.blind +
-                        ' ' +
-                        phrases.r2m_on
-                    )
-                    .prepend(commons.checkmark)
-                    .parent('li')
-                    .addClass('active')
-                    .siblings('li')
-                    .removeClass('active')
-                    .find('span.sign')
-                    .remove(),
-                  a(commons.dd + ' > #NagishLiColors')
-                    .prev('div.nl-dropdown-toggle')
-                    .hasClass('open') ||
-                    a(commons.dd + ' > #NagishLiColors')
-                      .prev('div.nl-dropdown-toggle')
-                      .children('.selected').length ||
-                    a(
-                      '<span class="selected">' + phrases.blind + '</span>'
-                    ).insertAfter(
-                      a(commons.dd + ' > #NagishLiColors')
-                        .prev('div', '.nl-dropdown-toggle')
-                        .children('.nl-dropdown-title')
-                    )))
-            : 'shift+w' == c.key
-            ? (k(),
-              a(
-                commons.dd + ' > #NagishLiColors > li > #NLInvertColors > .sign'
-              ).length
-                ? (a(
-                    commons.dd +
-                      ' > #NagishLiColors > li > #NLInvertColors > .sign'
-                  ).remove(),
-                  a(commons.dd + ' > #NagishLiColors > li.active').removeClass(
-                    'active'
-                  ),
-                  a(commons.dd + ' > #NagishLiColors > li > #NLNormalColors')
-                    .addClass('active')
-                    .prepend(commons.checkmark),
-                  a(commons.dd + ' > #NagishLiColors')
-                    .prev('div.nl-dropdown-toggle')
-                    .children('.selected')
-                    .remove())
-                : (a(commons.dd + ' > #NagishLiColors > li > #NLInvertColors')
-                    .attr(
-                      'aria-label',
-                      phrases.aria_the_option +
-                        phrases.impaired +
-                        ' ' +
-                        phrases.r2m_on
-                    )
-                    .prepend(commons.checkmark)
-                    .parent('li')
-                    .addClass('active')
-                    .siblings('li')
-                    .removeClass('active')
-                    .find('span.sign')
-                    .remove(),
-                  a(commons.dd + ' > #NagishLiColors')
-                    .prev('div.nl-dropdown-toggle')
-                    .hasClass('open') ||
-                    a(commons.dd + ' > #NagishLiColors')
-                      .prev('div.nl-dropdown-toggle')
-                      .children('.selected').length ||
-                    a(
-                      '<span class="selected">' + phrases.impaired + '</span>'
-                    ).insertAfter(
-                      a(commons.dd + ' > #NagishLiColors')
-                        .prev('div', '.nl-dropdown-toggle')
-                        .children('.nl-dropdown-title')
-                    )))
-            : 'shift+e' == c.key
-            ? (p(),
-              a(
-                commons.dd +
-                  ' > #NagishLiColors > li > #NLSaturateColors > .sign'
-              ).length
-                ? (a(
-                    commons.dd +
-                      ' > #NagishLiColors > li > #NLSaturateColors > .sign'
-                  ).remove(),
-                  a(commons.dd + ' > #NagishLiColors > li.active').removeClass(
-                    'active'
-                  ),
-                  a(commons.dd + ' > #NagishLiColors > li > #NLNormalColors')
-                    .addClass('active')
-                    .prepend(commons.checkmark),
-                  a(commons.dd + ' > #NagishLiColors')
-                    .prev('div.nl-dropdown-toggle')
-                    .children('.selected')
-                    .remove())
-                : (a(commons.dd + ' > #NagishLiColors > li > #NLSaturateColors')
-                    .attr(
-                      'aria-label',
-                      phrases.aria_the_option +
-                        phrases.saturated +
-                        ' ' +
-                        phrases.r2m_on
-                    )
-                    .prepend(commons.checkmark)
-                    .parent('li')
-                    .addClass('active')
-                    .siblings('li')
-                    .removeClass('active')
-                    .find('span.sign')
-                    .remove(),
-                  a(commons.dd + ' > #NagishLiColors')
-                    .prev('div.nl-dropdown-toggle')
-                    .hasClass('open') ||
-                    a(commons.dd + ' > #NagishLiColors')
-                      .prev('div.nl-dropdown-toggle')
-                      .children('.selected').length ||
-                    a(
-                      '<span class="selected">' + phrases.saturated + '</span>'
-                    ).insertAfter(
-                      a(commons.dd + ' > #NagishLiColors')
-                        .prev('div', '.nl-dropdown-toggle')
-                        .children('.nl-dropdown-title')
-                    )))
-            : 'shift+d' == c.key
-            ? (T(),
-              a(
-                commons.dd +
-                  ' > #NagishLiHighlight > li > #NLHighlightLinks > .sign'
-              ).length
-                ? (a(
-                    commons.dd +
-                      ' > #NagishLiHighlight > li > #NLHighlightLinks > .sign'
-                  ).remove(),
-                  a(
-                    commons.dd + ' > #NagishLiHighlight > li.active'
-                  ).removeClass('active'),
-                  a(commons.dd + ' > #NagishLiHighlight')
-                    .prev('div.nl-dropdown-toggle')
-                    .children('.selected')
-                    .remove())
-                : (a(
-                    commons.dd +
-                      ' > #NagishLiHighlight > li > #NLHighlightLinks'
-                  )
-                    .attr(
-                      'aria-label',
-                      phrases.aria_the_option +
-                        phrases.hl_links +
-                        ' ' +
-                        phrases.r2m_on
-                    )
-                    .prepend(commons.checkmark)
-                    .parent('li')
-                    .addClass('active')
-                    .siblings('li')
-                    .removeClass('active')
-                    .find('span.sign')
-                    .remove(),
-                  a(commons.dd + ' > #NagishLiHighlight')
-                    .prev('div.nl-dropdown-toggle')
-                    .hasClass('open') ||
-                    a(commons.dd + ' > #NagishLiHighlight')
-                      .prev('div.nl-dropdown-toggle')
-                      .children('.selected').length ||
-                    a(
-                      '<span class="selected">' + phrases.hl_links + '</span>'
-                    ).insertAfter(
-                      a(commons.dd + ' > #NagishLiHighlight')
-                        .prev('div', '.nl-dropdown-toggle')
-                        .children('.nl-dropdown-title')
-                    )))
-            : 'shift+f' == c.key &&
-              (U(),
-              a(
-                commons.dd +
-                  ' > #NagishLiHighlight > li > #NLHighlightHeadings > .sign'
-              ).length
-                ? (a(
-                    commons.dd +
-                      ' > #NagishLiHighlight > li > #NLHighlightHeadings > .sign'
-                  ).remove(),
-                  a(
-                    commons.dd + ' > #NagishLiHighlight > li.active'
-                  ).removeClass('active'),
-                  a(commons.dd + ' > #NagishLiHighlight')
-                    .prev('div.nl-dropdown-toggle')
-                    .children('.selected')
-                    .remove())
-                : (a(
-                    commons.dd +
-                      ' > #NagishLiHighlight > li > #NLHighlightHeadings'
-                  )
-                    .attr(
-                      'aria-label',
-                      phrases.aria_the_option +
-                        phrases.hl_headings +
-                        ' ' +
-                        phrases.r2m_on
-                    )
-                    .prepend(commons.checkmark)
-                    .parent('li')
-                    .addClass('active')
-                    .siblings('li')
-                    .removeClass('active')
-                    .find('span.sign')
-                    .remove(),
-                  a(commons.dd + ' > #NagishLiHighlight')
-                    .prev('div.nl-dropdown-toggle')
-                    .hasClass('open') ||
-                    a(commons.dd + ' > #NagishLiHighlight')
-                      .prev('div.nl-dropdown-toggle')
-                      .children('.selected').length ||
-                    a(
-                      '<span class="selected">' +
-                        phrases.hl_headings +
-                        '</span>'
-                    ).insertAfter(
-                      a(commons.dd + ' > #NagishLiHighlight')
-                        .prev('div', '.nl-dropdown-toggle')
-                        .children('.nl-dropdown-title')
-                    )));
+              : 'shift+a' == c.key
+                ? R()
+                : 'shift+s' == c.key
+                  ? S()
+                  : 'shift+q' == c.key
+                    ? (m(),
+                      a(
+                        commons.dd +
+                        ' > #NagishLiColors > li > #NLGrayscaleColors > .sign'
+                      ).length
+                        ? (a(
+                          commons.dd +
+                          ' > #NagishLiColors > li > #NLGrayscaleColors > .sign'
+                        ).remove(),
+                          a(commons.dd + ' > #NagishLiColors > li.active').removeClass(
+                            'active'
+                          ),
+                          a(commons.dd + ' > #NagishLiColors > li > #NLNormalColors')
+                            .addClass('active')
+                            .prepend(commons.checkmark),
+                          a(commons.dd + ' > #NagishLiColors')
+                            .prev('div.nl-dropdown-toggle')
+                            .children('.selected')
+                            .remove())
+                        : (a(
+                          commons.dd + ' > #NagishLiColors > li > #NLGrayscaleColors'
+                        )
+                          .attr(
+                            'aria-label',
+                            phrases.aria_the_option +
+                            phrases.blind +
+                            ' ' +
+                            phrases.r2m_on
+                          )
+                          .prepend(commons.checkmark)
+                          .parent('li')
+                          .addClass('active')
+                          .siblings('li')
+                          .removeClass('active')
+                          .find('span.sign')
+                          .remove(),
+                          a(commons.dd + ' > #NagishLiColors')
+                            .prev('div.nl-dropdown-toggle')
+                            .hasClass('open') ||
+                          a(commons.dd + ' > #NagishLiColors')
+                            .prev('div.nl-dropdown-toggle')
+                            .children('.selected').length ||
+                          a(
+                            '<span class="selected">' + phrases.blind + '</span>'
+                          ).insertAfter(
+                            a(commons.dd + ' > #NagishLiColors')
+                              .prev('div', '.nl-dropdown-toggle')
+                              .children('.nl-dropdown-title')
+                          )))
+                    : 'shift+w' == c.key
+                      ? (k(),
+                        a(
+                          commons.dd + ' > #NagishLiColors > li > #NLInvertColors > .sign'
+                        ).length
+                          ? (a(
+                            commons.dd +
+                            ' > #NagishLiColors > li > #NLInvertColors > .sign'
+                          ).remove(),
+                            a(commons.dd + ' > #NagishLiColors > li.active').removeClass(
+                              'active'
+                            ),
+                            a(commons.dd + ' > #NagishLiColors > li > #NLNormalColors')
+                              .addClass('active')
+                              .prepend(commons.checkmark),
+                            a(commons.dd + ' > #NagishLiColors')
+                              .prev('div.nl-dropdown-toggle')
+                              .children('.selected')
+                              .remove())
+                          : (a(commons.dd + ' > #NagishLiColors > li > #NLInvertColors')
+                            .attr(
+                              'aria-label',
+                              phrases.aria_the_option +
+                              phrases.impaired +
+                              ' ' +
+                              phrases.r2m_on
+                            )
+                            .prepend(commons.checkmark)
+                            .parent('li')
+                            .addClass('active')
+                            .siblings('li')
+                            .removeClass('active')
+                            .find('span.sign')
+                            .remove(),
+                            a(commons.dd + ' > #NagishLiColors')
+                              .prev('div.nl-dropdown-toggle')
+                              .hasClass('open') ||
+                            a(commons.dd + ' > #NagishLiColors')
+                              .prev('div.nl-dropdown-toggle')
+                              .children('.selected').length ||
+                            a(
+                              '<span class="selected">' + phrases.impaired + '</span>'
+                            ).insertAfter(
+                              a(commons.dd + ' > #NagishLiColors')
+                                .prev('div', '.nl-dropdown-toggle')
+                                .children('.nl-dropdown-title')
+                            )))
+                      : 'shift+e' == c.key
+                        ? (p(),
+                          a(
+                            commons.dd +
+                            ' > #NagishLiColors > li > #NLSaturateColors > .sign'
+                          ).length
+                            ? (a(
+                              commons.dd +
+                              ' > #NagishLiColors > li > #NLSaturateColors > .sign'
+                            ).remove(),
+                              a(commons.dd + ' > #NagishLiColors > li.active').removeClass(
+                                'active'
+                              ),
+                              a(commons.dd + ' > #NagishLiColors > li > #NLNormalColors')
+                                .addClass('active')
+                                .prepend(commons.checkmark),
+                              a(commons.dd + ' > #NagishLiColors')
+                                .prev('div.nl-dropdown-toggle')
+                                .children('.selected')
+                                .remove())
+                            : (a(commons.dd + ' > #NagishLiColors > li > #NLSaturateColors')
+                              .attr(
+                                'aria-label',
+                                phrases.aria_the_option +
+                                phrases.saturated +
+                                ' ' +
+                                phrases.r2m_on
+                              )
+                              .prepend(commons.checkmark)
+                              .parent('li')
+                              .addClass('active')
+                              .siblings('li')
+                              .removeClass('active')
+                              .find('span.sign')
+                              .remove(),
+                              a(commons.dd + ' > #NagishLiColors')
+                                .prev('div.nl-dropdown-toggle')
+                                .hasClass('open') ||
+                              a(commons.dd + ' > #NagishLiColors')
+                                .prev('div.nl-dropdown-toggle')
+                                .children('.selected').length ||
+                              a(
+                                '<span class="selected">' + phrases.saturated + '</span>'
+                              ).insertAfter(
+                                a(commons.dd + ' > #NagishLiColors')
+                                  .prev('div', '.nl-dropdown-toggle')
+                                  .children('.nl-dropdown-title')
+                              )))
+                        : 'shift+d' == c.key
+                          ? (T(),
+                            a(
+                              commons.dd +
+                              ' > #NagishLiHighlight > li > #NLHighlightLinks > .sign'
+                            ).length
+                              ? (a(
+                                commons.dd +
+                                ' > #NagishLiHighlight > li > #NLHighlightLinks > .sign'
+                              ).remove(),
+                                a(
+                                  commons.dd + ' > #NagishLiHighlight > li.active'
+                                ).removeClass('active'),
+                                a(commons.dd + ' > #NagishLiHighlight')
+                                  .prev('div.nl-dropdown-toggle')
+                                  .children('.selected')
+                                  .remove())
+                              : (a(
+                                commons.dd +
+                                ' > #NagishLiHighlight > li > #NLHighlightLinks'
+                              )
+                                .attr(
+                                  'aria-label',
+                                  phrases.aria_the_option +
+                                  phrases.hl_links +
+                                  ' ' +
+                                  phrases.r2m_on
+                                )
+                                .prepend(commons.checkmark)
+                                .parent('li')
+                                .addClass('active')
+                                .siblings('li')
+                                .removeClass('active')
+                                .find('span.sign')
+                                .remove(),
+                                a(commons.dd + ' > #NagishLiHighlight')
+                                  .prev('div.nl-dropdown-toggle')
+                                  .hasClass('open') ||
+                                a(commons.dd + ' > #NagishLiHighlight')
+                                  .prev('div.nl-dropdown-toggle')
+                                  .children('.selected').length ||
+                                a(
+                                  '<span class="selected">' + phrases.hl_links + '</span>'
+                                ).insertAfter(
+                                  a(commons.dd + ' > #NagishLiHighlight')
+                                    .prev('div', '.nl-dropdown-toggle')
+                                    .children('.nl-dropdown-title')
+                                )))
+                          : 'shift+f' == c.key &&
+                          (U(),
+                            a(
+                              commons.dd +
+                              ' > #NagishLiHighlight > li > #NLHighlightHeadings > .sign'
+                            ).length
+                              ? (a(
+                                commons.dd +
+                                ' > #NagishLiHighlight > li > #NLHighlightHeadings > .sign'
+                              ).remove(),
+                                a(
+                                  commons.dd + ' > #NagishLiHighlight > li.active'
+                                ).removeClass('active'),
+                                a(commons.dd + ' > #NagishLiHighlight')
+                                  .prev('div.nl-dropdown-toggle')
+                                  .children('.selected')
+                                  .remove())
+                              : (a(
+                                commons.dd +
+                                ' > #NagishLiHighlight > li > #NLHighlightHeadings'
+                              )
+                                .attr(
+                                  'aria-label',
+                                  phrases.aria_the_option +
+                                  phrases.hl_headings +
+                                  ' ' +
+                                  phrases.r2m_on
+                                )
+                                .prepend(commons.checkmark)
+                                .parent('li')
+                                .addClass('active')
+                                .siblings('li')
+                                .removeClass('active')
+                                .find('span.sign')
+                                .remove(),
+                                a(commons.dd + ' > #NagishLiHighlight')
+                                  .prev('div.nl-dropdown-toggle')
+                                  .hasClass('open') ||
+                                a(commons.dd + ' > #NagishLiHighlight')
+                                  .prev('div.nl-dropdown-toggle')
+                                  .children('.selected').length ||
+                                a(
+                                  '<span class="selected">' +
+                                  phrases.hl_headings +
+                                  '</span>'
+                                ).insertAfter(
+                                  a(commons.dd + ' > #NagishLiHighlight')
+                                    .prev('div', '.nl-dropdown-toggle')
+                                    .children('.nl-dropdown-title')
+                                )));
         b.preventDefault();
       }
     );
@@ -4147,193 +4147,193 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
       a(commons.dd + ' > .nl-dropdown-toggle').each(function () {
         a(this).append(
           '<span class="nl-dropdown-arrow" aria-hidden="true" aria-label="' +
-            phrases.aria_toggle_open_alt +
-            a(this).children('.nl-dropdown-title').text() +
-            '" style="background: ' +
-            icons.toggle_single +
-            ';"></span>'
+          phrases.aria_toggle_open_alt +
+          a(this).children('.nl-dropdown-title').text() +
+          '" style="background: ' +
+          icons.toggle_single +
+          ';"></span>'
         );
       });
     A
       ? (function () {
-          var b = f('read', 'ok'),
-            c = f('read', 'colors'),
-            d = f('read', 'position'),
-            e = f('read', 'text'),
-            l = f('read', 'display'),
-            h = f('read', 'zoom'),
-            q = f('read', 'font'),
-            w = f('read', 'highlight', { pos: 0 }),
-            x = f('read', 'highlight', { pos: 1 }),
-            A = f('read', 'help'),
-            C = f('read', 'animations'),
-            D = f('read', 'cursor'),
-            t = f('read', 'tabbing'),
-            r = f('read', 'r2m');
-          if (
-            '0' == b &&
-            (('0' != e && (8 >= parseInt(e) || 35 <= parseInt(e))) ||
-              ('0.0' != h && (0.5 >= parseFloat(h) || 2.5 <= parseFloat(h))) ||
-              (-1 !== c.indexOf(',') && c.split(',')[0] == c.split(',')[1]))
-          ) {
-            b = confirm(phrases.settings_prompt);
-            if (1 == b)
-              return (
-                f('delete'),
-                a(commons.bar).css({ 'max-height': '', 'overflow-y': '' }),
-                a(
-                  commons.bar +
-                    ' > #NagishLiBarStrip > #NagishLiToggleMenus, ' +
-                    commons.bar +
-                    ' > #NagishLiBarStrip > #NagishLiMove'
-                ).remove(),
-                a(commons.bar + ' > #NagishLiBarStrip').addClass('open'),
-                a(commons.menus).show(),
-                a(commons.menus).html(
-                  '<li class="nl-dropdown"><ul class="nl-dropdown-menu show"><li class="not-clickable"><div href="#">' +
-                    phrases.settings_reset_html_ok +
-                    '</div></li></ul></li>'
-                ),
-                alert(phrases.settings_reset_alert_ok),
-                a(commons.menus + ' a').focus(),
-                !1
-              );
-            0 == b &&
-              (f(name, 'write', 'ok', 1, '1'),
+        var b = f('read', 'ok'),
+          c = f('read', 'colors'),
+          d = f('read', 'position'),
+          e = f('read', 'text'),
+          l = f('read', 'display'),
+          h = f('read', 'zoom'),
+          q = f('read', 'font'),
+          w = f('read', 'highlight', { pos: 0 }),
+          x = f('read', 'highlight', { pos: 1 }),
+          A = f('read', 'help'),
+          C = f('read', 'animations'),
+          D = f('read', 'cursor'),
+          t = f('read', 'tabbing'),
+          r = f('read', 'r2m');
+        if (
+          '0' == b &&
+          (('0' != e && (8 >= parseInt(e) || 35 <= parseInt(e))) ||
+            ('0.0' != h && (0.5 >= parseFloat(h) || 2.5 <= parseFloat(h))) ||
+            (-1 !== c.indexOf(',') && c.split(',')[0] == c.split(',')[1]))
+        ) {
+          b = confirm(phrases.settings_prompt);
+          if (1 == b)
+            return (
+              f('delete'),
+              a(commons.bar).css({ 'max-height': '', 'overflow-y': '' }),
+              a(
+                commons.bar +
+                ' > #NagishLiBarStrip > #NagishLiToggleMenus, ' +
+                commons.bar +
+                ' > #NagishLiBarStrip > #NagishLiMove'
+              ).remove(),
+              a(commons.bar + ' > #NagishLiBarStrip').addClass('open'),
+              a(commons.menus).show(),
+              a(commons.menus).html(
+                '<li class="nl-dropdown"><ul class="nl-dropdown-menu show"><li class="not-clickable"><div href="#">' +
+                phrases.settings_reset_html_ok +
+                '</div></li></ul></li>'
+              ),
+              alert(phrases.settings_reset_alert_ok),
+              a(commons.menus + ' a').focus(),
+              !1
+            );
+          0 == b &&
+            (f(name, 'write', 'ok', 1, '1'),
               alert(
                 phrases.settings_save + '\n' + phrases.settings_save_reminder
               ));
-          }
-          'open' == f('read', 'menu')
-            ? a('#NagishLiBarStrip')
-                .addClass('open')
-                .next('#NagishLiMenus')
-                .show()
-            : a('#NagishLiMenus').hide();
-          'TR' == d
-            ? y('TR', !0)
-            : 'BR' == d
+        }
+        'open' == f('read', 'menu')
+          ? a('#NagishLiBarStrip')
+            .addClass('open')
+            .next('#NagishLiMenus')
+            .show()
+          : a('#NagishLiMenus').hide();
+        'TR' == d
+          ? y('TR', !0)
+          : 'BR' == d
             ? y('BR', !0)
             : 'BL' == d
-            ? y('BL', !0)
-            : y('TL', !0);
-          var n = !0;
-          d = f('read', 'submenus');
-          b = void 0;
-          d = void 0 === d ? '000000' : d;
-          b = void 0 === b ? '1' : b;
-          if (void 0 === n ? 0 : n)
-            for (n = d.length; n--; )
-              d[n] == b &&
-                (a(commons.dd + ' > .nl-dropdown-toggle')
-                  .eq(n)
-                  .addClass('open')
-                  .next('ul.nl-dropdown-menu')
-                  .show()
-                  .addClass('show'),
+              ? y('BL', !0)
+              : y('TL', !0);
+        var n = !0;
+        d = f('read', 'submenus');
+        b = void 0;
+        d = void 0 === d ? '000000' : d;
+        b = void 0 === b ? '1' : b;
+        if (void 0 === n ? 0 : n)
+          for (n = d.length; n--;)
+            d[n] == b &&
+              (a(commons.dd + ' > .nl-dropdown-toggle')
+                .eq(n)
+                .addClass('open')
+                .next('ul.nl-dropdown-menu')
+                .show()
+                .addClass('show'),
                 a(commons.dd + ' > .nl-dropdown-toggle')
                   .eq(n)
                   .children('.nl-dropdown-arrow')
                   .attr(
                     'aria-label',
                     phrases.aria_toggle_close_alt +
-                      a(commons.dd + ' > .nl-dropdown-toggle')
-                        .eq(n)
-                        .children('.nl-dropdown-title')
-                        .text()
+                    a(commons.dd + ' > .nl-dropdown-toggle')
+                      .eq(n)
+                      .children('.nl-dropdown-title')
+                      .text()
                   ));
-          else
-            for (n = d.length; n--; )
-              d[n] == b &&
-                (a(commons.dd + ' > .nl-dropdown-toggle')
-                  .eq(n)
-                  .addClass('open')
-                  .next('ul.nl-dropdown-menu')
-                  .slideDown('fast')
-                  .addClass('show'),
+        else
+          for (n = d.length; n--;)
+            d[n] == b &&
+              (a(commons.dd + ' > .nl-dropdown-toggle')
+                .eq(n)
+                .addClass('open')
+                .next('ul.nl-dropdown-menu')
+                .slideDown('fast')
+                .addClass('show'),
                 a(commons.dd + ' > .nl-dropdown-toggle')
                   .eq(n)
                   .children('.nl-dropdown-arrow')
                   .attr(
                     'aria-label',
                     phrases.aria_toggle_close_alt +
-                      a(commons.dd + ' > .nl-dropdown-toggle')
-                        .eq(n)
-                        .children('.nl-dropdown-title')
-                        .text()
+                    a(commons.dd + ' > .nl-dropdown-toggle')
+                      .eq(n)
+                      .children('.nl-dropdown-title')
+                      .text()
                   ));
-          ja();
-          0 == parseInt(e) ? I() : 0 < parseInt(e) ? R(!0) : S(!0);
-          'grayscale' == c
-            ? m(!0)
-            : 'invert' == c
+        ja();
+        0 == parseInt(e) ? I() : 0 < parseInt(e) ? R(!0) : S(!0);
+        'grayscale' == c
+          ? m(!0)
+          : 'invert' == c
             ? k(!0)
             : 'warm' == c
-            ? u('warm', !0)
-            : 'cold' == c
-            ? u('cold', !0)
-            : 'saturate' == c
-            ? p(!0)
-            : -1 !== c.indexOf(',')
-            ? ('-' != c.split(',')[0] && v('bg', W(c.split(',')[0]), !0),
-              '-' != c.split(',')[1] && v('txt', W(c.split(',')[1]), !0))
-            : z();
-          'textonly' == l ? Y(!0) : 'imagesonly' == l ? aa(!0) : ba();
-          0 < parseFloat(h) ? ca(!0) : 0 > parseFloat(h) ? da(!0) : ea();
-          'readable' == q && fa('readable', !0);
-          '1' == w && T(!0);
-          '1' == x && U(!0);
-          !a('ul#NagishLiHighlight')
-            .prev('.nl-dropdown-toggle', 'div')
-            .hasClass('open') &&
-            a('ul#NagishLiHighlight > li.active').length &&
-            (1 < a('ul#NagishLiHighlight > li.active').find('span.sign').length
-              ? ((c =
-                  a('ul#NagishLiHighlight')
-                    .children('li.active:first-child')
-                    .find('.nagishli-option-title')
-                    .text() +
-                  ' ' +
-                  a('ul#NagishLiHighlight')
-                    .children('li.active:nth-child(2)')
-                    .find('.nagishli-option-title')
-                    .text()),
-                (c = c.split(' ')),
-                (c[1] =
-                  'en' == g
-                    ? c[1].charAt(0).toUpperCase() + c[1].substr(1)
-                    : c[1]),
-                a(
-                  '<span class="selected">' +
-                    c[1] +
-                    '&nbsp;' +
-                    phrases.and +
-                    c[3] +
-                    '</span>'
-                ).insertAfter(
-                  a('ul#NagishLiHighlight')
-                    .prev('.nl-dropdown-toggle', 'div')
-                    .children('.nl-dropdown-title')
-                ))
-              : ((c = a('ul#NagishLiHighlight > li.active')
-                  .find('.nagishli-option-title')
-                  .text()),
-                a('<span class="selected">' + c + '</span>').insertAfter(
-                  a('ul#NagishLiHighlight')
-                    .prev('.nl-dropdown-toggle', 'div')
-                    .children('.nl-dropdown-title')
-                )));
-          '1' == A && V(!0);
-          'off' == C && ha(!0);
-          'on' == r && ia(!0);
-          'black' == D ? L('black', !0) : 'white' == D && L('white', !0);
-          'on' == t && ka(!0);
-        })()
+              ? u('warm', !0)
+              : 'cold' == c
+                ? u('cold', !0)
+                : 'saturate' == c
+                  ? p(!0)
+                  : -1 !== c.indexOf(',')
+                    ? ('-' != c.split(',')[0] && v('bg', W(c.split(',')[0]), !0),
+                      '-' != c.split(',')[1] && v('txt', W(c.split(',')[1]), !0))
+                    : z();
+        'textonly' == l ? Y(!0) : 'imagesonly' == l ? aa(!0) : ba();
+        0 < parseFloat(h) ? ca(!0) : 0 > parseFloat(h) ? da(!0) : ea();
+        'readable' == q && fa('readable', !0);
+        '1' == w && T(!0);
+        '1' == x && U(!0);
+        !a('ul#NagishLiHighlight')
+          .prev('.nl-dropdown-toggle', 'div')
+          .hasClass('open') &&
+          a('ul#NagishLiHighlight > li.active').length &&
+          (1 < a('ul#NagishLiHighlight > li.active').find('span.sign').length
+            ? ((c =
+              a('ul#NagishLiHighlight')
+                .children('li.active:first-child')
+                .find('.nagishli-option-title')
+                .text() +
+              ' ' +
+              a('ul#NagishLiHighlight')
+                .children('li.active:nth-child(2)')
+                .find('.nagishli-option-title')
+                .text()),
+              (c = c.split(' ')),
+              (c[1] =
+                'en' == g
+                  ? c[1].charAt(0).toUpperCase() + c[1].substr(1)
+                  : c[1]),
+              a(
+                '<span class="selected">' +
+                c[1] +
+                '&nbsp;' +
+                phrases.and +
+                c[3] +
+                '</span>'
+              ).insertAfter(
+                a('ul#NagishLiHighlight')
+                  .prev('.nl-dropdown-toggle', 'div')
+                  .children('.nl-dropdown-title')
+              ))
+            : ((c = a('ul#NagishLiHighlight > li.active')
+              .find('.nagishli-option-title')
+              .text()),
+              a('<span class="selected">' + c + '</span>').insertAfter(
+                a('ul#NagishLiHighlight')
+                  .prev('.nl-dropdown-toggle', 'div')
+                  .children('.nl-dropdown-title')
+              )));
+        '1' == A && V(!0);
+        'off' == C && ha(!0);
+        'on' == r && ia(!0);
+        'black' == D ? L('black', !0) : 'white' == D && L('white', !0);
+        'on' == t && ka(!0);
+      })()
       : a(
-          commons.bar +
-            ' > #NagishLiBarStrip > #NagishLiMove > #NagishLiMove' +
-            N
-        ).css('visibility', 'hidden');
+        commons.bar +
+        ' > #NagishLiBarStrip > #NagishLiMove > #NagishLiMove' +
+        N
+      ).css('visibility', 'hidden');
     a('body').on('mousedown keypress.nlkbnavclk', function (b) {
       !a(commons.menus).is(':visible') ||
         a(b.target).is(
@@ -4345,7 +4345,7 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
         (a(commons.menus).slideUp(150, function () {
           a(commons.bar + ' > #NagishLiBarStrip').removeClass('open');
         }),
-        f('change', 'menu', 'closed'));
+          f('change', 'menu', 'closed'));
     });
     a(commons.bar + ' > #NagishLiBarStrip').on(
       'click keypress.nlkbnavclk',
@@ -4355,23 +4355,23 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
           a(b.target).is('#NagishLiToggleMenus') ||
           (a(commons.menus).is(':visible')
             ? (a(commons.menus).slideUp(150, function () {
-                a(commons.bar + ' > #NagishLiBarStrip').removeClass('open');
-              }),
+              a(commons.bar + ' > #NagishLiBarStrip').removeClass('open');
+            }),
               (c = 'closed'))
             : (a(this).addClass('open').next('#NagishLiMenus').slideDown(150),
               (c = 'open')),
-          f('change', 'menu', c));
+            f('change', 'menu', c));
       }
     );
     a(commons.dd + ' > .nl-dropdown-toggle').click(function (b, c) {
       c = a(commons.dd + ' > .nl-dropdown-toggle').index(this);
       H
         ? (a(commons.dd + ' > .nl-dropdown-toggle')
-            .not(a(this))
-            .removeClass('open')
-            .next('ul.nl-dropdown-menu')
-            .slideUp('fast')
-            .removeClass('show'),
+          .not(a(this))
+          .removeClass('open')
+          .next('ul.nl-dropdown-menu')
+          .slideUp('fast')
+          .removeClass('show'),
           a(this)
             .toggleClass('open')
             .next('ul.nl-dropdown-menu')
@@ -4379,13 +4379,13 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
             .toggleClass('show'),
           (b = '000000'),
           a(this).hasClass('open') &&
-            (b = b.substr(0, c) + '1' + b.substr(c + 1)),
+          (b = b.substr(0, c) + '1' + b.substr(c + 1)),
           f('change', 'submenus', b))
         : (a(this)
-            .toggleClass('open')
-            .next('ul.nl-dropdown-menu')
-            .slideToggle('fast')
-            .toggleClass('show'),
+          .toggleClass('open')
+          .next('ul.nl-dropdown-menu')
+          .slideToggle('fast')
+          .toggleClass('show'),
           a(this).hasClass('open')
             ? ((b = '1'),
               a(this)
@@ -4393,13 +4393,13 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
                 .attr(
                   'aria-label',
                   phrases.aria_toggle_close_alt +
-                    a(this).children('.nl-dropdown-title').text()
+                  a(this).children('.nl-dropdown-title').text()
                 ),
               a(this)
                 .children('.nagishli-sr-only')
                 .text(
                   phrases.aria_toggle_close_alt +
-                    a(this).children('.nl-dropdown-title').text()
+                  a(this).children('.nl-dropdown-title').text()
                 ))
             : ((b = '0'),
               a(this)
@@ -4407,13 +4407,13 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
                 .attr(
                   'aria-label',
                   phrases.aria_toggle_open_alt +
-                    a(this).children('.nl-dropdown-title').text()
+                  a(this).children('.nl-dropdown-title').text()
                 ),
               a(this)
                 .children('.nagishli-sr-only')
                 .text(
                   phrases.aria_toggle_open_alt +
-                    a(this).children('.nl-dropdown-title').text()
+                  a(this).children('.nl-dropdown-title').text()
                 )),
           f('change', 'submenus', { to: b, pos: c }));
       ja();
@@ -4425,9 +4425,9 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
           (1 !== b.which && 13 !== b.which) ||
           (a(this).hasClass('expand-all')
             ? (a(this).attr({
-                class: 'collapse-all',
-                'aria-label': phrases.collapse_all,
-              }),
+              class: 'collapse-all',
+              'aria-label': phrases.collapse_all,
+            }),
               a(commons.dd + ' > .nl-dropdown-toggle')
                 .addClass('open')
                 .children('span.selected')
@@ -4442,13 +4442,13 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
                   .attr(
                     'aria-label',
                     phrases.aria_toggle_close_alt +
-                      a(this).children('.nl-dropdown-title').text()
+                    a(this).children('.nl-dropdown-title').text()
                   );
               }))
             : (a(this).attr({
-                class: 'expand-all',
-                'aria-label': phrases.expand_all,
-              }),
+              class: 'expand-all',
+              'aria-label': phrases.expand_all,
+            }),
               a(commons.dd + ' > .nl-dropdown-toggle.open').removeClass('open'),
               a(commons.dd + ' > .nl-dropdown-menu.show')
                 .slideUp('fast')
@@ -4460,7 +4460,7 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
                   .attr(
                     'aria-label',
                     phrases.aria_toggle_open_alt +
-                      a(this).children('.nl-dropdown-title').text()
+                    a(this).children('.nl-dropdown-title').text()
                   );
                 if (
                   a(this)
@@ -4482,16 +4482,16 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
                   }
                 } else a(this).next('#NagishLiHighlight', 'ul').length && (!a(this).children('span.selected').length && 1 < a(this).next('ul').children('li.active').find('span.sign').length ? ((b = a(this).next('ul').children('li.active:first-child').find('.nagishli-option-title').text() + ' ' + a(this).next('ul').children('li.active:nth-child(2)').find('.nagishli-option-title').text()), (b = b.split(' ')), (b[1] = 'en' == g ? b[1].charAt(0).toUpperCase() + b[1].substr(1) : b[1]), a('<span class="selected">' + b[1] + '&nbsp;' + phrases.and + b[3] + '</span>').insertAfter(a(this).children('.nl-dropdown-title'))) : !a(this).children('span.selected').length && a(this).next('ul').find('span.sign').length ? ((b = a(this).next('ul').children('li.active').find('.nagishli-option-title').text()), a('<span class="selected">' + b + '</span>').insertAfter(a(this).children('.nl-dropdown-title'))) : a(this).children('span.selected').remove());
               })),
-          f('change', 'submenus', c));
+            f('change', 'submenus', c));
       }
     );
     a(
       commons.dd +
-        ' > #NagishLiInfo > li > #NagishLiStatement, ' +
-        commons.dd +
-        ' > #NagishLiInfo > li > #NagishLiHowAccessible, ' +
-        commons.dd +
-        ' > #NagishLiInfo > li > #NagishLiKeyboardShortcutsInfo'
+      ' > #NagishLiInfo > li > #NagishLiStatement, ' +
+      commons.dd +
+      ' > #NagishLiInfo > li > #NagishLiHowAccessible, ' +
+      commons.dd +
+      ' > #NagishLiInfo > li > #NagishLiKeyboardShortcutsInfo'
     ).click(function (b) {
       if ('NagishLiStatement' == b.target.id && K) window.location.replace(K);
       else {
@@ -4509,20 +4509,20 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
           )
             a('#DeveloperMsg').length
               ? a('.NagishLiOverlay').fadeOut('fast', function () {
-                  a(this).remove();
-                  a('body[nl-kbnav]').length &&
-                    a(
-                      commons.dd +
-                        ' > #NagishLiInfo > li > #NagishLiHowAccessible'
-                    ).focus();
-                })
+                a(this).remove();
+                a('body[nl-kbnav]').length &&
+                  a(
+                    commons.dd +
+                    ' > #NagishLiInfo > li > #NagishLiHowAccessible'
+                  ).focus();
+              })
               : a('.NagishLiOverlay').fadeOut('fast', function () {
-                  a(this).remove();
-                  a('body[nl-kbnav]').length &&
-                    a(
-                      commons.dd + ' > #NagishLiInfo > li > #NagishLiStatement'
-                    ).focus();
-                }),
+                a(this).remove();
+                a('body[nl-kbnav]').length &&
+                  a(
+                    commons.dd + ' > #NagishLiInfo > li > #NagishLiStatement'
+                  ).focus();
+              }),
               a('html')[0].style.setProperty('overflow', '', ''),
               a('body')[0].style.setProperty('overflow', '', ''),
               a(document).off('keydown.nlkbnav mousedown.nlkbnav');
@@ -4532,31 +4532,31 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
         ).css('border-bottom-color');
         'NagishLiHowAccessible' == b.currentTarget.id
           ? ((b =
-              '<div class="NagishLiAboutText" style="text-align: ' +
-              phrases.align_right +
-              ' !important; width: 80% !important; margin: 0 auto !important;"><a role="button" id="closeBtn" tabindex="1" aria-label="' +
-              phrases.aria_close_modal +
-              '">&#x274c;&#xfe0e;</a><span class="nlap-title">' +
-              phrases.about +
-              '</span>'),
+            '<div class="NagishLiAboutText" style="text-align: ' +
+            phrases.align_right +
+            ' !important; width: 80% !important; margin: 0 auto !important;"><a role="button" id="closeBtn" tabindex="1" aria-label="' +
+            phrases.aria_close_modal +
+            '">&#x274c;&#xfe0e;</a><span class="nlap-title">' +
+            phrases.about +
+            '</span>'),
             (b =
               '0' != x
                 ? b + phrases.about_text_lic
                 : b +
-                  ('<span id="DeveloperMsg" style="border: 1px solid ' +
-                    c +
-                    ' !important; border-' +
-                    phrases.align_right +
-                    '-width: 10px !important; border-radius: 10px !important; display: block !important; padding: 2% !important; text-align: ' +
-                    phrases.align_right +
-                    ' !important; font-size: 90% !important; background: #EEE !important; font-weight: bold !important; color: #6f6f6f !important; max-width: 75% !important; margin: 0 auto 2.5% !important;"><a href="https://fb.me/ZannyBoy" target="_blank" tabindex="1"><img src="//graph.facebook.com/1452532180/picture?type=normal&amp;width=87&amp;height=87" onerror="this.parentNode.style.display=\'none\';" style="border-radius: 50% !important; margin-top: 1% !important; margin-' +
-                    phrases.align_left +
-                    ': 2% !important; float: ' +
-                    phrases.align_right +
-                    ' !important;" /></a>' +
-                    phrases.developer_message +
-                    '</span>' +
-                    phrases.about_text)),
+                ('<span id="DeveloperMsg" style="border: 1px solid ' +
+                  c +
+                  ' !important; border-' +
+                  phrases.align_right +
+                  '-width: 10px !important; border-radius: 10px !important; display: block !important; padding: 2% !important; text-align: ' +
+                  phrases.align_right +
+                  ' !important; font-size: 90% !important; background: #EEE !important; font-weight: bold !important; color: #6f6f6f !important; max-width: 75% !important; margin: 0 auto 2.5% !important;"><a href="https://fb.me/ZannyBoy" target="_blank" tabindex="1"><img src="//graph.facebook.com/1452532180/picture?type=normal&amp;width=87&amp;height=87" onerror="this.parentNode.style.display=\'none\';" style="border-radius: 50% !important; margin-top: 1% !important; margin-' +
+                  phrases.align_left +
+                  ': 2% !important; float: ' +
+                  phrases.align_right +
+                  ' !important;" /></a>' +
+                  phrases.developer_message +
+                  '</span>' +
+                  phrases.about_text)),
             (b +=
               '<br /><br /></div><style type="text/css">#NagishLiOverlayContent > .NagishLiAboutText > .nlap-title { font-size: 150% !important; color: ' +
               c +
@@ -4564,45 +4564,45 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
               c +
               ' !important; text-decoration: none !important; } #NagishLiOverlayContent > .NagishLiAboutText > .nlap-stitle { font-weight: bold !important; font-size: 110% !important; text-decoration: underline !important; }</style>'))
           : (b =
-              'NagishLiStatement' == b.currentTarget.id
-                ? '<div class="NagishLiStatementText" style="text-align: ' +
-                  phrases.align_right +
-                  ' !important; width: 80% !important; margin: 0 auto !important;"><a href="javascript:void(0);" role="button" id="closeBtn" tabindex="1" aria-label="' +
-                  phrases.aria_close_modal +
-                  '">&#x274c;&#xfe0e;</a><span class="nlas-title">' +
-                  ('' != D ? D.toUpperCase() + '&nbsp;-&nbsp;' : '') +
-                  (G ? '<br />' : '') +
-                  phrases.a11y_info +
-                  '</span>' +
-                  phrases.accessibility_statement +
-                  '</div><style type="text/css">#NagishLiOverlayContent > .NagishLiStatementText > .nlas-title { font-size: 150% !important; color: ' +
-                  c +
-                  ' !important; display: block !important; margin: 2% 0 !important; font-weight: bold !important; text-align: center !important; } #NagishLiOverlayContent > .NagishLiStatementText > a { color: ' +
-                  c +
-                  ' !important; text-decoration: none !important; } #NagishLiOverlayContent > .NagishLiStatementText > .nlas-stitle { font-weight: bold !important; font-size: 110% !important; text-decoration: underline !important; }</style>'
-                : '<div class="NagishLiKeyboardShortcutsText" style="text-align: ' +
-                  phrases.align_right +
-                  ' !important; width: 80% !important; margin: 0 auto !important;"><a href="javascript:void(0);" role="button" id="closeBtn" tabindex="1" aria-label="' +
-                  phrases.aria_close_modal +
-                  '">&#x274c;&#xfe0e;</a><span class="nlas-title">' +
-                  phrases.kbshortcuts +
-                  '</span>' +
-                  phrases.kbshortcuts_text +
-                  '</div><style type="text/css">#NagishLiOverlayContent > .NagishLiKeyboardShortcutsText > .nlas-title { font-size: 150% !important; color: ' +
-                  c +
-                  ' !important; display: block !important; margin: 2% 0 !important; font-weight: bold !important; text-align: center !important; } #NagishLiOverlayContent > .NagishLiKeyboardShortcutsText > a { color: ' +
-                  c +
-                  ' !important; text-decoration: none !important; } #NagishLiOverlayContent > .NagishLiKeyboardShortcutsText > .nlas-stitle { font-weight: bold !important; font-size: 110% !important; text-decoration: underline !important; }#NagishLiOverlayContent > .NagishLiKeyboardShortcutsText > kbd { padding: 4px 6px !important; color: #fff !important; background-color: #212529 !important; border-radius: 3px !important; display: inline-block !important; }</style>');
+            'NagishLiStatement' == b.currentTarget.id
+              ? '<div class="NagishLiStatementText" style="text-align: ' +
+              phrases.align_right +
+              ' !important; width: 80% !important; margin: 0 auto !important;"><a href="javascript:void(0);" role="button" id="closeBtn" tabindex="1" aria-label="' +
+              phrases.aria_close_modal +
+              '">&#x274c;&#xfe0e;</a><span class="nlas-title">' +
+              ('' != D ? D.toUpperCase() + '&nbsp;-&nbsp;' : '') +
+              (G ? '<br />' : '') +
+              phrases.a11y_info +
+              '</span>' +
+              phrases.accessibility_statement +
+              '</div><style type="text/css">#NagishLiOverlayContent > .NagishLiStatementText > .nlas-title { font-size: 150% !important; color: ' +
+              c +
+              ' !important; display: block !important; margin: 2% 0 !important; font-weight: bold !important; text-align: center !important; } #NagishLiOverlayContent > .NagishLiStatementText > a { color: ' +
+              c +
+              ' !important; text-decoration: none !important; } #NagishLiOverlayContent > .NagishLiStatementText > .nlas-stitle { font-weight: bold !important; font-size: 110% !important; text-decoration: underline !important; }</style>'
+              : '<div class="NagishLiKeyboardShortcutsText" style="text-align: ' +
+              phrases.align_right +
+              ' !important; width: 80% !important; margin: 0 auto !important;"><a href="javascript:void(0);" role="button" id="closeBtn" tabindex="1" aria-label="' +
+              phrases.aria_close_modal +
+              '">&#x274c;&#xfe0e;</a><span class="nlas-title">' +
+              phrases.kbshortcuts +
+              '</span>' +
+              phrases.kbshortcuts_text +
+              '</div><style type="text/css">#NagishLiOverlayContent > .NagishLiKeyboardShortcutsText > .nlas-title { font-size: 150% !important; color: ' +
+              c +
+              ' !important; display: block !important; margin: 2% 0 !important; font-weight: bold !important; text-align: center !important; } #NagishLiOverlayContent > .NagishLiKeyboardShortcutsText > a { color: ' +
+              c +
+              ' !important; text-decoration: none !important; } #NagishLiOverlayContent > .NagishLiKeyboardShortcutsText > .nlas-stitle { font-weight: bold !important; font-size: 110% !important; text-decoration: underline !important; }#NagishLiOverlayContent > .NagishLiKeyboardShortcutsText > kbd { padding: 4px 6px !important; color: #fff !important; background-color: #212529 !important; border-radius: 3px !important; display: inline-block !important; }</style>');
         a(
           '<div class="NagishLiOverlay"><div id="NagishLiOverlayContent" class="' +
-            P +
-            '" style="color: black !important; background-color: white !important; width: 85% !important; margin: auto !important; top: 25% !important; height: 50% !important; position: relative !important; border: 10px solid !important; border-color: ' +
-            c +
-            ' !important; border-radius: 25px !important; overflow-x: hidden !important; direction: ' +
-            phrases.dir +
-            ' !important; cursor: context-menu !important;">' +
-            b +
-            '</div></div>'
+          P +
+          '" style="color: black !important; background-color: white !important; width: 85% !important; margin: auto !important; top: 25% !important; height: 50% !important; position: relative !important; border: 10px solid !important; border-color: ' +
+          c +
+          ' !important; border-radius: 25px !important; overflow-x: hidden !important; direction: ' +
+          phrases.dir +
+          ' !important; cursor: context-menu !important;">' +
+          b +
+          '</div></div>'
         )
           .fadeIn('fast')
           .appendTo('#NagishLiTag');
@@ -4620,9 +4620,9 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
     });
     a(
       commons.dd +
-        ' > ul > li > div > span.help, ' +
-        commons.dd +
-        ' > ul > li > div > span.notice'
+      ' > ul > li > div > span.help, ' +
+      commons.dd +
+      ' > ul > li > div > span.notice'
     )
       .attr('data-balloon-pos', phrases.align_left)
       .on('mousedown keypress.nlkbnavclk', function () {
@@ -4631,11 +4631,11 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
       });
     a(
       commons.dd +
-        ' > #NagishLiColors > li > #NLCustomColors > span:not(.sign, .help, .nagishli-option-title)'
+      ' > #NagishLiColors > li > #NLCustomColors > span:not(.sign, .help, .nagishli-option-title)'
     ).click(function () {
       var b = a(this).is('#NLCustomColorsBG')
-          ? a('#NLCurrentBG')
-          : a('#NLCurrentTXT'),
+        ? a('#NLCurrentBG')
+        : a('#NLCurrentTXT'),
         c = a(this).is('#NLCustomColorsBG') ? phrases.bg : phrases.txt,
         d = a(this).parent('div#NLCustomColors').contents().detach();
       var e =
@@ -4647,15 +4647,15 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
       f =
         'text' !== f.type
           ? '<li style="background-color: ' +
-            e +
-            '; width: inherit !important;" role="button" aria-label="' +
-            phrases.aria_select_color +
-            c.toLowerCase() +
-            '"><input tabindex="35" id="NLColorPicker" type="color" value="' +
-            e +
-            "\" onchange=\"$(this).parent('li').css('background-color', $('#NLColorPicker').val()).attr('aria-label', '" +
-            phrases.clr_custom +
-            '\');" style="min-width: 18px !important; min-height: 18px !important; width: 100% !important; height: 100% !important; vertical-align: top !important;" /></li>'
+          e +
+          '; width: inherit !important;" role="button" aria-label="' +
+          phrases.aria_select_color +
+          c.toLowerCase() +
+          '"><input tabindex="35" id="NLColorPicker" type="color" value="' +
+          e +
+          "\" onchange=\"$(this).parent('li').css('background-color', $('#NLColorPicker').val()).attr('aria-label', '" +
+          phrases.clr_custom +
+          '\');" style="min-width: 18px !important; min-height: 18px !important; width: 100% !important; height: 100% !important; vertical-align: top !important;" /></li>'
           : '';
       e =
         '<span class="nagishli-option-title" style="display: none !important;">' +
@@ -4663,60 +4663,60 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
         '</span>';
       'he' == g
         ? (e +=
-            phrases.color +
-            ' ' +
-            c +
-            ':<ul id="NLcolorPanel" data-type="' +
-            c +
-            '" style="padding: 0 !important; text-align: center !important;"><li style="background-color: #000000;" tabindex="35" aria-label="' +
-            c +
-            ' ' +
-            phrases.clr_black +
-            '"></li><li style="background-color: #6495ed;" tabindex="35" aria-label="' +
-            c +
-            ' ' +
-            phrases.clr_blue +
-            '"></li><li style="background-color: #3cb371;" tabindex="35" aria-label="' +
-            c +
-            ' ' +
-            phrases.clr_green +
-            '"></li><li style="background-color: #ffd800;" tabindex="35" aria-label="' +
-            c +
-            ' ' +
-            phrases.clr_yellow +
-            '"></li><li style="background-color: #e95d4f;" tabindex="35" aria-label="' +
-            c +
-            ' ' +
-            phrases.clr_red +
-            '"></li><li style="background-color: #ffa500;" tabindex="35" aria-label="' +
-            c +
-            ' ' +
-            phrases.clr_orange +
-            '"></li><br /><li style="background-color: #a569bd;" tabindex="35" aria-label="' +
-            c +
-            ' ' +
-            phrases.clr_purple +
-            '"></li><li style="background-color: #ff78bb;" tabindex="35" aria-label="' +
-            c +
-            ' ' +
-            phrases.clr_pink +
-            '"></li><li style="background-color: #ffffff;" tabindex="35" aria-label="' +
-            c +
-            ' ' +
-            phrases.clr_white +
-            '"></li><li style="background-color: #a3a3a3;" tabindex="35" aria-label="' +
-            c +
-            ' ' +
-            phrases.clr_gray +
-            '"></li>' +
-            f)
+          phrases.color +
+          ' ' +
+          c +
+          ':<ul id="NLcolorPanel" data-type="' +
+          c +
+          '" style="padding: 0 !important; text-align: center !important;"><li style="background-color: #000000;" tabindex="35" aria-label="' +
+          c +
+          ' ' +
+          phrases.clr_black +
+          '"></li><li style="background-color: #6495ed;" tabindex="35" aria-label="' +
+          c +
+          ' ' +
+          phrases.clr_blue +
+          '"></li><li style="background-color: #3cb371;" tabindex="35" aria-label="' +
+          c +
+          ' ' +
+          phrases.clr_green +
+          '"></li><li style="background-color: #ffd800;" tabindex="35" aria-label="' +
+          c +
+          ' ' +
+          phrases.clr_yellow +
+          '"></li><li style="background-color: #e95d4f;" tabindex="35" aria-label="' +
+          c +
+          ' ' +
+          phrases.clr_red +
+          '"></li><li style="background-color: #ffa500;" tabindex="35" aria-label="' +
+          c +
+          ' ' +
+          phrases.clr_orange +
+          '"></li><br /><li style="background-color: #a569bd;" tabindex="35" aria-label="' +
+          c +
+          ' ' +
+          phrases.clr_purple +
+          '"></li><li style="background-color: #ff78bb;" tabindex="35" aria-label="' +
+          c +
+          ' ' +
+          phrases.clr_pink +
+          '"></li><li style="background-color: #ffffff;" tabindex="35" aria-label="' +
+          c +
+          ' ' +
+          phrases.clr_white +
+          '"></li><li style="background-color: #a3a3a3;" tabindex="35" aria-label="' +
+          c +
+          ' ' +
+          phrases.clr_gray +
+          '"></li>' +
+          f)
         : ((e +=
-            c +
-            ' ' +
-            phrases.color +
-            ':<ul id="NLcolorPanel" data-type="' +
-            c +
-            '" style="padding: 0 !important; text-align: center !important;">'),
+          c +
+          ' ' +
+          phrases.color +
+          ':<ul id="NLcolorPanel" data-type="' +
+          c +
+          '" style="padding: 0 !important; text-align: center !important;">'),
           (c = c.toLowerCase()),
           (e +=
             '<li style="background-color: #000000;" tabindex="35" aria-label="' +
@@ -4768,101 +4768,101 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
       document.getElementById('NLCustomColors').innerHTML = e;
       'none' != b.css('display') &&
         (a(commons.checkmark).prependTo(a('div#NLCustomColors')),
-        a(
-          commons.dd +
+          a(
+            commons.dd +
             ' > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel > li[style="background-color: ' +
             h(b.css('background-color')) +
             ';"]'
-        ).length
-          ? a(
+          ).length
+            ? a(
               commons.dd +
-                ' > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel > li[style="background-color: ' +
-                h(b.css('background-color')) +
-                ';"]'
+              ' > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel > li[style="background-color: ' +
+              h(b.css('background-color')) +
+              ';"]'
             )
               .eq(0)
               .addClass('selected')
-          : (a(
+            : (a(
               commons.dd +
-                " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
-                phrases.bg +
-                "'] > li[aria-label='" +
-                phrases.aria_select_bgcolor +
-                "'] > input#NLColorPicker"
+              " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
+              phrases.bg +
+              "'] > li[aria-label='" +
+              phrases.aria_select_bgcolor +
+              "'] > input#NLColorPicker"
             )
               .attr('value', h(b.css('background-color')))
               .parent('li')
               .attr('aria-label', phrases.clr_custom)
               .addClass('selected'),
-            a(
-              commons.dd +
+              a(
+                commons.dd +
                 " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
                 phrases.txt +
                 "'] > li[aria-label='" +
                 phrases.aria_select_txtcolor +
                 "'] > input#NLColorPicker"
-            )
-              .attr('value', h(b.css('background-color')))
-              .parent('li')
-              .attr('aria-label', phrases.clr_custom)
-              .addClass('selected')));
+              )
+                .attr('value', h(b.css('background-color')))
+                .parent('li')
+                .attr('aria-label', phrases.clr_custom)
+                .addClass('selected')));
       a('body[nl-kbnav]').length &&
         document.getElementById('NLcolorPanel').firstElementChild.focus();
       a(
         commons.dd +
-          ' > #NagishLiColors > li > #NLCustomColors > ul > li#NLCloseColorPanel'
+        ' > #NagishLiColors > li > #NLCustomColors > ul > li#NLCloseColorPanel'
       ).on('click keypress.nlkbnavclk', function () {
         var b = a(
-            commons.dd +
-              " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
-              phrases.bg +
-              "'] > li.selected"
-          ),
+          commons.dd +
+          " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
+          phrases.bg +
+          "'] > li.selected"
+        ),
           c = a(
             commons.dd +
-              " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
-              phrases.txt +
-              "'] > li.selected"
+            " > #NagishLiColors > li.not-clickable > #NLCustomColors > ul#NLcolorPanel[data-type='" +
+            phrases.txt +
+            "'] > li.selected"
           );
         a(commons.dd + ' > #NagishLiColors > li > #NLCustomColors')
           .empty()
           .append(d);
         a(this).parent('ul#NLcolorPanel').data('type') === phrases.bg
           ? (b.length
-              ? a(
-                  commons.dd +
-                    ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsBG > #NLCurrentBG'
-                )
-                  .css({
-                    'background-color': b.css('background-color'),
-                    display: 'inline-block',
-                  })
-                  .attr('aria-label', b.attr('aria-label'))
-              : a(
-                  commons.dd +
-                    ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsBG > #NLCurrentBG'
-                ).css({ 'background-color': '', display: 'none' }),
+            ? a(
+              commons.dd +
+              ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsBG > #NLCurrentBG'
+            )
+              .css({
+                'background-color': b.css('background-color'),
+                display: 'inline-block',
+              })
+              .attr('aria-label', b.attr('aria-label'))
+            : a(
+              commons.dd +
+              ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsBG > #NLCurrentBG'
+            ).css({ 'background-color': '', display: 'none' }),
             a('body[nl-kbnav]').length &&
-              document.getElementById('NLCustomColorsBG').focus())
+            document.getElementById('NLCustomColorsBG').focus())
           : (c.length
-              ? a(
-                  commons.dd +
-                    ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsTXT > #NLCurrentTXT'
-                )
-                  .css({
-                    'background-color': c.css('background-color'),
-                    display: 'inline-block',
-                  })
-                  .attr('aria-label', c.attr('aria-label'))
-              : a(
-                  commons.dd +
-                    ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsTXT > #NLCurrentTXT'
-                ).css({ 'background-color': '', display: 'none' }),
+            ? a(
+              commons.dd +
+              ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsTXT > #NLCurrentTXT'
+            )
+              .css({
+                'background-color': c.css('background-color'),
+                display: 'inline-block',
+              })
+              .attr('aria-label', c.attr('aria-label'))
+            : a(
+              commons.dd +
+              ' > #NagishLiColors > li > #NLCustomColors > #NLCustomColorsTXT > #NLCurrentTXT'
+            ).css({ 'background-color': '', display: 'none' }),
             a('body[nl-kbnav]').length &&
-              document.getElementById('NLCustomColorsTXT').focus());
+            document.getElementById('NLCustomColorsTXT').focus());
         1 <= a('#NLCurrentBG:visible, #NLCurrentTXT:visible').length
           ? a('div#NLCustomColors').children('span.sign').length ||
-            a(commons.checkmark).prependTo(a('div#NLCustomColors'))
+          a(commons.checkmark).prependTo(a('div#NLCustomColors'))
           : a('div#NLCustomColors').children('span.sign').remove();
       });
     });
@@ -4873,49 +4873,49 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
         ? !a(this).children('span.selected').length &&
           a(this).next('ul').children('li.active').length
           ? ((b = a(this)
-              .next('ul')
-              .children('li.active')
-              .find('.nagishli-option-title')
-              .text()),
+            .next('ul')
+            .children('li.active')
+            .find('.nagishli-option-title')
+            .text()),
             a('<span class="selected">' + b + '</span>').insertAfter(
               a(this).children('.nl-dropdown-title')
             ))
           : a(this).children('span.selected').remove()
         : a(this).next('#NagishLiHighlight', 'ul').length &&
-          (!a(this).children('span.selected').length &&
+        (!a(this).children('span.selected').length &&
           1 < a(this).next('ul').children('li.active').find('span.sign').length
-            ? ((b =
-                a(this)
-                  .next('ul')
-                  .children('li.active:first-child')
-                  .find('.nagishli-option-title')
-                  .text() +
-                ' ' +
-                a(this)
-                  .next('ul')
-                  .children('li.active:nth-child(2)')
-                  .find('.nagishli-option-title')
-                  .text()),
-              (b = b.split(' ')),
-              (b[1] =
-                'en' == g
-                  ? b[1].charAt(0).toUpperCase() + b[1].substr(1)
-                  : b[1]),
-              a(
-                '<span class="selected">' +
-                  b[1] +
-                  '&nbsp;' +
-                  phrases.and +
-                  b[3] +
-                  '</span>'
-              ).insertAfter(a(this).children('.nl-dropdown-title')))
-            : !a(this).children('span.selected').length &&
-              a(this).next('ul').find('span.sign').length
+          ? ((b =
+            a(this)
+              .next('ul')
+              .children('li.active:first-child')
+              .find('.nagishli-option-title')
+              .text() +
+            ' ' +
+            a(this)
+              .next('ul')
+              .children('li.active:nth-child(2)')
+              .find('.nagishli-option-title')
+              .text()),
+            (b = b.split(' ')),
+            (b[1] =
+              'en' == g
+                ? b[1].charAt(0).toUpperCase() + b[1].substr(1)
+                : b[1]),
+            a(
+              '<span class="selected">' +
+              b[1] +
+              '&nbsp;' +
+              phrases.and +
+              b[3] +
+              '</span>'
+            ).insertAfter(a(this).children('.nl-dropdown-title')))
+          : !a(this).children('span.selected').length &&
+            a(this).next('ul').find('span.sign').length
             ? ((b = a(this)
-                .next('ul')
-                .children('li.active')
-                .find('.nagishli-option-title')
-                .text()),
+              .next('ul')
+              .children('li.active')
+              .find('.nagishli-option-title')
+              .text()),
               a('<span class="selected">' + b + '</span>').insertAfter(
                 a(this).children('.nl-dropdown-title')
               ))
@@ -4932,37 +4932,37 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
           a(this).siblings('li:last').find('span.sign').remove(),
             a(this).is(':first-child')
               ? a(
-                  '<span class="sign" aria-hidden="true">&nbsp;&nbsp;&#x2795;&#xfe0e;</span>'
-                ).appendTo(a(this).children('div'))
+                '<span class="sign" aria-hidden="true">&nbsp;&nbsp;&#x2795;&#xfe0e;</span>'
+              ).appendTo(a(this).children('div'))
               : a(this).is(':nth-child(2)') &&
-                a(
-                  '<span class="sign" aria-hidden="true">&nbsp;&nbsp;&#x2796;&#xfe0e;</span>'
-                ).appendTo(a(this).children('div'));
+              a(
+                '<span class="sign" aria-hidden="true">&nbsp;&nbsp;&#x2796;&#xfe0e;</span>'
+              ).appendTo(a(this).children('div'));
       })
       .on('mouseup mouseleave mouseout keydown keyup', function () {
         a(this).is(':last-child') || a(this).find('span.sign').remove();
       });
     a(
       commons.dd +
-        ' > #NagishLiColors > li:not(.not-clickable), ' +
-        commons.dd +
-        ' > #NagishLiDisplay > li'
+      ' > #NagishLiColors > li:not(.not-clickable), ' +
+      commons.dd +
+      ' > #NagishLiDisplay > li'
     ).click(function () {
       a(this).hasClass('active')
         ? (a(this)
-            .not('li:last-child')
-            .removeClass('active')
-            .find('span.sign')
-            .remove(),
+          .not('li:last-child')
+          .removeClass('active')
+          .find('span.sign')
+          .remove(),
           a(commons.checkmark).prependTo(
             a(this).siblings('li:last-child').addClass('active').children('div')
           ))
         : (a(this)
-            .addClass('active')
-            .siblings('li')
-            .removeClass('active')
-            .find('span.sign')
-            .remove(),
+          .addClass('active')
+          .siblings('li')
+          .removeClass('active')
+          .find('span.sign')
+          .remove(),
           a(commons.checkmark).prependTo(a(this).children('div')));
     });
     a(commons.dd + ' > #NagishLiColors > li.not-clickable').on(
@@ -4970,33 +4970,12 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
       '#NLCustomColors > ul#NLcolorPanel > li:not(#NLCloseColorPanel)',
       function () {
         !a(this).hasClass('selected') ||
-        a(this).children('input').is('#NLColorPicker')
+          a(this).children('input').is('#NLColorPicker')
           ? (a(this).children('input').is('#NLColorPicker') &&
             a(this).siblings('li.selected').length
-              ? a(this).removeClass('selected')
-              : a(this)
-                  .addClass('selected')
-                  .siblings('li')
-                  .removeClass('selected')
-                  .closest('li.not-clickable')
-                  .addClass('active')
-                  .siblings('li')
-                  .removeClass('active')
-                  .find('span.sign')
-                  .remove(),
-            a(this).closest('div#NLCustomColors').children('span.sign')
-              .length ||
-              a(commons.checkmark).prependTo(
-                a(this).closest('#NLCustomColors', 'div')
-              ))
-          : a(this)
-              .removeClass('selected')
-              .closest('#NLCustomColors', 'div')
-              .find('span.sign')
-              .remove();
-        a(this).attr('aria-label') != phrases.aria_select_bgcolor &&
-        a(this).attr('aria-label') != phrases.aria_select_txtcolor
-          ? (a(this)
+            ? a(this).removeClass('selected')
+            : a(this)
+              .addClass('selected')
               .siblings('li')
               .removeClass('selected')
               .closest('li.not-clickable')
@@ -5005,16 +4984,37 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
               .removeClass('active')
               .find('span.sign')
               .remove(),
+            a(this).closest('div#NLCustomColors').children('span.sign')
+              .length ||
+            a(commons.checkmark).prependTo(
+              a(this).closest('#NLCustomColors', 'div')
+            ))
+          : a(this)
+            .removeClass('selected')
+            .closest('#NLCustomColors', 'div')
+            .find('span.sign')
+            .remove();
+        a(this).attr('aria-label') != phrases.aria_select_bgcolor &&
+          a(this).attr('aria-label') != phrases.aria_select_txtcolor
+          ? (a(this)
+            .siblings('li')
+            .removeClass('selected')
+            .closest('li.not-clickable')
+            .addClass('active')
+            .siblings('li')
+            .removeClass('active')
+            .find('span.sign')
+            .remove(),
             a(this).children('input').is('#NLColorPicker')
               ? a(this)
-                  .addClass('selected')
-                  .children('input#NLColorPicker')
-                  .attr('value', a('#NLColorPicker').val())
+                .addClass('selected')
+                .children('input#NLColorPicker')
+                .attr('value', a('#NLColorPicker').val())
               : (a(this)
-                  .parent("ul[data-type='" + phrases.bg + "']")
-                  .children("li[aria-label='" + phrases.clr_custom + "']")
-                  .attr('aria-label', phrases.aria_select_bgcolor)
-                  .css('background-color', 'transparent'),
+                .parent("ul[data-type='" + phrases.bg + "']")
+                .children("li[aria-label='" + phrases.clr_custom + "']")
+                .attr('aria-label', phrases.aria_select_bgcolor)
+                .css('background-color', 'transparent'),
                 a(this)
                   .parent("ul[data-type='" + phrases.txt + "']")
                   .children("li[aria-label='" + phrases.clr_custom + "']")
@@ -5024,13 +5024,13 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
               ? v()
               : v('txt'))
           : a(this).closest('div#NLCustomColors').children('span.sign')
-              .length &&
-            !a('body[nl-colors]').length &&
-            a(this)
-              .removeClass('selected')
-              .closest('#NLCustomColors', 'div')
-              .find('span.sign')
-              .remove();
+            .length &&
+          !a('body[nl-colors]').length &&
+          a(this)
+            .removeClass('selected')
+            .closest('#NLCustomColors', 'div')
+            .find('span.sign')
+            .remove();
         a('body[nl-colors]').length ||
           a('#NLCustomColors > ul#NLcolorPanel > li.selected').length ||
           a(commons.checkmark).prependTo(
@@ -5047,22 +5047,22 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
       a(this).hasClass('active')
         ? a(this).removeClass('active').find('span.sign').remove()
         : a(commons.checkmark).prependTo(
-            a(this).addClass('active').children('div')
-          );
+          a(this).addClass('active').children('div')
+        );
     });
     a(
       commons.dd +
-        ' > #NagishLiMisc > li > #NLCursor > #NLCursorBlack, ' +
-        commons.dd +
-        ' > #NagishLiMisc > li > #NLCursor > #NLCursorWhite'
+      ' > #NagishLiMisc > li > #NLCursor > #NLCursorBlack, ' +
+      commons.dd +
+      ' > #NagishLiMisc > li > #NLCursor > #NLCursorWhite'
     ).click(function () {
       a(this).hasClass('active')
         ? a(this).removeClass('active').find('span.sign').remove()
         : (a(this)
-            .siblings('span')
-            .removeClass('active')
-            .find('span.sign')
-            .remove(),
+          .siblings('span')
+          .removeClass('active')
+          .find('span.sign')
+          .remove(),
           a(commons.checkmark).prependTo(a(this).addClass('active')));
     });
     a('span#NagishLiMove > span').each(function () {
@@ -5127,42 +5127,42 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
         else if ('home' == b)
           location.assign(
             location.protocol +
-              '//' +
-              location.hostname +
-              (location.port && ':' + location.port) +
-              '/'
+            '//' +
+            location.hostname +
+            (location.port && ':' + location.port) +
+            '/'
           );
         else {
           var c;
           'menu' == b
             ? (c =
-                document.getElementsByTagName('nav')[0] ||
-                a("*[role='navigation']")[0] ||
-                a('ul li a')[0] ||
-                a("*[class*='menu']")[0] ||
-                a("*[id*='menu']")[0])
+              document.getElementsByTagName('nav')[0] ||
+              a("*[role='navigation']")[0] ||
+              a('ul li a')[0] ||
+              a("*[class*='menu']")[0] ||
+              a("*[id*='menu']")[0])
             : 'header' == b
-            ? (c =
+              ? (c =
                 document.getElementsByTagName('h1')[0] ||
                 document.getElementsByTagName('h2')[0] ||
                 document.getElementsByTagName('header')[0] ||
                 a("*[role='banner']")[0] ||
                 document.getElementsByTagName('div')[0] ||
                 document.getElementsByTagName('body')[0])
-            : 'paragraph' == b
-            ? (c =
-                document.getElementsByTagName('p')[0] ||
-                document.getElementsByTagName('body')[0])
-            : 'content' == b &&
-              (c =
-                document.getElementsByTagName('main')[0] ||
-                document.getElementsByTagName('article')[0] ||
-                document.getElementsByTagName('section')[0] ||
-                document.getElementsByTagName('h2')[0] ||
-                document.getElementsByTagName('h3')[0] ||
-                document.getElementsByTagName('p')[0] ||
-                document.getElementsByTagName('div')[0] ||
-                document.getElementsByTagName('body')[0]);
+              : 'paragraph' == b
+                ? (c =
+                  document.getElementsByTagName('p')[0] ||
+                  document.getElementsByTagName('body')[0])
+                : 'content' == b &&
+                (c =
+                  document.getElementsByTagName('main')[0] ||
+                  document.getElementsByTagName('article')[0] ||
+                  document.getElementsByTagName('section')[0] ||
+                  document.getElementsByTagName('h2')[0] ||
+                  document.getElementsByTagName('h3')[0] ||
+                  document.getElementsByTagName('p')[0] ||
+                  document.getElementsByTagName('div')[0] ||
+                  document.getElementsByTagName('body')[0]);
           c.scrollIntoView();
           a('body[nl-kbnav]').length && c.focus();
         }
@@ -5174,8 +5174,8 @@ function initNagishLi(lang, pos, compact, accordion, contact) {
         0 < document.getElementsByTagName('h1').length
           ? document.getElementsByTagName('h1')[0]
           : phrases.untitled_page),
-      (w = document.createElement('title')),
-      (w.innerHTML = J),
-      document.getElementsByTagName('head')[0].appendChild(w));
+        (w = document.createElement('title')),
+        (w.innerHTML = J),
+        document.getElementsByTagName('head')[0].appendChild(w));
   });
 }

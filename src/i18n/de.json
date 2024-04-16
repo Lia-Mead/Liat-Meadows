@@ -4,13 +4,12 @@
   "home_slogan2": "Das ist, was ich tue.",
   "home_development": "Web-Entwicklung ",
   "home_and_design": "& Design",
-  "liat_meadows": "Liat Meadows",
+  "liat_meadows": "Lia Meadows",
   "button_up": "oben",
-
   "about_development": "Entwicklung",
   "about_design": "Design",
   "about_about": "Über mich",
-  "about_para_1_1": "Hallo, schön Sie hier zu sehen. Mein Name ist Liat.\n",
+  "about_para_1_1": "Hallo, schön Sie hier zu sehen. Mein Name ist Lia.\n",
   "about_para_1_1_1": "Ich bin eine erfahrene Web- und Mobile-App-Entwickler, spezialisiert im Bereich Frontend mit einem starken Fokus auf ",
   "about_para_1_2": "React Native",
   "about_para_1_3": " und ",
@@ -29,7 +28,6 @@
   "details_button_online": "Zur Projekts Webseite",
   "details_button_youtube": "Auf YouTube ansehen",
   "detail_project_title_link": "Projekte",
-
   "card_project_name_ziegert": "ZIEGERT Immobilien",
   "card_project_name_flamingo": "Flamingo Generation",
   "card_project_name_les_voyageurs": "Les Voyageurs",
@@ -55,7 +53,6 @@
   "card_description_searchify": "Durchsuchen Sie Ihre Künstler und Alben mit der Spotify-API",
   "card_description_petition": "Petitionsprojekt zum Sammeln von E-Signaturen gegen stampfende Nachbarn",
   "card_description_connect": "Connect Four-Spiel im Retro-Stil. Kombiniere vier diagonale Avatare und gewinne die Runde",
-
   "footer_imprint": "Impressum",
   "footer_accessibility": "Barrierefreiheit",
   "footer_open_source": "Open Source",
@@ -64,9 +61,9 @@
   "accessibility_statement_text_2": "Ich würde mich über Kommentare und Anfragen zur E-Mail-Erreichbarkeit freuen.",
   "accessibility_statement_text_3": "Sie können mich per E-Mail kontaktieren: meadowsliat@gmail.com",
   "imprint_title": "Impressum",
-  "imprint_text_1": "Die verantwortliche Person für diese Website und ihren gesamten Inhalt ist Liat Meadows.",
+  "imprint_text_1": "Die verantwortliche Person für diese Website und ihren gesamten Inhalt ist Lia Meadows.",
   "imprint_text_2": "Für jede Anfrage können Sie mich über meine E-Mail erreichen.",
-  "imprint_text_3": "Liat Meadows",
+  "imprint_text_3": "Lia Meadows",
   "imprint_text_4": "E-Mail: meadowsliat@gmail.com",
   "oss_title": "Open-Source-Bibliotheken",
   "oss_text_1": "Diese Website verwendet die folgenden Open-Source-Bibliotheken:"

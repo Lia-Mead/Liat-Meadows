@@ -1,5 +1,5 @@
 import logo from '../assets/icons/logo.svg';
-import logoFont from '../assets/icons/logo-name.svg';
+import logoFont from '../assets/icons/logo-lia.svg';
 // import logo from '../assets/icons/logo-meadows.svg';
 
 export default function Logo() {

@@ -54,7 +54,7 @@ ul {
 }
 
 h1,
-h1 > a {
+h1>a {
   text-transform: uppercase;
   font-size: 1.5rem;
   letter-spacing: 2.9px;
@@ -70,6 +70,7 @@ h2,
 h3 {
   font-weight: 300;
 }
+
 p {
   line-height: 1.6;
 }
@@ -125,6 +126,7 @@ p {
     -webkit-transform: rotate(0);
     transform: rotate(0);
   }
+
   to {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
@@ -136,6 +138,7 @@ p {
     -webkit-transform: rotate(0);
     transform: rotate(0);
   }
+
   to {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
@@ -217,6 +220,7 @@ p {
     transform: translateY(-8px);
     box-shadow: 0 10px 10px -10px rgba(#7f8c8d, 1);
   }
+
   &:focus {
     outline: 2px solid $primary;
   }
@@ -301,7 +305,8 @@ p {
   box-shadow: 6px 0px 6px 0px rgb(61 53 53 / 24%);
   // border-bottom: 1px solid #9097a0;
 }
-.header > a {
+
+.header>a {
   width: 30%;
 }
 
@@ -312,6 +317,7 @@ p {
 .nav-menu {
   display: flex;
   align-items: center;
+
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -320,6 +326,7 @@ p {
 .nav-menu {
   display: flex;
   align-items: center;
+
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -333,7 +340,7 @@ p {
 }
 
 .nav-link,
-.nav-link > a {
+.nav-link>a {
   color: $white;
   display: flex;
   align-items: center;
@@ -341,6 +348,7 @@ p {
   padding: 0 0.5rem;
   height: 100%;
   cursor: pointer;
+
   &.active {
     color: $primary;
   }
@@ -355,11 +363,14 @@ p {
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   margin: 0 3px;
+  min-width: 50px;
+  font-weight: 600;
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
+    background: #3a3737;
     font-weight: 700;
+    color: #66e196;
   }
 }
 
@@ -395,12 +406,14 @@ p {
     color: #fff;
     text-decoration: none;
   }
+
   .footer-box {
     display: flex;
     width: 80%;
     padding: 1% 0;
     min-height: 30px;
   }
+
   .footer-box.first {
     justify-content: center;
     background-image: linear-gradient(287deg, #3cb371, #0fa7ee);
@@ -409,6 +422,7 @@ p {
     flex-wrap: wrap;
     min-height: 50px;
   }
+
   .footer-box.second {
     width: 70%;
     margin: 1% 0;
@@ -455,10 +469,12 @@ p {
     justify-content: center;
     align-items: flex-start;
   }
+
   a {
     color: #fff;
     padding: 30px 40px;
     text-decoration: underline;
+
     &:hover,
     &:focus,
     &:active {
@@ -473,6 +489,7 @@ p {
     padding-top: 20px;
     box-shadow: 0 10px 10px -10px rgba(#7f8c8d, 1);
     -webkit-box-shadow: 0 10px 10px -10px rgba(#7f8c8d, 1);
+
     .lang-btn {
       margin-left: 12px;
       margin-right: 12px;
@@ -494,10 +511,12 @@ p {
 
 .development-con {
   height: 100%;
+
   .box {
     background-color: $dark-bg;
   }
-  h1 > a {
+
+  h1>a {
     color: $white;
   }
 }
@@ -505,13 +524,14 @@ p {
 .design-con {
   height: 100%;
 
-  h1 > a {
+  h1>a {
     color: $dark;
   }
 }
 
 .detail-con {
   height: 100%;
+
   .stage {
     display: flex;
     flex-wrap: wrap;
@@ -519,6 +539,7 @@ p {
     justify-content: center;
     height: 100%;
   }
+
   .box {
     background-color: $light-bg;
     padding-bottom: 110px;
@@ -526,11 +547,12 @@ p {
     width: 90%;
     justify-content: center;
   }
+
   .title-box {
     padding: 5% 5% 0 5%;
   }
 
-  h1 > a {
+  h1>a {
     text-decoration: underline;
     font-weight: 700;
   }
@@ -549,6 +571,7 @@ p {
 
 .about-container {
   height: 100%;
+
   .avatar {
     width: 220px;
     height: 220px;
@@ -572,13 +595,14 @@ p {
     padding: 40px;
   }
 
-  h1 > a {
+  h1>a {
     color: $white;
   }
 
   a {
     margin: 0;
   }
+
   .icon {
     padding: 0;
     width: 80px;
@@ -592,6 +616,7 @@ p {
   .pill-box {
     margin: 20px 0;
   }
+
   .pill {
     background-color: $light-bg;
     border: none;
@@ -634,6 +659,7 @@ p {
   .con {
     flex-direction: row;
   }
+
   .stage {
     width: 90%;
   }
@@ -653,9 +679,11 @@ p {
       margin-top: 10px;
       margin-left: 30px;
     }
+
     .icon {
       width: 20%;
     }
+
     .footer-box.second {
       width: 100%;
     }
@@ -665,13 +693,16 @@ p {
     .box {
       padding-bottom: 100px;
     }
+
     .text-con {
       padding-top: 0;
     }
+
     .avatar-box {
       margin-top: 0px;
       padding-bottom: 30px;
     }
+
     .highlight {
       color: $primary;
     }
@@ -695,6 +726,7 @@ p {
   .gallery-con {
     width: 90%;
   }
+
   h1 {
     width: 90%;
   }
